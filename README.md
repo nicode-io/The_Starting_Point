@@ -20,7 +20,10 @@ It's the first sprint and it's about semantic HTML and CSS.
 Goal is to reproduce a web page from a mock-up png.
 
 ## Content :
-* Turlututu 
+* README.md
+* index.html
+  * style.min.css (sass)
+  * logos
 
 ## Status :
-In progress
+Done
