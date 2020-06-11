@@ -17,13 +17,10 @@ BeCode Charleroi
 ## Work context :
 Work done as part of the BeCode web developer training.
 It's the first sprint and it's about semantic HTML and CSS.
+Goal is to reproduce a web page from a mock-up png.
 
 ## Content :
-* Turlututu
-  * Reproduce a web page from a mock-up
-* 2 "Medium type" article
-  * 8 façons simples d’améliorer la typographie dans vos designs
-  * Petit Guide Typographique
+* Turlututu 
 
 ## Status :
 In progress
