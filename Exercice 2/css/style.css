@@ -56,7 +56,7 @@ nav ul {
   flex-direction: row;
   background: var(--company-orange);
   border-radius: 0.5rem;
-  color: #fff;
+  color: var(--company-lightgrey);
   font-family: Lato;
   padding: 5px;
 }
@@ -71,7 +71,7 @@ section {
 }
 
 article {
-  background: #fff;
+  background: var(--company-lightgrey);
   padding: 2vw 10vw;
   margin: 20px;
   border-radius: 0.4rem;
