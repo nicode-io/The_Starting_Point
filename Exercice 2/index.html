@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkDown Summary</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="img/2880px-Markdown-mark.svg.png" alt="logo-md">
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li>Intro</li>
+            <li>Mise en forme</li>
+            <li>Hiérarchie</li>
+            <li>Médias</li>
+            <li>Sources</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <article class=intro>
+          <h2>Le MarkDown, Qu'est-ce que c'est?</h2>
+          <h3>Une langue avant tout</h3>
+          <p>
+            Le Markdown est un langage de balisage léger permettant de formater et de baliser un document sans en compliquer la lecture, d'où l'emploi du terme "léger".
+          </p>
+          <h2>À quoi ca sert?</h2>
+          <p>
+            Comme indiqué précédemment, le MarDown, qui est utilisé dans de nombreuses applications, permet de formater un document directement dans le corps du texte sans l'alourdir.  
+            S'il est vrai que HTML présente des fonctions similaires, celui-ci complique grandement la lecture en raison de la présence de nombreux *tags* et instructions.
+          </p>
+          <p>
+            Voici, pour illustrer nos propos, deux versions de la même phrase, en MarkDown et en HTML :
+          </p>
+          <pre>
+            MarkDown: Écrire en **gras** ou en *italique* ne devrait pas être compliqué.
+            HTML: Écrire en &lt;strong>gras&lt;/strong&gt ou en &lt;em>italique&lt;/em&gt ne devrait pas être compliqué.
+            Résultat obtenu: Écrire en <b>gras</b> ou en <i>italique</i> ne devrait pas être compliqué.
+          </pre> 
+          <p>
+            Comme on le voit, la version en MarkDown est beaucoup plus lisible.  
+          </p>
+          <p>
+            Il ne s'agit là que d'un exemple des nombreux avantages que présente le MarkDown. Ainsi, vous trouverez plus loin dans ce document des informations supplémentaires sur les différents usages qu'il est possible d'en faire.
+          </p>
+        </article>
+        <article class="mise-forme">
+          <h2>Mise en forme dans markdown</h2>
+          <h3>Mise en Gras</h3>
+          <p>
+            Pour mettre du texte en **Gras**, ajoutez deux astérisques "**" ou traits "__" de soulignement avant et après un mot ou une phrase.  
+          </p>
+          <p>
+            <em>
+              exemples:
+            </em>
+          </p>
+            <pre>
+              Je m'appelle **Stéphane**.
+              Je m'appelle __Stéphane__.
+            </pre>
+          <p>
+            Pour des raisons de compatibilité, privilégiez les astérisque "**" pour la mise en gras de lettre au milieu d'un mot.</p>
+          </p>
+          <h3>Mise en Italique</h3>
+          <p>
+            Pour mettre du texte en *Italique*, ajoutez un astérisque "*" ou un trait de soulignement "_" avant et après un mot ou une phrase. 
+          </p>
+          <p>
+            <em>exemples:</em><br/>
+            <pre>
+              Je suis une formation chez *BeCode*.
+              Je suis une formation chez _Becode_.
+            </pre>
+          </p>
+          <p>
+            Pour mettre en italique le milieu d'un mot pour accentuer, ajoutez un astérisque "*" sans espaces autour des lettres. 
+          </p>
+          <h3>Mise en Gras et en Italique</h3><br/>
+          <p>
+            Pour mettre texte en ***Gras et en Italique*** en même temps, ajoutez trois astérisques "***" ou traits de soulignement "___" avant et après un mot ou une phrase.
+            <em>exemples:</em><br/>
+            <pre>
+              Maîtriser *GIT* est ***vraiment important***
+              Maîtriser *Git* est ___vraiment important___ 
+            </pre>       
+            Pour mettre en gras et en italique le milieu d'un mot pour accentuer, ajoutez trois astérisques "***"sans espaces autour des lettres.<br/>
+          </p>
+          <h3>Blockquotes</h3>
+          <p>
+            Pour créer un blockquote, ajoutez un >devant un paragraphe.<br/>
+            <em>exemples:</em><br/>
+            ceci est un bloc de citation<br/>
+            Les blockquotes peuvent contenir plusieurs paragraphes. Ajoutez un > sur les lignes vides entre les paragraphes.<br/>
+            <em>exemples:</em><br/> 
+            <pre>     
+            > bloc de citation <br/> 
+            ><br/>
+            > bloc de citation <br/> 
+            </pre>
+          </p>
+          <h3>Blockquotes imbriquées</h3>
+          <p>
+            Les blockquotes** peuvent être imbriqués. Ajoutez un ">>" devant le paragraphe que vous souhaitez imbriquer.<br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              > bloc de citation niveau 1 <br/> 
+              ><br/>
+              >> bloc de citation niveau 2<br/> 
+            </pre>
+          </p>
+          <h3>Blockquotes avec d'autres éléments</h3>
+          <p>
+            Les Blockquotes** peuvent contenir d'autres éléments au format Markdown. Tous les éléments ne peuvent pas être utilisés - vous devrez expérimenter pour voir lesquels fonctionnent.<br/>
+          </p>
+        </article>
+        <article class="hierarchie">
+          <h2>Hiérarchier dans MarkDown</h2>
+          <h3>Les différents niveaux de titres:</h3>
+          <p>
+            Pour avoir différents niveaux de titres, nous devons utiliser le caractère __"#"__.<br/>
+            Voici quelques exemples avec leur équivalent en html:<br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              # Titre --> H1
+              ## Titre --> H2
+              ### Titre --> H3
+              ###### Titre --> H6
+            </pre>
+          </p>
+          <h3>Comment créer un paragraphe:</h3>
+          <p>
+            Les paragraphes sont séparé par un saut de ligne entre chaque paragraphe.<br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt risus magna, id faucibus dui gravida ut. Nulla facilisi. Mauris id arcu id urna pharetra gravida nec sit amet lectus. Nam condimentum, lectus sed dictum viverra, tortor justo feugiat neque, ut vehicula velit lacus et dui.
+
+              Suspendisse imperdiet maximus urna at elementum. Maecenas est neque, lobortis nec orci quis, suscipit varius nunc. Sed porta velit id cursus condimentum. Proin enim libero, egestas a varius id, lacinia sit amet nisi. Ut posuere ante sed risus fermentum, quis imperdiet risus eleifend. Proin gravida imperdiet nunc, quis vestibulum turpis sodales non. Sed odio felis, feugiat malesuada gravida a, facilisis ac eros.
+
+              Etiam lacus lorem, condimentum ac lacus ac, elementum blandit ex. Donec lacinia tortor sed massa faucibus rhoncus. Aliquam varius nisi nisl, eu viverra lectus suscipit convallis. Nullam augue velit, fringilla ut dolor eu, dignissim ornare urna. Quisque in ornare ante, vitae porttitor nisi. Integer aliquam et quam at facilisis. Donec finibus eros id justo ultricies malesuada. Fusce elementum sit amet dui id porta. Vestibulum non lectus augue.
+            </pre>
+          </p>
+          <h3>Comment créer un saut de ligne:</h3>
+          <p>
+            Pour couper une ligne en partie, il faut utiliser <em>\</em> pour arreter la ligne et recommencer à la ligne suivante.<br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+              Maecenas tincidunt risus magna, id faucibus dui gravida ut.
+            </pre>
+          </p>
+          <h3>Comment créer une liste non ordonnée:</h3>
+          <p>
+            Vous devez utiliser soit - soit *
+            <em>exemples:</em><br/>
+            <pre>     
+              * pomme
+              * poire
+              * orange
+
+              - carré
+              - rond
+              - triangle
+            </pre>
+          </p>
+          <h3>Comment créer une sous-liste non ordonnée:</h3>
+          <p>
+            Il faut deux espaces dans cette sous-liste.
+            <em>exemples:</em><br/>
+            <pre>     
+              * Fruit
+              * Apple
+              * Orange
+              * Banana
+
+              - Dairy
+                - Milk
+                - Cheese
+            </pre>
+          </p>
+          <h3>Comment créer une liste ordonnée:</h3>
+          <p>
+            Vous devez utiliser le chiffre 1. et markdown incrémentera automatiquement la liste.
+            <em>exemple:</em><br/>
+            <pre>     
+              1. Un
+              1. deux
+              1. trois
+              1. quatre
+            </pre>
+          </p>
+          <h3>Comment créer une sous-liste ordonnée:</h3>
+          <p>
+            Il faut trois espaces dans cette sous-liste.
+            <em>exemples:</em><br/>
+            <pre>     
+              1. Un
+              1. deux
+                1. deux.un
+                1. deux.deux
+              1. trois
+            </pre>
+          </p>
+          <h3>Comment créer une liste mixte:</h3>
+          <p>
+            Vous devez jongler avec * ou - et 1. et les espaces.
+            <em>exemples:</em><br/>
+            <pre>     
+              * Animaux
+                - Mammifères
+                  - Sauvages
+                    1. Lions
+                    1. Tigres
+                    1. Gazelles
+                  - Domestiques
+                    - Chiens
+                        1. Berger
+                          1. Berger Allemand
+                          1. Berger Australien
+                          1. Berger Belge
+                        1. Chiwawa
+                    - Chats
+                - Poissons
+            </pre>
+          </p>
+          <h3>Comment créer une checklist:</h3>
+          <p>
+            Vous devez utiliser [ ] ou [X]
+            <em>exemples:</em><br/>
+            <pre>     
+              [x] Titres
+              [x] liste non ordonée
+              [x] liste ordonnée
+              [ ] check list
+            </pre>
+          </p>
+          <h3>Comment créer un tableau:</h3>
+          <p>
+            Vous devez utilisé | pour créer les colonnes et - pour créer la première ligne pour séparer le nom des colonnes de leurs contenus.
+            <em>exemples:</em><br/>
+            <pre>     
+              | Nom colonne 1     | Nom colonne 2     | Nom colonne 3     |
+              | ------------------| ------------------| ------------------|
+              | contenu cellule 1 | contenu cellule 2 | contenu cellule 3 |
+              | contenu cellule 4 | contenu cellule 5 | contenu cellule 6 |
+              | contenu cellule 7 | contenu cellule 8 | contenu cellule 9 |
+            </pre>
+          </p>
+        </article>
+        <article class="medias">
+          <h2>Insérer des médias et liens dans MarkDown</h2>
+          <h3>Liens</h3>
+          <p>
+            Pour réaliser un lien simple, il faut utiliser la syntaxe suivante:<br/>
+            [title](https://www.example.com)
+            <em>exemples:</em><br/>
+            <pre>     
+              [Lien vers Linkedin](https://www.linkedin.com) 
+              est l'équivalent du code HTML suivant:
+              [Lien vers Linkedin](https://www.linkedin.com)
+            </pre>
+          </p>
+          <h3>Liens relatifs</h3>
+          <p>
+            Pour réaliser un lien simple, il faut utiliser la syntaxe suivante:<br/>
+            [title](folder/readme.md)
+            <em>exemples:</em><br/>
+            <pre>     
+              [Lien vers l'index](/readme.md)
+            </pre>
+          </p>
+          <h3>Images (jpg, png, gif, ...)</h3>
+          <p>
+            Pour afficher une image, il faut utiliser la syntaxe suivante:<br/>
+            ![alt text](image.jpg)
+            <em>exemples:</em><br/>
+            <pre>     
+              ![img-cat](img/cat.jpg)) 
+              est l'équivalent du code HTML suivant:
+              &lt;img src=img/cat.jpg width=50px height=50px>
+            </pre>
+          </p>
+          <h3>Citations</h3>
+          <p>
+            Pour écrire une citation, on utilise un chevron fermant >suivi d'un espace pour débuter la citation.<br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              > Rien de grand ne s'est accompli dans le monde sans passionvous donnera: 
+              > Rien de grand ne s'est accompli dans le monde sans passion
+            </pre>
+          </p>
+          <h3>Mentions</h3>
+          <p>
+            Pour mentionner un membre de votre équipe ou une organistion, on utilise la syntaxe suivante: <br/>
+            username@mentions <br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              ch-vlvd-dev@mentions 
+            </pre>
+          </p>
+          <h3>Bloc de code</h3>
+          <p>
+            Un bloc code commence par une première ligne composée de trois ```  et se termine par une ligne similaire. Vous placez votre code entre ces deux lignes.<br/>
+            username@mentions <br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              ````
+              $result = $dbcon->query('SELECT * FROM tableop WHERE tags LIKE "%php%" ORDER BY title');
+              while ($data = $result->fetch())
+              ```<br/>
+              vous donnera: <br/>
+              $result = $dbcon->query('SELECT * FROM tableop WHERE tags LIKE "%php%" ORDER BY title');
+                while ($data = $result->fetch())
+            </pre>
+          </p>
+          <h3>Emoji</h3>
+          <p>
+            vous permet d'insérer des emojis en utilisant :nom-emoji:<br/>
+            <em>exemples:</em><br/>
+            <pre>     
+              :rocket: <br/>
+            </pre>
+            Vous trouverez une liste complète des emojis <a href="https://gist.github.com/rxaviers/7360908" target="blank">ICI</a>
+          </p>
+        </article>
+        <article class="Sources">
+          <h2>Sources</h2>
+          <p>
+            <ul>
+              <li> <a href="https://blog.wax-o.com/2014/04/tutoriel-un-guide-pour-bien-commencer-avec-markdown/">Un guide pour bien commencer avec markdown</a></li>  
+              <li><a href="https://support.discord.com/hc/fr/articles/210298617-Bases-de-la-mise-en-forme-de-texte-Markdown-mise-en-forme-du-chat-gras-italique-soulign%C3%A9-">Bases de la mise en forme de texte Markdown</a></li> 
+              <li><a href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Github - Basic writing and formatting syntax</a></li>  
+              <li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown cheatsheet</a></li>
+              <li><a href="https://gist.github.com/rxaviers/7360908">Complete list of Emoji</a></li> 
+              <li><a href="https://daringfireball.net/projects/markdown/syntax#precode">Markdown syntax by John Gruber</a></li>
+              <li><a href="https://www.markdownguide.org/basic-syntax/#code">Basic Syntax - Markdown guide</a></li>
+              <li><a href="https://guides.github.com/features/mastering-markdown">Mastering-markdown</a></li>
+              <li><a href="https://commonmark.org/help/">CommonMark</a></li>
+              <li><a href="https://github.com/commonmark/commonmark-spec/issues/399">Github-spec</a></li>  
+              <li><a href="https://www.markdownguide.org/basic-syntax/#lists">Basic Syntax</a></li>
+            </ul>
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html> 
