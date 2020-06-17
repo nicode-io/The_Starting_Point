@@ -1,6 +1,8 @@
 # Sprint - Work done - Progressive enhancement
 Final version of work - Progressive enhancement
 
+## Published on following [GitHub page](https://nicode-be.github.io/sprint-work/)
+
 ## Start date :
 09/06/2020
 
