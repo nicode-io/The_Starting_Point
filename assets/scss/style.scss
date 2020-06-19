@@ -1,0 +1,83 @@
+// This is a silent comment, welcome to SASS, an awesome improve for your CSS
+
+// Let's make variables, so we can use this in our next project for example, be lazy !
+$red: red;
+$blue: blue;
+$mainColor: rgba(245,145,45, 1);
+
+
+// Nesting is sooooo great and pretty !
+header {
+  background: $blue;}
+  nav {
+    background: $red;}
+    ul {
+      background: $mainColor;}
+      li {
+        background: green;}
+
+// Nesting and &, combo nesting 
+a {
+  color:$mainColor;
+  &:hover {
+    text-decoration: underline;}
+    &:visited {
+      color: green;}
+  }
+
+// Ready for maths ? 
+html {
+  font-size: (12 / 16) * 1em;
+}
+
+// Have is own framework will look so great on your portefolio, let's start here
+// Our reusable variables 
+$standard-border-color: gray;
+$winning-border-color: green;
+
+// Our default component class
+.user-dialog-box {
+  border: 10px solid $standard-border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+// Semantic class used in the DOM
+.alert-winning-user {
+  @extend .user-dialog-box; 
+  border-color: $winning-border-color;
+}
+
+// Wanna do this quiet ?
+// Our reusable variables 
+$standard-border-color: gray;
+$winning-border-color: green;
+
+// Our default component silent class
+%standard-dialog-box {
+  border: 10px solid $standard-border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+// Semantic class used in the DOM
+.user-notification {
+  @extend %standard-dialog-box;
+}
+
+// Semantic class used in the DOM
+.alert-winning-user {
+  @extend .user-dialog-box;
+  border-color: $winning-border-color;
+}
+
+// Cherry on the cake... MIXINS
+@mixin dialog-box($border-color: rgb(90, 9, 9)) {
+  border: 10px solid $border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.alert-winning-user {
+  @include dialog-box;
+}
