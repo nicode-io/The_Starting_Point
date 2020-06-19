@@ -13,8 +13,7 @@
   Web Developer Training
   
   ## How :
-  We will follow a learning path composed by following steps:   
-
+  We will follow a learning path composed by following steps: 
     1. La prairie - Tools / Frontend / Algorithms (+/- 1 month)  
     2. La colline - Frontend (+/- 1 month)  
     1. La montagne 1 - Back-end / Server (+/- 2 months)  
