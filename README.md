@@ -18,7 +18,7 @@
   ## Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change and it's so exciting !  
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
-  Thanks by advance for that :heart:
+  Thanks you in advance :heart:
 
 
 
