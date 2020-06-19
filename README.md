@@ -13,13 +13,14 @@
   Web Developer Training
   
   ## How :
-  We will follow a learning path composed by following steps: 
-    1 La prairie - Tools / Frontend / Algorithms (+/- 1 month)  
-    1 La colline - Frontend (+/- 1 month)  
-    1 La montagne 1 - Back-end / Server (+/- 2 months)  
-    1 La montagne 2 - Frameworks and CMS (+/- 2 months)  
-    1 Pâturages d'été - Workshops / Search internship (+/- 2 months)  
-    1 La vallée - Internship (1.5 - 3 months)  
+  We will follow a learning path composed by following steps:   
+
+    1. La prairie - Tools / Frontend / Algorithms (+/- 1 month)  
+    2. La colline - Frontend (+/- 1 month)  
+    1. La montagne 1 - Back-end / Server (+/- 2 months)  
+    1. La montagne 2 - Frameworks and CMS (+/- 2 months)  
+    1. Pâturages d'été - Workshops / Search internship (+/- 2 months)  
+    1. La vallée - Internship (1.5 - 3 months)  
   
   ## Repository content :
   You'll find a subfolder for each learning path's step, content of subfolder is listed below.
