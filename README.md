@@ -2,7 +2,7 @@
   
   ## When : 
   From  **02-06-2020**
-  To  **21-03-2020**
+  To  **21-03-2021**
 
   ## Where : 
   **BeCode A6K-E6K** 
@@ -25,7 +25,7 @@
   You'll find a subfolder for each learning path's step, content of subfolder is listed below.
   Some projects are replicate on a personnal hosting but you'll find every piece of code here too.
   
-  ## Collaboration : 
+  ## Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
   Thanks by advance for that :heart:
