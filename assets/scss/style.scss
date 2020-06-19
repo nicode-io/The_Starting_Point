@@ -1,3 +1,6 @@
+// IMPORTS
+@import "variables.scss";
+
 // ROOT
 *{
   margin:0;
@@ -6,7 +9,6 @@
 }
 
 // HEADER
-
 header {
   display: flex;
   flex-direction: row;
@@ -23,9 +25,7 @@ header {
     padding-left: 10vw;
   }
   nav {
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    @include flexRowCenter;
     ul {
       display: flex;
       flex-direction: row;
@@ -42,7 +42,6 @@ header {
 }
 
 // BODY
-
 body{
   font-family: roboto;
   background: $company-darkgrey;
@@ -121,13 +120,9 @@ body{
 }
 
 // Product partners
-
 .productFeatures {
-  display: flex;
+  @include flexRowCenter;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   background: $company-blue;
   color: #fff;
   h1 {
@@ -151,10 +146,7 @@ body{
 .partners {
   background: $company-lightgrey;
   article {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexRowCenter;
   }
   p {
     margin-top:30px;
@@ -169,10 +161,7 @@ body{
 .callToAction {
   background: #fff;
   .callToAction-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexRowCenter;
     min-height: 15vh;
     div {
       padding: 20px 40px;
@@ -197,7 +186,6 @@ body{
 }
 
 // FOOTER
-
 footer {
   background: $company-darkgrey;
   display: flex;
@@ -238,9 +226,7 @@ footer {
       padding-left: 1vw;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      align-items:center;
+      @include flexRowCenter;
       ul {
         display: flex;
         flex-direction: row;
@@ -266,9 +252,7 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexRowCenter;
     img {
       width: 50%;
       height: 50%;
@@ -310,9 +294,7 @@ footer {
     font-size: 1.1rem;
   }
   .separator2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexRowCenter;
     padding: 2VH;
     background: #fff;
     font-size: 1.1rem;
@@ -323,11 +305,8 @@ footer {
   
   // Product features
   .productFeatures {
-    display: flex;
+    @include flexRowCenter;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: $company-blue;
     color: #fff;
     h1 {
@@ -350,10 +329,7 @@ footer {
   .partners {
     background: $company-lightgrey;
     article {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flexRowCenter;
     }
     p {
       margin-top:30px;
@@ -368,10 +344,7 @@ footer {
   .callToAction {
     background: #fff;
     .callToAction-buttons {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flexRowCenter;
     }
       div {
         padding: 20px 40px;
@@ -394,7 +367,7 @@ footer {
       }
     }
   }
-  
+
 // FOOTER
   footer {
     background: $company-darkgrey;
