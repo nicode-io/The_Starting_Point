@@ -27,7 +27,7 @@
   * :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
   * :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
   * :cow: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
-  * :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
+  * :dart: :raise_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
   ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
