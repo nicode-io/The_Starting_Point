@@ -35,7 +35,7 @@
   Thanks by advance for that :heart:  
   
   
-## 1. **The Meadow**
+## 1. **The Meadow** :cow:
   * Google search *no files*
   * Terminal *no files*
   * Git  
@@ -56,7 +56,10 @@
     * [Learning environment](https://github.com/nicode-be/sprint-work) *details in link*
     * BONUS : [Star-Wars](https://github.com/nicode-be/star-wars-crawl) *stopped*
   * SASS   
-    * SASS/structure apply to [Turlututu](https://github.com/nicode-be/sprint-work), so now on V2
+    * [Learning SASS](https://github.com/nicode-be/learning-sass)  
+    * SASS apply to Turlututu, and upgrade css folder structure, so now on [Turlututu V2](https://github.com/nicode-be/sprint-work)  
+  * RESPONSIVE  
+
   
 
 
