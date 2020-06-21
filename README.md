@@ -10,7 +10,9 @@
   1 c/o A6K, 6000 Charleroi
 
   ## Why :
-  Web Developer Training
+  **BeCode** Web Developer Training
+  *In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is in da house !
+  Give maximum to get maxium :rocket:
   
   ## How :
   We will follow a learning path composed by following steps:  
