@@ -14,12 +14,12 @@
   
   ## How :
   We will follow a learning path composed by following steps:  
-    1. La prairie - Tools / Frontend / Algorithms (+/- 1 month)  
-    2. La colline - Frontend (+/- 1 month)  
-    3. La montagne 1 - Back-end / Server (+/- 2 months)  
-    4. La montagne 2 - Frameworks and CMS (+/- 2 months)  
-    5. Pâturages d'été - Workshops / Search internship (+/- 2 months)  
-    6. La vallée - Internship (1.5 - 3 months)  
+    1. **La prairie** - Tools / Frontend / Algorithms (+/- 1 month)  
+    2. **La colline** - Frontend (+/- 1 month)  
+    3. **La montagne** 1 - Back-end / Server (+/- 2 months)  
+    4. **La montagne** 2 - Frameworks and CMS (+/- 2 months)  
+    5. **Pâturages d'été** - Workshops / Search internship (+/- 2 months)  
+    6. **La vallée - Internship** (1.5 - 3 months)  
   
   ## Repository content :
   You'll find a subfolder for each learning path's step, content of subfolder is listed below.
