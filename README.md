@@ -21,7 +21,7 @@
     3. **The Mountain** 1 - Back-end / Server (+/- 2 months)  
     4. **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
     5. **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
-    6. **The Valley** - Internship (1.5 - 3 months)  
+    6. **The Valley - Internship** - Internship (1.5 - 3 months)  
   
   ## Repository content :
   You'll find a subfolder for each learning path's step, content of subfolder is listed below.
