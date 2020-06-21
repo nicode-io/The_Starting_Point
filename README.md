@@ -41,16 +41,16 @@
   * Git  
     * TeamWork : [Cadavre Exquis](https://github.com/riizbae/Exercice-Cadavre-Exquis-Aurore)  
       * *Those awesome people work with me on this project*:  
-      [Aurore Limage](https://github.com/riizbae)   
-      [Alksandra Slowik](https://github.com/88aleksandra88)  
-      [Bastien Dewerse](https://github.com/DewerseB)  
-      [Loïc Hobe](https://github.com/loichobe)  
+       :star2:[Aurore Limage](https://github.com/riizbae)   
+       :star2:[Alksandra Slowik](https://github.com/88aleksandra88)  
+       :star2:[Bastien Dewerse](https://github.com/DewerseB)  
+       :star2:[Loïc Hobe](https://github.com/loichobe)  
   * Markdown  
     * TeamWork : [Mardown Exercise](https://github.com/ch-vdld-dev/exercice-markdown)  
       * *Those awesome people work with me on this project*:   
-      [Marie Pierard](https://github.com/Marie-Pierard)   
-      [Chris Vdld](https://github.com/ch-vdld-dev)  
-      [Stéphane Kalonji](https://github.com/kalonjis)  
+       :star2:[Marie Pierard](https://github.com/Marie-Pierard)   
+       :star2:[Chris Vdld](https://github.com/ch-vdld-dev)  
+       :star2:[Stéphane Kalonji](https://github.com/kalonjis)  
   * HTML/ CSS  
     * SPRINT 1 Mockup reproduction : [Turlututu V1](https://github.com/nicode-be/sprint-work)  
     * [Learning environment](https://github.com/nicode-be/sprint-work) *details in link*
