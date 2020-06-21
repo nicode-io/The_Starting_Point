@@ -1,14 +1,16 @@
-// IMPORTS
+// &IMPORTS
 @import "variables.scss";
 
-// ROOT
+// &ROOT
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// HEADER
+// &BODY
+
+// *HEADER
 header {
   display: flex;
   flex-direction: row;
@@ -41,13 +43,7 @@ header {
   }
 }
 
-// BODY
-body{
-  font-family: roboto;
-  background: $company-darkgrey;
-  max-width: 100vw;
-}
-
+// *MAIN
 // To-top button 
 .chat-btn {
   position: fixed;
@@ -185,7 +181,7 @@ body{
   }
 }
 
-// FOOTER
+// *FOOTER
 footer {
   background: $company-darkgrey;
   display: flex;
@@ -207,10 +203,12 @@ footer {
 }
 
 
-// Mobile responsive queries
+// &MEDIA QUERIES
 @media only screen and (max-width: 400px) {
+
+// *BODY
   
-// HEADER  
+// *HEADER  
   header {
     display: flex;
     flex-direction: column;
@@ -242,7 +240,7 @@ footer {
     }
   }
   
-// BODY
+// *MAIN
   // To-top button
   .chat-btn {
     position: fixed;
@@ -368,7 +366,7 @@ footer {
     }
   }
 
-// FOOTER
+// *FOOTER
   footer {
     background: $company-darkgrey;
     display: flex;
