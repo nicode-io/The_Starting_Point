@@ -22,12 +22,12 @@
   ### INDEX :
   We will follow a learning path composed by following steps:  
 
-    1. :cow:**The Meadow** - Tools / Frontend / Algorithms (+/- 1 month)  
-    2. :horse::four_leaf_clover:**The Hills** - Frontend (+/- 1 month)  
-    3. :goat:**The Mountain** 1 - Back-end / Server (+/- 2 months)  
-    4. :ram:**The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
-    5. :cow::goat::ram::horse:**The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
-    6. :racehorse::dragon::rocket:**The Valley - Internship** - Internship (1.5 - 3 months)  
+    1. :cow: **The Meadow** - Tools / Frontend / Algorithms (+/- 1 month)  
+    2. :horse::four_leaf_clover: **The Hills** - Frontend (+/- 1 month)  
+    3. :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
+    4. :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
+    5. :cow: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
+    6. :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
   ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
