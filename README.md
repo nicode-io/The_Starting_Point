@@ -1,8 +1,8 @@
 # Becode Learning  
   
   ## When : 
-  From  **02-06-2020**
-  To  **21-03-2021**
+  From:  **02-06-2020**
+  To:  **21-03-2021**
 
   ## Where : 
   **BeCode A6K-E6K** 
