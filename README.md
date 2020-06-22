@@ -29,12 +29,6 @@
   * :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
   * :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
-  ### Collaboration & feedback : 
-  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
-  So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
-  Thanks by advance for that :heart:  
-  
-  
 ## 1. **The Meadow** :cow:
   * Google search *no files*
   * Terminal *no files*
@@ -64,7 +58,10 @@
   * CSS: ANIMATION & TRANSITIONS
     * [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/becode-animation-css)
   
-
+### Collaboration & feedback : 
+  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
+  So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
+  Thanks by advance for that :heart:  
   
 
 
