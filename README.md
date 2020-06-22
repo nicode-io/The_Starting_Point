@@ -59,6 +59,11 @@
     * [Learning SASS](https://github.com/nicode-be/learning-sass)  
     * SASS apply to Turlututu, and upgrade css folder structure, so now on [Turlututu V2](https://github.com/nicode-be/sprint-work)  
   * RESPONSIVE  
+    * [Exercise 1 - Discover responsive](https://github.com/nicode-be/ResponsiveDiscoveryExercise)  
+    * [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/Responsive-Exercise2)  
+  * CSS: ANIMATION & TRANSITIONS
+    * [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/becode-animation-css)
+  
 
   
 
