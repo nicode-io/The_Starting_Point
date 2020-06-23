@@ -36,7 +36,7 @@
   * Google search *no files*
   * Terminal *no files*
   * Git  
-    * 01-01 TeamWork : [Cadavre Exquis](https://github.com/nicode-be/01-01-Exercice-Cadavre-Exquis)  
+    * 01-01 TeamWork : [Cadavre Exquis](https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis/tree/846758ac8c2894bf51408bd3aa4a4bf909cdc165)  
       * *Those awesome people work with me on this project*:  
        :star2:[Aurore Limage](https://github.com/riizbae)   
        :star2:[Alksandra Slowik](https://github.com/88aleksandra88)  
