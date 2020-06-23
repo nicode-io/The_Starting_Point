@@ -33,33 +33,34 @@
   * :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
 ## 1. **The Meadow** :cow:
-  * Google search *no files*
-  * Terminal *no files*
+  * Google search *no files* *Completed* :trophy:
+  * Terminal *no files* *Completed* :trophy:
   * Git  
-    * 01-01 TeamWork : [Cadavre Exquis](https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis/tree/846758ac8c2894bf51408bd3aa4a4bf909cdc165)  
+    * :white_check_mark: **01-01** [TeamWork : Cadavre Exquis](https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
-       :star2:[Aurore Limage](https://github.com/riizbae)   
-       :star2:[Alksandra Slowik](https://github.com/88aleksandra88)  
-       :star2:[Bastien Dewerse](https://github.com/DewerseB)  
-       :star2:[Loïc Hobe](https://github.com/loichobe)  
+       :star:[Aurore Limage](https://github.com/riizbae)   
+       :star:[Alksandra Slowik](https://github.com/88aleksandra88)  
+       :star:[Bastien Dewerse](https://github.com/DewerseB)  
+       :star:[Loïc Hobe](https://github.com/loichobe)  
   * Markdown  
-    * TeamWork : [Mardown Exercise](https://github.com/nicode-be/01-02-Exercise-markdown)  
+    * :white_check_mark: **01-02** [TeamWork : Mardown Exercise](https://github.com/nicode-be/01-02-Exercise-markdown)  
       * *Those awesome people work with me on this project*:   
-       :star2:[Marie Pierard](https://github.com/Marie-Pierard)   
-       :star2:[Chris Vdld](https://github.com/ch-vdld-dev)  
-       :star2:[Stéphane Kalonji](https://github.com/kalonjis)  
+       :star:[Marie Pierard](https://github.com/Marie-Pierard)   
+       :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
+       :star:[Stéphane Kalonji](https://github.com/kalonjis)  
   * HTML/ CSS  
-    * SPRINT 1 Mockup reproduction : [Turlututu V1](https://github.com/nicode-be/sprint-work)  
-    * [Learning environment](https://github.com/nicode-be/sprint-work) *details in link*
-    * BONUS : [Star-Wars](https://github.com/nicode-be/star-wars-crawl) *stopped*
+    * :white_check_mark: **01-03** [Mockup reproduction : Turlututu V1](https://github.com/nicode-be/01-03-Turlututu) 
+    * :white_check_mark: **01-04** [Learning environment](https://github.com/nicode-be/01-04-Learning-environment) *details in link*. 
+    * :grey_exclamation::pencil2:**01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *stopped* :grey_exclamation::pencil2:
   * SASS   
-    * [Learning SASS](https://github.com/nicode-be/learning-sass)  
-    * SASS apply to Turlututu, and upgrade css folder structure, so now on [Turlututu V2](https://github.com/nicode-be/sprint-work)  
+    * :white_check_mark: **01-06** [Learning SASS](https://github.com/nicode-be/01-06-Learning-sass)  
+    * :white_check_mark: **01-03-V2** [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
   * RESPONSIVE  
-    * [Exercise 1 - Discover responsive](https://github.com/nicode-be/ResponsiveDiscoveryExercise)  
-    * [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/Responsive-Exercise2)  
+    * :white_check_mark: **01-07** [Exercise 1 - Discover responsive](https://github.com/nicode-be/01-07-Responsive-discover-exercise) 
+    * :grey_exclamation::pencil2: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/01-08-Responsive-zozor) *MVP Completed* 
   * CSS: ANIMATION & TRANSITIONS
-    * [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/becode-animation-css)
+    * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
+    * :construction: **01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
   
 ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
