@@ -3,10 +3,10 @@
 ### Repository links:
 * [Exercise 1](https://github.com/nicode-be/Learning-Environment/tree/master/Exercice%201)
 * [Exercise 2](https://github.com/nicode-be/Learning-Environment/tree/master/Exercice%202)
-* [Exercise 3](https://github.com/nicode-be/kikirpa-asbl)
-* [Exercice 4](https://github.com/nicode-be/404-Page)
+* [Exercise 3](https://github.com/nicode-be/01-04-01-Kik-Irpa-asbl)
+* [Exercice 4](https://github.com/nicode-be/01-04-02-Page-404)
 * Exercice 5 - Postponed
-* Exercise 6 - Work in progress
+* [Exercise 6](https://github.com/nicode-be/01-04-03-Star-wars-crawl)
 
 ### Start :
 #### 12/06/2020
