@@ -1,0 +1,21 @@
+[submodule "01-01-Exercise-Cadavre-Exquis"]
+	path = 01-01-Exercise-Cadavre-Exquis
+	url = https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis
+[submodule "01-02-Exercise-markdown"]
+	path = 01-02-Exercise-markdown
+	url = https://github.com/nicode-be/01-02-Exercise-markdown
+[submodule "01-03-Turlututu"]
+	path = 01-03-Turlututu
+	url = https://github.com/nicode-be/01-03-Turlututu
+[submodule "01-04-Learning-environment"]
+	path = 01-04-Learning-environment
+	url = https://github.com/nicode-be/01-04-Learning-environment
+[submodule "01-05-Star-wars-crawl"]
+	path = 01-05-Star-wars-crawl
+	url = https://github.com/nicode-be/01-05-Star-wars-crawl
+[submodule "01-06-Learning-sass"]
+	path = 01-06-Learning-sass
+	url = https://github.com/nicode-be/01-06-Learning-sass
+[submodule "01-07-Responsive-discover-exercise"]
+	path = 01-07-Responsive-discover-exercise
+	url = https://github.com/nicode-be/01-07-Responsive-discover-exercise
