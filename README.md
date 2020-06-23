@@ -36,14 +36,14 @@
   * Google search *no files*
   * Terminal *no files*
   * Git  
-    * TeamWork : [Cadavre Exquis](https://github.com/riizbae/Exercice-Cadavre-Exquis-Aurore)  
+    * 01-01 TeamWork : [Cadavre Exquis](https://github.com/nicode-be/01-01-Exercice-Cadavre-Exquis)  
       * *Those awesome people work with me on this project*:  
        :star2:[Aurore Limage](https://github.com/riizbae)   
        :star2:[Alksandra Slowik](https://github.com/88aleksandra88)  
        :star2:[Bastien Dewerse](https://github.com/DewerseB)  
        :star2:[Loïc Hobe](https://github.com/loichobe)  
   * Markdown  
-    * TeamWork : [Mardown Exercise](https://github.com/ch-vdld-dev/exercice-markdown)  
+    * TeamWork : [Mardown Exercise](https://github.com/nicode-be/01-02-Exercise-markdown)  
       * *Those awesome people work with me on this project*:   
        :star2:[Marie Pierard](https://github.com/Marie-Pierard)   
        :star2:[Chris Vdld](https://github.com/ch-vdld-dev)  
