@@ -21,7 +21,6 @@
   
   ### Timeline :  
   [Find timeline evolution of training here](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
-  <iframe allowfullscreen src='https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4' style='width:100%;height:100%;border:none;' />
   
   ### INDEX :
   We will follow a learning path composed by following steps:  
