@@ -19,3 +19,15 @@
 [submodule "01-07-Responsive-discover-exercise"]
 	path = 01-07-Responsive-discover-exercise
 	url = https://github.com/nicode-be/01-07-Responsive-discover-exercise
+[submodule "01-08-Responsive-zozor"]
+	path = 01-08-Responsive-zozor
+	url = https://github.com/nicode-be/01-08-Responsive-zozor
+[submodule "01-09-becode-animation-css"]
+	path = 01-09-becode-animation-css
+	url = https://github.com/nicode-be/01-09-becode-animation-css
+[submodule "01-10-scss-animated-card"]
+	path = 01-10-scss-animated-card
+	url = https://github.com/nicode-be/01-10-scss-animated-card
+[submodule "01-11-algo-js"]
+	path = 01-11-algo-js
+	url = https://github.com/nicode-be/01-11-algo-js
