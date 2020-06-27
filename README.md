@@ -63,7 +63,12 @@
       * :grey_exclamation::pencil2:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
   * JavaScript
     *  :construction: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
-  
+
+### Personnal projects : 
+In life, you have to start somewhere, otherwise you'll never get anywhere. [You will find here the beginning of a portfolio](https://wwww.nicode.be), it contains more perseverance and passion than technique for the moment, but be sure that this will change quickly !
+
+Here is [a Tetris game](https://www.nicode.be/lightris) made thanks to [Freecodecamp.org](https:www.freecodecamp.org). I brought a minimalist design, the superfluous is more than often useless.
+
 ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
