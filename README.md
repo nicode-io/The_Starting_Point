@@ -65,7 +65,7 @@
     *  :construction: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
 
 ### Personnal projects : 
-In life, you have to start somewhere, otherwise you'll never get anywhere. [You will find here the beginning of a portfolio](https://wwww.nicode.be), it contains more perseverance and passion than technique for the moment, but be sure that this will change quickly !
+In life, you have to start somewhere, otherwise you'll never get anywhere. [You will find here the beginning of a portfolio](https://wwww.nicode.be), it'a fresh-start/side-project, I will upgrade it in a few weeks.
 
 Here is [a Tetris game](https://www.nicode.be/lightris) made thanks to [Freecodecamp.org](https:www.freecodecamp.org). I brought a minimalist design, the superfluous is more than often useless.
 
