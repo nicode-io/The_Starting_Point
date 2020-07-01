@@ -12,7 +12,7 @@
   ### Why :
   **BeCode** Web Developer Training  
   In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is in da house !
-  Give maximum to get maxium :rocket:
+  Give maximum to get maximum :rocket:
 
   ### Project goals : 
   * Provide a summary of all the projects carried out in order to facilitate access to them
