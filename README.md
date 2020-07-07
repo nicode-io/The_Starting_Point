@@ -63,6 +63,12 @@
       * :grey_exclamation::pencil2:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
   * JavaScript
     *  :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
+  * BootStrap
+    *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)
+       * *Those awesome people work with me on this project*:   
+       :star:[Gerardo Cella](https://github.com/GerardoCella7)   
+       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
+       :star:[Pierre Weets](https://github.com/PierreWeets)  
   
 ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career, it's a big change but it's so exciting !  
