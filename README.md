@@ -71,7 +71,7 @@
        :star:[Pierre Weets](https://github.com/PierreWeets)  
   
 ### Collaboration & feedback : 
-  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's a big change but it's so exciting !  
+  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's time for me to make dreams reality !  
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
   Thanks by advance for that :heart:  
   
