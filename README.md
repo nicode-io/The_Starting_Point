@@ -11,8 +11,10 @@ Adding SASS to the project
 ## Location :
 BeCode Charleroi 
 
-## Contributor :
-[Nicolas Denoël](https://github.com/nicode-be/)  
+### Collaboration & feedback : 
+  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director. It's time for dreams to come true and for the digital world to become my daily life.
+  So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
+  Thanks by advance for that :heart:  
 
 ## Work context :
 Work done as part of the BeCode web developer training.
