@@ -31,3 +31,9 @@
 [submodule "01-11-algo-js"]
 	path = 01-11-algo-js
 	url = https://github.com/nicode-be/01-11-algo-js
+[submodule "02-01-js-step2"]
+	path = 02-01-js-step2
+	url = https://github.com/nicode-be/02-01-js-step2
+[submodule "PP-02-Skelethon"]
+	path = PP-02-Skelethon
+	url = https://github.com/nicode-be/PP-02-Skelethon

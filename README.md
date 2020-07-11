@@ -69,6 +69,14 @@
        :star:[Gerardo Cella](https://github.com/GerardoCella7)   
        :star:[Robby Delvaux](https://github.com/Delvaux1986)  
        :star:[Pierre Weets](https://github.com/PierreWeets) 
+
+## 2. **The Hills** :horse:
+  * Javascript
+    * :construction: [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2)  
+    * :construction: [Step 2 - Serie 2 - Exercises](https://github.com/nicode-be/02-01-js-step2)  
+  * Python/Django
+    * :construction: [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
+
   
 ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's time for me to make dreams reality !  
