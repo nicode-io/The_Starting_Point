@@ -33,8 +33,8 @@
   * :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
 ## 1. **The Field** :cow:
-  * Google search *no files* *Completed* :trophy:
-  * Terminal *no files* *Completed* :trophy:
+  * Google search 
+  * Terminal
   * Git  
     * :white_check_mark: **01-01** [TeamWork : Cadavre Exquis](https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
