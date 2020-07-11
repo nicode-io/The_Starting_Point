@@ -15,7 +15,7 @@
   Give maximum to get maximum :rocket:
 
 ### Collaboration & feedback : 
-  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's time for me to make dreams reality !  
+  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director. It's time for dreams to come true and for the digital world to become my daily life.
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
   Thanks by advance for that :heart:  
   
