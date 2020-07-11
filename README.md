@@ -51,18 +51,20 @@
   * HTML/ CSS  
       * :white_check_mark: **01-03** [Mockup reproduction : Turlututu V1](https://github.com/nicode-be/01-03-Turlututu) 
       * :white_check_mark: **01-04** [Learning environment](https://github.com/nicode-be/01-04-Learning-environment) *details in link*. 
-      * :grey_exclamation::pencil2:**01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *MVP Completed*
+      * **01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *MVP Completed*
     * SASS   
       * :white_check_mark: **01-06** [Learning SASS](https://github.com/nicode-be/01-06-Learning-sass)  
       * :white_check_mark: **01-03-V2** [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
     * RESPONSIVE  
       * :white_check_mark: **01-07** [Exercise 1 - Discover responsive](https://github.com/nicode-be/01-07-Responsive-discover-exercise) 
-      * :grey_exclamation::pencil2: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/01-08-Responsive-zozor) *MVP Completed* 
+      * :white_check_mark: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/01-08-Responsive-zozor) *MVP Completed* 
     * CSS: ANIMATION & TRANSITIONS
       * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
       * :grey_exclamation::pencil2:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
   * JavaScript
     *  :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
+  * Minimal Tetris
+    * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
   * BootStrap
     *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)
        * *Those awesome people work with me on this project*:   
@@ -72,10 +74,10 @@
 
 ## 2. **The Hills** :horse:
   * Javascript
-    * :construction: [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2)  
-    * :construction: [Step 2 - Serie 2 - Exercises](https://github.com/nicode-be/02-01-js-step2)  
+    * :construction: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2)  
+    * :construction: **02-02** [Step 2 - Serie 2 - Exercises](#)  
   * Python/Django
-    * :construction: [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
+    * :construction: **PP-02** [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
 
   
 ### Collaboration & feedback : 
