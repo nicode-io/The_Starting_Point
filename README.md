@@ -57,7 +57,7 @@
       * :white_check_mark: **01-03-V2** [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
     * RESPONSIVE  
       * :white_check_mark: **01-07** [Exercise 1 - Discover responsive](https://github.com/nicode-be/01-07-Responsive-discover-exercise) 
-      * :white_check_mark: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/01-08-Responsive-zozor) *MVP Completed* 
+      * :white_check_mark: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/01-08-Responsive-zozor) *MVP* 
     * CSS: ANIMATION & TRANSITIONS
       * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
       * :grey_exclamation::pencil2:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
