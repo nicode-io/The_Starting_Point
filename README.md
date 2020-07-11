@@ -51,7 +51,7 @@
   * HTML/ CSS  
       * :white_check_mark: **01-03** [Mockup reproduction : Turlututu V1](https://github.com/nicode-be/01-03-Turlututu) 
       * :white_check_mark: **01-04** [Learning environment](https://github.com/nicode-be/01-04-Learning-environment) *details in link*. 
-      * **01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *MVP Completed*
+      * :white_check_mark: **01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *MVP Completed*
     * SASS   
       * :white_check_mark: **01-06** [Learning SASS](https://github.com/nicode-be/01-06-Learning-sass)  
       * :white_check_mark: **01-03-V2** [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
