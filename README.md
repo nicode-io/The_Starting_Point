@@ -14,23 +14,29 @@
   In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is in da house !
   Give maximum to get maximum :rocket:
 
-  ### Project goals : 
-  * Provide a summary of all the projects carried out in order to facilitate access to them
-  * Later, create a website 
-  * Maybe create sort of storytelling who will tell how this BeCode story was such fantastic *(I'm already sure it will be.)*
+### Collaboration & feedback : 
+  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's time for me to make dreams reality !  
+  So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
+  Thanks by advance for that :heart:  
   
-  ### Timeline :  
-  [Find timeline evolution of training here](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
-  
-  ### INDEX :
-  We will follow a learning path composed by following steps:  
 
-  * :cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)  
-  * :horse: **The Hills** - Frontend (+/- 1 month)  
-  * :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
-  * :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
-  * :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
-  * :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
+### Project goals : 
+* Provide a summary of all the projects carried out in order to facilitate access to them
+* Later, create a website 
+* Maybe create sort of storytelling who will tell how this BeCode story was such fantastic *(I'm already sure it will be.)*
+
+### Timeline :  
+[Find timeline evolution of training here](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
+
+### INDEX :
+We will follow a learning path composed by following steps:  
+
+* :cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)  
+* :horse: **The Hills** - Frontend (+/- 1 month)  
+* :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
+* :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
+* :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
+* :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
 ## 1. **The Field** :cow:
   * Google search 
@@ -79,12 +85,7 @@
   * Python/Django
     * :construction: **PP-02** [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
 
-  
-### Collaboration & feedback : 
-  I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's time for me to make dreams reality !  
-  So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
-  Thanks by advance for that :heart:  
-  
+
 
 
 
