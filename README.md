@@ -25,14 +25,14 @@
   ### INDEX :
   We will follow a learning path composed by following steps:  
 
-  * :cow: **The Meadow** - Tools / Frontend / Algorithms (+/- 1 month)  
+  * :cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)  
   * :horse: **The Hills** - Frontend (+/- 1 month)  
   * :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
   * :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
   * :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
   * :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
   
-## 1. **The Meadow** :cow:
+## 1. **The Field** :cow:
   * Google search *no files* *Completed* :trophy:
   * Terminal *no files* *Completed* :trophy:
   * Git  
@@ -68,7 +68,7 @@
        * *Those awesome people work with me on this project*:   
        :star:[Gerardo Cella](https://github.com/GerardoCella7)   
        :star:[Robby Delvaux](https://github.com/Delvaux1986)  
-       :star:[Pierre Weets](https://github.com/PierreWeets)  
+       :star:[Pierre Weets](https://github.com/PierreWeets) 
   
 ### Collaboration & feedback : 
   I, [Nicolas](https://github.com/nicode-be), am at a start of a new career after 15 years as manager and sales director, it's time for me to make dreams reality !  
