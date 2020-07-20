@@ -82,8 +82,10 @@ We will follow a learning path composed by following steps:
   * Javascript
     * :construction: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2)  
     * :construction: **02-02** [Step 2 - Serie 2 - Exercises](#)  
+    * :white_check_mark: **TW-CookieClicker** [TeamWork : Cookie Clicker](https://github.com/nicode-be/TW-CookieClicker)  
   * Python/Django
     * :construction: **PP-02** [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
+  
 
 
 
