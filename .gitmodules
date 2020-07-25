@@ -43,6 +43,3 @@
 [submodule "02-02-js-step2-part2"]
 	path = 02-02-js-step2-part2
 	url = https://github.com/nicode-be/02-02-js-step2-part2
-[submodule "02-03-Hangman"]
-	path = 02-03-Hangman
-	url = https://github.com/nicode-be/02-03-Hangman
