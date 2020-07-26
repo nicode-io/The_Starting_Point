@@ -90,6 +90,7 @@ We will follow a learning path composed by following steps:
     * :construction: **02-03** [Pew Pew Game](https://github.com/nicode-be/02-03-PewPew)  
     * :construction: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman)
   * Python/Django
+    * :construction: **AL-01** [Autonom Learning - Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
     * :construction: **PP-02** [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
  
 
