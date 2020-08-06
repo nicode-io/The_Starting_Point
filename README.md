@@ -26,7 +26,7 @@
 * Maybe create sort of storytelling who will tell how this BeCode story was such fantastic *(I'm already sure it will be.)*
 
 ### Timeline :  
-[Find timeline evolution of training here](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
+[Discover the great timeline of this adventure here :calendar:](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 ### INDEX :
 We will follow a learning path composed by following steps:  
