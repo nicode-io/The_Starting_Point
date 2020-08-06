@@ -67,12 +67,12 @@ We will follow a learning path composed by following steps:
     * CSS: ANIMATION & TRANSITIONS
       * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
       * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
-    * BOOTSTRAP
-      *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
-        * *Those awesome people work with me on this project*:   
-        :star:[Gerardo Cella](https://github.com/GerardoCella7)   
-        :star:[Robby Delvaux](https://github.com/Delvaux1986)  
-        :star:[Pierre Weets](https://github.com/PierreWeets) 
+  * BOOTSTRAP
+    *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
+      * *Those awesome people work with me on this project*:    
+      :star:[Gerardo Cella](https://github.com/GerardoCella7)   
+      :star:[Robby Delvaux](https://github.com/Delvaux1986)  
+      :star:[Pierre Weets](https://github.com/PierreWeets) 
   * JAVASCRIPT
     *  :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
     * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
