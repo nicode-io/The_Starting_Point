@@ -15,16 +15,10 @@
   Give maximum to get maximum :rocket:
 
 ### Collaboration & feedback : 
-  Hello, I'm [Nicolas](https://github.com/nicode-be) and at a start of a new career after 15 years as manager and sales director. It's time for dreams to come true and for the digital world to become my daily life.
+  Hello, I'm [Nicolas](https://github.com/nicode-be) and at a start of a new career after 15 years as manager and sales director. It's time for me to make my dreams   come true and join a team for ambitious projects.
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
   If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me !  
   Thanks by advance for that :heart:  
-  
-
-### Project goals : 
-* Provide a summary of all the projects carried out in order to facilitate access to them
-* Later, create a website 
-* Maybe create sort of storytelling who will tell how this BeCode story was such fantastic *(I'm already sure it will be.)*
 
 ### Timeline :  
 [Discover the great timeline of this adventure here :calendar:](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
