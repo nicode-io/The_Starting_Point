@@ -69,7 +69,7 @@ We will follow a learning path composed by following steps:
       * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
     * BOOTSTRAP
       *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)
-        * *Those awesome people work with me on this project*:   
+        *Those awesome people work with me on this project*:   
         :star:[Gerardo Cella](https://github.com/GerardoCella7)   
         :star:[Robby Delvaux](https://github.com/Delvaux1986)  
         :star:[Pierre Weets](https://github.com/PierreWeets) 
