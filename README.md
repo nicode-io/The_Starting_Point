@@ -1,4 +1,4 @@
-# Becode - Intensive Web-Developer Training
+# Becode - Intensive Web-Developer Training :mortar_board:
   
   ### When : 
   From:  **02-06-2020**
