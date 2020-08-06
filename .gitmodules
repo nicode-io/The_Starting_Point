@@ -52,3 +52,6 @@
 [submodule "AL-01-PythonCrashCourse"]
 	path = AL-01-PythonCrashCourse
 	url = https://github.com/nicode-be/AL-01-PythonCrashCourse
+[submodule "TW-CookieClicker"]
+	path = TW-CookieClicker
+	url = https://github.com/nicode-be/TW-CookieClicker
