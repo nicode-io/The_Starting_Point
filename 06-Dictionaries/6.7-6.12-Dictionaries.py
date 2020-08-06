@@ -86,5 +86,5 @@ cities = {
     },
 }
 for city, city_infos in cities.items():
-    print(f"Visit {city.title()}, located in {city_infos['country'].title()} you will have a {city_infos['weather']}. {city_infos['fact']}")
+    print(f'Visit {city.title()}, located in {city_infos["country"].title()} you will have a {city_infos["weather"]}. {city_infos["fact"]}')
 
