@@ -41,14 +41,14 @@ We will follow a learning path composed by following steps:
 ## 1. **The Field** :cow:
   * Google search 
   * Terminal
-  * Git  
+  * GIT 
     * :white_check_mark: **01-01** [TeamWork : Cadavre Exquis](https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
        :star:[Aurore Limage](https://github.com/riizbae)   
        :star:[Alksandra Slowik](https://github.com/88aleksandra88)  
        :star:[Bastien Dewerse](https://github.com/DewerseB)  
        :star:[Loïc Hobe](https://github.com/loichobe)  
-  * Markdown  
+  * MARKDOWN  
     * :white_check_mark: **01-02** [TeamWork : Mardown Exercise](https://github.com/nicode-be/01-02-Exercise-markdown)  
       * *Those awesome people work with me on this project*:   
        :star:[Marie Pierard](https://github.com/Marie-Pierard)   
