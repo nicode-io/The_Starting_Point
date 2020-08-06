@@ -17,7 +17,7 @@
 ### Collaboration & feedback : 
   Hello, I'm [Nicolas](https://github.com/nicode-be) and at a start of a new career after 15 years as manager and sales director. It's time for dreams to come true and for the digital world to become my daily life.
   So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
-  If you are looking to hire a strong and atypical profile in your team do not hesitate to contact me !
+  If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me !
   Thanks by advance for that :heart:  
   
 
