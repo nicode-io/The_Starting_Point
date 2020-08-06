@@ -69,7 +69,7 @@ We will follow a learning path composed by following steps:
       * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
   * BOOTSTRAP
     *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
-      * *Those awesome people work with me on this project*:   
+        * *Those awesome people work with me on this project*:   
       :star:[Gerardo Cella](https://github.com/GerardoCella7)   
       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
       :star:[Pierre Weets](https://github.com/PierreWeets)  
@@ -81,7 +81,7 @@ We will follow a learning path composed by following steps:
   * JAVASCRIPT
     * :white_check_mark: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2) 
     * :white_check_mark: **TW-CookieClicker** [TeamWork : Cookie Clicker](https://github.com/nicode-be/TW-CookieClicker)  
-      * *Those awesome people work with me on this project*:   
+       * *Those awesome people work with me on this project*:   
       :star: [Calvin Jitnaree](https://github.com/Calvin781)  
       :star: [Simon Duquaine](https://github.com/simonduquaine)  
       :star: [Albert Ndizeye](https://github.com/AlbertNd)  
