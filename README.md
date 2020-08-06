@@ -54,7 +54,7 @@ We will follow a learning path composed by following steps:
        :star:[Marie Pierard](https://github.com/Marie-Pierard)   
        :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
        :star:[Stéphane Kalonji](https://github.com/kalonjis)  
-  * HTML/ CSS  
+  * HTML / CSS  
       * :white_check_mark: **01-03** [Mockup reproduction : Turlututu V1](https://github.com/nicode-be/01-03-Turlututu) 
       * :white_check_mark: **01-04** [Learning environment](https://github.com/nicode-be/01-04-Learning-environment) *details in link*. 
       * :white_check_mark: **01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *MVP Completed*
@@ -67,19 +67,18 @@ We will follow a learning path composed by following steps:
     * CSS: ANIMATION & TRANSITIONS
       * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
       * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
-  * JavaScript
+    * BOOTSTRAP
+      *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)
+        * *Those awesome people work with me on this project*:   
+        :star:[Gerardo Cella](https://github.com/GerardoCella7)   
+        :star:[Robby Delvaux](https://github.com/Delvaux1986)  
+        :star:[Pierre Weets](https://github.com/PierreWeets) 
+  * JAVASCRIPT
     *  :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
-  * Minimal Tetris
     * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
-  * BootStrap
-    *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)
-       * *Those awesome people work with me on this project*:   
-       :star:[Gerardo Cella](https://github.com/GerardoCella7)   
-       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
-       :star:[Pierre Weets](https://github.com/PierreWeets) 
 
 ## 2. **The Hills** :horse:
-  * Javascript
+  * JAVASCRIPT
     * :white_check_mark: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2) 
     * :white_check_mark: **TW-CookieClicker** [TeamWork : Cookie Clicker](https://github.com/nicode-be/TW-CookieClicker)  
       * *Those awesome people work with me on this project*:   
@@ -89,9 +88,9 @@ We will follow a learning path composed by following steps:
     * :white_check_mark: **02-02** [Step 2 - Serie 2 - Exercises](https://github.com/nicode-be/02-02-js-step2-part2)    
     * :negative_squared_cross_mark: **02-03** [Pew Pew Game](https://github.com/nicode-be/02-03-PewPew)  
     * :soon: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman)
-  * Python/Django
+  * PYTHON - DJANGO
     * :soon: **AL-01** [Autonom Learning - Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
-    * :construction: **PP-02** [SKELETHON - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
+    * :construction: **PP-02** [SKELETHON - DJANGO - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
  
 
 
