@@ -32,7 +32,7 @@
 We will follow a learning path composed by following steps:  
 
 * :cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)  
-* :horse: **The Hills** - Frontend (+/- 1 month)  
+* :horse: **The Hill** - Frontend (+/- 1 month)  
 * :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
 * :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
 * :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
@@ -77,7 +77,7 @@ We will follow a learning path composed by following steps:
     * :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
     * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
 
-## 2. **The Hills** :horse:
+## 2. **The Hill** :horse:
   * JAVASCRIPT
     * :white_check_mark: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2) 
     * :white_check_mark: **TW-CookieClicker** [TeamWork : Cookie Clicker](https://github.com/nicode-be/TW-CookieClicker)  
