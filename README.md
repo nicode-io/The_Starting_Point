@@ -11,7 +11,7 @@
 
   ### Why :
   **BeCode** Web Developer Training  
-  In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is in da house !
+  In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
   Give maximum to get maximum :rocket:
 
 ### Collaboration & feedback : 
