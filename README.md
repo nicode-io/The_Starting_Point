@@ -36,7 +36,7 @@ We will follow a learning path composed by following steps:
 * :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
 * :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
 * :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
-* :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (1.5 - 3 months)  
+* :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (3 months)  
   
 ## 1. **The Field** :cow:
   * Google search 
