@@ -72,9 +72,9 @@ We will follow a learning path composed by following steps:
       * *Those awesome people work with me on this project*:    
       :star:[Gerardo Cella](https://github.com/GerardoCella7)   
       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
-      :star:[Pierre Weets](https://github.com/PierreWeets) 
+      :star:[Pierre Weets](https://github.com/PierreWeets)  
   * JAVASCRIPT
-    *  :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
+    * :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
     * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
 
 ## 2. **The Hills** :horse:
