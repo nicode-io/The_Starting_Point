@@ -1,25 +1,23 @@
 # Becode - Intensive Web-Developer Training :mortar_board:
-  
-  ### When : 
-  From:  **02-06-2020**
-  To:  **21-03-2021**
 
-  ### Where : 
-  **BeCode A6K-E6K** 
-  Square des martyrs 
-  1 c/o A6K, 6000 Charleroi
+### When : 
+From:  **02-06-2020**
+To:  **21-03-2021**
 
-  ### Why :
-  **BeCode** Web Developer Training  
-  In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
-  Give maximum to get maximum :rocket:
+### Where : 
+**BeCode A6K-E6K** 
+
+### Why :
+**BeCode** Web Developer Training  
+In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
+Give maximum to get maximum :rocket:
 
 ### Collaboration & feedback : 
-  Hello, I'm [Nicolas](https://github.com/nicode-be) and at a start of a new career after 15 years as manager and sales director. 
-  It's time for me to make my dreams   come true and join a team for ambitious projects.  
-  So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
-  If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me !  
-  Thanks by advance for that :heart:  
+Hello, I'm [Nicolas](https://github.com/nicode-be) and at a start of a new career after 15 years as manager and sales director. 
+It's time for me to make my dreams   come true and join a team for ambitious projects.  
+So feel strongly to give me any recommandation about my work, advice for future projects, and all comments you want.  
+If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me !  
+Thanks by advance for that :heart:  
 
 ### Timeline :  
 [Discover the great timeline of this adventure here :calendar:](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
@@ -85,7 +83,7 @@ We will follow a learning path composed by following steps:
     * :negative_squared_cross_mark: **02-03** [Pew Pew Game](https://github.com/nicode-be/02-03-PewPew)  
     * :soon: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman)
   * PYTHON - DJANGO
-    * :soon: **AL-01** [Autonom Learning - Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
+    * :white_check_mark: **AL-01** [Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
     * :construction: **PP-02** [SKELETHON - DJANGO - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
  
 
