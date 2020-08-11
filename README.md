@@ -81,7 +81,7 @@ We will follow a learning path composed by following steps:
       :star: [Albert Ndizeye](https://github.com/AlbertNd)  
     * :white_check_mark: **02-02** [Step 2 - Serie 2 - Exercises](https://github.com/nicode-be/02-02-js-step2-part2)    
     * :negative_squared_cross_mark: **02-03** [Pew Pew Game](https://github.com/nicode-be/02-03-PewPew)  
-    * :soon: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman)
+    * :white_check_mark: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman_Game)
   * PYTHON - DJANGO
     * :white_check_mark: **AL-01** [Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
     * :construction: **PP-02** [SKELETHON - DJANGO - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
