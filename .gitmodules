@@ -46,9 +46,6 @@
 [submodule "02-03-PewPew"]
 	path = 02-03-PewPew
 	url = https://github.com/nicode-be/02-03-PewPew
-[submodule "02-04-Hangman"]
-	path = 02-04-Hangman
-	url = https://github.com/nicode-be/02-04-Hangman
 [submodule "AL-01-PythonCrashCourse"]
 	path = AL-01-PythonCrashCourse
 	url = https://github.com/nicode-be/AL-01-PythonCrashCourse
