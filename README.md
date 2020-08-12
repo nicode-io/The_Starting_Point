@@ -22,3 +22,22 @@ Step-by-Step
             check if the user is in sudo group  
         *   $ id username    
 
+*   Disabling password authentication on your server
+    *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
+    *   $ sudo nano /etc/ssh/sshd_config
+    *   Uncomment line: "PasswordAuthentication yes" and change it to "PasswordAuthentication no"
+    *   Save and close file
+    *   $ sudo systemctl restart ssh 
+    *   As precaution, open a new terminal window and teest that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
+
+*   Setting up basic firewall
+    *   Each applications have its own settings for firewall    
+        you can see the app list :  
+    *   $ sudo ufw app list  
+        authorize OpenSSH : 
+    *   $ sudo ufw allow OpenSSH 
+        enable then firewall :
+    *   $ sudo ufw enable   
+        check status
+    *   $ sudo ufw status
+    *   Be sure to allow future applications through the firewall to allow traffic in
