@@ -10,6 +10,3 @@
 [submodule "TW-CookieClicker"]
 	path = TW-CookieClicker
 	url = https://github.com/nicode-be/TW-CookieClicker
-[submodule "02-04-Hangman_Game"]
-	path = 02-04-Hangman_Game
-	url = https://github.com/nicode-be/02-04-Hangman_Game
