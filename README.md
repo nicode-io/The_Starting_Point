@@ -1,5 +1,16 @@
 # Becode - Intensive Web-Developer Training :mortar_board:
 
+[Discover the great timeline of this adventure here :calendar:](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
+[![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) 
+[![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) 
+[![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://codeclimate.com/github/badges/badgerbadgerbadger) 
+[![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/issues) 
+[![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls) 
+[![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) 
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) 
+[![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
+
 ### When : 
 From:  **02-06-2020**
 To:  **21-03-2021**
@@ -84,8 +95,10 @@ We will follow a learning path composed by following steps:
     * :white_check_mark: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman_Game)
     * :construction: **TW-JS_DATA** [Working with data and existent project](https://github.com/nicode-be/TW-JS_Data)
   * PYTHON - DJANGO
-    * :white_check_mark: **AL-01** [Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
-    * :construction: **PP-02** [SKELETHON - DJANGO - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
+    * :white_check_mark: **PYT-01** [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
+    * :construction: **PYT-02** [ALIEN INVADERS - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
+    * :construction: **PYT-03** [SKELETHON - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django)  
+   
  
 
 
