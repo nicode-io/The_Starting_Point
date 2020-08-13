@@ -1,6 +1,3 @@
-[submodule "01-06-Learning-sass"]
-	path = 01-06-Learning-sass
-	url = https://github.com/nicode-be/01-06-Learning-sass
 [submodule "01-07-Responsive-discover-exercise"]
 	path = 01-07-Responsive-discover-exercise
 	url = https://github.com/nicode-be/01-07-Responsive-discover-exercise
