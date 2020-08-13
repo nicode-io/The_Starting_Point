@@ -25,25 +25,25 @@ Thanks by advance for that :heart:
 ### INDEX :
 We will follow a learning path composed by following steps:  
 
-* [:cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)](#1. **TheField** :cow:)  
-* :horse: **The Hill** - Frontend (+/- 1 month)  
-* :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
-* :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
-* :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
-* :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (3 months)  
+- :cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)  
+- :horse: **The Hill** - Frontend (+/- 1 month)  
+- :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
+- :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
+- :cow2: :goat: :ram: :horse: **The Summer Pastures** - Workshops / Search internship (+/- 2 months)  
+- :dart: :raised_hands: :racehorse: :dragon: :rocket: **The Valley - Internship** - Internship (3 months)  
   
 ## 1. **The Field** :cow:
   * Google search 
   * Terminal
   * GIT 
-    * :white_check_mark: **01-01** [TeamWork : Cadavre Exquis](https://github.com/nicode-be/01-01-Exercise-Cadavre-Exquis) 
+    * :white_check_mark: **01-01** [TeamWork : Cadavre Exquis](https://github.com/nicode-io/TW-Becode-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
        :star:[Aurore Limage](https://github.com/riizbae)   
        :star:[Alksandra Slowik](https://github.com/88aleksandra88)  
        :star:[Bastien Dewerse](https://github.com/DewerseB)  
        :star:[Loïc Hobe](https://github.com/loichobe)  
   * MARKDOWN  
-    * :white_check_mark: **01-02** [TeamWork : Mardown Exercise](https://github.com/nicode-be/01-02-Exercise-markdown)  
+    * :white_check_mark: **01-02** [TeamWork : Mardown Exercise](https://github.com/nicode-io/TW-Becode-Markdown_Discovery)  
       * *Those awesome people work with me on this project*:   
        :star:[Marie Pierard](https://github.com/Marie-Pierard)   
        :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
