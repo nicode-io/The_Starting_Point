@@ -1,9 +1,6 @@
 [submodule "01-03-Turlututu"]
 	path = 01-03-Turlututu
 	url = https://github.com/nicode-be/01-03-Turlututu
-[submodule "01-04-Learning-environment"]
-	path = 01-04-Learning-environment
-	url = https://github.com/nicode-be/01-04-Learning-environment
 [submodule "01-05-Star-wars-crawl"]
 	path = 01-05-Star-wars-crawl
 	url = https://github.com/nicode-be/01-05-Star-wars-crawl
