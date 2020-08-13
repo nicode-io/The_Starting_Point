@@ -36,31 +36,31 @@ We will follow a learning path composed by following steps:
   * Google search 
   * Terminal
   * GIT 
-    * :white_check_mark: **01-01** [TeamWork : Cadavre Exquis](https://github.com/nicode-io/TW-Becode-Cadavre-Exquis) 
+    * :white_check_mark: [TeamWork : Cadavre Exquis](https://github.com/nicode-io/TW-Becode-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
        :star:[Aurore Limage](https://github.com/riizbae)   
        :star:[Alksandra Slowik](https://github.com/88aleksandra88)  
        :star:[Bastien Dewerse](https://github.com/DewerseB)  
        :star:[Loïc Hobe](https://github.com/loichobe)  
   * MARKDOWN  
-    * :white_check_mark: **01-02** [TeamWork : Mardown Exercise](https://github.com/nicode-io/TW-Becode-Markdown_Discovery)  
+    * :white_check_mark: [TeamWork : Mardown Exercise](https://github.com/nicode-io/TW-Becode-Markdown_Discovery)  
       * *Those awesome people work with me on this project*:   
        :star:[Marie Pierard](https://github.com/Marie-Pierard)   
        :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
        :star:[Stéphane Kalonji](https://github.com/kalonjis)  
   * HTML / CSS  
-      * :white_check_mark: **01-03** [Mockup reproduction : Turlututu V1](https://github.com/nicode-be/01-03-Turlututu) 
-      * :white_check_mark: **01-04** [Learning environment](https://github.com/nicode-be/01-04-Learning-environment) *details in link*. 
-      * :white_check_mark: **01-05** [BONUS : Star-Wars](https://github.com/nicode-be/01-05-Star-wars-crawl) *MVP Completed*
+      * :white_check_mark: [Mockup reproduction : Turlututu V1](https://github.com/nicode-be/01-03-Turlututu) 
+      * :white_check_mark: [Learning environment](https://github.com/html-css-nicode/HC-01-Learning-environment) *details in link*. 
+      * :white_check_mark: [BONUS : Star-Wars](https://github.com/html-css-nicode/HC-02-Star-wars-crawl) *MVP Completed*
     * SASS   
-      * :white_check_mark: **01-06** [Learning SASS](https://github.com/nicode-be/01-06-Learning-sass)  
-      * :white_check_mark: **01-03-V2** [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
+      * :white_check_mark: [Learning SASS](https://github.com/html-css-nicode/HC-03-Learning-sass)  
+      * :white_check_mark: [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
     * RESPONSIVE  
-      * :white_check_mark: **01-07** [Exercise 1 - Discover responsive](https://github.com/nicode-be/01-07-Responsive-discover-exercise) 
-      * :white_check_mark: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/nicode-be/01-08-Responsive-zozor) *MVP* 
+      * :white_check_mark: **01-07** [Exercise 1 - Discover responsive](https://github.com/html-css-nicode/HC-04-Responsive-discover-exercise) 
+      * :white_check_mark: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/html-css-nicode/HC-05-Responsive-zozor) *MVP* 
     * CSS: ANIMATION & TRANSITIONS
-      * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
-      * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
+      * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/html-css-nicode/HC-06-becode-animation-css) 
+      * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/html-css-nicode/HC-07-animated-card)
   * BOOTSTRAP
     *  :white_check_mark: **TW-Bootstrap** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
         * *Those awesome people work with me on this project*:   

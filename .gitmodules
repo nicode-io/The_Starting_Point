@@ -7,3 +7,24 @@
 [submodule "PYT-03-Skelethon_Django"]
 	path = PYT-03-Skelethon_Django
 	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
+[submodule "HC-01-Learning-environment"]
+	path = HC-01-Learning-environment
+	url = https://github.com/html-css-nicode/HC-01-Learning-environment
+[submodule "HC-02-Star-wars-crawl"]
+	path = HC-02-Star-wars-crawl
+	url = https://github.com/html-css-nicode/HC-02-Star-wars-crawl
+[submodule "HC-03-Learning-sass"]
+	path = HC-03-Learning-sass
+	url = https://github.com/html-css-nicode/HC-03-Learning-sass
+[submodule "HC-04-Responsive-discover-exercise"]
+	path = HC-04-Responsive-discover-exercise
+	url = https://github.com/html-css-nicode/HC-04-Responsive-discover-exercise
+[submodule "HC-05-Responsive-zozor"]
+	path = HC-05-Responsive-zozor
+	url = https://github.com/html-css-nicode/HC-05-Responsive-zozor
+[submodule "HC-06-becode-animation-css"]
+	path = HC-06-becode-animation-css
+	url = https://github.com/html-css-nicode/HC-06-becode-animation-css
+[submodule "HC-07-animated-card"]
+	path = HC-07-animated-card
+	url = https://github.com/html-css-nicode/HC-07-animated-card
