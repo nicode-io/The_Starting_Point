@@ -1,4 +1,3 @@
-
 # V2 - SASS conversion
 Adding SASS to the project
 
@@ -46,12 +45,6 @@ BeCode Charleroi
 Work done as part of the BeCode web developer training.
 It's the first sprint and it's about semantic HTML and CSS.
 Goal is to reproduce a web page from a mock-up png.
-
-## Content :
-* README.md
-* index.html
-  * style.min.css (sass)
-  * logos
 
 ## Status :
 Done
