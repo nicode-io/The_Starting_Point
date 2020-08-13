@@ -1,16 +1,5 @@
 # Becode - Intensive Web-Developer Training :mortar_board:
 
-[Discover the great timeline of this adventure here :calendar:](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) 
-[![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) 
-[![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) 
-[![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://codeclimate.com/github/badges/badgerbadgerbadger) 
-[![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/issues) 
-[![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls) 
-[![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) 
-[![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
-
 ### When : 
 From:  **02-06-2020**
 To:  **21-03-2021**
@@ -36,7 +25,7 @@ Thanks by advance for that :heart:
 ### INDEX :
 We will follow a learning path composed by following steps:  
 
-* :cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)  
+* [:cow: **The Field** - Tools / Frontend / Algorithms (+/- 1 month)](#1. **TheField** :cow:)  
 * :horse: **The Hill** - Frontend (+/- 1 month)  
 * :goat: **The Mountain** 1 - Back-end / Server (+/- 2 months)  
 * :ram: **The Mountain** 2 - Frameworks and CMS (+/- 2 months)  
