@@ -1,6 +1,3 @@
-[submodule "PP-02-Skelethon"]
-	path = PP-02-Skelethon
-	url = https://github.com/nicode-be/PP-02-Skelethon
 [submodule "TW-CookieClicker"]
 	path = TW-CookieClicker
 	url = https://github.com/nicode-be/TW-CookieClicker
