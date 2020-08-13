@@ -62,7 +62,7 @@ We will follow a learning path composed by following steps:
       * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/nicode-be/01-09-becode-animation-css) 
       * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/nicode-be/01-10-scss-animated-card)
   * BOOTSTRAP
-    *  :white_check_mark: **TEAMWORK** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
+    *  :white_check_mark: **TW-Bootstrap** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
         * *Those awesome people work with me on this project*:   
       :star:[Gerardo Cella](https://github.com/GerardoCella7)   
       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
@@ -82,6 +82,7 @@ We will follow a learning path composed by following steps:
     * :white_check_mark: **02-02** [Step 2 - Serie 2 - Exercises](https://github.com/nicode-be/02-02-js-step2-part2)    
     * :negative_squared_cross_mark: **02-03** [Pew Pew Game](https://github.com/nicode-be/02-03-PewPew)  
     * :white_check_mark: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman_Game)
+    * :construction: **TW-JS_DATA** [Working with data and existent project](https://github.com/nicode-be/TW-JS_Data)
   * PYTHON - DJANGO
     * :white_check_mark: **AL-01** [Python Crash Course](https://github.com/nicode-be/AL-01-PythonCrashCourse)  
     * :construction: **PP-02** [SKELETHON - DJANGO - Personnal Project](https://github.com/nicode-be/PP-02-Skelethon)  
