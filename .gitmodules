@@ -7,9 +7,6 @@
 [submodule "PYT-03-Skelethon_Django"]
 	path = PYT-03-Skelethon_Django
 	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
-[submodule "HC-07-animated-card"]
-	path = HC-07-animated-card
-	url = https://github.com/html-css-nicode/HC-07-animated-card
 [submodule "JS-01-Algo_Javascript"]
 	path = JS-01-Algo_Javascript
 	url = https://github.com/Javascripter-Nicode/JS-01-Algo_Javascript
