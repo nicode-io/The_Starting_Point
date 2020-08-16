@@ -7,9 +7,6 @@
 [submodule "PYT-03-Skelethon_Django"]
 	path = PYT-03-Skelethon_Django
 	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
-[submodule "HC-01-Learning-environment"]
-	path = HC-01-Learning-environment
-	url = https://github.com/html-css-nicode/HC-01-Learning-environment
 [submodule "HC-02-Star-wars-crawl"]
 	path = HC-02-Star-wars-crawl
 	url = https://github.com/html-css-nicode/HC-02-Star-wars-crawl
