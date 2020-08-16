@@ -2,7 +2,9 @@
 > 10 months to change your life and become a developer
 
 ### **BeCode** Intensive Bootcamp
-In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
+In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !   
+The bootcamp aims at acquiring self-learning skills and mastering the basics, both on the frontend and backend sides. An accompaniment is provided by a team of great coaches who will guide you and help you overcome the various peaks of difficulty encountered.  
+Partly remote at the moment due to the health situation but we have turned this into an opportunity by using a maximum of collaborative tools. The two programming languages I chose are Javascript and Python. At the end of the bootcamp I will certainly be able to help you on your projects while continuing to improve my skills on a daily basis. Passion guides me at every moment, in every learning curve and surpassing oneself is part of my DNA.   
 Give maximum to get maximum :rocket:
 
 > When
@@ -18,7 +20,7 @@ To:  **21-03-2021**
 - [The Field](#the-field) 
 - [The Hill](#the-hill)
 - [The Mountain](#the-mountain)
-- [The Summer Pastures](#summer-pastures)
+- [The Summer Pastures](#the-summer-pastures)
 - [The Valley](#the-valley)
 - [Timeline](#timeline)
 - [Collaboration](#collaboration)
