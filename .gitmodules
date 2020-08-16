@@ -1,6 +1,3 @@
-[submodule "PYT-02-AlienInvasion"]
-	path = PYT-02-AlienInvasion
-	url = https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion
 [submodule "PYT-03-Skelethon_Django"]
 	path = PYT-03-Skelethon_Django
 	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
