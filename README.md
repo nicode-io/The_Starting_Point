@@ -1,4 +1,4 @@
-# BECODDE BOOTCAMP :mortar_board:
+# BECODE BOOTCAMP :mortar_board:
 > 10 months to change your life and become a developer
 
 ### **BeCode** Intensive Bootcamp
