@@ -1,6 +1,3 @@
-[submodule "PYT-01-PythonCrashCourse"]
-	path = PYT-01-PythonCrashCourse
-	url = https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse
 [submodule "PYT-02-AlienInvasion"]
 	path = PYT-02-AlienInvasion
 	url = https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion
