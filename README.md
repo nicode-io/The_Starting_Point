@@ -66,6 +66,8 @@ To:  **21-03-2021**
     * :white_check_mark: [Introduction to JavaScript](https://github.com/Javascripter-Nicode/JS-01-Algo_Javascript)
     * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
 
+---
+
 ## The Hill
 > :horse: Frontend (+/- 1 month)
 
@@ -84,17 +86,24 @@ To:  **21-03-2021**
     * :white_check_mark: **PYT-01** [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
     * :construction: **PYT-02** [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
     * :construction: **PYT-03** [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django)  
-   
+
+----
+
 ## The Mountain 
 > PART ONE :goat: Back-end / Server (+/- 2 months)
 
-## The Mountain 
+
+---
+
+### And the best is yet to come ... :
+
+##### The Mountain 
 > PART TWO :ram: Frameworks and CMS (+/- 2 months)
 
-## The Summer Pastures
+##### The Summer Pastures
 > :cow2: :goat: :ram: :horse: Workshops - Upgrading stacks (+/- 2 months)
 
-## The Valley
+#### The Valley
 > :dart: :raised_hands: :racehorse: :dragon: :rocket: Internship (3 months)  
 
 --- 
