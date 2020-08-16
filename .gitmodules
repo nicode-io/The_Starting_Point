@@ -1,6 +1,3 @@
-[submodule "PYT-03-Skelethon_Django"]
-	path = PYT-03-Skelethon_Django
-	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
 [submodule "TW-Cadavre-Exquis"]
 	path = TW-Cadavre-Exquis
 	url = https://github.com/Becode-TeamWork/TW-Cadavre-Exquis
