@@ -7,9 +7,6 @@
 [submodule "PYT-03-Skelethon_Django"]
 	path = PYT-03-Skelethon_Django
 	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
-[submodule "HC-03-Learning-sass"]
-	path = HC-03-Learning-sass
-	url = https://github.com/html-css-nicode/HC-03-Learning-sass
 [submodule "HC-04-Responsive-discover-exercise"]
 	path = HC-04-Responsive-discover-exercise
 	url = https://github.com/html-css-nicode/HC-04-Responsive-discover-exercise
