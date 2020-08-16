@@ -36,14 +36,14 @@ We will follow a learning path composed by following steps:
   * Google search 
   * Terminal
   * GIT 
-    * :white_check_mark: [TeamWork : Cadavre Exquis](https://github.com/nicode-io/TW-Becode-Cadavre-Exquis) 
+    * :white_check_mark: [TeamWork : Cadavre Exquis](https://github.com/Becode-TeamWork/TW-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
        :star:[Aurore Limage](https://github.com/riizbae)   
        :star:[Alksandra Slowik](https://github.com/88aleksandra88)  
        :star:[Bastien Dewerse](https://github.com/DewerseB)  
        :star:[Loïc Hobe](https://github.com/loichobe)  
   * MARKDOWN  
-    * :white_check_mark: [TeamWork : Mardown Exercise](https://github.com/nicode-io/TW-Becode-Markdown_Discovery)  
+    * :white_check_mark: [TeamWork : Mardown Exercise](https://github.com/Becode-TeamWork/TW-MarkDown_Discovery)  
       * *Those awesome people work with me on this project*:   
        :star:[Marie Pierard](https://github.com/Marie-Pierard)   
        :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
@@ -56,31 +56,31 @@ We will follow a learning path composed by following steps:
       * :white_check_mark: [Learning SASS](https://github.com/html-css-nicode/HC-03-Learning-sass)  
       * :white_check_mark: [SASS apply, folder structure upgraded to Turlututu v1](https://github.com/nicode-be/01-03-Turlututu) 
     * RESPONSIVE  
-      * :white_check_mark: **01-07** [Exercise 1 - Discover responsive](https://github.com/html-css-nicode/HC-04-Responsive-discover-exercise) 
-      * :white_check_mark: **01-08** [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/html-css-nicode/HC-05-Responsive-zozor) *MVP* 
+      * :white_check_mark: [Exercise 1 - Discover responsive](https://github.com/html-css-nicode/HC-04-Responsive-discover-exercise) 
+      * :white_check_mark: [Exercise 2 - Switch a non-responsive page to responsive mobile and tablet (base is not mobile-first)](https://github.com/html-css-nicode/HC-05-Responsive-zozor) *MVP* 
     * CSS: ANIMATION & TRANSITIONS
-      * :white_check_mark: **01-09** [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/html-css-nicode/HC-06-becode-animation-css) 
+      * :white_check_mark: [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/html-css-nicode/HC-06-becode-animation-css) 
       * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/html-css-nicode/HC-07-animated-card)
   * BOOTSTRAP
-    *  :white_check_mark: **TW-Bootstrap** [Discover CSS frameworks: BootStrap](https://github.com/nicode-be/restaurant-css-framework)  
+    *  :white_check_mark: **TW-Bootstrap** [Discover CSS frameworks: BootStrap](https://github.com/Becode-TeamWork/TW-Bootstrap_Restaurant)  
         * *Those awesome people work with me on this project*:   
       :star:[Gerardo Cella](https://github.com/GerardoCella7)   
       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
       :star:[Pierre Weets](https://github.com/PierreWeets)  
   * JAVASCRIPT
-    * :white_check_mark: **01-11** [Introduction to JavaScript](https://github.com/nicode-be/01-11-algo-js)
+    * :white_check_mark: [Introduction to JavaScript](https://github.com/Javascripter-Nicode/JS-01-Algo_Javascript)
     * :white_check_mark: **PP-01** [Lightris - Minimal Tetris Game](https://github.com/nicode-be/PP-01-Tetris-js)   
 
 ## 2. **The Hill** :horse:
   * JAVASCRIPT
-    * :white_check_mark: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/nicode-be/02-01-js-step2) 
-    * :white_check_mark: **TW-CookieClicker** [TeamWork : Cookie Clicker](https://github.com/nicode-be/TW-CookieClicker)  
+    * :white_check_mark: **02-01** [Step 2 - Serie 1 - Exercises](https://github.com/Javascripter-Nicode/JS-02-Step2_Serie1) 
+    * :white_check_mark: **TW-CookieClicker** [TeamWork : Cookie Clicker](https://github.com/Becode-TeamWork/TW-Cookie_Clicker)  
        * *Those awesome people work with me on this project*:   
       :star: [Calvin Jitnaree](https://github.com/Calvin781)  
       :star: [Simon Duquaine](https://github.com/simonduquaine)  
       :star: [Albert Ndizeye](https://github.com/AlbertNd)  
-    * :white_check_mark: **02-02** [Step 2 - Serie 2 - Exercises](https://github.com/nicode-be/02-02-js-step2-part2)    
-    * :negative_squared_cross_mark: **02-03** [Pew Pew Game](https://github.com/nicode-be/02-03-PewPew)  
+    * :white_check_mark: [Step 2 - Serie 2 - Exercises](https://github.com/Javascripter-Nicode/JS-03-Step2_Serie2)    
+    * :negative_squared_cross_mark: [Pew Pew Game](https://github.com/Javascripter-Nicode/JS-04-PewPew_Game)  
     * :white_check_mark: **02-04** [The Hangman Game](https://github.com/nicode-be/02-04-Hangman_Game)
     * :construction: **TW-JS_DATA** [Working with data and existent project](https://github.com/nicode-be/TW-JS_Data)
   * PYTHON - DJANGO

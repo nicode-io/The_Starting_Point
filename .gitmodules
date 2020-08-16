@@ -28,3 +28,15 @@
 [submodule "HC-07-animated-card"]
 	path = HC-07-animated-card
 	url = https://github.com/html-css-nicode/HC-07-animated-card
+[submodule "JS-01-Algo_Javascript"]
+	path = JS-01-Algo_Javascript
+	url = https://github.com/Javascripter-Nicode/JS-01-Algo_Javascript
+[submodule "TW-Cadavre-Exquis"]
+	path = TW-Cadavre-Exquis
+	url = https://github.com/Becode-TeamWork/TW-Cadavre-Exquis
+[submodule "TW-MarkDown_Discovery"]
+	path = TW-MarkDown_Discovery
+	url = https://github.com/Becode-TeamWork/TW-MarkDown_Discovery
+[submodule "TW-Bootstrap_Restaurant"]
+	path = TW-Bootstrap_Restaurant
+	url = https://github.com/Becode-TeamWork/TW-Bootstrap_Restaurant
