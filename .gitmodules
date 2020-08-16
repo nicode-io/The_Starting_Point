@@ -7,9 +7,6 @@
 [submodule "PYT-03-Skelethon_Django"]
 	path = PYT-03-Skelethon_Django
 	url = https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django
-[submodule "HC-05-Responsive-zozor"]
-	path = HC-05-Responsive-zozor
-	url = https://github.com/html-css-nicode/HC-05-Responsive-zozor
 [submodule "HC-06-becode-animation-css"]
 	path = HC-06-becode-animation-css
 	url = https://github.com/html-css-nicode/HC-06-becode-animation-css
