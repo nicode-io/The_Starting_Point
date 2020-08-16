@@ -28,13 +28,13 @@ It's time for a crash course to (re)work basics and take my Python's stack to an
 
 ---
 
-**BeCode** Web Developer Training  
+**BeCode** Intensive Bootcamp  
 This project took place in my leearning path in BeCode (see below) to full stack web developer.
 In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
 Give maximum to get maximum :rocket:
 
 ### Timeline 
-[Discover the great timeline of my adventure to become a developer :calendar: Want to write your company name on it ? See collaboration section ;)](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
+[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 ### Collaboration
 Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), welcome to my all new life as developer.
