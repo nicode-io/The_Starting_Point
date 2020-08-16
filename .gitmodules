@@ -4,6 +4,3 @@
 [submodule "TW-MarkDown_Discovery"]
 	path = TW-MarkDown_Discovery
 	url = https://github.com/Becode-TeamWork/TW-MarkDown_Discovery
-[submodule "TW-Bootstrap_Restaurant"]
-	path = TW-Bootstrap_Restaurant
-	url = https://github.com/Becode-TeamWork/TW-Bootstrap_Restaurant
