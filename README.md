@@ -23,7 +23,7 @@ Make your way through the space to counter the Alien invasion on board of your s
 
 ---
 
-**BeCode** Intensive Bootcamp 
+**BeCode** Intensive Bootcamp    
 This project took place in my leearning path in BeCode (see below) to full stack web developer.
 In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
 Give maximum to get maximum :rocket:
