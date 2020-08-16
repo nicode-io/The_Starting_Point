@@ -1,6 +1,3 @@
-[submodule "TW-Cadavre-Exquis"]
-	path = TW-Cadavre-Exquis
-	url = https://github.com/Becode-TeamWork/TW-Cadavre-Exquis
 [submodule "TW-MarkDown_Discovery"]
 	path = TW-MarkDown_Discovery
 	url = https://github.com/Becode-TeamWork/TW-MarkDown_Discovery
