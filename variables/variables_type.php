@@ -18,7 +18,7 @@
         4 => 'Dominique',
         5 => 'Sophie',
         6 => 'Karoll',
-    )
+    );
     $hungry = true;
 ?>
 <p>
