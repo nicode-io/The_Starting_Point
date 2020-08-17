@@ -83,17 +83,22 @@ To:  **21-03-2021**
     * :white_check_mark: [Step 2 - Serie 2](https://github.com/Javascripter-Nicode/JS-03-Step2_Serie2)    
     * :negative_squared_cross_mark: [PewPew Game](https://github.com/Javascripter-Nicode/JS-04-PewPew_Game)  
     * :white_check_mark: [The Hangman Game](https://github.com/nicode-be/02-04-Hangman_Game)
-    * :construction: [JavaScript Data](https://github.com/nicode-be/TW-JS_Data)
+    * :white_check_mark: [JavaScript Data](https://github.com/nicode-be/TW-JS_Data)
   * PYTHON
-    * :white_check_mark: **PYT-01** [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
-    * :construction: **PYT-02** [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
-    * :construction: **PYT-03** [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django)  
+    * :white_check_mark: [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
+    * :construction: [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
+    * :construction: [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django) 
 
 ----
 
 ## The Mountain 
 > PART ONE :goat: Back-end / Server (+/- 2 months)
 
+  * PHP
+    * :construction: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)
+  * DOCKER
+  * FLUTTER
+    * :construction: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
 
 ---
 
