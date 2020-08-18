@@ -98,6 +98,8 @@ To:  **21-03-2021**
     * :construction: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)
   * DOCKER
     * :construction: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
+  * PYTHON
+    * :construction: [Python Back-end - Part 1](https://github.com/Pythonizer-Nicode/PYT-04-Pyhton_Backend_1)
   * FLUTTER
     * :construction: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
 
