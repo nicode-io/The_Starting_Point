@@ -96,15 +96,15 @@ The information in this document is collected as part of my learning how to use 
     *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
     *   Overwrite with followings values : 
     ```<VirtualHost *:80>```
-    ServerAdmin admin@test.com  
-    ServerName test.com 
-    ServerAlias www.test.com    
-    DocumentRoot /var/www/test.com/public_html  
-    ErrorLog ${APACHE_LOG_DIR}/error.log    
-    CustomLog ${APACHE_LOG_DIR}/access.log combined 
+    ```ServerAdmin admin@test.com```  
+    ```ServerName test.com```
+    ```ServerAlias www.test.com```
+    ```DocumentRoot /var/www/test.com/public_html```
+    ```ErrorLog ${APACHE_LOG_DIR}/error.log```
+    ```CustomLog ${APACHE_LOG_DIR}/access.log combined```
     ```</VirtualHost>``` 
 *   Enabling virtual host
-    *   ```$ sudo a2ensite domainname.com.conf
+    *   ```$ sudo a2ensite domainname.com.conf```
 *   Restart Apache to apply changes
     *   ```$ sudo service apache2 restart```
 > End of loop to add a new site 
