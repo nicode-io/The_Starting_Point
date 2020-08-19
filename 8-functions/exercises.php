@@ -78,8 +78,41 @@
         echo('<br>');
     }
     replaceTwo('sphærotheca');
+    
+    // 9
+    function createDivError($cssClass, $errorMessage) {
+        echo('<div class="' . $cssClass . '">Error: ' . $errorMessage . '.</div>');
+        echo('<br>');
+    }
+    createDivError('warning', 'Be aware of the dogs');
 
+    // 10
+    function createDivErrorTwo($errorMessage, $cssClass = 'info') {
+        echo('<div class="' . $cssClass . '">Error: ' . $errorMessage . '.</div>');
+        echo('<br>');
+    }
+    createDivErrorTwo('Be aware of the dogs');
+    createDivErrorTwo('Be aware of the dogs', 'newClass');
 
+    // 11
+    /**
+     * Choose two randoms words in two arrays and display them 
+     * User can click 'generate' button to rand two new words
+     */
+    function randomWord() {
+        $wordsArrShort = ['Black', 'white', 'green', 'blue'];
+        $wordsArrLong = ['alliance', 'accident', 'building', 'calendar'];
+        $wordOne = ucwords($wordsArrShort[rand ( 0 , count($wordsArrShort)-1 )]);
+        $wordTwo = ucwords($wordsArrLong[rand ( 0 , count($wordsArrLong)-1 )]);
+
+        echo('<form method="get" action="exercises.php">' 
+        .   '<input type="submit" name="submit" value="generate"/>'  
+        .   '</form>'
+        .   '<p>' . $wordOne . ' ' . $wordTwo . '</p>');
+    }
+    randomWord();
+
+    
     ?>
 </body>
 </html>
