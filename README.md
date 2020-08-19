@@ -94,7 +94,7 @@ The information in this document is collected as part of my learning how to use 
     *   Add basic HTML page's content 
 *   Create virtual host configuration files
     *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
-    *   Overwrite with followings values : 
+    *   Overwrite with followings values :   
     ```<VirtualHost *:80>```    
     ```ServerAdmin admin@test.com```     
     ```ServerName test.com```   
