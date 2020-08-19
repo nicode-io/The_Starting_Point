@@ -112,7 +112,19 @@
     }
     randomWord();
 
-    
+    // 12
+    function lowerize($word) {
+        echo(strtolower($word));
+        echo('<br>');
+    }
+    lowerize('BIG UPPERCASE WORDS');
+
+    function calculateConeVolume($ray, $height) {
+        $coneVolume = $ray * $ray * 3.14 * $height * (1/3);
+        echo('The volume of a cone which ray is ' . $ray . ' and height is ' . $height . ' = ' . $coneVolume . ' cm<sup>3</sup><br />');
+    }
+    calculateConeVolume(14, 50);
+
     ?>
 </body>
 </html>
