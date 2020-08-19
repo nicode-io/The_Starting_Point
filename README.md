@@ -27,11 +27,19 @@ The information in this document is collected as part of my learning how to use 
             /home/.ssh/key_name 
         *   Enter password twice for the key    
     *   Copy SSH key in clipboard   
-        *   ```pbcopy < ~/.ssh/key_name.pub```    
+        *   ```$ pbcopy < ~/.ssh/key_name.pub```    
             or  (if you don't have pbcopy for example)  
-        *   ```cat ~/.ssh/key_name.pub``` and copy terminal output
+        *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
+    *   Connect to SSH to VPS
+        *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
+        *   ```$ ssh 'user@host```You'll be asked by local system for key password
+        *   It's ok, from now you can connect without having to type a password on this computer
 
 *   Avoid using root user for daily admin usage, cause of too many privileges this user have, instead create a user with sudo powers, it will allow you to do main daily tasks
+
+*   Switch to root user and change root user's password
+    *   ```$ sudo -i```
+    *   ```$ passwd```
 
 *   Create user with sudo powers on server  
     *   ```$ sudo adduser username``` 
@@ -71,6 +79,44 @@ The information in this document is collected as part of my learning how to use 
         *   Value/IP: **your_vps_ip** (ipv4)  
         *   TTL: **auto** or **30minutes** or specific setting if you need it
         *   Check propagation with : ```$ dig your_domain_name```you should see if the process works 
+
+*   Install APACHE Web Server
+    *   ```$ sudo apt-get update```
+    *   ```$ sudo apt-get install apache2```
+
+> Repeat followings for each website you host
+*   Making file / directory structure and setup permissions
+    *   ```$ sudo mkdir -p /var/www/domainname.com/public_html```
+    *   ```$ sudo chown -R $USER:$USER /var/www/domainname.com/public_html```
+    *   ```$ sudo chmod -R 755 /var/www```
+*   Create sample web content page 
+    *   ```$ sudo nano /var/www/domainname.com/public_html/index.html```
+    *   Add basic HTML page's content 
+*   Create virtual host configuration files
+    *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
+    *   Overwrite with followings values : 
+    ```<VirtualHost *:80>```
+    ```ServerAdmin admin@test.com```
+    ```ServerName test.com```
+    ```ServerAlias www.test.com```
+    ```DocumentRoot /var/www/test.com/public_html```
+    ```ErrorLog ${APACHE_LOG_DIR}/error.log```
+    ```CustomLog ${APACHE_LOG_DIR}/access.log combined```
+    ```</VirtualHost>``` 
+*   Enabling virtual host
+    *   ```$ sudo a2ensite domainname.com.conf
+*   Restart Apache to apply changes
+    *   ```$ sudo service apache2 restart```
+> End of loop to add a new site 
+
+> Do followings operations on local computer not on VPS !
+
+*   ```$ sudo nano /etc/hosts```
+*   Add :
+    ```VPS_IP  domainname.com``` 
+*   Make a line for every domain you have 
+*   Visit domainname.com in your local browser, this should work ;) 
+*   Let's develop a great website now !
 
 ---
 
