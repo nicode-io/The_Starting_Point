@@ -87,7 +87,7 @@ To:  **21-03-2021**
   * PYTHON
     * :white_check_mark: [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
     * :construction: [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
-    * :construction: [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django) 
+    * :white_wheck_mark: [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django) 
 
 ----
 
@@ -95,7 +95,7 @@ To:  **21-03-2021**
 > PART ONE :goat: Back-end / Server (+/- 2 months)
 
   * PHP
-    * :construction: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)
+    * :white_check_mark: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)
   * DOCKER
     * :construction: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
   * PYTHON
