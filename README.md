@@ -23,12 +23,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [DOMAIN REDIRECTION](#domain-redirection) 
     -   [SFTP ACCESS](#sftp-access)
     -   [PHP](#php)
+    -   [PYTHON](#python)
     -   [MYSQL](#mysql)
+    -   [MONGO DB](#mongo-db)
     -   [APACHE](#apache)
     -   [VIRTUAL HOSTS](#virtual-hosts)
     -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
-    -   [PYTHON](#python)
-    -   [MONGO DB](#mongo-db)
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
     -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
@@ -42,70 +42,74 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [USERS & ROOT USER](#users-&-root-user)
 -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 
-####    SSH
->   :warning:
-*   Create SSH key
-    *   ```$ ssh-keygen```
-    *   Choose name of the key and where to save :  
-        /home/.ssh/key_name 
-    *   Enter password twice for the key    
-*   Copy SSH key in clipboard   
-    *   ```$ pbcopy < ~/.ssh/key_name.pub```    
-        or  (if you don't have pbcopy for example)  
-    *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
-*   Connect to SSH to VPS
-    *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
-    *   ```$ ssh 'user@host```You'll be asked by local system for key password
-    *   It's ok, from now you can connect without having to type a password on this computer :magic_wand:
+    ####    SSH
+    >   :warning:
+    *   Create SSH key
+        *   ```$ ssh-keygen```
+        *   Choose name of the key and where to save :  
+            /home/.ssh/key_name 
+        *   Enter password twice for the key    
+    *   Copy SSH key in clipboard   
+        *   ```$ pbcopy < ~/.ssh/key_name.pub```    
+            or  (if you don't have pbcopy for example)  
+        *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
+    *   Connect to SSH to VPS
+        *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
+        *   ```$ ssh 'user@host```You'll be asked by local system for key password
+        *   It's ok, from now you can connect without having to type a password on this computer :magic_wand:
 
-####    USERS & ROOT USER
->   Get the superpowers of admin and give the tiny rights to these bad users :crown:
-*   Avoid using root user for daily admin usage, cause of too many privileges this user have, instead create a user with sudo powers, it will allow you to do main daily tasks
-*   Switch to root user and change root user's password
-    *   ```$ sudo -i```
-    *   ```$ passwd```
+    ####    USERS & ROOT USER
+    >   Get the superpowers of admin and give the tiny rights to these bad users :crown:
+    *   Avoid using root user for daily admin usage, cause of too many privileges this user have, instead create a user with sudo powers, it will allow you to do main daily tasks
+    *   Switch to root user and change root user's password
+        *   ```$ sudo -i```
+        *   ```$ passwd```
 
-*   Create user with sudo powers on server  
-    *   ```$ sudo adduser username``` 
-    *   Enter user information and validate 
-    *   Add user to sudo group  
-        *   ```$ sudo usermod -aG sudo username```    
-            check if the user is in sudo group  
-        *   ```$ id username```  
-*   Ask for ROOT access with you sudo User 
-    *   ```$ su -```
-    *   Enter **ROOT** password
-    *   You now working as ROOT user with same rights 
+    *   Create user with sudo powers on server  
+        *   ```$ sudo adduser username``` 
+        *   Enter user information and validate 
+        *   Add user to sudo group  
+            *   ```$ sudo usermod -aG sudo username```    
+                check if the user is in sudo group  
+            *   ```$ id username```  
+    *   Ask for ROOT access with you sudo User 
+        *   ```$ su -```
+        *   Enter **ROOT** password
+        *   You now working as ROOT user with same rights 
 
-####    BASIC SECURITY FIRSTS STEPS
->   :warning:
-*   Disabling password auth / ROOT connection with SSH on VPS
-    *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
-    *   ```$ sudo nano /etc/ssh/sshd_config```
-    *   Uncomment line: "PasswordAuthentication yes" and change it to "PasswordAuthentication no"
-    *   Set *PermitRootLogin* to **no**
-    *   Add : *AllowUsers **username*** Add a space between usernames if you have many
-    *   Save and close file
-    *   ```$ sudo systemctl restart ssh```
-    *   As precaution, open a new terminal window and test that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
-*   (Optionnal) Keep server connection alive with your local computer:  
->   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your VPS in in production mode. 
+    ####    BASIC SECURITY FIRSTS STEPS
+    >   :warning:
+    *   Disabling password auth / ROOT connection with SSH on VPS
+        *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
+        *   ```$ sudo nano /etc/ssh/sshd_config```
+        *   Uncomment line: "PasswordAuthentication yes" and change it to "PasswordAuthentication no"
+        *   Set *PermitRootLogin* to **no**
+        *   Add : *AllowUsers **username*** Add a space between usernames if you have many
+        *   Save and close file
+        *   ```$ sudo systemctl restart ssh```
+        *   As precaution, open a new terminal window and test that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
+    *   (Optionnal) Keep server connection alive with your local computer:  
+    >   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your VPS in in production mode. 
     *   In the same file */etc/ssh/sshd_config* add the followings: 
         *TCPKeepAlive yes*
         *ServerAliveInterval 30*
         This will send a TCPKeepAlive every 30 seconds
+    *   On your local computer: 
+        ```$ sudo nano /etc/ssh/ssh_config```
+    *   Add the folloing line:  
+        **ServerAliveInterval 120**
 
-*   Setting up basic firewall
-    *   Each applications have its own settings for firewall    
-        you can see the app list :  
-    *   ```$ sudo ufw app list```
-        authorize OpenSSH : 
-    *   ```$ sudo ufw allow OpenSSH```
-        enable then firewall :
-    *   ```$ sudo ufw enable```
-        check status
-    *   ```$ sudo ufw status```
-    *   Be sure to allow future applications through the firewall to allow traffic in
+    *   Setting up basic firewall
+        *   Each applications have its own settings for firewall    
+            you can see the app list :  
+        *   ```$ sudo ufw app list```
+            authorize OpenSSH : 
+        *   ```$ sudo ufw allow OpenSSH```
+            enable then firewall :
+        *   ```$ sudo ufw enable```
+            check status
+        *   ```$ sudo ufw status```
+        *   Be sure to allow future applications through the firewall to allow traffic in
 
 --- 
 
@@ -115,169 +119,171 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [DOMAIN REDIRECTION](#domain-redirection) 
 -   [SFTP ACCESS](#sftp-access)
 -   [PHP](#php)
+-   [PYTHON](#python)
 -   [MYSQL](#mysql)
+-   [MONGO DB](#mongo-db)
 -   [APACHE](#apache)
 -   [VIRTUAL HOSTS](#virtual-hosts)
 -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
--   [PYTHON](#python)
--   [MONGO DB](#mongo-db)
 
-####    DOMAIN REDIRECTION
->   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
-*   Redirect your domain name to VPS
-    *   Check on your domain name's provider dashboard a **DNS** section or **A-Records** section
-    *   Create a new A-record using the followings :
-        *   Host: **@**
-        *   Value/IP: **your_vps_ip** (ipv4)  
-        *   TTL: **auto** or **30minutes** or specific setting if you need it
-        *   Check propagation with : ```$ dig your_domain_name```you should see if the process works :magic_wand:
+    ####    DOMAIN REDIRECTION
+    >   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
+    *   Redirect your domain name to VPS
+        *   Check on your domain name's provider dashboard a **DNS** section or **A-Records** section
+        *   Create a new A-record using the followings :
+            *   Host: **@**
+            *   Value/IP: **your_vps_ip** (ipv4)  
+            *   TTL: **auto** or **30minutes** or specific setting if you need it
+            *   Check propagation with : ```$ dig your_domain_name```you should see if the process works :magic_wand:
 
-####    SFTP ACCESS
->  :warning: SSH FTP connection
+    ####    SFTP ACCESS
+    >  :warning: SSH FTP connection
 
-*   Download FTP client, FileZilla for example is free
-*   Create a new connection with followings informations :
-    *   Protocol: **SFTP - SSH File Transfer Protocol**
-    *   Host: **VPS_IP** 
-    *   Port: empty should work, else try **22**
-    *   User: *Username used for SSH connection to your VPS*
-    *   Password: *Password used for SSH connection to your VPS*
-    *   Accept fingerprint if asked, then connect
+    *   Download FTP client, FileZilla for example is free
+    *   Create a new connection with followings informations :
+        *   Protocol: **SFTP - SSH File Transfer Protocol**
+        *   Host: **VPS_IP** 
+        *   Port: empty should work, else try **22**
+        *   User: *Username used for SSH connection to your VPS*
+        *   Password: *Password used for SSH connection to your VPS*
+        *   Accept fingerprint if asked, then connect
 
-####    PHP
->   A very popular programming language 
-*   Install PHP and PHP modules
-    *   ```$ sudo apt install -y php7.4``` 
-    *   ```$ php -v``` check wich version is installed
-        Install PHP modules (example:)
-    *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
+    ####    PHP
+    >   A very popular programming language 
+    *   Install PHP and PHP modules
+        *   ```$ sudo apt install -y php7.4``` 
+        *   ```$ php -v``` check wich version is installed
+            Install PHP modules (example:)
+        *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
 
-####    MYSQL
->   A SQL database server, do queries all day, SQL will answer you each time, except if you miss the ending *;* off course :wink:
-*   Installation
-    *   ```$ sudo apt update```
-    *   ```$ sudo apt install mysql-server```
-*   Configuration
-    *   ```$ sudo mysql_secure_installation```
-    *   Choose a level of security for passwords, from 0 to 2
-    *   Enter and confirm your password 
-    *   Choose if you wish to disable anonymous connection *recommended*
-    *   Choose if you wish to disable remote root login *recommended*
-    *   Choose if you wich to remove test database and access to it *not recommended for now*
-*   Create dedicated MySQL user and granting privileges
-    *   ```$ sudo mysql``` Enter in MySQL console 
-    *   ```mysql> CREATE USER username@host_name IDENTIFIED BY 'password';```
-    *   From now you can grant specific permissions to user, there's many of them, here's an example: 
-        ```mysql> GRANT DELETE ON db_name.table TO 'username@host';```
-    *   You can add *WITH GRANT OPTION* at the end of statement to allow user giving permissions to other users (off course limited to his own permissions)
-    *   A good practise is to run following after giving permissions: 
-        ```mysql> FLUSH PRIVILEGES;```
-    *   ```mysql> exit``` to finally quit MySQL
-*   Testing MySQL
-    *   ```$ systemctl status mysql.service```
-    *   You should see "Server is operationnal" and many others informations
-        *   If not: ```$ sudo systemctl start mysql```
-    *   ```$ sudo mysqladmin -p -u username version``` 
-    *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running :magic_wand:
+    ####    PYTHON
+    >   A powerfull programming language for Web-Development as for I.A and data-science
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
+        *   Check if Python 3 is already installed with :   
+            ```$ python3 -V```
+        *   Install pip, it's Python package/library manager, as apt is for example:    
+            ```$ sudo apt install -y python3-pip```
+        *   From now, you can install packages with following:  
+            ```$ sudo pip3 install package_name``` (ex: ```$ sudo pip3 install django```)
+        *   Here's a few more packages to prepare a robust development environment: 
+            ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
+        *   We're ready for next step: Setting up a Virtual Environment !
 
-####    APACHE
->   Your web hosting server, mandatory for websites hosting/development
-*   Install APACHE Web Server
-    *   ```$ sudo apt-get update```
-    *   ```$ sudo apt-get install apache2```
+    ####    MYSQL
+    >   A SQL database server, do queries all day, SQL will answer you each time, except if you miss the ending *;* off course :wink:
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt install mysql-server```
+    *   Configuration
+        *   ```$ sudo mysql_secure_installation```
+        *   Choose a level of security for passwords, from 0 to 2
+        *   Enter and confirm your password 
+        *   Choose if you wish to disable anonymous connection *recommended*
+        *   Choose if you wish to disable remote root login *recommended*
+        *   Choose if you wich to remove test database and access to it *not recommended for now*
+    *   Create dedicated MySQL user and granting privileges
+        *   ```$ sudo mysql``` Enter in MySQL console 
+        *   ```mysql> CREATE USER username@host_name IDENTIFIED BY 'password';```
+        *   From now you can grant specific permissions to user, there's many of them, here's an example: 
+            ```mysql> GRANT DELETE ON db_name.table TO 'username@host';```
+        *   You can add *WITH GRANT OPTION* at the end of statement to allow user giving permissions to other users (off course limited to his own permissions)
+        *   A good practise is to run following after giving permissions: 
+            ```mysql> FLUSH PRIVILEGES;```
+        *   ```mysql> exit``` to finally quit MySQL
+    *   Testing MySQL
+        *   ```$ systemctl status mysql.service```
+        *   You should see "Server is operationnal" and many others informations
+            *   If not: ```$ sudo systemctl start mysql```
+        *   ```$ sudo mysqladmin -p -u username version``` 
+        *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running :magic_wand:
 
-####    VIRTUAL HOSTS
->   One virtual host and file folder are needed for each website you'll host    
->   Repeat followings for each website you host
-*   Making file / directory structure and setup permissions
-    *   ```$ sudo mkdir -p /var/www/domainname.com/public_html```
-    *   ```$ sudo chown -R $USER:$USER /var/www/domainname.com/public_html```
-    *   ```$ sudo chmod -R 755 /var/www```
-*   Create sample web content page 
-    *   ```$ sudo nano /var/www/domainname.com/public_html/index.html```
-    *   Add basic HTML page's content 
-*   Create virtual host configuration files
-    *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
-    *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
-    *   Overwrite with followings values :   
-    ```<VirtualHost *:80>```    
-    ```ServerAdmin admin@test.com```     
-    ```ServerName test.com```   
-    ```ServerAlias www.test.com```  
-    ```DocumentRoot /var/www/test.com/public_html```    
-    ```ErrorLog ${APACHE_LOG_DIR}/error.log```  
-    ```CustomLog ${APACHE_LOG_DIR}/access.log combined```   
-    ```</VirtualHost>```   
-*   Make a check of Apache's configuration files with:  
-    ```$ sudo apache2ctl configtest```  
-    Result should be **Syntax OK**, if not you have to correct your configuration file
-*   Enabling virtual host
-    *   ```$ sudo a2ensite domainname.com.conf```
-*   Restart Apache to apply changes
-    *   ```$ sudo service apache2 restart```
-> End of loop to add a new site 
+    ####    MONGO DB
+    >   A no SQL Database manager, works well with Python and many more
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt -y upgrade```
+        *   ```$ sudo apt install -y mongodb```
+        *   Check install / running service with:  
+            ```$ sudo systemctl status mongodb```   
+        *   Install official Python MongoDB driver called PyMongo:  
+            ```$ sudo pip3 install pymongo```
+    *   Make a connection with MongoClient
 
-> Do followings operations on local computer not on VPS !
+    ####    APACHE
+    >   Your web hosting server, mandatory for websites hosting/development
+    *   Install APACHE Web Server
+        *   ```$ sudo apt-get update```
+        *   ```$ sudo apt-get install apache2```
 
-*   ```$ sudo nano /etc/hosts```
-*   Add :
-    ```VPS_IP  domainname.com``` 
-*   Make a line for every domain you have 
-*   Visit domainname.com in your local browser, this should work :magic_wand: 
-*   Let's develop a great website now !
+    ####    VIRTUAL HOSTS
+    >   One virtual host and file folder are needed for each website you'll host    
+    >   Repeat followings for each website you host
+    *   Making file / directory structure and setup permissions
+        *   ```$ sudo mkdir -p /var/www/domainname.com/public_html```
+        *   ```$ sudo chown -R $USER:$USER /var/www/domainname.com/public_html```
+        *   ```$ sudo chmod -R 755 /var/www```
+    *   Create sample web content page 
+        *   ```$ sudo nano /var/www/domainname.com/public_html/index.html```
+        *   Add basic HTML page's content 
+    *   Create virtual host configuration files
+        *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
+        *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
+        *   Overwrite with followings values :   
+        ```<VirtualHost *:80>```    
+        ```ServerAdmin admin@test.com```     
+        ```ServerName test.com```   
+        ```ServerAlias www.test.com```  
+        ```DocumentRoot /var/www/test.com/public_html```    
+        ```ErrorLog ${APACHE_LOG_DIR}/error.log```  
+        ```CustomLog ${APACHE_LOG_DIR}/access.log combined```   
+        ```</VirtualHost>```   
+    *   Make a check of Apache's configuration files with:  
+        ```$ sudo apache2ctl configtest```  
+        Result should be **Syntax OK**, if not you have to correct your configuration file
+    *   Enabling virtual host
+        *   ```$ sudo a2ensite domainname.com.conf```
+    *   Restart Apache to apply changes
+        *   ```$ sudo service apache2 restart```
+    > End of loop to add a new site 
 
-####    CERTBOT - SSL CERTIFICATION
->   :warning: AllowS HTTPS connections
-*   Installation 
-    *   ```$ sudo apt update```
-    *   ```$ sudo apt -y upgrade```
-    *   ```$ sudo apt install certbot python3-certbot-apache```
-*   Allow HTTPS trough the firewall
-    *   ```$ sudo ufw status```
-    *   ```$ sudo ufw allow 'Apache Full'```
-    *   ```$ sudo ufw delete allow 'Apache'```
-    *   Check if access is *Apache Full* with again:    
-        ```$ sudo ufw status```
-*   Obtaining an SSL Certificate
-    *   ```$ sudo certbot --apache```
-    *   Enter a valid email adress, it'll be used for renewal !
-    *   Agree the terms of service
-    *   Share or not your email (not recommended)
-    *   Each domain for wich you can activate a certificate, choose one or many, if many separate choice's number by a space
-    *   Validate and wait for the certification to be done
-    *   Test your website with HTTPS, and the magic happens :magic_wand:
-    *   You can use following to check renewal (if no error it's fine): 
-        ```$ sudo systemctl status certbot.timer``` 
-        ```$ sudo certbot renew --dry-run```
+    > Do followings operations on local computer not on VPS !
 
-####    PYTHON
->   Everybody should try Python :rocket:
-*   Installation
-    *   ```$ sudo apt update```
-    *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
-    *   Check if Python 3 is already installed with :   
-        ```$ python3 -V```
-    *   Install pip, it's Python package/library manager, as apt is for example:    
-        ```$ sudo apt install -y python3-pip```
-    *   From now, you can install packages with following:  
-        ```$ sudo pip3 install package_name``` (ex: ```$ sudo pip3 install django```)
-    *   Here's a few more packages to prepare a robust development environment: 
-        ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
-    *   We're ready for next step: Setting up a Virtual Environment !
+    *   ```$ sudo nano /etc/hosts```
+    *   Add :
+        ```VPS_IP  domainname.com``` 
+    *   Make a line for every domain you have 
+    *   Visit domainname.com in your local browser, this should work :magic_wand: 
+    *   Let's develop a great website now !
 
-####    MONGO DB
->   A no SQL Database manager, works well with Python and many more
-*   Installation
-    *   ```$ sudo apt update```
-    *   ```$ sudo apt -y upgrade```
-    *   ```$ sudo apt install -y mongodb```
-    *   Check install / running service with:  
-        ```$ sudo systemctl status mongodb```   
-    *   Install official Python MongoDB driver called PyMongo:  
-        ```$ sudo pip3 install pymongo```
-*   Make a connection with MongoClient
+    ####    CERTBOT - SSL CERTIFICATION
+    >   :warning: AllowS HTTPS connections
+    *   Installation 
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt -y upgrade```
+        *   ```$ sudo apt install certbot python3-certbot-apache```
+    *   Allow HTTPS trough the firewall
+        *   ```$ sudo ufw status```
+        *   ```$ sudo ufw allow 'Apache Full'```
+        *   ```$ sudo ufw delete allow 'Apache'```
+        *   Check if access is *Apache Full* with again:    
+            ```$ sudo ufw status```
+    *   Obtaining an SSL Certificate
+        *   ```$ sudo certbot --apache```
+        *   Enter a valid email adress, it'll be used for renewal !
+        *   Agree the terms of service
+        *   Share or not your email (not recommended)
+        *   Each domain for wich you can activate a certificate, choose one or many, if many separate choice's number by a space
+        *   Validate and wait for the certification to be done
+        *   Test your website with HTTPS, and the magic happens :magic_wand:
+        *   You can use following to check renewal (if no error it's fine): 
+            ```$ sudo systemctl status certbot.timer``` 
+            ```$ sudo certbot renew --dry-run```
+
 
 ---
+
 
 ### DEVELOPMENT ENVIRONMENT
 >   Configure a development environment available remotely
@@ -285,23 +291,38 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 
-### VSCODE REMOTE DEVELOPMENT EXTENSION
-> Allows you to connect to your server's files and projects remotely
+    #### VSCODE REMOTE DEVELOPMENT EXTENSION
+    > Allows you to connect to your server's files and projects remotely
+    *   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
+    *   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
+    *   Install [Remote Devlopment VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
+    *   In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
+        *   Click *Connect to host*
+        *   Choose *+ Add a new host*
+        *   Type *ssh username@VPS_IP -A* and press *Enter*
+        *   A new VScode window will pop, you're now connected to your remote server and have access to the file structure and all folders you have there. :thumbs:
 
-*   :round_pushpin: Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
-*   :round_pushpin: Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
-*   :round_pushpin: Install [Remote Devlopment VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
-*   :round_pushpin: In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
-    *   Click *Connect to host*
-    *   Choose *+ Add a new host*
-    *   Type *ssh username@VPS_IP -A* and press *Enter*
-    *   A new VScode window will pop, you're now connected to your remote server and have access to the file structure and all folders you have there. :thumbs:
-
-### PYTHON VIRTUAL ENVIRONMENT
->   Create isolated space on your server for each of your Python's projects
-
-
-
+    #### PYTHON VIRTUAL ENVIRONMENT
+    >   Create isolated space on your server for each of your Python's projects. We'll use **VENV** but others exists
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt upgrade```
+        *   ```$ sudo apt install -y python3-venv```
+    *   Create a new virtual environment
+        *   Create a project folder:    
+            ```$ mkdir project_folder```
+        *   Navigate to your project folder:    
+            ```$ cd project_folder```
+        *   Create the virtual environment using:   
+            ```$ python3 -m venv environment_name```
+        *   List created files (optionnal): 
+            ```$ ls environment_name```
+        *   Activate your virtual environment:  
+            ```$ source environment_name/bin/activate```
+        *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your VPS's system but only to this virtual environment :magic_wand:
+    *   Delete your virtual environment 
+        *   Simply delete *environment_name* folder with:   
+            ```$ sudo rm -r .../environment_name/*```
 ---
 
 **BeCode** Intensive Bootcamp     
