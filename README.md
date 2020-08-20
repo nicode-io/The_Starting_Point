@@ -1,10 +1,10 @@
-# :book: BEGINNER'S GUIDE TO VPS :computer:
-> On my way to host multiple websites on my virtual private server
-
+# (◉ ͜ʖ◉))ﾉ彡 :book: BEGINNER'S GUIDE TO VPS :computer:
+> Want to host multiple websites on a virtual private server ?
+> Want to create a first virtual development environment ? 
+> Let's try it together !
 
 ## Description 
 > Start 15-08-2020
-> (◉ ͜ʖ◉))ﾉ彡
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
