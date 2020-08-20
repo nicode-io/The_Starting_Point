@@ -14,6 +14,7 @@ The information in this document is collected as part of my learning how to use 
 ## Index
 - [Server Initialisation](#server-initialisation) 
 - [Websites Hostings](#websites-hosting)
+- [FTP Access](#ftp-access)
 - [Collaboration](#collaboration)
 - [Timeline](#timeline)
 
@@ -94,6 +95,7 @@ The information in this document is collected as part of my learning how to use 
     *   Add basic HTML page's content 
 *   Create virtual host configuration files
     *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
+    *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
     *   Overwrite with followings values :   
     ```<VirtualHost *:80>```    
     ```ServerAdmin admin@test.com```     
@@ -118,6 +120,17 @@ The information in this document is collected as part of my learning how to use 
 *   Visit domainname.com in your local browser, this should work ;) 
 *   Let's develop a great website now !
 
+### FTP ACCESS
+> SSH FTP connection
+
+*   Download FTP client, FileZilla for example is free
+*   Create a new connection with followings informations :
+    *   Protocol: **SFTP - SSH File Transfer Protocol**
+    *   Host: **VPS_IP** 
+    *   Port: empty should work, else try **22**
+    *   User: *Username used for SSH connection to your VPS*
+    *   Password: *Password used for SSH connection to your VPS*
+    *   Accept fingerprint if asked, then connect
 ---
 
 **BeCode** Intensive Bootcamp     
