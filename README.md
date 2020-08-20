@@ -255,6 +255,14 @@ A small, unpretentious guide that brings together the information collected from
         ```$ sudo pip3 install pymongo```
 *   Make a connection with MongoClient
 
+### DEVELOPMENT ENVIRONMENT
+>   Configure a deevelopment environment available remotely
+
+*   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
+*   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
+*   Install [Remote Devlopment VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
+*   Install 
+
 
 ---
 
