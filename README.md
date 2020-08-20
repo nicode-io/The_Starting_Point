@@ -7,7 +7,9 @@
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
-:warning: elements refers directly to server, files or users' security
+When you see::warning:, this refers directly to server, files or users' security
+
+Little disclaimer: made by a rookie for the rookie, there's for sure missing things (I'll complete with times) and bad things (I'll improve myself). 
 
 ---
 
