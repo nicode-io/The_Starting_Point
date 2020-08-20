@@ -4,6 +4,7 @@
 
 ## Description 
 > Start 15-08-2020
+> (◉ ͜ʖ◉))ﾉ彡
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
@@ -55,7 +56,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 *   Connect to SSH to VPS
     *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
     *   ```$ ssh 'user@host```You'll be asked by local system for key password
-    *   It's ok, from now you can connect without having to type a password on this computer
+    *   It's ok, from now you can connect without having to type a password on this computer :magic_wand:
 
 ####    USERS & ROOT USER
 >   Get the superpowers of admin and give the tiny rights to these bad users :crown:
@@ -74,7 +75,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 *   Ask for ROOT access with you sudo User 
     *   ```$ su -```
     *   Enter **ROOT** password
-    *   You now working as ROOT user with same rights (God mode activated, be aware of your power :smile:)
+    *   You now working as ROOT user with same rights :european_castle:
 
 ####    BASIC SECURITY FIRSTS STEPS
 >   :warning:
@@ -129,7 +130,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Host: **@**
         *   Value/IP: **your_vps_ip** (ipv4)  
         *   TTL: **auto** or **30minutes** or specific setting if you need it
-        *   Check propagation with : ```$ dig your_domain_name```you should see if the process works 
+        *   Check propagation with : ```$ dig your_domain_name```you should see if the process works :magic_wand:
 
 ####    SFTP ACCESS
 >  :warning: SSH FTP connection to upload your fresh work easily or to upload your teammates work back from your holiday :tropical_drink:
@@ -177,7 +178,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   You should see "Server is operationnal" and many others informations
         *   If not: ```$ sudo systemctl start mysql```
     *   ```$ sudo mysqladmin -p -u username version``` 
-    *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running
+    *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running :magic_wand:
 
 ####    APACHE
 >   Your web hosting server, mandatory for websites hosting/development
@@ -222,7 +223,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 *   Add :
     ```VPS_IP  domainname.com``` 
 *   Make a line for every domain you have 
-*   Visit domainname.com in your local browser, this should work ;) 
+*   Visit domainname.com in your local browser, this should work :magic_wand: 
 *   Let's develop a great website now !
 
 ####    CERTBOT - SSL CERTIFICATION
@@ -244,7 +245,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   Share or not your email (not recommended)
     *   Each domain for wich you can activate a certificate, choose one or many, if many separate choice's number by a space
     *   Validate and wait for the certification to be done
-    *   Test your website with HTTPS, and the magic happens :smile:
+    *   Test your website with HTTPS, and the magic happens :magic_wand:
     *   You can use following to check renewal (if no error it's fine): 
         ```$ sudo systemctl status certbot.timer``` 
         ```$ sudo certbot renew --dry-run```
@@ -262,7 +263,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         ```$ sudo pip3 install package_name``` (ex: ```$ sudo pip3 install django```)
     *   Here's a few more packages to prepare a robust development environment: 
         ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
-    *   We're ready for next step: Setting up a Virtual Environment :smile:
+    *   We're ready for next step: Setting up a Virtual Environment !
 
 ####    MONGO DB
 >   A no SQL Database manager, works well with Python and many more
