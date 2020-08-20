@@ -1,7 +1,6 @@
 # :book: BEGINNER'S GUIDE TO VPS :computer:
 > On my way to host multiple websites on my virtual private server
 
-REMOTE TEST WORKS
 
 ## Description 
 > Start 15-08-2020
@@ -25,6 +24,9 @@ A small, unpretentious guide that brings together the information collected from
     -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
     -   [PYTHON](#python)
     -   [MONGO DB](#mongo-db)
+-   [DEVELOPMENT ENVIRONMENT](#development-environment)
+    -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
+    -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 -   [Collaboration](#collaboration)
 -   [Timeline](#timeline)
 
@@ -78,7 +80,14 @@ A small, unpretentious guide that brings together the information collected from
     *   Add : *AllowUsers **username*** Add a space between usernames if you have many
     *   Save and close file
     *   ```$ sudo systemctl restart ssh```
-    *   As precaution, open a new terminal window and teest that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
+    *   As precaution, open a new terminal window and test that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
+*   (Optionnal) Keep server connection alive with your local computer:  
+>   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your VPS in in production mode. 
+
+    *   In the same file */etc/ssh/sshd_config* add the followings: 
+        *TCPKeepAlive yes*
+        *ServerAliveInterval 30*
+        This will send a TCPKeepAlive every 30 seconds
 
 *   Setting up basic firewall
     *   Each applications have its own settings for firewall    
@@ -256,13 +265,29 @@ A small, unpretentious guide that brings together the information collected from
         ```$ sudo pip3 install pymongo```
 *   Make a connection with MongoClient
 
+---
+
 ### DEVELOPMENT ENVIRONMENT
 >   Configure a deevelopment environment available remotely
+
+-   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
+-   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
+
+### VSCODE REMOTE DEVELOPMENT EXTENSION
+> Allows you to connect to your server's files and projects remotely
 
 *   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
 *   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
 *   Install [Remote Devlopment VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
-*   Install 
+*   In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
+    *   Click *Connect to host*
+    *   Choose *+ Add a new host*
+    *   Type *ssh username@VPS_IP -A* and press *Enter*
+    *   A new VScode window will pop, you're now connected to your remote server and have access to the file structure and all folders you have there. :thumbs:
+
+### PYTHON VIRTUAL ENVIRONMENT
+>   Create isolated space on your server for each of your Python's projects
+
 
 
 ---
