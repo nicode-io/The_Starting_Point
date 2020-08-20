@@ -1,6 +1,6 @@
 # (◉ ͜ʖ◉))ﾉ彡 :book: BEGINNER'S GUIDE TO VPS :computer:
-> Want to host multiple websites on a virtual private server ?
-> Want to create a first virtual development environment ? 
+> Want to host multiple websites on a virtual private server ?  
+> Want to create a first virtual development environment ?  
 > Let's try it together !
 
 ## Description 
