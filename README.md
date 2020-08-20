@@ -75,7 +75,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 *   Ask for ROOT access with you sudo User 
     *   ```$ su -```
     *   Enter **ROOT** password
-    *   You now working as ROOT user with same rights :european_castle:
+    *   You now working as ROOT user with same rights 
 
 ####    BASIC SECURITY FIRSTS STEPS
 >   :warning:
@@ -133,7 +133,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Check propagation with : ```$ dig your_domain_name```you should see if the process works :magic_wand:
 
 ####    SFTP ACCESS
->  :warning: SSH FTP connection to upload your fresh work easily or to upload your teammates work back from your holiday :tropical_drink:
+>  :warning: SSH FTP connection
 
 *   Download FTP client, FileZilla for example is free
 *   Create a new connection with followings informations :
@@ -153,7 +153,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
 
 ####    MYSQL
->   A SQL database server, do queries all day SQL will answer you each time, except if you miss the ending *;* off course :wink:
+>   A SQL database server, do queries all day, SQL will answer you each time, except if you miss the ending *;* off course :wink:
 *   Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt install mysql-server```
@@ -187,7 +187,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   ```$ sudo apt-get install apache2```
 
 ####    VIRTUAL HOSTS
->   One virtual host and file folder are needed for each website you'll host
+>   One virtual host and file folder are needed for each website you'll host    
 >   Repeat followings for each website you host
 *   Making file / directory structure and setup permissions
     *   ```$ sudo mkdir -p /var/www/domainname.com/public_html```
@@ -227,18 +227,18 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 *   Let's develop a great website now !
 
 ####    CERTBOT - SSL CERTIFICATION
->   :warning: allow HTTPS connections
-*   Installation 
+>   :warning: AllowS HTTPS connections
+*   :round_pushpin: Installation 
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade```
     *   ```$ sudo apt install certbot python3-certbot-apache```
-*   Allow HTTPS trough the firewall
+*   :round_pushpin: Allow HTTPS trough the firewall
     *   ```$ sudo ufw status```
     *   ```$ sudo ufw allow 'Apache Full'```
     *   ```$ sudo ufw delete allow 'Apache'```
     *   Check if access is *Apache Full* with again:    
         ```$ sudo ufw status```
-*   Obtaining an SSL Certificate
+*   :round_pushpin: Obtaining an SSL Certificate
     *   ```$ sudo certbot --apache```
     *   Enter a valid email adress, it'll be used for renewal !
     *   Agree the terms of service
@@ -251,8 +251,8 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         ```$ sudo certbot renew --dry-run```
 
 ####    PYTHON
->   Everybody should try Python :smile:
-*   Installation
+>   Everybody should try Python :rocket:
+*   :round_pushpin: Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
     *   Check if Python 3 is already installed with :   
@@ -267,7 +267,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 ####    MONGO DB
 >   A no SQL Database manager, works well with Python and many more
-*   Installation
+*   :round_pushpin: Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade```
     *   ```$ sudo apt install -y mongodb```
@@ -275,7 +275,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         ```$ sudo systemctl status mongodb```   
     *   Install official Python MongoDB driver called PyMongo:  
         ```$ sudo pip3 install pymongo```
-*   Make a connection with MongoClient
+*   :round_pushpin: Make a connection with MongoClient
 
 ---
 
@@ -288,10 +288,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 ### VSCODE REMOTE DEVELOPMENT EXTENSION
 > Allows you to connect to your server's files and projects remotely
 
-*   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
-*   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
-*   Install [Remote Devlopment VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
-*   In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
+*   :round_pushpin: Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
+*   :round_pushpin: Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
+*   :round_pushpin: Install [Remote Devlopment VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
+*   :round_pushpin: In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
     *   Click *Connect to host*
     *   Choose *+ Add a new host*
     *   Type *ssh username@VPS_IP -A* and press *Enter*
