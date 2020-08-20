@@ -7,6 +7,8 @@
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
+:warning: elements refers directly to server, files or users' security
+
 ---
 
 ## :file_folder: Index
@@ -38,6 +40,7 @@ A small, unpretentious guide that brings together the information collected from
 -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 
 ####    SSH
+>   :warning:
 *   Create SSH key
     *   ```$ ssh-keygen```
     *   Choose name of the key and where to save :  
@@ -53,6 +56,7 @@ A small, unpretentious guide that brings together the information collected from
     *   It's ok, from now you can connect without having to type a password on this computer
 
 ####    USERS & ROOT USER
+>   Get the superpowers of admin and give the tiny rights to these bad users :crown:
 *   Avoid using root user for daily admin usage, cause of too many privileges this user have, instead create a user with sudo powers, it will allow you to do main daily tasks
 *   Switch to root user and change root user's password
     *   ```$ sudo -i```
@@ -83,7 +87,6 @@ A small, unpretentious guide that brings together the information collected from
     *   As precaution, open a new terminal window and test that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
 *   (Optionnal) Keep server connection alive with your local computer:  
 >   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your VPS in in production mode. 
-
     *   In the same file */etc/ssh/sshd_config* add the followings: 
         *TCPKeepAlive yes*
         *ServerAliveInterval 30*
@@ -104,7 +107,7 @@ A small, unpretentious guide that brings together the information collected from
 --- 
 
 ### BASICS FOR WEB HOSTINGS
->   Apps, Virtual Hosts, databases
+>  :wrench: Apps, Virtual Hosts, databases
 
 -   [DOMAIN REDIRECTION](#domain-redirection) 
 -   [SFTP ACCESS](#sftp-access)
@@ -117,6 +120,7 @@ A small, unpretentious guide that brings together the information collected from
 -   [MONGO DB](#mongo-db)
 
 ####    DOMAIN REDIRECTION
+>   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
 *   Redirect your domain name to VPS
     *   Check on your domain name's provider dashboard a **DNS** section or **A-Records** section
     *   Create a new A-record using the followings :
@@ -126,7 +130,7 @@ A small, unpretentious guide that brings together the information collected from
         *   Check propagation with : ```$ dig your_domain_name```you should see if the process works 
 
 ####    SFTP ACCESS
->  :warning: SSH FTP connection
+>  :warning: SSH FTP connection to upload your fresh work easily or to upload your teammates work back from your holiday :tropical_drink:
 
 *   Download FTP client, FileZilla for example is free
 *   Create a new connection with followings informations :
@@ -138,6 +142,7 @@ A small, unpretentious guide that brings together the information collected from
     *   Accept fingerprint if asked, then connect
 
 ####    PHP
+>   A very popular programming language 
 *   Install PHP and PHP modules
     *   ```$ sudo apt install -y php7.4``` 
     *   ```$ php -v``` check wich version is installed
@@ -145,6 +150,7 @@ A small, unpretentious guide that brings together the information collected from
     *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
 
 ####    MYSQL
+>   A SQL database server, do queries all day SQL will answer you each time, except if you miss the ending *;* off course :wink:
 *   Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt install mysql-server```
@@ -172,6 +178,7 @@ A small, unpretentious guide that brings together the information collected from
     *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running
 
 ####    APACHE
+>   Your web hosting server, mandatory for websites hosting/development
 *   Install APACHE Web Server
     *   ```$ sudo apt-get update```
     *   ```$ sudo apt-get install apache2```
@@ -241,6 +248,7 @@ A small, unpretentious guide that brings together the information collected from
         ```$ sudo certbot renew --dry-run```
 
 ####    PYTHON
+>   Everybody should try Python :smile:
 *   Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
@@ -255,6 +263,7 @@ A small, unpretentious guide that brings together the information collected from
     *   We're ready for next step: Setting up a Virtual Environment :smile:
 
 ####    MONGO DB
+>   A no SQL Database manager, works well with Python and many more
 *   Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade```
@@ -268,7 +277,7 @@ A small, unpretentious guide that brings together the information collected from
 ---
 
 ### DEVELOPMENT ENVIRONMENT
->   Configure a deevelopment environment available remotely
+>   Configure a development environment available remotely
 
 -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
