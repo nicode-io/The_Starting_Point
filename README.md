@@ -15,11 +15,13 @@ A small, unpretentious guide that brings together the information collected from
     -   [USERS & ROOT USER](#users-&-root-user)
     -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 -   [WEB HOSTING](#basic-for-web-hosting)
-    -   [Domain Redirection](#domain-redirection) 
-    -   [SFTP Access](#sftp-access)
+    -   [DOMAIN REDIRECTION](#domain-redirection) 
+    -   [SFTP ACCESS](#sftp-access)
     -   [PHP](#php)
     -   [MYSQL](#mysql)
     -   [APACHE](#apache)
+    -   [VIRTUAL HOSTS](#virtual-hosts)
+    -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
     -   [PYTHON](#python)
     -   [MONGO DB](#mongo-db)
 -   [Collaboration](#collaboration)
@@ -98,6 +100,8 @@ A small, unpretentious guide that brings together the information collected from
 -   [PHP](#php)
 -   [MYSQL](#mysql)
 -   [APACHE](#apache)
+-   [VIRTUAL HOSTS](#virtual-hosts)
+-   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
 -   [PYTHON](#python)
 -   [MONGO DB](#mongo-db)
 
@@ -182,7 +186,10 @@ A small, unpretentious guide that brings together the information collected from
     ```DocumentRoot /var/www/test.com/public_html```    
     ```ErrorLog ${APACHE_LOG_DIR}/error.log```  
     ```CustomLog ${APACHE_LOG_DIR}/access.log combined```   
-    ```</VirtualHost>```    
+    ```</VirtualHost>```   
+*   Make a check of Apache's configuration files with:  
+    ```$ sudo apache2ctl configtest```  
+    Result should be **Syntax OK**, if not you have to correct your configuration file
 *   Enabling virtual host
     *   ```$ sudo a2ensite domainname.com.conf```
 *   Restart Apache to apply changes
@@ -197,6 +204,54 @@ A small, unpretentious guide that brings together the information collected from
 *   Make a line for every domain you have 
 *   Visit domainname.com in your local browser, this should work ;) 
 *   Let's develop a great website now !
+
+####    CERTBOT - SSL CERTIFICATION
+*   Installation 
+    *   ```$ sudo apt update```
+    *   ```$ sudo apt -y upgrade```
+    *   ```$ sudo apt install certbot python3-certbot-apache```
+*   Allow HTTPS trough the firewall
+    *   ```$ sudo ufw status```
+    *   ```$ sudo ufw allow 'Apache Full'```
+    *   ```$ sudo ufw delete allow 'Apache'```
+    *   Check if access is *Apache Full* with again:    
+        ```$ sudo ufw status```
+*   Obtaining an SSL Certificate
+    *   ```$ sudo certbot --apache```
+    *   Enter a valid email adress, it'll be used for renewal !
+    *   Agree the terms of service
+    *   Share or not your email (not recommended)
+    *   Each domain for wich you can activate a certificate, choose one or many, if many separate choice's number by a space
+    *   Validate and wait for the certification to be done
+    *   Test your website with HTTPS, and the magic happens :smile:
+    *   You can use following to check renewal (if no error it's fine): 
+        ```$ sudo systemctl status certbot.timer``` 
+        ```$ sudo certbot renew --dry-run```
+
+####    PYTHON
+*   Installation
+    *   ```$ sudo apt update```
+    *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
+    *   Check if Python 3 is already installed with :   
+        ```$ python3 -V```
+    *   Install pip, it's Python package/library manager, as apt is for example:    
+        ```$ sudo apt install -y python3-pip```
+    *   From now, you can install packages with following:  
+        ```$ sudo pip3 install package_name``` (ex: ```$ sudo pip3 install django```)
+    *   Here's a few more packages to prepare a robust development environment: 
+        ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
+    *   We're ready for next step: Setting up a Virtual Environment :smile:
+
+####    MONGO DB
+*   Installation
+    *   ```$ sudo apt update```
+    *   ```$ sudo apt -y upgrade```
+    *   ```$ sudo apt install -y mongodb```
+    *   Check install / running service with:  
+        ```$ sudo systemctl status mongodb```   
+    *   Install official Python MongoDB driver called PyMongo:  
+        ```$ sudo pip3 install pymongo```
+*   Make a connection with MongoClient
 
 
 ---
