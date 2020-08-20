@@ -228,17 +228,17 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 ####    CERTBOT - SSL CERTIFICATION
 >   :warning: AllowS HTTPS connections
-*   :round_pushpin: Installation 
+*   Installation 
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade```
     *   ```$ sudo apt install certbot python3-certbot-apache```
-*   :round_pushpin: Allow HTTPS trough the firewall
+*   Allow HTTPS trough the firewall
     *   ```$ sudo ufw status```
     *   ```$ sudo ufw allow 'Apache Full'```
     *   ```$ sudo ufw delete allow 'Apache'```
     *   Check if access is *Apache Full* with again:    
         ```$ sudo ufw status```
-*   :round_pushpin: Obtaining an SSL Certificate
+*   Obtaining an SSL Certificate
     *   ```$ sudo certbot --apache```
     *   Enter a valid email adress, it'll be used for renewal !
     *   Agree the terms of service
@@ -252,7 +252,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 ####    PYTHON
 >   Everybody should try Python :rocket:
-*   :round_pushpin: Installation
+*   Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
     *   Check if Python 3 is already installed with :   
@@ -267,7 +267,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 ####    MONGO DB
 >   A no SQL Database manager, works well with Python and many more
-*   :round_pushpin: Installation
+*   Installation
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade```
     *   ```$ sudo apt install -y mongodb```
@@ -275,7 +275,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         ```$ sudo systemctl status mongodb```   
     *   Install official Python MongoDB driver called PyMongo:  
         ```$ sudo pip3 install pymongo```
-*   :round_pushpin: Make a connection with MongoClient
+*   Make a connection with MongoClient
 
 ---
 
