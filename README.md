@@ -1,4 +1,4 @@
-# BEGINNER'S GUIDE TO VPS 
+# :book: BEGINNER'S GUIDE TO VPS :computer:
 > On my way to host multiple websites on my virtual private server
 
 
@@ -9,7 +9,7 @@ A small, unpretentious guide that brings together the information collected from
 
 ---
 
-## Index
+## :file_folder: Index
 -   [Server Initialisation](#server-initialisation) 
     -   [SSH](#SSH) 
     -   [USERS & ROOT USER](#users-&-root-user)
@@ -68,6 +68,7 @@ A small, unpretentious guide that brings together the information collected from
     *   You now working as ROOT user with same rights (God mode activated, be aware of your power :smile:)
 
 ####    BASIC SECURITY FIRSTS STEPS
+>   :warning:
 *   Disabling password auth / ROOT connection with SSH on VPS
     *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
     *   ```$ sudo nano /etc/ssh/sshd_config```
@@ -115,7 +116,7 @@ A small, unpretentious guide that brings together the information collected from
         *   Check propagation with : ```$ dig your_domain_name```you should see if the process works 
 
 ####    SFTP ACCESS
->   SSH FTP connection
+>  :warning: SSH FTP connection
 
 *   Download FTP client, FileZilla for example is free
 *   Create a new connection with followings informations :
@@ -206,6 +207,7 @@ A small, unpretentious guide that brings together the information collected from
 *   Let's develop a great website now !
 
 ####    CERTBOT - SSL CERTIFICATION
+>   :warning: allow HTTPS connections
 *   Installation 
     *   ```$ sudo apt update```
     *   ```$ sudo apt -y upgrade```
