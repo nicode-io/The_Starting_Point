@@ -36,8 +36,9 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [MYSQL](#mysql)
     -   [MONGO DB](#mongo-db)
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
-    -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
+    -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-development-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
+    -   [DJANGO FRAMEWORK](#django-framework)
 -   [COLLABORATION](#collaboration)
 -   [TIMELINE](#timeline)
 
@@ -86,7 +87,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Enter **ROOT** password
         *   You now working as ROOT user with same rights 
 
-    ####    BASIC SECURITY FIRSTS STEPS
+    ####    BASIC SECURITY FIRST STEP
     >   :warning:
     *  #####    Disabling password auth / ROOT connection with SSH on VPS
         *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
@@ -129,10 +130,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 -   [DOMAIN REDIRECTION](#domain-redirection) 
 -   [SFTP ACCESS](#sftp-access)
--   [PHP](#php)
--   [PYTHON](#python)
--   [MYSQL](#mysql)
--   [MONGO DB](#mongo-db)
 -   [APACHE](#apache)
 -   [VIRTUAL HOSTS](#virtual-hosts)
 -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
@@ -392,8 +389,9 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 ### DEVELOPMENT ENVIRONMENT
 >   Configure a development environment available remotely
--   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
+-   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-development-extension) 
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
+-   [DJANGO FRAMEWORK](#django-framework)
 
     ####    VSCODE REMOTE DEVELOPMENT EXTENSION
     > Allows you to connect to your server's files and projects remotely
@@ -433,7 +431,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Simply delete *environment_name* folder with:   
             ```$ sudo rm -r .../environment_name/*```
 
-    ####    DJANGO
+    ####    DJANGO FRAMEWORK
     >   A Powerful Web-Framework using Python to develop beautiful-builded websites with a high-level of security. Your website will growth more and more ? Django then shines !
     *   #####   Installation
         *   It's recommended to install Django in a virtual environment to make distinctions with your server file system. You can use **VENV** (see above) **PIPENV** or another tool from your choice.
@@ -454,16 +452,16 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   If you can read *System check identified no issues (0 silenced).* everything works well
         *   It's time to discover MVC and this awesome framework !
 
-        
+
 ---
 
 
-**BeCode** Intensive Bootcamp     
+### **BeCode** Intensive Bootcamp     
 This project took place in my leearning path in BeCode (see below) to full stack web developer.
 In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
 Give maximum to get maximum :rocket:
 
-## COLLABORATION
+### COLLABORATION
 Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), welcome to my all new life as developer.
 After 15 years as manager and sales director it's time for me to make my dreams come true and to become a developer.
 Autonomous learner, problem solver and commited team member, I'm ready for challenges !
@@ -471,7 +469,7 @@ So feel strongly to give me any recommandation about my work, advice for future 
 If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me to check if we can share a project together !  
 Thanks by advance for that :heart:  
 
-## TIMELINE
+### TIMELINE
 [:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
