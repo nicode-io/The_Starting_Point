@@ -1,10 +1,10 @@
-# :book: BEGINNER'S GUIDE TO VPS :computer:
+# (◉ ͜ʖ◉))ﾉ彡 :book: BEGINNER'S GUIDE TO VPS ✧٩(•́⌄•́๑)
 > On my way to host multiple websites on my virtual private server
 
 
 ## Description 
 > Start 15-08-2020
-> (◉ ͜ʖ◉))ﾉ彡
+> 
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
@@ -15,20 +15,23 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 ---
 
 ## :file_folder: Index
--   [Server Initialisation](#server-initialisation) 
+-   [SERVER INITIALISATION](#server-initialisation) 
     -   [SSH](#SSH) 
     -   [USERS & ROOT USER](#users-&-root-user)
     -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 -   [WEB HOSTING](#basic-for-web-hosting)
     -   [DOMAIN REDIRECTION](#domain-redirection) 
     -   [SFTP ACCESS](#sftp-access)
-    -   [PHP](#php)
-    -   [PYTHON](#python)
-    -   [MYSQL](#mysql)
-    -   [MONGO DB](#mongo-db)
     -   [APACHE](#apache)
     -   [VIRTUAL HOSTS](#virtual-hosts)
     -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
+    -   [HTACCESS](#htaccess)
+-   [PROGRAMMING LANGUAGE](#programming-language)
+    -   [PHP](#php)
+    -   [PYTHON](#python)
+-   [DATABASES MANAGEMENT](#databases-management)
+    -   [MYSQL](#mysql)
+    -   [MONGO DB](#mongo-db)
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
     -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
@@ -125,7 +128,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [APACHE](#apache)
 -   [VIRTUAL HOSTS](#virtual-hosts)
 -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
--   [.HTACCESS](#.htaccess)
+-   [HTACCESS](#htaccess)
 
     ####    DOMAIN REDIRECTION
     >   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
@@ -148,69 +151,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   User: *Username used for SSH connection to your VPS*
         *   Password: *Password used for SSH connection to your VPS*
         *   Accept fingerprint if asked, then connect
-
-    ####    PHP
-    >   A very popular programming language 
-    *   Install PHP and PHP modules
-        *   ```$ sudo apt install -y php7.4``` 
-        *   ```$ php -v``` check wich version is installed
-            Install PHP modules (example:)
-        *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
-
-    ####    PYTHON
-    >   A powerfull programming language for Web-Development as for I.A and data-science
-    *   Installation
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
-        *   Check if Python 3 is already installed with :   
-            ```$ python3 -V```
-        *   Install pip, it's Python package/library manager, as apt is for example:    
-            ```$ sudo apt install -y python3-pip```
-        *   From now, you can install packages with following:  
-            ```$ sudo pip3 install package_name``` (ex: ```$ sudo pip3 install django```)
-        *   Here's a few more packages to prepare a robust development environment: 
-            ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
-        *   We're ready for next step: Setting up a Virtual Environment !
-
-    ####    MYSQL
-    >   A SQL database server, do queries all day, SQL will answer you each time, except if you miss the ending *;* off course :wink:
-    *   Installation
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt install mysql-server```
-    *   Configuration
-        *   ```$ sudo mysql_secure_installation```
-        *   Choose a level of security for passwords, from 0 to 2
-        *   Enter and confirm your password 
-        *   Choose if you wish to disable anonymous connection *recommended*
-        *   Choose if you wish to disable remote root login *recommended*
-        *   Choose if you wich to remove test database and access to it *not recommended for now*
-    *   Create dedicated MySQL user and granting privileges
-        *   ```$ sudo mysql``` Enter in MySQL console 
-        *   ```mysql> CREATE USER username@host_name IDENTIFIED BY 'password';```
-        *   From now you can grant specific permissions to user, there's many of them, here's an example: 
-            ```mysql> GRANT DELETE ON db_name.table TO 'username@host';```
-        *   You can add *WITH GRANT OPTION* at the end of statement to allow user giving permissions to other users (off course limited to his own permissions)
-        *   A good practise is to run following after giving permissions: 
-            ```mysql> FLUSH PRIVILEGES;```
-        *   ```mysql> exit``` to finally quit MySQL
-    *   Testing MySQL
-        *   ```$ systemctl status mysql.service```
-        *   You should see "Server is operationnal" and many others informations
-            *   If not: ```$ sudo systemctl start mysql```
-        *   ```$ sudo mysqladmin -p -u username version``` 
-        *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running :magic_wand:
-
-    ####    MONGO DB
-    >   A no SQL Database manager, works well with Python and many more
-    *   Installation
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt -y upgrade```
-        *   ```$ sudo apt install -y mongodb```
-        *   Check install / running service with:  
-            ```$ sudo systemctl status mongodb```   
-        *   Install official Python MongoDB driver called PyMongo:  
-            ```$ sudo pip3 install pymongo```
-    *   Make a connection with MongoClient
 
     ####    APACHE
     >   Your web hosting server, mandatory for websites hosting/development
@@ -282,34 +222,109 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo systemctl status certbot.timer``` 
             ```$ sudo certbot renew --dry-run```
 
-####    .HTACCESS
->   Manage your pages redirection, create 404 or allow or deny specific IP's
-*   Create an **.htaccess** file is the first step, be sure to do one file for each website you host to be sure avoiding conflicts and personalize your configuration
-    *   Go to your website's root directory:    
-        ```$ cd var/www/domainname.com/public_html```
-    *   Create **.htacess** file:   
-        ```$ touch .htacess```
-    *   From now you can edit this file for the following steps: redirection, 404 page, specific IP filters and more. 
-*   Manage website pages' redirection
-    *   First go to your website folder:    
-        ```$ cd /var/www/domainname.com/public_html/```
-    *   Create an html basic file to test redirection:  
-        ```$ sudo touch test.html```
-    *   Edit this file: 
-        ```$ sudo nano test.html```
-    *   Add following code and save: 
-        ```<html><body>Redirection Test is working</body></html>```
+    ####    HTACCESS
+    >   Manage your pages redirection, create 404 or allow or deny specific IP's
+    *   Create an **.htaccess** file is the first step, be sure to do one file for each website you host to be sure avoiding conflicts and personalize your configuration
+        *   Go to your website's root directory:    
+            ```$ cd var/www/domainname.com/public_html```
+        *   Create **.htacess** file:   
+            ```$ touch .htacess```
+        *   From now you can edit this file for the following steps: redirection, 404 page, specific IP filters and more. 
+    *   Manage website pages' redirection
+        *   First go to your website folder:    
+            ```$ cd /var/www/domainname.com/public_html/```
+        *   Create an html basic file to test redirection:  
+            ```$ sudo touch test.html```
+        *   Edit this file: 
+            ```$ sudo nano test.html```
+        *   Add following code and save: 
+            ```<html><body>Redirection Test is working</body></html>```
+        *
     *
-*
-    
 
+---
+
+### PROGRAMMING LANGUAGE
+> The start of everything in digital world, programming languages transform every ideas into working solutions. Find the one who fits to you and your goals and say **Hello World**
+-   [PHP](#php)
+-   [PYTHON](#python)
+
+    ####    PHP
+    >   A very popular programming language 
+    *   Install PHP and PHP modules
+        *   ```$ sudo apt install -y php7.4``` 
+        *   ```$ php -v``` check wich version is installed
+            Install PHP modules (example:)
+        *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
+
+    ####    PYTHON
+    >   A powerfull programming language for Web-Development as for I.A and data-science
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
+        *   Check if Python 3 is already installed with :   
+            ```$ python3 -V```
+        *   Install pip, it's Python package/library manager, as apt is for example:    
+            ```$ sudo apt install -y python3-pip```
+        *   From now, you can install packages with following:  
+            ```$ sudo pip3 install package_name``` (ex: ```$ sudo pip3 install django```)
+        *   Here's a few more packages to prepare a robust development environment: 
+            ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
+        *   We're ready for next step: Setting up a Virtual Environment !
+
+---
+
+### DATABASES MANAGEMENT
+>   There's many databases manager and types of databases. We can sort them in two main families: Relative and Non-relative (also often called No SQL).
+>   MySQL is a relative database system and Mongo DB is an unrelative database system
+-   [MYSQL](#mysql)
+-   [MONGO DB](#mongo-db)
+
+    ####    MYSQL
+    >   A SQL database server, do queries all day, SQL will answer you each time, except if you miss the ending *;* off course :wink:
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt install mysql-server```
+    *   Configuration
+        *   ```$ sudo mysql_secure_installation```
+        *   Choose a level of security for passwords, from 0 to 2
+        *   Enter and confirm your password 
+        *   Choose if you wish to disable anonymous connection *recommended*
+        *   Choose if you wish to disable remote root login *recommended*
+        *   Choose if you wich to remove test database and access to it *not recommended for now*
+    *   Create dedicated MySQL user and granting privileges
+        *   ```$ sudo mysql``` Enter in MySQL console 
+        *   ```mysql> CREATE USER username@host_name IDENTIFIED BY 'password';```
+        *   From now you can grant specific permissions to user, there's many of them, here's an example: 
+            ```mysql> GRANT DELETE ON db_name.table TO 'username@host';```
+        *   You can add *WITH GRANT OPTION* at the end of statement to allow user giving permissions to other users (off course limited to his own permissions)
+        *   A good practise is to run following after giving permissions: 
+            ```mysql> FLUSH PRIVILEGES;```
+        *   ```mysql> exit``` to finally quit MySQL
+    *   Testing MySQL
+        *   ```$ systemctl status mysql.service```
+        *   You should see "Server is operationnal" and many others informations
+            *   If not: ```$ sudo systemctl start mysql```
+        *   ```$ sudo mysqladmin -p -u username version``` 
+        *   You should see an output with many elements like mysqladmin version, this means MySQL is up and running :magic_wand:
+
+    ####    MONGO DB
+    >   A no SQL Database manager, works well with Python and many more
+    *   Installation
+        *   ```$ sudo apt update```
+        *   ```$ sudo apt -y upgrade```
+        *   ```$ sudo apt install -y mongodb```
+        *   Check install / running service with:  
+            ```$ sudo systemctl status mongodb```   
+        *   Install official Python MongoDB driver called PyMongo:  
+            ```$ sudo pip3 install pymongo```
+    *   Make a connection with MongoClient
 
 ---
 
 
 ### DEVELOPMENT ENVIRONMENT
 >   Configure a development environment available remotely
-
 -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 
