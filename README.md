@@ -6,7 +6,6 @@
 
 ## Description 
 > Start 15-08-2020
-> 
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
@@ -14,7 +13,9 @@ When you see::warning:, this refers directly to server, files or users' security
 
 Little disclaimer: made by a rookie for the rookie, there's for sure missing things (I'll complete with times) and bad things (I'll improve myself). 
 
+
 ---
+
 
 ## :file_folder: Index
 -   [SERVER INITIALISATION](#server-initialisation) 
@@ -37,10 +38,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
     -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
--   [Collaboration](#collaboration)
--   [Timeline](#timeline)
+-   [COLLABORATION](#collaboration)
+-   [TIMELINE](#timeline)
+
 
 ---
+
 
 ### SERVER INITIALISATION
 -   [SSH](#SSH)
@@ -117,7 +120,9 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ sudo ufw status```
         *   Be sure to allow future applications through the firewall to allow traffic in
 
+
 --- 
+
 
 ### BASICS FOR WEB HOSTINGS
 >  :wrench: Apps, Virtual Hosts, databases
@@ -228,7 +233,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo certbot renew --dry-run```
 
     ####    HTACCESS
-    >   Manage your pages redirection, create 404 or allow or deny specific IP's
+    >   Manage your pages redirection, create 404 or allow or deny specific IPs
     *   #####    Enable .htaccess in Apache
         *   You'll need to add configuration to your website's virtual host, repeat this operation for each website you host 
         *   Open your website's virtual host configuration file:    
@@ -241,7 +246,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             </Directory>    
         *   Restart Apache Service: 
             ```$ sudo service apache2 restart```
-    *   ##### Create an **.htaccess** file
+    *   #####   Create an **.htaccess** file
         *   Be sure to do one file for each website you host to be sure avoiding conflicts and personalize your configuration
         *   Go to your website's root directory:    
             ```$ cd var/www/domainname.com/public_html```
@@ -250,7 +255,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Add the following line and save:    
             **Options -Indexes**
         *   From now you can edit this file for the following steps: redirection, 404 page, specific IP filters and more. 
-    *   ##### Manage website pages' redirection
+    *   #####   Manage website pages redirection
         *   First go to your website folder:    
             ```$ cd /var/www/domainname.com/public_html/```
         *   Create an html basic file to test redirection:  
@@ -263,9 +268,45 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo nano .htaccess```
         *   Add the following line and save: 
             **Redirect 301 /index.html /redir-test.html**
-    *
+        *   Navigate to your **domain.com/index.html** you should now be redirected to **domain.com/redir-test.html**
+    *   #####   Set up a 404 page 
+        *   Create a **404.html** page in folder /var/www/domainname.com/public_html
+        *   Add, for example, following content in it and save:  
+            <!doctype html>
+                <html>
+                    <body>
+                    404 ERROR : Page not found :(
+                    </body>
+                </html>
+        *   Edit your **.htaccess** file:   
+            ```$ sudo nano .htaccess```
+        *   Add the following line and save: 
+            **ErrorDocument 404 /404.html**  
+        *   Navigate to an *uncreated* page, for example *www.domainname.com/no-exist.html*
+        *   You should be redirected to your freshly installed 404 page !
+    *   #####   Restricted IPs
+        > Sometimes you want to give access to specific IP's to a folder or otherwise you want to refuse access to specific IP's, for example if you ban an user's IP. You can do that in two ways: **1.** allow all IP's but somes or **2.** do not allow any addresses except certain 
+        *   **1.** Block IPs
+            *   Edit your **.htaccess** file:   
+            ```$ sudo nano .htaccess```
+            *   Remove the following line (if applicable):  
+                **Options -Indexes**
+            *   Add the followings lines and save:  
+                **order allow,deny** indicate you allow all IPs but ...  
+                **deny from 192.0.2.9** to block just this IP   
+                **deny from 192.0.2** to block all the range from 0 to 255
+        *   **2.** Allow IPs
+            *   Edit your **.htaccess** file:   
+            ```$ sudo nano .htaccess```
+            *   Add the followings lines and save:  
+                **order deny,allow**    
+                **Deny from all** to block all IPs
+                **allow from 192.0.2.9** to allow just this IP
+                **allow from 192.0.2** to allow all the range from 0 to 255
+            
 
 ---
+
 
 ### PROGRAMMING LANGUAGE
 > The start of everything in digital world, programming languages transform every ideas into working solutions. Find the one who fits to you and your goals and say **Hello World**
@@ -295,7 +336,9 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev```
         *   We're ready for next step: Setting up a Virtual Environment !
 
+
 ---
+
 
 ### DATABASES MANAGEMENT
 >   There's many databases manager and types of databases. We can sort them in two main families: Relative and Non-relative (also often called No SQL).
@@ -342,6 +385,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Install official Python MongoDB driver called PyMongo:  
             ```$ sudo pip3 install pymongo```
     *   #####   Make a connection with MongoClient
+
 
 ---
 
@@ -392,18 +436,34 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    DJANGO
     >   A Powerful Web-Framework using Python to develop beautiful-builded websites with a high-level of security. Your website will growth more and more ? Django then shines !
     *   #####   Installation
+        *   It's recommended to install Django in a virtual environment to make distinctions with your server file system. You can use **VENV** (see above) **PIPENV** or another tool from your choice.
+        *   Install pip, package manager first: 
+            ```$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py```
+        *   Run the following in the folder you have downloaded  *get-pip.py* : 
+            ```$ python get-pip.py```
+        *   Install Django: 
+            ```$ python -m pip install Django```
+        *   Check your version as a check:  
+            ```$ python -m django --version```
+    *   #####   Creating a project
+        *   Go to your project directory and run following: 
+            ```$ django-admin startproject *project_name*```
+        *   You can now explore the default project's structure
+    *   #####   Verify your initialisation
+        *   ```$ python manage.py runserver```
+        *   If you can read *System check identified no issues (0 silenced).* everything works well
+        *   It's time to discover MVC and this awesome framework !
 
+        
 ---
+
 
 **BeCode** Intensive Bootcamp     
 This project took place in my leearning path in BeCode (see below) to full stack web developer.
 In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
 Give maximum to get maximum :rocket:
 
-## Timeline 
-[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
-
-## Collaboration
+## COLLABORATION
 Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), welcome to my all new life as developer.
 After 15 years as manager and sales director it's time for me to make my dreams come true and to become a developer.
 Autonomous learner, problem solver and commited team member, I'm ready for challenges !
@@ -411,5 +471,7 @@ So feel strongly to give me any recommandation about my work, advice for future 
 If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me to check if we can share a project together !  
 Thanks by advance for that :heart:  
 
+## TIMELINE
+[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
