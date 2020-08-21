@@ -1,10 +1,10 @@
-# (◉ ͜ʖ◉))ﾉ彡 :book: BEGINNER'S GUIDE TO VPS ✧٩(•́⌄•́๑)
-> Want to host multiple websites on a virtual private server ?  
-> Want to create a first virtual development environment ?  
-> Let's try it together !
+# :book: BEGINNER'S GUIDE TO VPS :computer:
+> On my way to host multiple websites on my virtual private server
+
 
 ## Description 
 > Start 15-08-2020
+> (◉ ͜ʖ◉))ﾉ彡
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
 
@@ -125,6 +125,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [APACHE](#apache)
 -   [VIRTUAL HOSTS](#virtual-hosts)
 -   [CERTBOT - SSL CERTIFICATION](#certbot---ssl-certification)
+-   [.HTACCESS](#.htaccess)
 
     ####    DOMAIN REDIRECTION
     >   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
@@ -258,7 +259,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   Let's develop a great website now !
 
     ####    CERTBOT - SSL CERTIFICATION
-    >   :warning: AllowS HTTPS connections
+    >   :warning: AllowS HTTPS connections if your hosting provider doesn't provide a solution, wich is rare
     *   Installation 
         *   ```$ sudo apt update```
         *   ```$ sudo apt -y upgrade```
@@ -281,6 +282,27 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo systemctl status certbot.timer``` 
             ```$ sudo certbot renew --dry-run```
 
+####    .HTACCESS
+>   Manage your pages redirection, create 404 or allow or deny specific IP's
+*   Create an **.htaccess** file is the first step, be sure to do one file for each website you host to be sure avoiding conflicts and personalize your configuration
+    *   Go to your website's root directory:    
+        ```$ cd var/www/domainname.com/public_html```
+    *   Create **.htacess** file:   
+        ```$ touch .htacess```
+    *   From now you can edit this file for the following steps: redirection, 404 page, specific IP filters and more. 
+*   Manage website pages' redirection
+    *   First go to your website folder:    
+        ```$ cd /var/www/domainname.com/public_html/```
+    *   Create an html basic file to test redirection:  
+        ```$ sudo touch test.html```
+    *   Edit this file: 
+        ```$ sudo nano test.html```
+    *   Add following code and save: 
+        ```<html><body>Redirection Test is working</body></html>```
+    *
+*
+    
+
 
 ---
 
@@ -291,7 +313,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-devlopment-extension) 
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
 
-    #### VSCODE REMOTE DEVELOPMENT EXTENSION
+    ####    VSCODE REMOTE DEVELOPMENT EXTENSION
     > Allows you to connect to your server's files and projects remotely
     *   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
     *   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
@@ -302,7 +324,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Type *ssh username@VPS_IP -A* and press *Enter*
         *   A new VScode window will pop, you're now connected to your remote server and have access to the file structure and all folders you have there. :thumbs:
 
-    #### PYTHON VIRTUAL ENVIRONMENT
+    ####    PYTHON VIRTUAL ENVIRONMENT
     >   Create isolated space on your server for each of your Python's projects. We'll use **VENV** but others exists
     *   Installation
         *   ```$ sudo apt update```
@@ -320,9 +342,15 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Activate your virtual environment:  
             ```$ source environment_name/bin/activate```
         *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your VPS's system but only to this virtual environment :magic_wand:
+    *   Close your venv environment: *CTRL + D*
     *   Delete your virtual environment 
         *   Simply delete *environment_name* folder with:   
             ```$ sudo rm -r .../environment_name/*```
+
+    ####    DJANGO
+    >   A Powerful Web-Framework using Python to develop beautiful-builded websites with a high-level of security. Your website will growth more and more ? Django then shines !
+    *   Installation
+
 ---
 
 **BeCode** Intensive Bootcamp     
