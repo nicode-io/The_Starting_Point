@@ -7,7 +7,7 @@ BeCode Charleroi
 ## V2 - Integrate SASS
 
 ### Project link :
-[GitHub page](https://nicode-be.github.io/01-03-Turlututu/)
+[GitHub page](https://nicode-io.github.io/01-03-Turlututu/)
 
 ### Why :
 **BeCode** Web Developer Training  
