@@ -1,6 +1,6 @@
 # (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE TO VPS ✧٩(•́⌄•́๑)
->   Want to host multiple websites on your own VPS ? 
->   Want to be free to configure your server as you like ? 
+>   Want to host multiple websites on your own VPS ?    
+>   Want to be free to configure your server as you like ?  
 >   Let's start together ! 
 
 
