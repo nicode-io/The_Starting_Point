@@ -1,5 +1,5 @@
-# (◉ ͜ʖ◉))ﾉ彡 :book: BEGINNER'S GUIDE TO VPS ✧٩(•́⌄•́๑)
-> On my way to host multiple websites on my virtual private server
+# (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE TO VPS ✧٩(•́⌄•́๑)
+> :book: On my way to host multiple websites on my virtual private server
 
 
 ## Description 
@@ -46,7 +46,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 
     ####    SSH
-    >   :warning:
+    >   :warning:   
     *   Create SSH key
         *   ```$ ssh-keygen```
         *   Choose name of the key and where to save :  
