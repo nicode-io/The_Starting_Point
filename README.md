@@ -80,18 +80,34 @@ My second Django's project. This one aims to go deeper in the knowledge of this 
     ```]``` 
 ####    Writing a view
 *   In your app folder, open **views.py**
-*   Add the following code for home page:
+*   Add the following code for home page:   
     ```def index(request):```   
     ```"""The homepage for project"""```    
     ```return render(request, 'project_name/index.html')``` (be aware of indent, this is Pyhton)
- ###    Writing a template
+####    Writing a template
 *   In your app folder, create a subfolder called **templates**
 *   Make another folder inside the **templates** folder called **app_name** (this seems redundant but allows a good interpretation for Django, especially in large projects)
 *   In this last folder create an **index.html** file, the path will so be *project_name/app_name/templates/app_name/index.html*
-*   Add a small test HTML content like :
+*   Add a small test HTML content like :    
     ```<p>Project Name Homepage</p>```
     ```<p>Welcome to this new Django's adventure</p>```
 *   Save the **index.html** and now if you browse to ```http://localhost:8000/admin/``` you should see your small text inside !
+
+####    Writing a base template
+*   Base template can be considered as a parent of others children pages. A children page will inherit all content from the base template, this way you just have to change new elements in the child page. It makes it easy to change an all website header of footer for example
+*   In the same folder as *index.html* create a file called **base.html**
+*   Add followings:     
+    ```<p><a href="{% url 'app_name:index' %}">App Name</a></p>``` A link to the homepage we will insert in all future children pages (we need to set up that in a few step).   
+    ```{% block content %}{% endblock content %}``` for now they are placeholders without content but if there was content in them, this content would be replicated to all children page, from now only the empty block will be applied.   
+*   Now open **index.html** to make it a child page of *base.html*.
+*   Replace actual content by :   
+    ```{% extends "app_name/base.html" %}``` import the *base.html* template    
+    ```{% block content %}``` Start of the content block    
+    ```<p>Learning Log helps you keep track of your leaning, for any topic you're learning about.</p>``` Content of content block  
+    ```{% endblock content %}``` End of content block   
+*   A good practise in bigger project is to create a main base template for all your apps, then in the apps create a base that inherit from the main base and then children pages in the app inheriting from app base. This way you can manage hundreds of pages and make a global change to the whole site easily, or a big change on an app base too. The more you think your starting structure with Django, the more easiest maintenance/upgrades you got :wink:
+
+
 
 
 
