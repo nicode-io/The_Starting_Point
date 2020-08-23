@@ -8,7 +8,7 @@
         <title>Learning Log</title>
 
         {% bootstrap_css %}
-        {% bootstrap_javascript jaquery='full' %}
+        {% bootstrap_javascript jquery='full' %}
 
     </head>
     <body>
@@ -26,7 +26,7 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
                             <span class="navbar-text">
@@ -40,7 +40,7 @@
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a href="{% 'users:register' %}" class="nav-link">
+                            <a href="{% url 'users:register' %}" class="nav-link">
                                 Register
                             </a>
                         </li>

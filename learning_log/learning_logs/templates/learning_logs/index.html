@@ -1,5 +1,29 @@
 {% extends "learning_logs/base.html" %}
-{% block content %}
-    <p>Learning Log helps you keep track of your leaning, for any topic you're learning about.</p>
-{% endblock content %}
 
+{% block page_header %}
+    <section class="jumbotron">
+        <h1 class="display-3">
+            Track your learning
+        </h1>
+        <p class="lead">
+            Make your own Learning Log, and keep a list of the topics you're learning about. Whenever you learn something new about a topic, make an entry summarizing what you've learned.
+        </p>
+        <a href="{% url 'users:register' %}" class="btn btn-lg btn-primary" role="button">
+            Register &raquo;
+        </a>
+    </section>
+    <section class="jumbotron">
+        <h1 class="display-3">
+            Have an account
+        </h1>
+        <p class="lead">
+            Let's go !
+        </p>
+        <a href="{% url 'learning_logs:new_topic' %}" class="btn btn-lg btn-primary" role="button">
+            Create a topic &raquo;
+        </a>
+        <a href="{% url 'learning_logs:topics' %}" class="btn btn-lg btn-primary" role="button">
+            Browse your topics &raquo;
+        </a>
+    </section>
+{% endblock page_header %}
