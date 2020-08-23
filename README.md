@@ -445,12 +445,15 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ python -m django --version```
     *   #####   Creating a project
         *   Go to your project directory and run following: 
-            ```$ django-admin startproject *project_name*```
+            ```$ django-admin startproject *project_name* .```  
+            >   The ending **.** is very important. It creates a directory structure wich will make it easy to deploy the app to a server after development
         *   You can now explore the default project's structure
     *   #####   Verify your initialisation
         *   ```$ python manage.py runserver```
         *   If you can read *System check identified no issues (0 silenced).* everything works well
         *   It's time to discover MVC and this awesome framework !
+    *   ####    Learn a lot more about Django
+        *   I made a step-by-step dedicated to django [HERE](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed), if you want to learn more and make an entire first project this may help you. :wink:
 
 
 ---
