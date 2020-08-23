@@ -245,23 +245,39 @@ My second Django's project. This one aims to go deeper in the knowledge of this 
 *   Open **base.html** and in the *{% else %}* condition add following as first line:   
     ```<a href="{% url 'users:register' %}">Register</a> -```   
 
+####    Allow user to own their data
+*   In your app_name folder, open **views.py** and add followings:  
+    At the start of the file after *from django.shortcuts...* add:  
+    ```from django.contrib.auth.decorators import login_required``` 
+    From now, you can add **@login_required** just before the view you want to show to registred users only, example:   
+    ```@login_required```   
+    ```def view_example(request):```
+    ```...```
+*   In project folder, open **settings.py** and add the followings at the bottom: 
+    ```#My settings```  
+    ```LOGIN_URL = 'users:login'``` 
+    That way you define th default url redirection for unregistred user who attempt to reach a registred-user-only page
+*   A good and simple practise is to put **@login_required** to each view by default, and then authorize access after thinking about your way to manage security and user-experience
 
-
-
-
-
-
-
-
-
-
-
-
+####    Use django-bootstrap4 app
+*   In your virtual environment, install django-bootstrap4: 
+    ```$ pip install django-bootstrap4```  
+*   In project folder, open **settings.py**, and in *INSTALLED_APPS = [...]* after  your apps, add: 
+    ```# Third party apps```    
+    ```'bootstrap4',``` 
+*   Make sure this new section is located between you apps and default django apps
+*   In *app_name/templates/learning_logs* folder Open **base.html**, replace existing content by:   
+    MAKE AN EXTERNAL LINK TO HTML CODE
+*   Update you differents pages with what you learn in [django-bootstrap4 documentation](https://django-bootstrap4.readthedocs.io/en/latest/)
 
 
 ##  Achievements 
 *   Go deeper in Django
-*   Write a step-by-step cheatsheet for setting up a Django project
+*   Write a step-by-step cheatsheet for:
+    *   Set up a Django project
+    *   Manage apps, views, urls, models, forms and admin panel 
+    *   Set up an authentication system
+    *   Allowing users to own their data
 *   Manage database and CRUD (Create Read Update Delete)
 *   Set up routines in web/app development with Python/Django
 *   Explore next project's main goal => combo Django Mongo DB
