@@ -120,6 +120,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             check status
         *   ```$ sudo ufw status```
         *   Be sure to allow future applications through the firewall to allow traffic in
+        *   SSH port: ```$ sudo ufw allow 22``` 
+        *   HTTP/HTTPS: ```$ sudo ufw allow proto tcp from any to any port 80,443```
+        *   HTTP: ```sudo ufw allow http``` or ```sudo ufw allow 80```
+        *   HTTPS: ```sudo ufw allow https``` or ```sudo ufw allow 443```
 
 
 --- 
@@ -162,7 +166,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    APACHE
     >   Your web hosting server, mandatory for websites hosting/development
     *   #####   Installation
-        *   ```$ sudo apt-get update```
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt-get install apache2```
 
     ####    VIRTUAL HOSTS
@@ -171,7 +175,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Making file / directory structure and setup permissions
         *   ```$ sudo mkdir -p /var/www/domainname.com/public_html```
         *   ```$ sudo chown -R $USER:$USER /var/www/domainname.com/public_html```
-        *   ```$ sudo chmod -R 755 /var/www```
+        *   ```$ sudo chmod -R 755 /var/www/```
     *   #####   Create sample web content page 
         *   ```$ sudo nano /var/www/domainname.com/public_html/index.html```
         *   Add basic HTML page's content 
@@ -206,10 +210,9 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   Let's develop a great website now !
 
     ####    CERTBOT - SSL CERTIFICATION
-    >   :warning: AllowS HTTPS connections if your hosting provider doesn't provide a solution, wich is rare
+    >   :warning: AllowS HTTPS connections if your hosting provider doesn't provide a solution, wich is uncommon
     *   #####   Installation 
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt -y upgrade```
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install certbot python3-certbot-apache```
     *   #####   Allow HTTPS trough the firewall
         *   ```$ sudo ufw status```
@@ -313,6 +316,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    PHP
     >   A very popular programming language 
     *   #####   Install PHP and PHP modules
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install -y php7.4``` 
         *   ```$ php -v``` check wich version is installed
             Install PHP modules (example:)
@@ -321,8 +325,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    PYTHON
     >   A powerfull programming language for Web-Development as for I.A and data-science
     *   #####   Installation
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt -y upgrade``` *-y option allow installation without manual confirmation*
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   Check if Python 3 is already installed with :   
             ```$ python3 -V```
         *   Install pip, it's Python package/library manager, as apt is for example:    
@@ -340,13 +343,46 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 ### DATABASES MANAGEMENT
 >   There's many databases manager and types of databases. We can sort them in two main families: Relative and Non-relative (also often called No SQL).
 >   MySQL is a relative database system and Mongo DB is an unrelative database system
+-   [MARIADB](#mariadb)
 -   [MYSQL](#mysql)
 -   [MONGO DB](#mongo-db)
 
-    ####    MYSQL
-    >   A relative Databases manager/server, this is one of the references and you should find all the documentation you need to launch your first projects.
+    ####    MARIADB
+    >   This one is one of the most relationnal database. Based on a for of MySQL and made by original developers of MySQL. It is faster in many points and guaranteed to stay open source
     *   #####   Installation
-        *   ```$ sudo apt update```
+        *   Update System
+            *   ```$ sudo apt update && sudo apt upgrade```
+            *   ```$ sudo apt -y install software-properties-common``` 
+        *   Import MariaDB gpg key
+            *   ```$ sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'``` 
+        *   Add MariaDB APT repository
+            *   ```$ sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'``` 
+        *   Install MariaDB Server
+            *   ```$ sudo apt update && sudo apt upgrade```
+            *   ```$ sudo apt install mariadb-server mariadb-client```
+        *   Secure MariaBD Server
+            *   ```$ sudo mysql_secure_installation```
+            *   Answer all the questions and you're done
+            *   ```$ systemctl status mysql``` to check status
+    *   #####   Access to MariaDB
+        *   ```$ sudo mysql -u root -p``` *enter root password* 
+    *   #####   Create a database
+        *   ```MariaDB [...]> CREATE DATABASE db_name;```
+        *   ```MariaDB [...]> SHOW DATABASES;``` to check creation
+    *   #####   Create a user and manage privileges
+        *   ```$ sudo mysql -u root```
+        *   ```MariaDB [...]> CREATE USER user_name@localhost IDENTIFIED BY user_password;```
+        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
+        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON db_name TO user_name@localhost IDENTIFIED BY user_password;``` to give access to specific database
+        *   ```MariaDB [...]> FLUSH PRIVILEGES;``` to refresh recently added privileges
+        *   ```MariaDB [...]> SHOW GRANTS FOR user_name@localhost;``` to check status of privileges for user
+    *   #####   Remove a user
+        *   ```DROP USER user_name@localhost;``` 
+
+    ####    MYSQL
+    >   Another relationnal database, older than MariaDB (wich is based on a fork of MySQL by the way) and a lesser speed
+    *   #####   Installation
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install mysql-server```
     *   #####   Configuration
         *   ```$ sudo mysql_secure_installation```
@@ -374,8 +410,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    MONGO DB
     >   A no SQL Databases manager/server, its powerfull schema less system and OOP structure and more of that an easy way to scale up when your website will growth
     *   #####   Installation
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt -y upgrade```
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install -y mongodb```
         *   Check install / running service with:  
             ```$ sudo systemctl status mongodb```   
@@ -410,8 +445,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    PYTHON VIRTUAL ENVIRONMENT
     >   Create isolated space on your server for each of your Python's projects. We'll use **VENV** but others exists
     *   #####   Installation
-        *   ```$ sudo apt update```
-        *   ```$ sudo apt upgrade```
+        *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install -y python3-venv```
     *   #####   Create a new virtual environment
         *   Create a project folder:    
