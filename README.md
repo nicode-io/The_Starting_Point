@@ -33,6 +33,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [PHP](#php)
     -   [PYTHON](#python)
 -   [DATABASES MANAGEMENT](#databases-management)
+    -   [MARIADB](#mariadb)
     -   [MYSQL](#mysql)
     -   [MONGO DB](#mongo-db)
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
@@ -317,10 +318,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     >   A very popular programming language 
     *   #####   Install PHP and PHP modules
         *   ```$ sudo apt update && sudo apt upgrade```
-        *   ```$ sudo apt install -y php7.4``` 
+        *   ```sudo apt install -y php7.4-mysql```
+        *   ```sudo phpenmod pdo_mysql```
         *   ```$ php -v``` check wich version is installed
             Install PHP modules (example:)
         *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
+        *   ```sudo service apache2 restart```
 
     ####    PYTHON
     >   A powerfull programming language for Web-Development as for I.A and data-science
@@ -365,7 +368,15 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   Answer all the questions and you're done
             *   ```$ systemctl status mysql``` to check status
     *   #####   Access to MariaDB
-        *   ```$ sudo mysql -u root -p``` *enter root password* 
+        *   ```$ sudo mysql -u root -p``` *enter root password*
+    *   #####   PDO connection syntax
+        ```<?php try {```
+        ``` $pdo = new PDO('mysql:host=localhost;port=3306;dbname=db_name;charset=utf8', 'user_name', 'password';```
+        ```     echo 'Connection succeeded';```
+        ``` }```
+        ``` catch (PDOException $e) {```
+        ```     die('Erreur : '.$e->getMessage());```
+        ```}?>```
     *   #####   Create a database
         *   ```MariaDB [...]> CREATE DATABASE db_name;```
         *   ```MariaDB [...]> SHOW DATABASES;``` to check creation
