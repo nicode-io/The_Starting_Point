@@ -1,5 +1,5 @@
-# (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE TO VPS ✧٩(•́⌄•́๑)
->   Want to host multiple websites on your own VPS ?    
+# (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE TO PRIVATE SERVER ✧٩(•́⌄•́๑)
+>   Want to host multiple websites on your own private server?  
 >   Want to be free to configure your server as you like ?  
 >   Let's start together ! 
 
@@ -7,7 +7,7 @@
 ## Description 
 > Start 15-08-2020
 
-A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a VPS to host a multitude of websites and applications.
+A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a (virtual) private server to host a multitude of websites and applications.
 
 When you see::warning:, this refers directly to server, files or users' security
 
@@ -67,7 +67,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             or  (if you don't have pbcopy for example)  
         *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
 
-    *   #####   Connect to SSH to VPS
+    *   #####   Connect to SSH to (virtual) private server
         *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
         *   ```$ ssh 'user@host```You'll be asked by local system for key password
         *   It's ok, from now you can connect without having to type a password on this computer :magic_wand:
@@ -100,7 +100,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    BASIC SECURITY FIRST STEP
     >   :warning:
 
-    *  #####    Disabling password auth / ROOT connection with SSH on VPS
+    *  #####    Disabling password auth / ROOT connection with SSH on (virtual) private server
         *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
         *   ```$ sudo nano /etc/ssh/sshd_config```
         *   Uncomment line: "PasswordAuthentication yes" and change it to "PasswordAuthentication no"
@@ -111,7 +111,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   As precaution, open a new terminal window and test that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
 
     *   #####   (Optionnal) Keep server connection alive with your local computer:  
-        >   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your VPS in in production mode. 
+        >   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your (virtual) private server in in production mode. 
         *   In the same file */etc/ssh/sshd_config* add the followings: 
             *TCPKeepAlive yes*
             *ServerAliveInterval 30*
@@ -154,11 +154,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    DOMAIN REDIRECTION
     >   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
 
-    *   #####   Redirect your domain name to VPS
+    *   #####   Redirect your domain name to (virtual) private server
         *   Check on your domain name's provider dashboard a **DNS** section or **A-Records** section
         *   Create a new A-record using the followings :
             *   Host: **@**
-            *   Value/IP: **your_vps_ip** (ipv4)  
+            *   Value/IP: **your_server_ip** (ipv4)  
             *   TTL: **auto** or **30minutes** or specific setting if you need it
             *   Check propagation with : ```$ dig your_domain_name```you should see if the process works :magic_wand:
 
@@ -171,10 +171,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Create new SFTP connection
         *   Click *New connection* and use followings:  
             *   Protocol: **SFTP - SSH File Transfer Protocol**
-            *   Host: **VPS_IP** 
+            *   Host: **your_server_IP** 
             *   Port: empty should work, else try **22**
-            *   User: *Username used for SSH connection to your VPS*
-            *   Password: *Password used for SSH connection to your VPS*
+            *   User: *Username used for SSH connection to your (virtual) private server*
+            *   Password: *Password used for SSH connection to your (virtual) private server*
         *   Connect, accept fingerprint if asked
 
     ####    APACHE
@@ -221,11 +221,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ sudo service apache2 restart```
     > End of loop to add a new site 
 
-    > Do followings operations on local computer not on VPS !
+    > Do followings operations on local computer not on (virtual) private server !
 
     *   ```$ sudo nano /etc/hosts```
     *   Add :
-        ```VPS_IP  domainname.com``` 
+        ```your_server_IP  domainname.com``` 
     *   Make a line for every domain you have 
     *   Visit domainname.com in your local browser, this should work :magic_wand: 
     *   Let's develop a great website now !
@@ -495,7 +495,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
     *   #####   Accessing PHPMyAdmin remotely
         *   On your local computer, browse the following:   
-            **http://YOUR_VPS_IP/phpmyadmin
+            **http://your_server_IP/phpmyadmin
         *   Enter your SQL superuser credentials
         *   You now have access to the admin panel from everywhere
 
@@ -512,7 +512,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     > Allows you to connect to your server's files and projects remotely
 
     *   #####   SSH Server
-        *   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
+        *   Make sure you have an SSH server running on your (virtual) private server, if you follow this guide you should have OpenSSH up to date doing the job
 
     *   #####   VSCODE
         *   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
@@ -522,7 +522,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
             *   Click *Connect to host*
             *   Choose *+ Add a new host*
-            *   Type *ssh username@VPS_IP -A* and press *Enter*
+            *   Type *ssh username@your_server_IP -A* and press *Enter*
             *   A new VScode window will pop, you're now connected to your remote server and have access to the file structure and all folders you have there. :thumbs:
 
     ####    PYTHON VIRTUAL ENVIRONMENT
@@ -543,7 +543,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ ls environment_name```
         *   Activate your virtual environment:  
             ```$ source environment_name/bin/activate```
-        *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your VPS's system but only to this virtual environment :magic_wand:
+        *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your (virtual) private server's system but only to this virtual environment :magic_wand:
 
     *   #####   Close venv virtual environment
         *   *CTRL + D*
