@@ -36,6 +36,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [MARIADB](#mariadb)
     -   [MYSQL](#mysql)
     -   [MONGO DB](#mongo-db)
+    -   [PHPMYADMIN](#phpmyadmin)
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
     -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-development-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
@@ -53,16 +54,19 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 
     ####    SSH
-    >   :warning:   
+    >   :warning:  
+     
     *   #####   Create SSH key
         *   ```$ ssh-keygen```
         *   Choose name of the key and where to save :  
             /home/.ssh/key_name 
-        *   Enter password twice for the key    
+        *   Enter password twice for the key  
+
     *   #####   Copy SSH key in clipboard   
         *   ```$ pbcopy < ~/.ssh/key_name.pub```    
             or  (if you don't have pbcopy for example)  
         *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
+
     *   #####   Connect to SSH to VPS
         *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
         *   ```$ ssh 'user@host```You'll be asked by local system for key password
@@ -70,12 +74,16 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    USERS & ROOT USER
     >   Get the superpowers of admin and give the tiny rights to these bad users :crown:
+
     *   #####   Security advice
         *   Avoid using root user for daily admin usage, cause of too many privileges this user have, instead create a user with sudo powers, it will allow you to do main daily tasks
+
     *   #####   Switch to root user 
         *   ```$ sudo -i```
+
     *   #####   change root user's password
         *   ```$ passwd```
+
     *   #####   Create user with sudo rights  
         *   ```$ sudo adduser username``` 
         *   Enter user information and validate 
@@ -83,6 +91,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   ```$ sudo usermod -aG sudo username```    
                 check if the user is in sudo group  
             *   ```$ id username```  
+
     *   #####   Ask for ROOT access with you sudo User 
         *   ```$ su -```
         *   Enter **ROOT** password
@@ -90,6 +99,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    BASIC SECURITY FIRST STEP
     >   :warning:
+
     *  #####    Disabling password auth / ROOT connection with SSH on VPS
         *   First be sure you have at least root ssh access to your server, ideal would be to have another user with sudo powers and ssh access to your server.
         *   ```$ sudo nano /etc/ssh/sshd_config```
@@ -99,6 +109,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Save and close file
         *   ```$ sudo systemctl restart ssh```
         *   As precaution, open a new terminal window and test that the SSH service is running correctly before closing session, and so avoid you can't log on your sever next time
+
     *   #####   (Optionnal) Keep server connection alive with your local computer:  
         >   If you want to avoid freeze of your terminal when spending time searching web or read documentation while configuring your server, recommended to remove it when your VPS in in production mode. 
         *   In the same file */etc/ssh/sshd_config* add the followings: 
@@ -142,6 +153,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    DOMAIN REDIRECTION
     >   Because you think a long time for this awesome name that will make you the next sold start-up :moneybag:
+
     *   #####   Redirect your domain name to VPS
         *   Check on your domain name's provider dashboard a **DNS** section or **A-Records** section
         *   Create a new A-record using the followings :
@@ -155,6 +167,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     *   #####   Download FTP client
         *   [FileZilla](https://filezilla-project.org/) for example is free
+
     *   #####   Create new SFTP connection
         *   Click *New connection* and use followings:  
             *   Protocol: **SFTP - SSH File Transfer Protocol**
@@ -166,6 +179,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    APACHE
     >   Your web hosting server, mandatory for websites hosting/development
+
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt-get install apache2```
@@ -173,13 +187,16 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     ####    VIRTUAL HOSTS
     >   One virtual host and file folder are needed for each website you'll host    
     >   Repeat followings for each website you host
+
     *   #####   Making file / directory structure and setup permissions
         *   ```$ sudo mkdir -p /var/www/domainname.com/public_html```
         *   ```$ sudo chown -R $USER:$USER /var/www/domainname.com/public_html```
         *   ```$ sudo chmod -R 755 /var/www/```
+
     *   #####   Create sample web content page 
         *   ```$ sudo nano /var/www/domainname.com/public_html/index.html```
         *   Add basic HTML page's content 
+
     *   #####   Create virtual host configuration files
         *   ```$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/domainname.com.conf```
         *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
@@ -192,11 +209,14 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         ```ErrorLog ${APACHE_LOG_DIR}/error.log```  
         ```CustomLog ${APACHE_LOG_DIR}/access.log combined```   
         ```</VirtualHost>```   
+
     *  #####    Check Apache's configuration 
         ```$ sudo apache2ctl configtest```  
         Result should be **Syntax OK**, if not you have to correct your configuration file
+
     *   #####   Enabling virtual host
         *   ```$ sudo a2ensite domainname.com.conf```
+
     *   #####   Restart Apache to apply changes
         *   ```$ sudo service apache2 restart```
     > End of loop to add a new site 
@@ -212,15 +232,18 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    CERTBOT - SSL CERTIFICATION
     >   :warning: AllowS HTTPS connections if your hosting provider doesn't provide a solution, wich is uncommon
+
     *   #####   Installation 
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install certbot python3-certbot-apache```
+
     *   #####   Allow HTTPS trough the firewall
         *   ```$ sudo ufw status```
         *   ```$ sudo ufw allow 'Apache Full'```
         *   ```$ sudo ufw delete allow 'Apache'```
         *   Check if access is *Apache Full* with again:    
             ```$ sudo ufw status```
+
     *   #####   Obtaining an SSL Certificate
         *   ```$ sudo certbot --apache```
         *   Enter a valid email adress, it'll be used for renewal !
@@ -235,6 +258,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    HTACCESS
     >   Manage your pages redirection, create 404 or allow or deny specific IPs
+
     *   #####    Enable .htaccess in Apache
         *   You'll need to add configuration to your website's virtual host, repeat this operation for each website you host 
         *   Open your website's virtual host configuration file:    
@@ -247,6 +271,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             </Directory>    
         *   Restart Apache Service: 
             ```$ sudo service apache2 restart```
+
     *   #####   Create an **.htaccess** file
         *   Be sure to do one file for each website you host to be sure avoiding conflicts and personalize your configuration
         *   Go to your website's root directory:    
@@ -256,6 +281,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Add the following line and save:    
             **Options -Indexes**
         *   From now you can edit this file for the following steps: redirection, 404 page, specific IP filters and more. 
+
     *   #####   Manage website pages redirection
         *   First go to your website folder:    
             ```$ cd /var/www/domainname.com/public_html/```
@@ -270,6 +296,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Add the following line and save: 
             **Redirect 301 /index.html /redir-test.html**
         *   Navigate to your **domain.com/index.html** you should now be redirected to **domain.com/redir-test.html**
+
     *   #####   Set up a 404 page 
         *   Create a **404.html** page in folder /var/www/domainname.com/public_html
         *   Add, for example, following content in it and save:  
@@ -285,6 +312,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             **ErrorDocument 404 /404.html**  
         *   Navigate to an *uncreated* page, for example *www.domainname.com/no-exist.html*
         *   You should be redirected to your freshly installed 404 page !
+
     *   #####   Restricted IPs
         > Sometimes you want to give access to specific IP's to a folder or otherwise you want to refuse access to specific IP's, for example if you ban an user's IP. You can do that in two ways: **1.** allow all IP's but somes or **2.** do not allow any addresses except certain 
         *   **1.** Block IPs
@@ -322,11 +350,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```sudo phpenmod pdo_mysql```
         *   ```$ php -v``` check wich version is installed
             Install PHP modules (example:)
-        *   ```sudo apt install php7.4-mysql php7.4-curl php7.4-json php7.4-cgi php7.4-xsl```
         *   ```sudo service apache2 restart```
 
     ####    PYTHON
     >   A powerfull programming language for Web-Development as for I.A and data-science
+
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   Check if Python 3 is already installed with :   
@@ -349,9 +377,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [MARIADB](#mariadb)
 -   [MYSQL](#mysql)
 -   [MONGO DB](#mongo-db)
+-   [PHPMYADMIN](#phpmyadmin)
 
     ####    MARIADB
     >   This one is one of the most relationnal database. Based on a for of MySQL and made by original developers of MySQL. It is faster in many points and guaranteed to stay open source
+
     *   #####   Installation
         *   Update System
             *   ```$ sudo apt update && sudo apt upgrade```
@@ -367,8 +397,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   ```$ sudo mysql_secure_installation```
             *   Answer all the questions and you're done
             *   ```$ systemctl status mysql``` to check status
+
     *   #####   Access to MariaDB
         *   ```$ sudo mysql -u root -p``` *enter root password*
+
     *   #####   PDO connection syntax
         ```<?php try {```
         ``` $pdo = new PDO('mysql:host=localhost;port=3306;dbname=db_name;charset=utf8', 'user_name', 'password';```
@@ -377,9 +409,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         ``` catch (PDOException $e) {```
         ```     die('Erreur : '.$e->getMessage());```
         ```}?>```
+
     *   #####   Create a database
         *   ```MariaDB [...]> CREATE DATABASE db_name;```
         *   ```MariaDB [...]> SHOW DATABASES;``` to check creation
+
     *   #####   Create a user and manage privileges
         *   ```$ sudo mysql -u root```
         *   ```MariaDB [...]> CREATE USER user_name@localhost IDENTIFIED BY user_password;```
@@ -389,8 +423,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON db_name.* TO user_name@localhost IDENTIFIED BY user_password;``` to give access to specific database
             *   ```MariaDB [...]> FLUSH PRIVILEGES;``` to refresh recently added privileges
             *   ```MariaDB [...]> SHOW GRANTS FOR user_name@localhost;``` to check status of privileges for user
+
     *   #####   Remove a user
         *   ```DROP USER user_name@localhost;``` 
+
     *   #####   Remove MariaDB completely for re-install
         *   **BACKUP YOUR DATABASES** or you're gonna **loose them !**
         *   ```$ sudo service mysql stop```
@@ -399,9 +435,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    MYSQL
     >   Another relationnal database, older than MariaDB (wich is based on a fork of MySQL by the way) and a lesser speed
+
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install mysql-server```
+
     *   #####   Configuration
         *   ```$ sudo mysql_secure_installation```
         *   Choose a level of security for passwords, from 0 to 2
@@ -409,6 +447,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Choose if you wish to disable anonymous connection *recommended*
         *   Choose if you wish to disable remote root login *recommended*
         *   Choose if you wich to remove test database and access to it *not recommended for now*
+
     *   #####   Create dedicated MySQL user and granting privileges
         *   ```$ sudo mysql``` Enter in MySQL console 
         *   ```mysql> CREATE USER username@host_name IDENTIFIED BY 'password';```
@@ -418,6 +457,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   A good practise is to run following after giving permissions: 
             ```mysql> FLUSH PRIVILEGES;```
         *   ```mysql> exit``` to finally quit MySQL
+
     *   #####   Testing MySQL
         *   ```$ systemctl status mysql.service```
         *   You should see "Server is operationnal" and many others informations
@@ -427,6 +467,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    MONGO DB
     >   A no SQL Databases manager/server, its powerfull schema less system and OOP structure and more of that an easy way to scale up when your website will growth
+
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install -y mongodb```
@@ -434,8 +475,29 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo systemctl status mongodb```   
         *   Install official Python MongoDB driver called PyMongo:  
             ```$ sudo pip3 install pymongo```
+
     *   #####   Make a connection with MongoClient
         :construction:
+
+    ####    PHPMyAdmin
+    >   PHPMyAdmin is a GUI, accesible remotely, that allows you to administrate MariaDB/MySQL easily. 
+
+    *   #####   Installation
+        *   ```$ sudo apt install phpmyadmin```
+    *   #####   Configure Apache for PHPMyAdmin
+        *   ```$ sudo nano /etc/apache2/apache2.conf```
+        *   At the end of the file add followings:  
+            *Include phpMyAdmin*    
+            **Include /etc/phpmyadmin/apache.conf** 
+    *   #####   Create an SQL superuser if you don't have one
+        *   ```$ sudo mysql -u root```
+        *   ```MariaDB [...]> CREATE USER user_name@localhost IDENTIFIED BY user_password;```
+        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
+    *   #####   Accessing PHPMyAdmin remotely
+        *   On your local computer, browse the following:   
+            **http://YOUR_VPS_IP/phpmyadmin
+        *   Enter your SQL superuser credentials
+        *   You now have access to the admin panel from everywhere
 
 ---
 
@@ -448,10 +510,13 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    VSCODE REMOTE DEVELOPMENT EXTENSION
     > Allows you to connect to your server's files and projects remotely
+
     *   #####   SSH Server
         *   Make sure you have an SSH server running on your VPS, if you follow this guide you should have OpenSSH up to date doing the job
+
     *   #####   VSCODE
         *   Install [VSCode](https://code.visualstudio.com/) or [VSCode Insiders](https://code.visualstudio.com/insiders/) on your local computer.
+
     *   #####   VSCODE REMOTE DEVELOPMENT EXTENSION
         *   Install [Remote Development VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)  
         *   In VSCode (local), click on the *shiny blue*  **><** button on bottom left 
@@ -462,9 +527,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ####    PYTHON VIRTUAL ENVIRONMENT
     >   Create isolated space on your server for each of your Python's projects. We'll use **VENV** but others exists
+
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt install -y python3-venv```
+
     *   #####   Create a new virtual environment
         *   Create a project folder:    
             ```$ mkdir project_folder```
@@ -477,14 +544,17 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Activate your virtual environment:  
             ```$ source environment_name/bin/activate```
         *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your VPS's system but only to this virtual environment :magic_wand:
+
     *   #####   Close venv virtual environment
         *   *CTRL + D*
+
     *   #####   Delete venv virtual environment 
         *   Simply delete *environment_name* folder with:   
             ```$ sudo rm -r .../environment_name/*```
 
     ####    DJANGO FRAMEWORK
     >   A Powerful Web-Framework using Python to develop beautiful-builded websites with a high-level of security. Your website will growth more and more ? Django then shines !
+
     *   #####   Installation
         *   It's recommended to install Django in a virtual environment to make distinctions with your server file system. You can use **VENV** (see above) **PIPENV** or another tool from your choice.
         *   Install pip, package manager first: 
@@ -495,15 +565,18 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ python -m pip install Django```
         *   Check your version as a check:  
             ```$ python -m django --version```
+
     *   #####   Creating a project
         *   Go to your project directory and run following: 
             ```$ django-admin startproject *project_name* .```  
             >   The ending **.** is very important. It creates a directory structure wich will make it easy to deploy the app to a server after development
         *   You can now explore the default project's structure
+
     *   #####   Verify your initialisation
         *   ```$ python manage.py runserver```
         *   If you can read *System check identified no issues (0 silenced).* everything works well
         *   It's time to discover MVC and this awesome framework !
+
     *   ####    Learn a lot more about Django
         *   I made a step-by-step dedicated to django [HERE](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed), if you want to learn more and make an entire first project this may help you. :wink:
 
