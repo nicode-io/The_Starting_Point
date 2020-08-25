@@ -362,7 +362,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   ```$ sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'``` 
         *   Install MariaDB Server
             *   ```$ sudo apt update && sudo apt upgrade```
-            *   ```$ sudo apt install mariadb-server mariadb-client```
+            *   ```$ sudo apt install -y mariadb-server mariadb-client```
         *   Secure MariaBD Server
             *   ```$ sudo mysql_secure_installation```
             *   Answer all the questions and you're done
@@ -384,11 +384,16 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ sudo mysql -u root```
         *   ```MariaDB [...]> CREATE USER user_name@localhost IDENTIFIED BY user_password;```
         *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
-        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON db_name TO user_name@localhost IDENTIFIED BY user_password;``` to give access to specific database
+        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON db_name.* TO user_name@localhost IDENTIFIED BY user_password;``` to give access to specific database
         *   ```MariaDB [...]> FLUSH PRIVILEGES;``` to refresh recently added privileges
         *   ```MariaDB [...]> SHOW GRANTS FOR user_name@localhost;``` to check status of privileges for user
     *   #####   Remove a user
         *   ```DROP USER user_name@localhost;``` 
+    *   #####   Remove MariaDB completely for re-install
+        *   **BACKUP YOUR DATABASES** or you're gonna **loose them !**
+        *   ```$ sudo service mysql stop```
+        *   ```$ sudo apt-get --purge remove "mysql*"```
+        *   ```sudo rem -rf /etc/mysql/```
 
     ####    MYSQL
     >   Another relationnal database, older than MariaDB (wich is based on a fork of MySQL by the way) and a lesser speed
@@ -428,7 +433,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Install official Python MongoDB driver called PyMongo:  
             ```$ sudo pip3 install pymongo```
     *   #####   Make a connection with MongoClient
-
+        :construction:
 
 ---
 
