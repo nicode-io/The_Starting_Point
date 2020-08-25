@@ -383,10 +383,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Create a user and manage privileges
         *   ```$ sudo mysql -u root```
         *   ```MariaDB [...]> CREATE USER user_name@localhost IDENTIFIED BY user_password;```
-        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
-        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON db_name.* TO user_name@localhost IDENTIFIED BY user_password;``` to give access to specific database
-        *   ```MariaDB [...]> FLUSH PRIVILEGES;``` to refresh recently added privileges
-        *   ```MariaDB [...]> SHOW GRANTS FOR user_name@localhost;``` to check status of privileges for user
+        *   PRIVILEGES
+            *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
+            *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password WITH GRANT OPTION;``` to give all access and superuser access
+            *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON db_name.* TO user_name@localhost IDENTIFIED BY user_password;``` to give access to specific database
+            *   ```MariaDB [...]> FLUSH PRIVILEGES;``` to refresh recently added privileges
+            *   ```MariaDB [...]> SHOW GRANTS FOR user_name@localhost;``` to check status of privileges for user
     *   #####   Remove a user
         *   ```DROP USER user_name@localhost;``` 
     *   #####   Remove MariaDB completely for re-install
