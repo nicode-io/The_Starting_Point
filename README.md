@@ -1,5 +1,5 @@
 #   (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE 
-#   TO PRIVATE SERVER ✧٩(•́⌄•́๑)
+#   TO (VIRTUAL) PRIVATE SERVER ✧٩(•́⌄•́๑)
 >   Want to host multiple websites on your own private server?  
 >   Want to be free to configure your server as you like ?  
 >   Let's start together ! 
