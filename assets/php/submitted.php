@@ -1,13 +1,13 @@
 <?php 
     require 'db.php';
 
-    $lastName = $_POST['last-name'];
-    $firstName = $_POST['first-name'];
-    $gender = $_POST['gender'];
-    $email = $_POST['email'];
-    $country = $_POST['country'];
-    $subject = $_POST['subject'];
-    $comment = $_POST['comment'];
+    $lastName = filter_var($_POST['last-name'], FILTER_SANITIZE_STRING);
+    $firstName = filter_var($_POST['first-name'], FILTER_SANITIZE_STRING);
+    $gender = filter_var($_POST['gender'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $comment = filter_var($_POST['comment'], FILTER_SANITIZE_STRING);
     try {
         $conn = $pdo;
         // set the PDO error mode to exception
@@ -19,6 +19,7 @@
     } catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage(); 
     }
+    include 'sendMail.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
