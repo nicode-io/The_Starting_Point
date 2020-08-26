@@ -260,7 +260,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             ```$ sudo systemctl status certbot.timer``` 
             ```$ sudo certbot renew --dry-run```
 
-    ####    HTACCESS
+    ####    HTACCESS 
     >   Manage your pages redirection, create 404 or allow or deny specific IPs
 
     *   #####    Enable .htaccess in Apache
@@ -320,7 +320,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Disallow access to specific file
 
     *   #####   Restricted IPs
-        > Sometimes you want to give access to specific IP's to a folder or otherwise you want to refuse access to specific IP's, for example if you ban an user's IP. You can do that in two ways: **1.** allow all IP's but somes or **2.** do not allow any addresses except certain 
+        > :warning: Sometimes you want to give access to specific IP's to a folder or otherwise you want to refuse access to specific IP's, for example if you ban an user's IP. You can do that in two ways: **1.** allow all IP's but somes or **2.** do not allow any addresses except certain 
         *   **1.** Block IPs
             *   Edit your **.htaccess** file:   
             ```$ sudo nano .htaccess```
@@ -399,7 +399,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Install MariaDB Server
             *   ```$ sudo apt update && sudo apt upgrade```
             *   ```$ sudo apt install -y mariadb-server mariadb-client```
-        *   Secure MariaBD Server
+        *   Secure MariaBD Server :warning:
             *   ```$ sudo mysql_secure_installation```
             *   Answer all the questions and you're done
             *   ```$ systemctl status mysql``` to check status
