@@ -37,7 +37,9 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [MARIADB](#mariadb)
     -   [MYSQL](#mysql)
     -   [MONGO DB](#mongo-db)
+-   [TOOLS](#tools)
     -   [PHPMYADMIN](#phpmyadmin)
+    -   [PHP MAILER](#php-mailer)
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
     -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-development-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
@@ -69,6 +71,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
 
     *   #####   Connect to SSH to (virtual) private server
+        *   ```$ ssh-copy-id username@your_server_IP```
         *   ```$ ssh-copy-id -i ~/.ssh/mykey user@host```
         *   ```$ ssh 'user@host```You'll be asked by local system for key password
         *   It's ok, from now you can connect without having to type a password on this computer :magic_wand:
@@ -314,6 +317,8 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Navigate to an *uncreated* page, for example *www.domainname.com/no-exist.html*
         *   You should be redirected to your freshly installed 404 page !
 
+    *   #####   Disallow access to specific file
+
     *   #####   Restricted IPs
         > Sometimes you want to give access to specific IP's to a folder or otherwise you want to refuse access to specific IP's, for example if you ban an user's IP. You can do that in two ways: **1.** allow all IP's but somes or **2.** do not allow any addresses except certain 
         *   **1.** Block IPs
@@ -480,7 +485,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Make a connection with MongoClient
         :construction:
 
-    ####    PHPMyAdmin
+-   [TOOLS](#tools)
+    -   [PHPMYADMIN](#phpmyadmin)
+    -   [COMPOSER](#composer)
+    -   [PHP MAILER](#php-mailer)
+
+    ####    PHPMYADMIN
     >   PHPMyAdmin is a GUI, accesible remotely, that allows you to administrate MariaDB/MySQL easily. 
 
     *   #####   Installation
@@ -499,6 +509,32 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             **http://your_server_IP/phpmyadmin
         *   Enter your SQL superuser credentials
         *   You now have access to the admin panel from everywhere
+    
+    ####    COMPOSER
+    >   Composer is a popular dependency management tool for PHP, created mainly to facilitate installation and updates for project dependencies. Composer is also commonly used to bootstrap new projects based on popular PHP frameworks, such as Symfony and Laravel.
+
+    *   #####   Installation
+        *   ```$ sudo apt update && sudo apt upgrade```
+        *   ```$ sudo apt install php-cli unzip```
+        *   ```$ cd ~```
+        *   ```$ curl -sS https://getcomposer.org/installer -o composer-setup.php```
+        *   ```$ HASH=`curl -sS https://composer.github.io/installer.sig``` to verify download
+        *   ```$ echo $HASH``` to verify the hash value
+        *   ```$ php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"``` check script
+        *   If the output is **Installer verified**, you're good to go, else start installation again
+        *   ```$ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer```
+        *   ```$ composer``` to test your install, you should see long list of command starting by Composer's logo
+
+
+    ####    PHP MAILER
+    >   An extension that allows you to send email from PHP code in your web pages. Our way to install require Composer, see above for details. 
+    *   #####   Installation
+        *   ```$ sudo apt update && sudo apt upgrade```
+        *   ```$ composer require phpmailer/phpmailer```
+
+
+
+
 
 ---
 
