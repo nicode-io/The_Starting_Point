@@ -1,0 +1,40 @@
+//& Imports
+@import "variables", "mixins";
+
+//& Mobile-first
+form {
+  @include flexColumnWrap;
+  @include flexFlexstartCenter;
+  section {
+    @include flexRowWrap;
+    @include flexCenterCenter;
+    article {
+      @include flexRowWrap;
+      @include flexCenterCenter;
+      input {
+        text-align: center;
+      }
+      
+      label {
+        text-align: center;
+      }
+    }
+  }
+  #emailSect {
+
+  }
+  #feedbackSect {
+    @include flexRowWrap;
+    @include flexCenterCenter;
+    article {
+      @include flexColumnWrap;
+      @include flexCenterCenter;
+    }
+  }
+  #winnie {
+    visibility: hidden;
+  }
+}
+input:focus {
+  outline: 3px solid gold;
+}

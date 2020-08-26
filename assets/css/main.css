@@ -1,0 +1,50 @@
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+form section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+form section article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+form section article input {
+  text-align: center;
+}
+form section article label {
+  text-align: center;
+}
+form #feedbackSect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+form #feedbackSect article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+form #winnie {
+  visibility: hidden;
+}
+
+input:focus {
+  outline: 3px solid gold;
+}
+
+/*# sourceMappingURL=main.css.map */
