@@ -2,22 +2,41 @@
     // require './assets/php/db.php';
     // include_once './assets/php/sendMail.php';
     // require './assets/php/checkin.php';
-    function input_check($userInput) {
-        $firstName = input_check($_POST[first-name]);
-        $lastName = input_check($_POST[last-name]);
-        $gender = input_check($_POST[gender]);
-        $country = input_check($_POST[country]);
-        $email = input_check($_POST[email]);
+
+    $firstName = '';
+    $lastName = '';
+    $gender = '';
+    $country = '';
+    $email = '';
+    $subject = '';
+    $comment = '';
+
+    if (!empty($_POST)) {
+        $firstName = filter_var($_POST['first-name'], FILTER_SANITIZE_STRING);
+        $lastName = filter_var($_POST['last-name'], FILTER_SANITIZE_STRING);
+        $gender = filter_var($_POST['gender'], FILTER_SANITIZE_STRING);
+        $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+        $comment = filter_var($_POST['comment'], FILTER_SANITIZE_STRING);
+        $checkErrors = array('firstName'=>'', 'lastName'=>'', 'gender'=>'', 'country'=>'', 'email'=>'');
+
+        if(!preg_match('/^[a-zA-Z\s]+$/', $firstName)) {
+            $errors['firstName'] = 'Your first name contains invalid characters';
+        }
+        if(!preg_match('/^[a-zA-Z\s]+$/', $lastName)) {
+            $errors['lastName'] = 'Your last name contains invalid characters';
+        }
+        if(!preg_match('/^[a-zA-Z\s]+$/', $gender)) {
+            $errors['gender'] = 'Please select a gender from the list';
+        }
+        if(!preg_match('/^[a-zA-Z\s]+$/', $country)) {
+            $errors['country'] = 'Your country is invalid';
+        }
+        if (!preg_match('/^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/', $email)) {
+            $errors['email'] = 'Your email is invalid';
+        } 
     }
-    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-        echo 'data OK'; 
-
-    } else {
-        echo 'bad DATA';
-    }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,16 +50,18 @@
     </head>
     <body> 
         <main class="main d-flex flex-column justify-content-center align-items-center" role="main">
-            <section id="logo" class="col-4">
+            <section id="logo" class="col-8">
                 <img src="./assets/img/hackers-poulette-logo.png" class="rounded mx-auto d-block" alt="Hacker Poulette logo">
             </section>    
-            <form id="formSupport" class="jumbotron col-6" aria-label="Contact support team" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> <!-- action target this page -->
+            <form id="formSupport" class="jumbotron col-11 col-xl-8" aria-label="Contact support team" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> <!-- action target this page -->
                 <section class="row pb-1" id="nameSect">
                     <article class="col-12 col-xl-6 pb-2">
-                        <input type="text" class="form-control" name="first-name" placeholder="First name" autocorrect="off" required>
+                        <input type="text" class="form-control" name="first-name" placeholder="First name" autocorrect="off" value="<?php echo $firstName; ?>" required>
+                        <?php echo '<span class="error">' . $errors['firstName'] . '</span>' ?>
                     </article>
                     <article class="col-12 col-xl-6 pb-2">
-                        <input type="text" class="form-control" name="last-name" placeholder="Last name" autocorrect="off" required>
+                        <input type="text" class="form-control" name="last-name" placeholder="Last name" autocorrect="off" value="<?php echo $lastName; ?>"required>
+                        <?php echo '<span class="error">' . $errors['lastName'] . '</span>' ?>
                     </article>
                 </section> 
                 <section class="row pb-1 d-flex flex-rox justify-content-between align-items-center">
@@ -50,18 +71,21 @@
                             <option value="female">Female</option>
                             <option value="other" selected="selected">Non-binary</option>
                         </select>
+                        <?php echo '<span class="error">' . $errors['gender'] . '</span>' ?>
                     </article>
                     <article class="col-xl-6 pb-2">
-                        <input id="country" class="form-control" name="country" type="text" placeholder="Country" required>
+                        <input id="country" class="form-control" name="country" type="text" placeholder="Country" value="<?php echo $country; ?>" required>
+                        <?php echo '<span class="error">' . $errors['country'] . '</span>' ?>
                     </article>
                 </section>
                 <section class="row pb-1">
                     <article class="col-xl-6 pb-2">
-                        <input id="email" class="form-control" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text" placeholder="Email" required>
+                        <input id="email" class="form-control" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text" placeholder="Email" value="<?php echo $email; ?>" required>
+                        <?php echo '<span class="error">' . $errors['email'] . '</span>' ?>
                     </article>
                 </section>
                 <section class="row pb-1">
-                    <article class="form-group col-xl-6 pb-2">
+                    <article class="form-group col-xl-6">
                         <select id="subject" class="form-control" name="subject" value="Others Issues">
                             <option value="technical-issue">Technical issue</option>
                             <option value="administrative-issue">Administrative issue</option>
@@ -73,22 +97,17 @@
                         <i>optionnal</i>
                     </article>
                 </section>
-                    
-                </section>
-                <section id="feedbackSect">
-                    
-                </section>
                 <section>
                     <article class="form-group col-xl-12 p-2 pb-2">
                         <label for="comment">Comment</>
-                        <textarea id="comment" class="form-control" name="comment" rows="10" cols="100" maxlength="1000" required></textarea>
+                        <textarea id="comment" class="form-control" name="comment" rows="10" cols="100" maxlength="1000" required><?php echo $comment; ?></textarea>
                     </article>
                 </section>
                 <section id="winnie">
                     <input id="pooh" name="pooh" type="text">
                 </section>
                 <section class="formField col-12 col-xl-12 pt-3 d-flex justify-content-end align-items-center" id="submitSect">
-                    <input type="submit" id="submit" class="btn btn-primary" value="Send Feedback"></input> 
+                    <input type="submit" id="submit" class="btn btn-primary" name="submit" value="Send Feedback"></input> 
                 </section>
             </form>
         </main>

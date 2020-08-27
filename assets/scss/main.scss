@@ -22,13 +22,17 @@ body {
           border: 2px $companyBlueTrans solid;
           width: 50vw;
           height: 6vh;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-weight: 700;
         }
       }
     }
   }
 }  
+
+.error {
+  color: red;
+}
 
 //& XL-Screens
 @media only screen and (min-width: 1200px) {
