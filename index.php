@@ -2,11 +2,22 @@
     // require './assets/php/db.php';
     // include_once './assets/php/sendMail.php';
     // require './assets/php/checkin.php';
-    
-    if (isset($_POST['last-name'], $_POST['first-name'], $_POST['gender'], $_POST['email'], $_POST['country'], $_POST['subject'], $_POST['comment'])) { echo 'data OK'; 
+    function input_check($userInput) {
+        $firstName = input_check($_POST[first-name]);
+        $lastName = input_check($_POST[last-name]);
+        $gender = input_check($_POST[gender]);
+        $country = input_check($_POST[country]);
+        $email = input_check($_POST[email]);
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+        echo 'data OK'; 
+
     } else {
         echo 'bad DATA';
     }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,32 +36,32 @@
             </section>    
             <form id="formSupport" class="jumbotron col-6" aria-label="Contact support team" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> <!-- action target this page -->
                 <section class="row pb-1" id="nameSect">
-                    <article class="col-6 pb-2">
+                    <article class="col-12 col-xl-6 pb-2">
                         <input type="text" class="form-control" name="first-name" placeholder="First name" autocorrect="off" required>
                     </article>
-                    <article class="col-6 pb-2">
+                    <article class="col-12 col-xl-6 pb-2">
                         <input type="text" class="form-control" name="last-name" placeholder="Last name" autocorrect="off" required>
                     </article>
                 </section> 
                 <section class="row pb-1 d-flex flex-rox justify-content-between align-items-center">
-                    <article class="col-3">
+                    <article class="col-xl-3 pb-2">
                         <select id="gender" name="gender" class="form-control" required>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other" selected="selected">Non-binary</option>
                         </select>
                     </article>
-                    <article class="col-6">
+                    <article class="col-xl-6 pb-2">
                         <input id="country" class="form-control" name="country" type="text" placeholder="Country" required>
                     </article>
                 </section>
                 <section class="row pb-1">
-                    <article class="col-6">
+                    <article class="col-xl-6 pb-2">
                         <input id="email" class="form-control" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text" placeholder="Email" required>
                     </article>
                 </section>
                 <section class="row pb-1">
-                    <article class="form-group col-6">
+                    <article class="form-group col-xl-6 pb-2">
                         <select id="subject" class="form-control" name="subject" value="Others Issues">
                             <option value="technical-issue">Technical issue</option>
                             <option value="administrative-issue">Administrative issue</option>
@@ -58,7 +69,7 @@
                             <option value="other-issue" selected="selected">Other issue</option>
                         </select>
                     </article>
-                    <article class="form-group col-2">
+                    <article class="form-group col-xl-2 d-flex align-items-center justify-content-center pb-2">
                         <i>optionnal</i>
                     </article>
                 </section>
@@ -68,7 +79,7 @@
                     
                 </section>
                 <section>
-                    <article class="form-group col-12 p-2">
+                    <article class="form-group col-xl-12 p-2 pb-2">
                         <label for="comment">Comment</>
                         <textarea id="comment" class="form-control" name="comment" rows="10" cols="100" maxlength="1000" required></textarea>
                     </article>
@@ -76,7 +87,7 @@
                 <section id="winnie">
                     <input id="pooh" name="pooh" type="text">
                 </section>
-                <section class="formField col-12 pt-3 d-flex justify-content-end align-items-center" id="submitSect">
+                <section class="formField col-12 col-xl-12 pt-3 d-flex justify-content-end align-items-center" id="submitSect">
                     <input type="submit" id="submit" class="btn btn-primary" value="Send Feedback"></input> 
                 </section>
             </form>

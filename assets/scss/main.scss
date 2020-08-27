@@ -3,29 +3,59 @@
 @import "variables", "mixins";
 
 
-//& Main
+//& Mobile-First
 body {
   main {
     img {
-      width: 20vw;
+      width: 40vw;
       height: auto;
     }
     font-family: 'Bellota', cursive;
     #formSupport {
       background: $companyBlueTrans;
-      
       #winnie {
         visibility: hidden;
       }
-      #submit {
-        background-color: $companyBlue;
-        border: 2px $companyBlueTrans solid;
-        width: 20vw;
-        height: 6vh;
-        font-size: 1.4em;
-        font-weight: 900;
+      #submitSect {
+        #submit {
+          background-color: $companyBlue;
+          border: 2px $companyBlueTrans solid;
+          width: 50vw;
+          height: 6vh;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
       }
     }
   }
+}  
+
+//& XL-Screens
+@media only screen and (min-width: 1200px) {
+  body {
+    main {
+      img {
+        width: 20vw;
+        height: auto;
+      }
+      font-family: 'Bellota', cursive;
+      #formSupport {
+        background: $companyBlueTrans;
+        #winnie {
+          visibility: hidden;
+        }
+        #submitSect {
+          #submit {
+            background-color: $companyBlue;
+            border: 2px $companyBlueTrans solid;
+            width: 20vw;
+            height: 6vh;
+            font-size: 2rem;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }  
 }
 

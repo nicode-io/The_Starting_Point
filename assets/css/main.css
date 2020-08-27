@@ -3,7 +3,7 @@ body main {
   font-family: "Bellota", cursive;
 }
 body main img {
-  width: 20vw;
+  width: 40vw;
   height: auto;
 }
 body main #formSupport {
@@ -12,13 +12,37 @@ body main #formSupport {
 body main #formSupport #winnie {
   visibility: hidden;
 }
-body main #formSupport #submit {
+body main #formSupport #submitSect #submit {
   background-color: #0d8187;
   border: 2px #0d818750 solid;
-  width: 20vw;
+  width: 50vw;
   height: 6vh;
-  font-size: 1.4em;
-  font-weight: 900;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1200px) {
+  body main {
+    font-family: "Bellota", cursive;
+  }
+  body main img {
+    width: 20vw;
+    height: auto;
+  }
+  body main #formSupport {
+    background: #0d818750;
+  }
+  body main #formSupport #winnie {
+    visibility: hidden;
+  }
+  body main #formSupport #submitSect #submit {
+    background-color: #0d8187;
+    border: 2px #0d818750 solid;
+    width: 20vw;
+    height: 6vh;
+    font-size: 2rem;
+    font-weight: 900;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
