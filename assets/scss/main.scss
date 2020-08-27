@@ -5,6 +5,7 @@
 
 //& Mobile-First
 body {
+  background: $companyWhite;
   main {
     img {
       width: 40vw;
@@ -31,12 +32,25 @@ body {
 }  
 
 .error {
-  color: red;
+  color: $errorRed;
+}
+#descriptionSubmit {
+  visibility: hidden;
+}
+label {
+  color: $companyBlack;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+#optional {
+  color: $companyBlue;
+  font-size: 0.8rem;
 }
 
 //& XL-Screens
 @media only screen and (min-width: 1200px) {
   body {
+    background: $companyWhite;
     main {
       img {
         width: 20vw;
