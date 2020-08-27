@@ -1,6 +1,9 @@
 # HACKERS POULETTE
 > Learning project using PHP/SQL - Create a responsive dynamic responsive form 
 
+![Hackers Poulette](assets/img/hackers-poulette-logo.png)
+Format: ![Alt Text](url)
+
 ##  Index
 -   [Description](#description)   
 -   [Achievements](#achievements)
