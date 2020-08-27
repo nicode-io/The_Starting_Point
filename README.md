@@ -23,7 +23,7 @@ The company Hackers Poulette ™ sells Raspberry Pi accessory kits to build your
 *   Progressive enhancement
 *   PHP programming
 *   Project planning
-*   Mock-up creation
+*   Data sanitize
 *   Database management
 
 ---
