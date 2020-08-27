@@ -1,5 +1,5 @@
 # HACKERS POULETTE
-> Learning project using PHP/SQL 
+> Learning project using PHP/SQL - Create a responsive dynamic responsive form 
 
 ##  Index
 -   [Description](#description)   
