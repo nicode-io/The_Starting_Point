@@ -1,40 +1,31 @@
 //& Imports
+@import "https://fonts.googleapis.com/css2?family=Bellota&display=swap";
 @import "variables", "mixins";
 
-//& Mobile-first
-form {
-  @include flexColumnWrap;
-  @include flexFlexstartCenter;
-  section {
-    @include flexRowWrap;
-    @include flexCenterCenter;
-    article {
-      @include flexRowWrap;
-      @include flexCenterCenter;
-      input {
-        text-align: center;
-      }
-      
-      label {
-        text-align: center;
-      }
-    }
-  }
-  #emailSect {
 
-  }
-  #feedbackSect {
-    @include flexRowWrap;
-    @include flexCenterCenter;
-    article {
-      @include flexColumnWrap;
-      @include flexCenterCenter;
+//& Main
+body {
+  main {
+    img {
+      width: 20vw;
+      height: auto;
+    }
+    font-family: 'Bellota', cursive;
+    #formSupport {
+      background: $companyBlueTrans;
+      
+      #winnie {
+        visibility: hidden;
+      }
+      #submit {
+        background-color: $companyBlue;
+        border: 2px $companyBlueTrans solid;
+        width: 20vw;
+        height: 6vh;
+        font-size: 1.4em;
+        font-weight: 900;
+      }
     }
   }
-  #winnie {
-    visibility: hidden;
-  }
 }
-input:focus {
-  outline: 3px solid gold;
-}
+

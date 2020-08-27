@@ -1,50 +1,24 @@
-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+@import "https://fonts.googleapis.com/css2?family=Bellota&display=swap";
+body main {
+  font-family: "Bellota", cursive;
 }
-form section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+body main img {
+  width: 20vw;
+  height: auto;
 }
-form section article {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+body main #formSupport {
+  background: #0d818750;
 }
-form section article input {
-  text-align: center;
-}
-form section article label {
-  text-align: center;
-}
-form #feedbackSect {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-form #feedbackSect article {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-form #winnie {
+body main #formSupport #winnie {
   visibility: hidden;
 }
-
-input:focus {
-  outline: 3px solid gold;
+body main #formSupport #submit {
+  background-color: #0d8187;
+  border: 2px #0d818750 solid;
+  width: 20vw;
+  height: 6vh;
+  font-size: 1.4em;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=main.css.map */

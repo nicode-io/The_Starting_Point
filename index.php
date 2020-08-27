@@ -1,5 +1,12 @@
 <?php 
-    require './assets/php/db.php';
+    // require './assets/php/db.php';
+    // include_once './assets/php/sendMail.php';
+    // require './assets/php/checkin.php';
+    
+    if (isset($_POST['last-name'], $_POST['first-name'], $_POST['gender'], $_POST['email'], $_POST['country'], $_POST['subject'], $_POST['comment'])) { echo 'data OK'; 
+    } else {
+        echo 'bad DATA';
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,73 +14,75 @@
         <meta charset="UTF-8">
         <meta name="description" content="Learning project PHP/SQL">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
         <title>Hackers Poulette</title>
     </head>
     <body> 
-        <main class="main" role="main">
-            <form id="formSupport" aria-label="Contact support team" action="./assets/php/submitted.php" method="post">
-                <section class="formField" id="nameSect">
-                    <article>
-                        <label for="lastName">Last Name</label>
+        <main class="main d-flex flex-column justify-content-center align-items-center" role="main">
+            <section id="logo" class="col-4">
+                <img src="./assets/img/hackers-poulette-logo.png" class="rounded mx-auto d-block" alt="Hacker Poulette logo">
+            </section>    
+            <form id="formSupport" class="jumbotron col-6" aria-label="Contact support team" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> <!-- action target this page -->
+                <section class="row pb-1" id="nameSect">
+                    <article class="col-6 pb-2">
+                        <input type="text" class="form-control" name="first-name" placeholder="First name" autocorrect="off" required>
                     </article>
-                    <article>
-                        <input id="lastName" name="last-name" autocorrect="off" type="text" required>
+                    <article class="col-6 pb-2">
+                        <input type="text" class="form-control" name="last-name" placeholder="Last name" autocorrect="off" required>
                     </article>
-                    <article>
-                        <label for="firstName">First Name</label>
-                    <article>
-                        <input id="firstName" name="first-name" autocorrect="off" type="text" required>
+                </section> 
+                <section class="row pb-1 d-flex flex-rox justify-content-between align-items-center">
+                    <article class="col-3">
+                        <select id="gender" name="gender" class="form-control" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other" selected="selected">Non-binary</option>
+                        </select>
                     </article>
-                </section>    
-                <section class="formField" id="genderSect">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Non-binary</option>
-                    </select>
-                </section>
-                <section class="formField" id="emailSect">
-                    <article>
-                        <label for="email">Email</label>
-                    </article>
-                    <article>
-                        <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text" placeholder="you@mail.com" required>
+                    <article class="col-6">
+                        <input id="country" class="form-control" name="country" type="text" placeholder="Country" required>
                     </article>
                 </section>
-                <section class="formField" id="countrySect">
-                    <label for="country">Country</label>
-                    <input id="country" name="country" type="text" required>
+                <section class="row pb-1">
+                    <article class="col-6">
+                        <input id="email" class="form-control" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text" placeholder="Email" required>
+                    </article>
                 </section>
-                <section class="formField" id="feedbackSect">
-                    <article>
-                        <label for="subject">Subject:</label>
-                        <p>optionnal</p>
-                        <select id="subject" name="subject" value="Others Issues">
+                <section class="row pb-1">
+                    <article class="form-group col-6">
+                        <select id="subject" class="form-control" name="subject" value="Others Issues">
                             <option value="technical-issue">Technical issue</option>
                             <option value="administrative-issue">Administrative issue</option>
                             <option value="commercial-issue">Commercial issue</option>
                             <option value="other-issue" selected="selected">Other issue</option>
                         </select>
                     </article>
-                    <article>
-                        <p>
-                            <label for="comment">Comment</>
-                        </p>
-                        <p>
-                            <textarea id="comment" name="comment" rows="20" cols="50" maxlength="1000" required></textarea>
-                        </p> 
+                    <article class="form-group col-2">
+                        <i>optionnal</i>
+                    </article>
+                </section>
+                    
+                </section>
+                <section id="feedbackSect">
+                    
+                </section>
+                <section>
+                    <article class="form-group col-12 p-2">
+                        <label for="comment">Comment</>
+                        <textarea id="comment" class="form-control" name="comment" rows="10" cols="100" maxlength="1000" required></textarea>
                     </article>
                 </section>
                 <section id="winnie">
                     <input id="pooh" name="pooh" type="text">
                 </section>
-                <section class="formField" id="submitSect">
-                    <input value="Send feedback" type="submit"> 
+                <section class="formField col-12 pt-3 d-flex justify-content-end align-items-center" id="submitSect">
+                    <input type="submit" id="submit" class="btn btn-primary" value="Send Feedback"></input> 
                 </section>
             </form>
         </main>
     </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </html>
