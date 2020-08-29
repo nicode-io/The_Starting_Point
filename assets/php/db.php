@@ -1,4 +1,5 @@
 <?php 
+
     $host = 'localhost';
     $port = '3306';
     $dbname = 'db01';
@@ -9,4 +10,5 @@
     }
     catch (PDOException $e) {
         die('Erreur : '.$e->getMessage());
-    } 
+    }
+    

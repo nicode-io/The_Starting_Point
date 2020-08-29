@@ -6,12 +6,28 @@
 //& Mobile-First
 body {
   background: $companyWhite;
+  font-family: 'Bellota', cursive;
   main {
-    img {
-      width: 40vw;
-      height: auto;
+    section {
+      img {
+        width: auto;
+        height: 15vh;
+      }
+      article {
+        .error {
+          color: $errorRed;
+        }
+        label {
+          color: $companyBlack;
+          font-size: 1.1rem;
+          font-weight: 900;
+          #optional {
+            color: $companyBlue;
+            font-size: 0.8rem;
+          }
+        }
+      }
     }
-    font-family: 'Bellota', cursive;
     #formSupport {
       background: $companyBlueTrans;
       #winnie {
@@ -25,38 +41,41 @@ body {
           height: 6vh;
           font-size: 1.3rem;
           font-weight: 700;
-        }
+        } 
+      }
+      #descriptionSubmit {
+        visibility: hidden;
       }
     }
   }
 }  
 
-.error {
-  color: $errorRed;
-}
-#descriptionSubmit {
-  visibility: hidden;
-}
-label {
-  color: $companyBlack;
-  font-size: 1.1rem;
-  font-weight: 900;
-}
-#optional {
-  color: $companyBlue;
-  font-size: 0.8rem;
-}
-
 //& XL-Screens
 @media only screen and (min-width: 1200px) {
   body {
     background: $companyWhite;
+    font-family: 'Bellota', cursive;
     main {
-      img {
-        width: 20vw;
-        height: auto;
+      section {
+        img {
+          width: auto;
+          height: 20vh;
+        }
+        article {
+          .error {
+            color: $errorRed;
+          }
+          label {
+            color: $companyBlack;
+            font-size: 1.1rem;
+            font-weight: 900;
+            #optional {
+              color: $companyBlue;
+              font-size: 0.8rem;
+            }
+          }
+        }
       }
-      font-family: 'Bellota', cursive;
       #formSupport {
         background: $companyBlueTrans;
         #winnie {
@@ -71,6 +90,9 @@ label {
             font-size: 2rem;
             font-weight: 900;
           }
+        }
+        #descriptionSubmit {
+          visibility: hidden;
         }
       }
     }

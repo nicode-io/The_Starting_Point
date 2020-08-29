@@ -1,7 +1,8 @@
 <?php 
-    // require './assets/php/db.php';
-    // include_once './assets/php/sendMail.php';
-    // require './assets/php/checkin.php';
+
+    require '/var/www/nicode.io/public_html/becode/hackers-poulette/assets/php/sendMail.php';
+    require '/var/www/nicode.io/public_html/becode/hackers-poulette/assets/php/db.php';
+    require '/var/www/nicode.io/public_html/becode/hackers-poulette/assets/php/checkin.php';
 
     $firstName = '';
     $lastName = '';
@@ -10,6 +11,7 @@
     $email = '';
     $subject = '';
     $comment = '';
+    $success = '';
 
     if (!empty($_POST)) {
         $firstName = filter_var($_POST['first-name'], FILTER_SANITIZE_STRING);
@@ -20,23 +22,59 @@
         $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
         $comment = filter_var($_POST['comment'], FILTER_SANITIZE_STRING);
         $checkErrors = array('firstName'=>'', 'lastName'=>'', 'gender'=>'', 'country'=>'', 'email'=>'');
-
-        if(!preg_match('/^[a-zA-Z\s]+$/', $firstName)) {
+        $errCount = 0;
+        
+        if(!preg_match('/^[a-zA-Z-ë\s]+$/', $firstName)) {
             $errors['firstName'] = '<i class="fas fa-exclamation-circle"></i> Your first name contains invalid characters';
+            $errCount =+ 1;
         }
-        if(!preg_match('/^[a-zA-Z\s]+$/', $lastName)) {
+        if(!preg_match('/^[a-zA-Z-ë\s]+$/', $lastName)) {
             $errors['lastName'] = '<i class="fas fa-exclamation-circle"></i> Your last name contains invalid characters';
+            $errCount =+ 1;
         }
         if(!preg_match('/^[a-zA-Z\s]+$/', $gender)) {
             $errors['gender'] = '<i class="fas fa-exclamation-circle"></i> Please select a gender from the list';
+            $errCount =+ 1;
         }
-        if(!preg_match('/^[a-zA-Z\s]+$/', $country)) {
+        if(!preg_match('/^[a-zA-Z-\s]+$/', $country)) {
             $errors['country'] = '<i class="fas fa-exclamation-circle"></i> Your country is invalid';
+            $errCount =+ 1;
         }
         if (!preg_match('/^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/', $email)) {
             $errors['email'] = '<i class="fas fa-exclamation-circle"></i> Your email is invalid';
+            $errCount =+ 1;
+        }
+        if (!empty(s_POST[pooh])) {
+            $errCount =+ 1;
+        }
+        if ($errCount === 0) {
+            sendMail($firstName, $lastName, $email, $subject, $comment);
+            try {
+                $conn = $pdo;
+    
+                // set the PDO error mode to exception
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+                // SQL Query
+                $sql = "INSERT INTO form_support (last_name, first_name, gender, email, country, subject, comment)
+                VALUES ('$lastName', '$firstName', '$gender', '$email', '$country', '$subject', '$comment')";
+
+                // use exec() because no results are returned
+                $conn->exec($sql);
+
+            } catch(PDOException $e) {
+                echo $sql . "<br>" . $e->getMessage(); 
+            }
+            $firstName = '';
+            $lastName = '';
+            $gender = '';
+            $country = '';
+            $email = '';
+            $subject = '';
+            $comment = '';
+            $success = '<span class="confirm bg-success text-white rounded p-3 d-flex flex-column justify-content-center align-items-center mb-2"><p>Thanks for you feedback !</p><p> You\'ll get an answer within 24 hours.</p><p>We send you a confirmation by email</p></span>'; 
         } 
-    }
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,14 +89,15 @@
     </head>
     <body> 
         <main class="main d-flex flex-column justify-content-center align-items-center" role="main">
-            <section id="logo" class="col-8">
+            <section id="logo" class="col-12">
                 <img src="./assets/img/hackers-poulette-logo.png" class="rounded mx-auto d-block" alt="Hacker Poulette logo">
-            </section>    
+            </section>  
+            <?php echo $success ?>  
             <form id="formSupport" class="jumbotron col-11 col-xl-8" aria-label="Contact support team" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> <!-- action target this page -->
                 <section class="row pb-1" id="nameSect">
                     <article class="col-12 col-xl-6 pb-2">
                         <label for="firstName">First name</label>
-                        <input type="text" class="form-control" name="last-name" placeholder="First name" autocorrect="off" value="<?php echo $firstName; ?>"required aria-required="true">
+                        <input type="text" class="form-control" name="first-name" placeholder="First name" autocorrect="off" value="<?php echo $firstName; ?>" required aria-required="true">
                         <?php echo '<span class="error" role="alert">' . $errors['firstName'] . '</span>' ?>
                     </article>
                     <article class="col-12 col-xl-6 pb-2">
@@ -94,17 +133,17 @@
                     <article class="form-group col-xl-6">
                         <label for="subject">Issue <i id="optional">optional</i></label>
                         <select id="subject" class="form-control" name="subject" value="Others Issues" aria-required="false">
-                            <option value="technical-issue">Technical issue</option>
-                            <option value="administrative-issue">Administrative issue</option>
-                            <option value="commercial-issue">Commercial issue</option>
-                            <option value="other-issue" selected="selected">Other issue</option>
+                            <option value="technical issue">Technical issue</option>
+                            <option value="administrative issue">Administrative issue</option>
+                            <option value="commercial issue">Commercial issue</option>
+                            <option value="issue" selected="selected">Other issue</option>
                         </select>
                     </article>
                 </section>
                 <section>
                     <article class="form-group col-xl-12 p-2 pb-2">
                         <label for="comment">Comment</>
-                        <textarea id="comment" class="form-control" name="comment" rows="10" cols="100" maxlength="1000" required aria-required="true"><?php echo $comment; ?></textarea>
+                        <textarea id="comment" class="form-control" name="comment" rows="10" cols="110" maxlength="1000" required aria-required="true"><?php echo $comment; ?></textarea>
                     </article>
                 </section>
                 <section id="winnie">

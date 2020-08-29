@@ -1,13 +1,23 @@
 @import "https://fonts.googleapis.com/css2?family=Bellota&display=swap";
 body {
   background: #fff;
-}
-body main {
   font-family: "Bellota", cursive;
 }
-body main img {
-  width: 40vw;
-  height: auto;
+body main section img {
+  width: auto;
+  height: 15vh;
+}
+body main section article .error {
+  color: #d45455;
+}
+body main section article label {
+  color: #303030;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+body main section article label #optional {
+  color: #0d8187;
+  font-size: 0.8rem;
 }
 body main #formSupport {
   background: #0d818750;
@@ -23,36 +33,30 @@ body main #formSupport #submitSect #submit {
   font-size: 1.3rem;
   font-weight: 700;
 }
-
-.error {
-  color: #d45455;
-}
-
-#descriptionSubmit {
+body main #formSupport #descriptionSubmit {
   visibility: hidden;
-}
-
-label {
-  color: #303030;
-  font-size: 1.1rem;
-  font-weight: 900;
-}
-
-#optional {
-  color: #0d8187;
-  font-size: 0.8rem;
 }
 
 @media only screen and (min-width: 1200px) {
   body {
     background: #fff;
-  }
-  body main {
     font-family: "Bellota", cursive;
   }
-  body main img {
-    width: 20vw;
-    height: auto;
+  body main section img {
+    width: auto;
+    height: 20vh;
+  }
+  body main section article .error {
+    color: #d45455;
+  }
+  body main section article label {
+    color: #303030;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+  body main section article label #optional {
+    color: #0d8187;
+    font-size: 0.8rem;
   }
   body main #formSupport {
     background: #0d818750;
@@ -67,6 +71,9 @@ label {
     height: 6vh;
     font-size: 2rem;
     font-weight: 900;
+  }
+  body main #formSupport #descriptionSubmit {
+    visibility: hidden;
   }
 }
 
