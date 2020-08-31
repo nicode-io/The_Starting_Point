@@ -430,6 +430,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   ```MariaDB [...]> FLUSH PRIVILEGES;``` to refresh recently added privileges
             *   ```MariaDB [...]> SHOW GRANTS FOR user_name@localhost;``` to check status of privileges for user
 
+    *   #####   Update a user's password
+        *   Connect as superuser: ```mysql> mysql -u root -h localhost -p```
+        *   Run: ```mysql> ALTER USER 'username'@'localhost' IDENTIFIED BY 'new_password';```
+
     *   #####   Remove a user
         *   ```DROP USER user_name@localhost;``` 
 
@@ -463,6 +467,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   A good practise is to run following after giving permissions: 
             ```mysql> FLUSH PRIVILEGES;```
         *   ```mysql> exit``` to finally quit MySQL
+
+    *   #####   Update a user's password
+        *   Connect as superuser: ```mysql> mysql -u root -h localhost -p```
+        *   Run: ```mysql> ALTER USER 'username'@'localhost' IDENTIFIED BY 'new_password';```
 
     *   #####   Testing MySQL
         *   ```$ systemctl status mysql.service```
@@ -531,9 +539,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ composer require phpmailer/phpmailer```
-
-
-
 
 
 ---
@@ -613,6 +618,11 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ python manage.py runserver```
         *   If you can read *System check identified no issues (0 silenced).* everything works well
         *   It's time to discover MVC and this awesome framework !
+
+    *   ####    Connect remotely to your Django's localhost
+        *   On the local computer: ```$ ssh -v -L 9000:localhost: username@your_server_ip```
+        *   On the remote server, in your project folder: ```$ python manage.py runserver```
+        *   On the local computer, browse ***http://localhost:9000**
 
     *   ####    Learn a lot more about Django
         *   I made a step-by-step dedicated to django [HERE](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed), if you want to learn more and make an entire first project this may help you. :wink:
