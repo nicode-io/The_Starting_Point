@@ -17,6 +17,7 @@ My second Django's project. This one aims to go deeper in the knowledge of this 
 ##  Cheat Sheet
 > Find the step-by-step summary, not documented or explained except for some points, refers to django/python documentation to know more about what you're doing with the followings.
 ####    Create the project in virtual environement
+*   Go to your project's folder: ```$ cd path/to/my/project``` 
 *   Create venv: ```$ python -m venv env_name```
 *   Activate venv: ```$ source env_name/bin/activate```
 *   Deactivate venv: ```$ deactivate```
@@ -269,6 +270,11 @@ My second Django's project. This one aims to go deeper in the knowledge of this 
 *   In *app_name/templates/learning_logs* folder Open **base.html**, replace existing content by:   
     MAKE AN EXTERNAL LINK TO HTML CODE
 *   Update you differents pages with what you learn in [django-bootstrap4 documentation](https://django-bootstrap4.readthedocs.io/en/latest/)
+
+####    Connect remotely to your Django's localhost
+*   On the local computer: ```$ ssh -v -L 9000:localhost: username@your_server_ip```
+*   On the remote server, in your project folder: ```$ python manage.py runserver```
+*   On the local computer, browse ***http://localhost:9000**
 
 
 ##  Achievements 
