@@ -538,7 +538,16 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     >   An extension that allows you to send email from PHP code in your web pages. Our way to install require Composer, see above for details. 
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
-        *   ```$ composer require phpmailer/phpmailer```
+
+    *   #####   Use Google SMTP
+        *   [Allow less secure applications](https://myaccount.google.com/security-checkup) and **Turn on less secure app access**
+        *   [Disable Captcha for server connection](https://accounts.google.com/DisplayUnlockCaptcha)
+        *   Use the followings as connection information in your phpmailer config:
+            *   ```$mail->Host = 'smtp.gmail.com';```
+            *   ```$mail->Username = 'your_mail@google.com';```
+            *   ```$mail->Password = 'you_google_password';``` be aware of security and better use a variable value coming from another php file that is secured and invisible
+            *   ```mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;```
+            *   ```mail->Port = 465;```
 
 
 ---
@@ -548,6 +557,8 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 >   Configure a development environment available remotely
 -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-development-extension) 
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
+    -   [VENV](#venv)
+    -   [PIPENV](#pipenv)
 -   [DJANGO FRAMEWORK](#django-framework)
 
     ####    VSCODE REMOTE DEVELOPMENT EXTENSION
@@ -568,31 +579,56 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   A new VScode window will pop, you're now connected to your remote server and have access to the file structure and all folders you have there. :thumbs:
 
     ####    PYTHON VIRTUAL ENVIRONMENT
-    >   Create isolated space on your server for each of your Python's projects. We'll use **VENV** but others exists
+    >   Create isolated space on your server for each of your Python's projects.
 
-    *   #####   Installation
-        *   ```$ sudo apt update && sudo apt upgrade```
-        *   ```$ sudo apt install -y python3-venv```
+    *   ####    VENV
+        *   #####   Installation
+            *   ```$ sudo apt update && sudo apt upgrade```
+            *   ```$ sudo apt install -y python3-venv```
 
-    *   #####   Create a new virtual environment
-        *   Create a project folder:    
-            ```$ mkdir project_folder```
-        *   Navigate to your project folder:    
-            ```$ cd project_folder```
-        *   Create the virtual environment using:   
-            ```$ python3 -m venv environment_name```
-        *   List created files (optionnal): 
-            ```$ ls environment_name```
-        *   Activate your virtual environment:  
-            ```$ source environment_name/bin/activate```
-        *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your (virtual) private server's system but only to this virtual environment :magic_wand:
+        *   #####   Create a new virtual environment
+            *   Create a project folder:    
+                ```$ mkdir project_folder```
+            *   Navigate to your project folder:    
+                ```$ cd project_folder```
+            *   Create the virtual environment using:   
+                ```$ python3 -m venv environment_name```
+            *   List created files (optionnal): 
+                ```$ ls environment_name```
+            *   Activate your virtual environment:  
+                ```$ source environment_name/bin/activate```
+            *   From now the start of your command prompt will be your environment name, all packages or library you'll install in it won't be linked to your (virtual) private server's system but only to this virtual environment :magic_wand:
 
-    *   #####   Close venv virtual environment
-        *   *CTRL + D*
+        *   #####   Close venv virtual environment
+            *   *CTRL + D*
 
-    *   #####   Delete venv virtual environment 
-        *   Simply delete *environment_name* folder with:   
-            ```$ sudo rm -r .../environment_name/*```
+        *   #####   Delete venv virtual environment 
+            *   Simply delete *environment_name* folder with:   
+                ```$ sudo rm -r .../environment_name/*```
+    
+    *   ####    PIPENV
+        >   You need PIP package manager to use PIPENV
+        *   #####   Installation
+            *   ```$ pip install pipenv```
+        *   #####   Create a new virtual environment
+            *   Got to your project directory: ```$ cd project```
+            *   Install environment: ```$ pipenv installl```
+        *   #####   Launch virtual environment shell
+            *   Launch shell: ```$ pipenv shell```
+        *   #####   Install 3rd party package
+            *   ```$ pipenv install package_name```
+            *   For specific version: ```$ pipenv install package_name==0.10.1```
+            *   Install from VCS (like Github): ```$ pipenv install -e git+https://github.com/package_name/package_name.git#egg=package_name```
+            *   Specify using only in development: ```$ pipenv install package_name --dev```
+        *   #####   Lock your environment when ready to production
+            *   ```$ pipenv lock```
+        *   #####   Tips to deploy
+            *   When you have the **code** and the **Pipfile.lock** in your production environment, you should install the last successful environment recorded:    
+            ```$ pipenv install --ignore-pipfile``` 
+            *   If a developer wants to make additions to your code, they need the **code**, the **Pipfile** and type:  
+            ```$ pipenv install --dev``` 
+            This will install all packages, included the ones installed with **--dev** options
+
 
     ####    DJANGO FRAMEWORK
     >   A Powerful Web-Framework using Python to develop beautiful-builded websites with a high-level of security. Your website will growth more and more ? Django then shines !
@@ -626,6 +662,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     *   ####    Learn a lot more about Django
         *   I made a step-by-step dedicated to django [HERE](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed), if you want to learn more and make an entire first project this may help you. :wink:
+    
+    *   ####    Deploy Django on Heroku
+        *   Install Gunicorn: ```$ pipenv install gunicorn```   
+        *   Install PostgreSQL: ```$ sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common``` 
+        *   Install Psycopg - PostgreSQL adapter: ```$ pipenv install psycopg2-binary```
+        *   
 
 
 ---
