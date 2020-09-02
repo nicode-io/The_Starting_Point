@@ -96,15 +96,16 @@ To:  **21-03-2021**
 
   * PHP
     * :white_check_mark: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)
-    * :construction: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette)
+    * :white_check_mark: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette)
+    * :construction: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP)
   * HOSTING 
     * :white_check_mark: [Beginner's guide to VPS](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
   * DOCKER
     * :white_check_mark: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
   * PYTHON
-    * :zzz: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
+    * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
   * FLUTTER
-    * :zzz: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
+    * :white_check_mark: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
 
 ---
 
