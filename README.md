@@ -95,9 +95,11 @@ To:  **21-03-2021**
 > PART ONE :goat: Back-end / Server (+/- 2 months)
 
   * PHP
-    * :white_check_mark: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)
-    * :white_check_mark: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette)
-    * :construction: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP)
+    * :white_check_mark: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)  
+    * :white_check_mark: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette) 
+    * :construction: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP) 
+  * SQL
+    * :construction: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
   * HOSTING 
     * :white_check_mark: [Beginner's guide to VPS](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
   * DOCKER
