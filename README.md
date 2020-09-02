@@ -43,7 +43,8 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [DEVELOPMENT ENVIRONMENT](#development-environment)
     -   [VSCODE REMOTE DEVELOPMENT EXTENSION](#vscode-remote-development-extension) 
     -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
-    -   [DJANGO FRAMEWORK](#django-framework)
+        -   [VENV](#venv)
+        -   [PIPENV](#pipenv)
 -   [COLLABORATION](#collaboration)
 -   [TIMELINE](#timeline)
 
@@ -559,7 +560,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 -   [PYTHON VIRTUAL ENVIRONMENT](#python-virtual-environment)
     -   [VENV](#venv)
     -   [PIPENV](#pipenv)
--   [DJANGO FRAMEWORK](#django-framework)
 
     ####    VSCODE REMOTE DEVELOPMENT EXTENSION
     > Allows you to connect to your server's files and projects remotely
@@ -628,46 +628,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   If a developer wants to make additions to your code, they need the **code**, the **Pipfile** and type:  
             ```$ pipenv install --dev``` 
             This will install all packages, included the ones installed with **--dev** options
-
-
-    ####    DJANGO FRAMEWORK
-    >   A Powerful Web-Framework using Python to develop beautiful-builded websites with a high-level of security. Your website will growth more and more ? Django then shines !
-
-    *   #####   Installation
-        *   It's recommended to install Django in a virtual environment to make distinctions with your server file system. You can use **VENV** (see above) **PIPENV** or another tool from your choice.
-        *   Install pip, package manager first: 
-            ```$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py```
-        *   Run the following in the folder you have downloaded  *get-pip.py* : 
-            ```$ python get-pip.py```
-        *   Install Django: 
-            ```$ python -m pip install Django```
-        *   Check your version as a check:  
-            ```$ python -m django --version```
-
-    *   #####   Creating a project
-        *   Go to your project directory and run following: 
-            ```$ django-admin startproject *project_name* .```  
-            >   The ending **.** is very important. It creates a directory structure wich will make it easy to deploy the app to a server after development
-        *   You can now explore the default project's structure
-
-    *   #####   Verify your initialisation
-        *   ```$ python manage.py runserver```
-        *   If you can read *System check identified no issues (0 silenced).* everything works well
-        *   It's time to discover MVC and this awesome framework !
-
-    *   ####    Connect remotely to your Django's localhost
-        *   On the local computer: ```$ ssh -v -L 9000:localhost: username@your_server_ip```
-        *   On the remote server, in your project folder: ```$ python manage.py runserver```
-        *   On the local computer, browse ***http://localhost:9000**
-
-    *   ####    Learn a lot more about Django
-        *   I made a step-by-step dedicated to django [HERE](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed), if you want to learn more and make an entire first project this may help you. :wink:
-    
-    *   ####    Deploy Django on Heroku
-        *   Install Gunicorn: ```$ pipenv install gunicorn```   
-        *   Install PostgreSQL: ```$ sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common``` 
-        *   Install Psycopg - PostgreSQL adapter: ```$ pipenv install psycopg2-binary```
-        *   
 
 
 ---
