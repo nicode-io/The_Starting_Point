@@ -25,7 +25,7 @@
                 try {
                     $this->db_connection = new PDO('mysql:host=' . $this->host . ';port=' . $this->port . ';dbname=' . $this->db_name . ';charset=utf8', '' . $this->db_username . '', '' . $this->db_user_password . '');
                     $this->db_connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ); // :: call to static variable
-                    echo 'connection sucess';
+                    echo 'connection sucess ';
                 }
                 catch (PDOException $e) {
                     die('Erreur : '.$e->getMessage());
@@ -35,10 +35,10 @@
         }
 
         public function sqlQuery($query){
-            return $this->dbConnect()->query($query)->fetchAll();
+            return $this->dbConnect()->query($query)->fetch();
         }
     }
 
     $test = new Connection('localhost', '8889', 'oop_php', 'root', 'root');
-    $result = $test->sqlQuery('SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = \'BASE TABLE\'');
-    var_dump($result);
+    $result = $test->sqlQuery('SELECT COUNT(*) as valeur FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = \'BASE TABLE\'');
+    echo $result->valeur;
