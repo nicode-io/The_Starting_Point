@@ -39,6 +39,6 @@
         }
     }
 
-    $test = new Connection('localhost', '8889', 'oop_php', 'root', 'root');
-    $result = $test->sqlQuery('SELECT COUNT(*) as valeur FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = \'BASE TABLE\'');
-    echo $result->valeur;
+    // $test = new Connection('localhost', '8889', 'oop_php', 'root', 'root');
+    // $result = $test->sqlQuery('SELECT COUNT(*) as valeur FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = \'BASE TABLE\'');
+    // echo $result->valeur;
