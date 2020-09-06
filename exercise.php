@@ -22,13 +22,7 @@ while ($data = $result->fetch())
     echo ($data['bas'] . ' ');
 }
 
-// Close cursor
+// Close query
 $result->closeCursor();
 
-// Display data
-while ($data = $result->fetch())
-{
-    echo ($data['ville'] . ' ');
-    echo ($data['haut'] . ' ');
-    echo ($data['bas'] . ' ');
-}
+// --------------------------------------------------
