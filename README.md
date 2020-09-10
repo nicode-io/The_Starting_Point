@@ -97,11 +97,16 @@ To:  **21-03-2021**
   * PHP
     * :white_check_mark: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)  
     * :white_check_mark: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette) 
-    * :construction: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP) 
+    * :white_check_mark: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP) 
+    * :construction: [TeamWork  : COGIP](https://github.com/Becode-TeamWork/TW-Cogip) 
+       * *Those awesome people work with me on this project*:   
+      :star:[François Wauters](https://github.com/fwauters)
+      :star:[Aleksandra Slovik](https://github.com/88aleksandra88)  
+      :star:[Robin Jacquemart](https://github.com/JackRob)  
   * SQL
-    * :construction: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
+    * :white_check_mark: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
   * HOSTING 
-    * :white_check_mark: [Beginner's guide to VPS](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
+    * :white_check_mark: [Beginner's guide to private server](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
   * DOCKER
     * :white_check_mark: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
   * PYTHON
