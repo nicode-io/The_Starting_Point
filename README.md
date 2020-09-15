@@ -123,7 +123,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             This will send a TCPKeepAlive every 30 seconds
         *   On your local computer: 
             ```$ sudo nano /etc/ssh/ssh_config```
-        *   Add the folloing line:  
+        *   Add the following line:  
             **ServerAliveInterval 120**
 
     *   #####   Setting up basic firewall
@@ -188,6 +188,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   #####   Installation
         *   ```$ sudo apt update && sudo apt upgrade```
         *   ```$ sudo apt-get install apache2```
+        *   ```$ sudo ufw allow 'Apache'```
 
     ####    VIRTUAL HOSTS
     >   One virtual host and file folder are needed for each website you'll host    
@@ -236,7 +237,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   Let's develop a great website now !
 
     ####    CERTBOT - SSL CERTIFICATION
-    >   :warning: AllowS HTTPS connections if your hosting provider doesn't provide a solution, wich is uncommon
 
     *   #####   Installation 
         *   ```$ sudo apt update && sudo apt upgrade```
