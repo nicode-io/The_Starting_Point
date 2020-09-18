@@ -33,31 +33,32 @@ To:  **21-03-2021**
   * Google search 
   * Terminal
   * GIT 
-    * :white_check_mark: [**TeamWork Cadavre Exquis**](https://github.com/Becode-TeamWork/TW-Cadavre-Exquis) 
+    * :white_check_mark: [TeamWork Cadavre Exquis](https://github.com/Becode-TeamWork/TW-Cadavre-Exquis) 
       * *Those awesome people work with me on this project*:  
        :star:[Aurore Limage](https://github.com/riizbae)   
        :star:[Alksandra Slowik](https://github.com/88aleksandra88)  
        :star:[Bastien Dewerse](https://github.com/DewerseB)  
        :star:[Loïc Hobe](https://github.com/loichobe)  
   * MARKDOWN  
-    * :white_check_mark: [**TeamWork Mardown Discovery**](https://github.com/Becode-TeamWork/TW-MarkDown_Discovery)  
+    * :white_check_mark: [TeamWork Mardown Discovery](https://github.com/Becode-TeamWork/TW-MarkDown_Discovery)  
       * *Those awesome people work with me on this project*:   
        :star:[Marie Pierard](https://github.com/Marie-Pierard)   
        :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
        :star:[Stéphane Kalonji](https://github.com/kalonjis)  
   * HTML / CSS  
-      * :white_check_mark: [**Turlututu V1**](https://github.com/nicode-be/01-03-Turlututu) 
-      * :white_check_mark: [**Learning environment**](https://github.com/html-css-nicode/HC-01-Learning-environment) *details in link*. 
-      * :white_check_mark: [**Star-Wars crawl**](https://github.com/html-css-nicode/HC-02-Star-wars-crawl) *MVP Completed*
+      * :white_check_mark: [Turlututu V1](https://github.com/html-css-nicode/HC-08-Turlututu_homepage) 
+      * :white_check_mark: [Learning environment](https://github.com/html-css-nicode/HC-01-Learning-environment) *details in link*. 
+      * :white_check_mark: [Star-Wars crawl](https://github.com/html-css-nicode/HC-02-Star-wars-crawl) *MVP Completed*
+      * :white_wheck_mark: [Kik-Irpa homepage](https://github.com/html-css-nicode/HC-09-Kik_Irpa)
     * SASS   
-      * :white_check_mark: [**Learning SASS**](https://github.com/html-css-nicode/HC-03-Learning-sass)  
-      * :white_check_mark: [**Turlututu v2**](https://github.com/nicode-be/01-03-Turlututu) 
+      * :white_check_mark: [Learning SASS](https://github.com/html-css-nicode/HC-03-Learning-sass)  
+      * :white_check_mark: [Turlututu v2](https://github.com/html-css-nicode/HC-08-Turlututu_homepage) 
     * RESPONSIVE  
       * :white_check_mark: [Responsive discovery exercise](https://github.com/html-css-nicode/HC-04-Responsive-discover-exercise) 
       * :white_check_mark: [Responsive Zozor](https://github.com/html-css-nicode/HC-05-Responsive-zozor) *MVP* 
     * CSS: ANIMATION & TRANSITIONS
       * :white_check_mark: [Exercise 1 - Drill - Three buttons creation with transition and animations](https://github.com/html-css-nicode/HC-06-becode-animation-css) 
-      * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/html-css-nicode/HC-07-animated-card)
+      * :negative_squared_cross_mark:**01-10** [Exercise 2 - SCSS Animated card](https://github.com/html-css-nicode/HC-07-Animated_Card)
   * BOOTSTRAP
     *  :white_check_mark: **TW-Bootstrap** [Discover CSS frameworks: BootStrap](https://github.com/Becode-TeamWork/TW-Bootstrap_Restaurant)  
         * *Those awesome people work with me on this project*:   
@@ -82,8 +83,9 @@ To:  **21-03-2021**
       :star: [Albert Ndizeye](https://github.com/AlbertNd)  
     * :white_check_mark: [Step 2 - Serie 2](https://github.com/Javascripter-Nicode/JS-03-Step2_Serie2)    
     * :negative_squared_cross_mark: [PewPew Game](https://github.com/Javascripter-Nicode/JS-04-PewPew_Game)  
-    * :white_check_mark: [The Hangman Game](https://github.com/nicode-be/02-04-Hangman_Game)
+    * :white_check_mark: [The Hangman Game](https://github.com/Javascripter-Nicode/JS-05-Hangman_Game)
     * :white_check_mark: [JavaScript Data](https://github.com/nicode-be/TW-JS_Data)
+    * :white_check_mark: [LightRIS - Minimal Tetris](https://github.com/Javascripter-Nicode/JS-06-LightRis)
   * PYTHON
     * :white_check_mark: [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
     * :construction: [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
@@ -93,12 +95,13 @@ To:  **21-03-2021**
 
 ## The Mountain 
 > PART ONE :goat: Back-end / Server (+/- 2 months)
+> PART TWO :ram: Frameworks and CMS (+/- 2 months)
 
   * PHP
     * :white_check_mark: [PHP Fundamentals](https://github.com/php-nicode/PHP-01-PHP_Fundamentals)  
     * :white_check_mark: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette) 
     * :white_check_mark: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP) 
-    * :construction: [TeamWork  : COGIP](https://github.com/Becode-TeamWork/TW-Cogip) 
+    * :white_check_mark: [TeamWork  : COGIP](https://github.com/Becode-TeamWork/TW-Cogip) 
        * *Those awesome people work with me on this project*:   
       :star:[François Wauters](https://github.com/fwauters)
       :star:[Aleksandra Slovik](https://github.com/88aleksandra88)  
@@ -111,15 +114,16 @@ To:  **21-03-2021**
     * :white_check_mark: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
   * PYTHON
     * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
+    * :construction: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
+    * :construction: [Django Unleashed](https://github.com/nicode-io/Django_Unleashed)
   * FLUTTER
     * :white_check_mark: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
-
+  * WORDPRESS
+    * :white_check_mark: [Another Wordpress (beginner's guide)](https://github.com/Wordpress-Nicode/WP-01-Another_Wordpress_Guide)
+    
 ---
 
 ### And the best is yet to come ... :
-
-##### The Mountain 
-> PART TWO :ram: Frameworks and CMS (+/- 2 months)
 
 ##### The Summer Pastures
 > :cow2: :goat: :ram: :horse: Workshops - Upgrading stacks (+/- 2 months)
@@ -142,4 +146,3 @@ Thanks by advance for that :heart:
 
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
