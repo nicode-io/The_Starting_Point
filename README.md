@@ -102,20 +102,28 @@ To:  **21-03-2021**
     * :white_check_mark: [Project: Hackers Poulette](https://github.com/php-nicode/PHP-02-Hackers_Poulette) 
     * :white_check_mark: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP) 
     * :white_check_mark: [TeamWork  : COGIP](https://github.com/Becode-TeamWork/TW-Cogip) 
-       * *Those awesome people work with me on this project*:   
-      :star:[François Wauters](https://github.com/fwauters)
+      * *Those awesome people work with me on this project*:   
+      :star:[François Wauters](https://github.com/fwauters) 
       :star:[Aleksandra Slovik](https://github.com/88aleksandra88)  
       :star:[Robin Jacquemart](https://github.com/JackRob)  
+  * PYTHON
+    * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
+    * :construction: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
+    * :construction: [Django Unleashed](https://github.com/nicode-io/Django_Unleashed)
+  * JAVASCRIPT
+    * :white_check_mark: [Node.js - Introduction](https://github.com/Javascripter-Nicode/JS-07-Node_JS)
+    * :construction: [TeamWork - RealTimeChat]
+      * *Those awesome people work with me on this project*:  
+      :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)  
+      :star:[Marie Pierard](https://github.com/Marie-Pierard)   
+      :star:[Jean-Claude Brognez](https://github.com/jcbrognez) 
   * SQL
     * :white_check_mark: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
   * HOSTING 
     * :white_check_mark: [Beginner's guide to private server](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
   * DOCKER
     * :white_check_mark: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
-  * PYTHON
-    * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
-    * :construction: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
-    * :construction: [Django Unleashed](https://github.com/nicode-io/Django_Unleashed)
+
   * FLUTTER
     * :white_check_mark: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
   * WORDPRESS
