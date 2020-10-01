@@ -65,6 +65,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Choose name of the key and where to save :  
             /home/.ssh/key_name 
         *   Enter password twice for the key  
+        *   ```$ sudo nano ~/.ssh/config``` and add followings: 
+                ```Host *```
+                ``` AddKeysToAgent yes```
+                ``` UseKeychain yes```
+                ``` IdentityFile ~/.ssh/id_rsa```
+        *   ```$ ssh-add -K ~/.ssh/id_rsa```
 
     *   #####   Copy SSH key in clipboard   
         *   ```$ pbcopy < ~/.ssh/key_name.pub```    
