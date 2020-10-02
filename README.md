@@ -1,10 +1,13 @@
-# BECODE BOOTCAMP :mortar_board:
-> 10 months to change your life and become a developer
+# BECODE BOOTCAMP :rocket:
+> Change your life ,become a developer, get a nice job !
 
 ### **BeCode** Intensive Bootcamp
-In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !   
-The bootcamp aims at acquiring self-learning skills and mastering the basics, both on the frontend and backend sides. An accompaniment is provided by a team of great coaches who will guide you and help you overcome the various peaks of difficulty encountered.  
-Partly remote at the moment due to the health situation but we have turned this into an opportunity by using a maximum of collaborative tools. The two programming languages I chose are Javascript and Python. At the end of the bootcamp I will certainly be able to help you on your projects while continuing to improve my skills on a daily basis. Passion guides me at every moment, in every learning curve and surpassing oneself is part of my DNA.   
+
+In ten months, you have a wonderful opportunity to become a great Junior App & Web Developer. 
+We are motivated by inclusion and the spirit of sharing!   
+The bootcamp aims at acquiring self-learning skills and mastering a junior web developer path, both frontend and backend. 
+Support is provided by a team of great coaches who will guide you and help you overcome the various peaks of difficulty encountered.
+
 Give maximum to get maximum :rocket:
 
 > When
@@ -17,13 +20,18 @@ To:  **21-03-2021**
 [**BeCode A6K-E6K** ](https://www.e6k.be/home-en)
 
 ## Index
+- [Timeline](#timeline)
 - [The Field](#the-field) 
 - [The Hill](#the-hill)
 - [The Mountain](#the-mountain)
 - [The Summer Pastures](#the-summer-pastures)
 - [The Valley](#the-valley)
-- [Timeline](#timeline)
 - [Collaboration](#collaboration)
+
+---
+
+### Timeline 
+[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company name on it ? See collaboration section ;)](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 ---
 
@@ -141,8 +149,6 @@ To:  **21-03-2021**
 
 --- 
 
-### Timeline 
-[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company name on it ? See collaboration section ;)](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 ### Collaboration
 Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), welcome to my all new life as developer.
