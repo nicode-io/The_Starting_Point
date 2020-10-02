@@ -640,8 +640,12 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 
 ### **BeCode** Intensive Bootcamp     
-This project took place in my leearning path in BeCode (see below) to full stack web developer.
-In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
+This project took place in my leearning path in BeCode (see below) to Junior App & Web Developer.
+In ten months, you have a wonderful opportunity to become a great junior web developer. 
+We are motivated by inclusion and the spirit of sharing!   
+The bootcamp aims at acquiring self-learning skills and mastering a junior web developer path, both frontend and backend. 
+Support is provided by a team of great coaches who will guide you and help you overcome the various peaks of difficulty encountered.
+
 Give maximum to get maximum :rocket:
 
 ### COLLABORATION
