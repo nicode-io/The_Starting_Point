@@ -28,7 +28,16 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
-#### v-0.1 
+####    v-0.2
+>   Create 'events' app & models
+
+*   Create 'events' app
+*   Create following classes in events/models :
+    *   Venue
+    *   MyClubUser
+    *   Event
+
+####    v-0.1 
 >   Project initialisation
 
 *   Init README.md
