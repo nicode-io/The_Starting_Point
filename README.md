@@ -28,6 +28,16 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+#### v-0.1 
+>   Project initialisation
+
+*   Init README.md
+*   Init GitFlow
+*   Create Venv
+*   Install Django
+*   Install Postgre
+*   Config database connector
+*   Config .gitignore
 
 ---
 
