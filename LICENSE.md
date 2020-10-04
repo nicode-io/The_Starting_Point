@@ -1,5 +1,5 @@
 
-Copyright (c) 2020,  <>
+Copyright (c) 2020, Nicolas Denoël <info@nicode.io>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
