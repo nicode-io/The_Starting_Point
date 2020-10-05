@@ -124,7 +124,6 @@ To:  **21-03-2021**
     * :white_check_mark: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
   * WORDPRESS
     * :white_check_mark: [Another Wordpress (beginner's guide)](https://github.com/Wordpress-Nicode/WP-01-Another_Wordpress_Guide)
-  
   * PYTHON
     * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
     * :construction: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
