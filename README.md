@@ -102,7 +102,7 @@ To:  **21-03-2021**
 ----
 
 ## The Mountain 
-> PART ONE :goat: Back-end / Server (+/- 2 months)
+> PART ONE :goat: Back-end / Server (+/- 2 months) 
 > PART TWO :ram: Frameworks and CMS (+/- 2 months)
 
   * PHP
@@ -114,6 +114,17 @@ To:  **21-03-2021**
       :star:[François Wauters](https://github.com/fwauters) 
       :star:[Aleksandra Slovik](https://github.com/88aleksandra88)  
       :star:[Robin Jacquemart](https://github.com/JackRob)  
+  * SQL 
+    * :white_check_mark: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
+  * HOSTING 
+    * :white_check_mark: [Beginner's guide to private server](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
+  * DOCKER
+    * :white_check_mark: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
+  * FLUTTER
+    * :white_check_mark: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
+  * WORDPRESS
+    * :white_check_mark: [Another Wordpress (beginner's guide)](https://github.com/Wordpress-Nicode/WP-01-Another_Wordpress_Guide)
+  
   * PYTHON
     * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
     * :construction: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
@@ -125,18 +136,7 @@ To:  **21-03-2021**
       :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)  
       :star:[Marie Pierard](https://github.com/Marie-Pierard)   
       :star:[Jean-Claude Brognez](https://github.com/jcbrognez) 
-  * SQL
-    * :white_check_mark: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
-  * HOSTING 
-    * :white_check_mark: [Beginner's guide to private server](https://github.com/nicode-io/PP-Guide_To_VPS/blob/master/README.md)
-  * DOCKER
-    * :white_check_mark: [Docker Discovery](https://github.com/nicode-io/PP-Docker_discovery)
-
-  * FLUTTER
-    * :white_check_mark: [Flutter Discovery](https://github.com/nicode-io/PP-Flutter-Discovery)
-  * WORDPRESS
-    * :white_check_mark: [Another Wordpress (beginner's guide)](https://github.com/Wordpress-Nicode/WP-01-Another_Wordpress_Guide)
-    
+  
 ---
 
 ### And the best is yet to come ... :
