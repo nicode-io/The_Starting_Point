@@ -28,6 +28,17 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.3
+>   Create 'events' dynamic view
+
+*   Introduce HttpResponse
+*   Configure urls.py in 'myclub_site'
+*   Configure urls.py in 'events'
+*   Add dynamic title
+*   Use regex for filtering URL
+*   Add calendar
+*   Add default parameters for URL
+
 ####    v-0.2
 >   Create 'events' app & models
 
