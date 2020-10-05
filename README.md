@@ -102,7 +102,7 @@ To:  **21-03-2021**
 ----
 
 ## The Mountain 
-> PART ONE :goat: Back-end / Server (+/- 2 months) 
+> PART ONE :goat: Back-end / Server (+/- 2 months)  
 > PART TWO :ram: Frameworks and CMS (+/- 2 months)
 
   * PHP
