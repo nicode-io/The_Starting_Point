@@ -9,10 +9,12 @@ BeCode Charleroi
 ### Project link :
 [GitHub page](https://nicode-io.github.io/01-03-Turlututu/)
 
-### Why :
-**BeCode** Web Developer Training  
-In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
-Give maximum to get maximum :rocket:
+### BeCode Intensive Bootcamp
+
+In ten months, you have a wonderful opportunity to become a great Junior App & Web Developer. We are motivated by inclusion and the spirit of sharing!
+The bootcamp aims at acquiring self-learning skills and mastering a junior web developer path, both frontend and backend. Support is provided by a team of great coaches who will guide you and help you overcome the various peaks of difficulty encountered.
+
+Give maximum to get maximum 🚀
 
 ### Collaboration & feedback : 
 Hello, I'm [Nicolas](https://github.com/nicode-be) and at a start of a new career after 15 years as manager and sales director. 
