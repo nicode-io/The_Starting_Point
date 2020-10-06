@@ -5,7 +5,7 @@
     height: auto;
 }
 #wrapper {
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
@@ -38,7 +38,7 @@ h1 {
     list-style-type: none;
     border-bottom: thin solid #e0e0e0;
     color: #1e9d36;
-    left: 0px;
+    left: 0;
     list-style-position: inside;
 }
 #nav li a {
@@ -62,7 +62,7 @@ h1 {
 }
 #top_menu {
     float: right;
-    padding: 50px 20px 0px 0px;
+    padding: 50px 20px 0 0;
     font-size: 1.2em;
     color: #270c39;
 }
@@ -72,7 +72,7 @@ table.month td {
     text-align: center;
 }
 table.month th {
-    padding: 2px 0px;
+    padding: 2px 0;
     text-align: center;
 }
 th.month {
@@ -116,4 +116,6 @@ input {
     border: 1px solid green;
     border-radius: 3px;
 }
-
+.required label:after {
+    content: "*";
+}
