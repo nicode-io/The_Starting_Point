@@ -28,6 +28,28 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.4
+>   Create templates / includes / static files
+
+*   Template Design Philosophy
+    *   Separate logic from presentation
+    *   Discourage redundancy
+    *   Be decoupled from HTML
+    *   XML is bad
+    *   Assume designer competence
+    *   Treat whitespace obviously
+    *   Don't invent a programming language
+    *   Ensure safety and security
+    *   Extensible
+*   Create base template in main project templates folder
+*   Create page templates in app project templates folder
+*   Use inheritance to DRY templates
+*   Use include to DRY templates
+*   Displaying database data
+*   Loading and adding static files
+*   Styling templates 
+
+
 ####    v-0.3
 >   Create 'events' dynamic view
 
