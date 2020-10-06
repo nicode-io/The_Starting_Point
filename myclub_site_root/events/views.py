@@ -12,7 +12,17 @@ def index(request, year=date.today().year, month=date.today().month):
     month_name = calendar.month_name[month]
     title = "MyClub Event Calendar - %s %s" % (month_name, year)
     cal = HTMLCalendar().formatmonth(year, month)
-    return render(request, 'events/calendar_base.html', {'title': title, 'cal': cal})
+    announcements = [
+        {
+            'date': '11-10-2020',
+            'announcement': "Club Registrations Open"
+        },
+        {
+            'date': '12-15-2020',
+            'announcement': "Joe Smith Elected New Club President"
+        }
+    ]
+    return render(request, 'events/calendar_base.html', {'title': title, 'cal': cal, 'announcements': announcements})
 
 def all_events(request):
     event_list = Event.objects.all()
