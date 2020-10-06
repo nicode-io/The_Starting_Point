@@ -28,6 +28,17 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.5
+>   Manage admin panel
+
+*   Customize add/edit form 
+*   Use fieldset 
+*   Register models 
+*   Manage users and groups
+*   Manage permissions
+*   Add password recovery option 
+    * Only links, email recovery not yet implemented 
+
 ####    v-0.4
 >   Create templates / includes / static files
 
