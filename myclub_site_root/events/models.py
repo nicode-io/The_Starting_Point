@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+class VenueManager(models.Manager):
+    def get_queryset(self):
+        return super(VenueManager, self).get_queryset().filter(zip_code='1000')  # 1000 is an example
+
 class Venue(models.Model):
     name = models.CharField('Venue Name', max_length=120)
     address = models.CharField(max_length=300)
@@ -8,6 +13,8 @@ class Venue(models.Model):
     phone = models.CharField('Contact Phone', max_length=20, blank=True)
     web = models.URLField('Web Address', blank=True)
     email_address = models.EmailField('Email Address', blank=True)
+    venues = models.Manager()
+    local_venues = VenueManager()
 
     def __str__(self):
         return self.name
