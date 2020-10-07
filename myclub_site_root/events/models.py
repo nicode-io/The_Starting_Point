@@ -41,5 +41,22 @@ class Event(models.Model):
     description = models.TextField(blank=True)
     events = EventManager()
 
+    def save(self, *args, **kwargs):
+        self.manager = User.objects.get(username='admin')
+        #   admin must exist
+        super(Event, self).save(*args, **kwargs)
+
+    def event_timing(self, date):
+        if self.event_date > date:
+            return "Event is after this date"
+        elif self.event_date == date:
+            return "Event is on the same day"
+        else:
+            return "Event is before this date"
+
+    @property
+    def name_slug(self):
+        return self.name.lower().replace(' ', '-')
+
     def __str__(self):
         return self.name
