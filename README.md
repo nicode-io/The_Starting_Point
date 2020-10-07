@@ -28,6 +28,16 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.7
+>   Advanced models
+
+*   Adding and overriding model managers
+*   Custom model methods
+*   Multi-table inheritance
+*   Django's methods that return QuerySet
+*   Django's methods that don't return QuerySets
+
+
 ####    v-0.6
 >   Django Forms
 
