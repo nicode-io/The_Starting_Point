@@ -20,6 +20,11 @@ class MyClubUser(models.Model):
     def __str__(self):
         return self.first_name + " " + self.last_name
 
+# Model methods
+class EventManager(models.Manager):
+    def event_type_count(self,event_type):
+        return self.filter(name__icontains=event_type).count()
+
 class Event(models.Model):
     name = models.CharField('Event Name', max_length=120)
     event_date = models.DateTimeField('Event Date')
@@ -27,6 +32,7 @@ class Event(models.Model):
     manager = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)
     attendees = models.ManyToManyField(MyClubUser, blank=True)
     description = models.TextField(blank=True)
+    events = EventManager()
 
     def __str__(self):
         return self.name
