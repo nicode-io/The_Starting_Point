@@ -2,11 +2,33 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from datetime import date
-import calendar
 from calendar import HTMLCalendar
-from .models import Event
+from .models import Event, Venue
 from .forms import VenueForm
+from django.template.response import TemplateResponse
+import calendar
+import csv
 
+def gen_text(request):
+    response = HttpResponse(content_type='text/plain')
+    response['Content-Disposition'] = 'attachment; filename="bart.txt'
+    lines = [
+        "I will not expose the ignorance of the faculty.\n",
+        "I will not conduct my own fire drills.\n",
+        "I will not prescribe medication.\n",
+    ]
+    response.writelines(lines)
+    return response
+
+def gen_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="venues.csv"'
+    writer = csv.writer(response)
+    venues = Venue.venues.all()
+    writer.writerow(['Venue Name', 'Address', 'Phone', 'Email'])
+    for venue in venues:
+        writer.writerow([venue.name, venue.address, venue.phone, venue.email_address])
+    return response
 
 def index(request, year=date.today().year, month=date.today().month):
     year = int(year)
@@ -26,7 +48,7 @@ def index(request, year=date.today().year, month=date.today().month):
             'announcement': "Joe Smith Elected New Club President"
         }
     ]
-    return render(request, 'events/calendar_base.html', {'title': title, 'cal': cal, 'announcements': announcements})
+    return TemplateResponse(request, 'events/calendar_base.html', {'title': title, 'cal': cal, 'announcements': announcements})
 
 
 def all_events(request):
