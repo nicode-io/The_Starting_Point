@@ -28,6 +28,22 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.8
+>   Advanced views
+
+*   Request objects
+*   Request methods
+*   Response objects
+*   Query dictionary objects
+*   TemplateResponse objects
+*   Middleware / Custom middleware
+*   Generating non-HTML content:
+    *   Text files
+    *   CSV files
+    *   PDF files using Reportlab library
+*   Display pagination with build-in Paginator
+*   Convert/Split views file into a views folder 
+
 ####    v-0.7
 >   Advanced models
 
