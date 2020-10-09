@@ -3,11 +3,26 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from datetime import date
 from calendar import HTMLCalendar
-from .models import Event, Venue
+from django.core.paginator import Paginator
+from .models import Event, Venue, MyClubUser
 from .forms import VenueForm
 from django.template.response import TemplateResponse
 import calendar
 import csv
+from django.http import FileResponse
+import io
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch
+from reportlab.lib.pagesizes import letter
+
+def list_subscribers(request):
+    p = Paginator(MyClubUser.objects.all(), 3)
+    page = request.GET.get('page')
+    subscribers = p.get_page(page)
+    return render(request,
+                  'events/subscribers.html',
+                  {'subscribers': subscribers}
+                  )
 
 def gen_text(request):
     response = HttpResponse(content_type='text/plain')
@@ -29,6 +44,25 @@ def gen_csv(request):
     for venue in venues:
         writer.writerow([venue.name, venue.address, venue.phone, venue.email_address])
     return response
+
+def gen_pdf(request):
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
+    textob = c.beginText()
+    textob.setTextOrigin(inch, inch)
+    textob.setFont("Helvetica-Oblique", 14)
+    lines = [
+        "I will not expose the ignorance of the faculty",
+        "I will not conduct my own fire drills",
+        "I will not prescribe medication",
+    ]
+    for line in lines:
+        textob.textLine(line)
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    return FileResponse(buf, as_attachment=True, filename='nicode.pdf')
 
 def index(request, year=date.today().year, month=date.today().month):
     year = int(year)
