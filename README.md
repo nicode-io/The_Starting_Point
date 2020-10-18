@@ -26,6 +26,17 @@ and the great front library React.
 
 ### Release Notes
 
+####    v-0.3
+>   Setting up frontend
+
+*   Create-react-app 'frontend' in main project folder
+*   Install 'bootstrap' and 'reactstrap' packages
+*   Add ```import 'bootstrap/dist/css/bootstrap.min.css';``` in 'frontend/src/index.js'`
+*   Modify 'app.js'
+*   Create 'src/components/Modal.js' and create component
+*   Install 'axios' package and configure proxy in 'frontend/package.json'
+
+
 ####    v-0.2
 >   Setting up APIs
 
