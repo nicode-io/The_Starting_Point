@@ -26,6 +26,22 @@ and the great front library React.
 
 ### Release Notes
 
+####    v-0.2
+>   Setting up APIs
+
+*   Install djangorestframework
+*   Install django-cors-headers
+*   Add 'corseheaders' and 'rest_framework' to INSTALLED_APPS
+*   Add the following at the end of SETTINGS.PY:
+    CORS_ORIGIN_WHITELIST = (   
+        'https://localhost:3000',   
+        'https://localhost:8000'    
+        )       
+*   Create **serializers.py** into 'Todo' app
+*   Create the **TodoView**
+*   Configure main **urls.py** for routing
+*   Navigate localhost:8000/api/todo_all for firsts CRUD operations
+
 ####    v-0.1 
 >   Project initialisation
 
