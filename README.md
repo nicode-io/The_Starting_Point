@@ -6,7 +6,7 @@
 
 
 ### Description 
-> Start 16-10-2020
+> Start 18-10-2020
 
 
 ###  Index
@@ -35,7 +35,6 @@ and the great front library React.
 *   Modify 'app.js'
 *   Create 'src/components/Modal.js' and create component
 *   Install 'axios' package and configure proxy in 'frontend/package.json'
-
 
 ####    v-0.2
 >   Setting up APIs
