@@ -2,8 +2,8 @@
 >   Project mixin Django & React
 
 
-![](react-logo.png)
-![](django-logo.png)
+![](reango-logo.png)
+
 
 ### Description 
 > Start 16-10-2020
