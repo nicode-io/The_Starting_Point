@@ -138,4 +138,5 @@ CORS_ORIGIN_WHITELIST = (
 'https://localhost:3000',
 'https://localhost:8000',
 'http://192.168.0.23:3000',
+'http://172.20.5.108:3000',
 )
