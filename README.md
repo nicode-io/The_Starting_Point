@@ -1,4 +1,3 @@
-PYT-06-Django_Unleashed
 # (◉ ͜ʖ◉))ﾉ彡 DJANGO UNLEASHED ✧٩(•́⌄•́๑)
 >   Django website using Postgre database
 

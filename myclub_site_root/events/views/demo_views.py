@@ -7,7 +7,9 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
 from events.models import Venue
-
+from django.core import serializers
+from datetime import datetime
+from django.template import RequestContext, Template
 
 
 def gen_text(request):
@@ -21,6 +23,7 @@ def gen_text(request):
     response.writelines(lines)
     return response
 
+
 def gen_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="venues.csv"'
@@ -30,6 +33,7 @@ def gen_csv(request):
     for venue in venues:
         writer.writerow([venue.name, venue.address, venue.phone, venue.email_address])
     return response
+
 
 def gen_pdf(request):
     buf = io.BytesIO()
@@ -49,3 +53,53 @@ def gen_pdf(request):
     c.save()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename='nicode.pdf')
+
+
+def template_demo(request):
+    empty_list = []
+    color_list = ['red', 'green', 'blue', 'yellow']
+    somevar = 5
+    anothervar = 21
+    today = datetime.now()
+    past = datetime(1985, 11, 5)
+    future = datetime(2035, 11, 5)
+    best_bands = [
+        {'name': 'The Angels', 'country': 'Australia'},
+        {'name': 'AC/DC', 'country': 'Australia'},
+        {'name': 'Nirvana', 'country': 'USA'},
+        {'name': 'The Offspring', 'country': 'USA'},
+        {'name': 'Iron Maiden', 'country': 'UK'},
+        {'name': 'Ramnstein', 'country': 'Germany'},
+    ]
+    aussie_bands = ['Australia', ['The Angels', 'AC/DC', 'The Living End']]
+    venues_js = serializers.serialize('json', Venue.venues.all())
+    return render(request,
+                  'events/template_demo.html',
+                  {
+                      'somevar': somevar,
+                      'anothervar': anothervar,
+                      'empty_list': empty_list,
+                      'color-list': color_list,
+                      'best_bands': best_bands,
+                      'today': today,
+                      'past': past,
+                      'future': future,
+                      'aussie_bands': aussie_bands,
+                      'venues': venues_js,
+                  }
+    )
+
+def my_processor(request):
+    return {
+        'foo': 'foo',
+        'bar': 'bar',
+        'baz': 'baz',
+    }
+
+def context_demo(request):
+    template = Template('{{foo }}<br>{{ bar }}<br>{{ baz }}')
+    con = RequestContext(request, processors=[my_processor])
+    return HttpResponse(template.render(con))
+
+
+
