@@ -12,7 +12,15 @@ const UserSchema = mongoose.Schema({
     email: {
         type: String,
         required: true,
+        unique: true,
     },
+    password: {
+        type: String,
+        required: true,
+    },
+    company: {
+        type: String,
+    }
 });
 
 module.exports = mongoose.model('user', UserSchema);
