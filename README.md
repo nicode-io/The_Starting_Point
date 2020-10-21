@@ -27,6 +27,16 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.9
+>   Advanced templates
+
+*   Common template tags
+*   Template filters
+*   Custom template filters
+*   Custom tags 
+*   Work with 'Context' and 'RequestContext' objects and context processors
+*   Custom processor 
+
 ####    v-0.8
 >   Advanced views
 
