@@ -1,4 +1,4 @@
-const machine = require('../models/Machine');
+const Machine = require('../models/Machine');
 
 exports.getMachine = (req, res) => {
 

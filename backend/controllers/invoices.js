@@ -1,6 +1,6 @@
 const User = require('../models/Invoice');
 
-exports.getinvoice = (req, res) => {
+exports.getInvoice = (req, res) => {
 
 }
 exports.postInvoice = (req, res) => {
