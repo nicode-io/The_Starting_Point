@@ -5,9 +5,17 @@ const ReservationSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    user: {
+    usernotlogged: {
         type: String,
-        required: true
+        required: () => {
+            return !this.userlogged;
+        }
+    },
+    userlogged: {
+        type: String,
+        required: () => {
+            return !this.usernotlogged;
+        }
     },
     startdate: {
         type: Date,
