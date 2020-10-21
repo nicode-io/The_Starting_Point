@@ -27,6 +27,16 @@ GitFlow is used to structure the project repository. Feel free to share your fee
 
 ### Release Notes
 
+####    v-0.10
+>   Customizing Django admin
+
+*   Change site text, style sheets
+*   Replace default admin 
+*   Creating custom admin apps
+*   Customizing Django's admin templates
+*   Write own admin actions
+*   Add a WYSIWYG editor to admin
+
 ####    v-0.9
 >   Advanced templates
 
