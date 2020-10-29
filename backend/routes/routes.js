@@ -17,11 +17,11 @@ router.post('/add-user', usersController.postUser);
 
 router.get('/:userId' , usersController.getUser);
 
-router.get('/edituser/:userId' , usersController.getEditUser);
+router.get('/edit-user/:userId' , usersController.getEditUser);
 
-router.post('/edituser', usersControllerer.postEditUser);
+router.post('/edit-user', usersControllerer.postEditUser);
 
-router.delete('/deleteuser/:userId' , usersControllerer.deleteUser);
+router.delete('/delete-user/:userId' , usersControllerer.deleteUser);
 // ROUTE FOR INVOICES
 
 router.get('/invoices' , invoicesController.getAllInvoice);
@@ -30,11 +30,11 @@ router.post('/add-invoice' , invoicesController.postInvoice);
 
 router.get('/:invoiceId' , invoicesController.getInvoice);
 
-router.get('/editinvoice/:invoiceId', invoicesController.editInvoice);
+router.get('/edit-invoice/:invoiceId', invoicesController.editInvoice);
 
-router.post('editinvoice' , invoicesController.postEditInvoice);
+router.post('/edit-invoice' , invoicesController.postEditInvoice);
 
-router.delete('/deleteinvoice/:invoiceId', invoicesController.deleteInvoice);
+router.delete('/delete-invoice/:invoiceId', invoicesController.deleteInvoice);
 
 // ROUTE FOR MACHINES
 
@@ -44,11 +44,11 @@ router.post('/add-machine' , machinesController.postMachine);
 
 router.get('/:machineId' , machinesController.getMachine);
 
-router.get('/editmachine/:machineId', machinesController.editMachine);
+router.get('/edit-machine/:machineId', machinesController.editMachine);
 
-router.post('/editmachine' , machinesController.postEditMachine);
+router.post('/edit-machine' , machinesController.postEditMachine);
 
-router.delete('/deletemachine/:machineId', machinesController.deleteMachine);
+router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
 
 // ROUTE FOR PRODUCTS
 
@@ -58,11 +58,11 @@ router.post('/add-product' , productsController.postMachine);
 
 router.get('/:productId' , productsController.getProduct);
 
-router.get('/editproduct/:productId', productsController.editMachine);
+router.get('/edit-product/:productId', productsController.editMachine);
 
-router.post('/editproduct' , productsController.postEditProduct);
+router.post('/edit-product' , productsController.postEditProduct);
 
-router.delete('/deleteproduct/:productId', productsController.deleteProduct);
+router.delete('/delete-product/:productId', productsController.deleteProduct);
 
 // ROUTE FOR RESERVATIONS 
 
@@ -72,11 +72,11 @@ router.post('/add-reservation' , reservationsController.postReservation);
 
 router.get('/:reservationId' , reservationsController.getReservation);
 
-router.get('/editreservation/:reservationId' , reservationsController.editMachine);
+router.get('/edit-reservation/:reservationId' , reservationsController.editMachine);
 
-router.post('/editreservation' , reservationsController.postEditReservation);
+router.post('/edit-reservation' , reservationsController.postEditReservation);
 
-router.delete('/deletereservation/:reservationId' , reservationsController.deleteReservation);
+router.delete('/delete-reservation/:reservationId' , reservationsController.deleteReservation);
 
 
 
