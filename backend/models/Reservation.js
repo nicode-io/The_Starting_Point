@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// const Machine = require('./Machine');
 
 const ReservationSchema = mongoose.Schema({
     name: {
@@ -25,10 +26,10 @@ const ReservationSchema = mongoose.Schema({
         type: Date,
         required:true
     },
-    machine:  [{ 
-        type: Schema.Types.ObjectId, 
-        ref: 'Machine' 
-    }]
+    // machine:  [{ 
+    //     type: Machine.ObjectId, 
+    //     ref: 'Machine' 
+    // }]
 });
 
 module.exports = mongoose.model('Reservation', ReservationSchema);
