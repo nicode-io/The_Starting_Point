@@ -32,7 +32,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // router.get('/:invoiceId' , invoicesController.getInvoice);
 
-// router.get('/edit-invoice/:invoiceId', invoicesController.editInvoice);
+// router.get('/edit-invoice/:invoiceId', invoicesController.getEditInvoice);
 
 // router.post('/edit-invoice' , invoicesController.postEditInvoice);
 
@@ -46,7 +46,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // router.get('/:machineId' , machinesController.getMachine);
 
-// router.get('/edit-machine/:machineId', machinesController.editMachine);
+// router.get('/edit-machine/:machineId', machinesController.getEditMachine);
 
 // router.post('/edit-machine' , machinesController.postEditMachine);
 
@@ -60,7 +60,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // router.get('/:productId' , productsController.getProduct);
 
-// router.get('/edit-product/:productId', productsController.editMachine);
+// router.get('/edit-product/:productId', productsController.getEditMachine);
 
 // router.post('/edit-product' , productsController.postEditProduct);
 
@@ -74,7 +74,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // router.get('/:reservationId' , reservationsController.getReservation);
 
-// router.get('/edit-reservation/:reservationId' , reservationsController.editMachine);
+// router.get('/edit-reservation/:reservationId' , reservationsController.getEditReservation);
 
 // router.post('/edit-reservation' , reservationsController.postEditReservation);
 
