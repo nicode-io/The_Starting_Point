@@ -8,11 +8,13 @@ const Nav = () => {
             <div className="nav-link-main">
                 <Link to="/" className={`nav-link${useLocation().pathname === "/" ? " is-current" : ""}`}>Home</Link>
                 <Link to="/reservation" className={`nav-link${useLocation().pathname === "/reservation" ? " is-current" : ""}`}>Reservation</Link>
-                <Link to="/document" className={`nav-link${useLocation().pathname === "/document" ? " is-current" : ""}`}>Document</Link>
-                <Link to="/info" className={`nav-link${useLocation().pathname === "/info" ? " is-current" : ""}`}>Info</Link>
+                <Link to="/files" className={`nav-link${useLocation().pathname === "/files" ? " is-current" : ""}`}>Documents</Link>
+                <Link to="/events" className={`nav-link${useLocation().pathname === "/events" ? " is-current" : ""}`}>Events</Link>
             </div>
         </nav>
     )
 }
 
-export default Nav;
+export {
+    Nav
+};

@@ -1,11 +1,12 @@
 import React from "react";
-import { InvoicesList, ReservationList } from "../..";
+import { InvoicesList, ReservationsList } from "../..";
 
-export function Files(props) {
+export function Files() {
     return (
         <main>
+            This is a list of all your documents
             <InvoicesList />
-            <ReservationList />
+            <ReservationsList />
         </main>
     )
 }

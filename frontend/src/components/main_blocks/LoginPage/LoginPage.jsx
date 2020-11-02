@@ -1,15 +1,15 @@
 import React from 'react';
-import LoginForm from '../..';
+import { LoginForm } from '../..';
 
-const Login = () => {
+const LoginPage = () => {
     return (
-        <div className="log_main">
+        <main className="log_main">
             <h1 className="log_title">Login page</h1>
             <LoginForm />
-        </div>
+        </main>
     )
 }
 
 export  {
-    Login
-}
+    LoginPage
+};

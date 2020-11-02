@@ -27,5 +27,5 @@ export { LoginForm } from "./section_blocks/LoginForm/LoginForm";
 export { RegisterForm } from "./section_blocks/RegisterForm/RegisterForm";
 export { ReservationForm } from "./section_blocks/ReservationForm/ReservationForm";
 export { ReservationItem } from "./section_blocks/ReservationItem/ReservationItem";
-export { ReservationList } from "./section_blocks/ReservationsList/ReservationsList";
+export { ReservationsList } from "./section_blocks/ReservationsList/ReservationsList";
 export { UserType } from "./section_blocks/UserType/UserType";

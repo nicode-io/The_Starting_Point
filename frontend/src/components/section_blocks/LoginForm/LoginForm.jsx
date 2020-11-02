@@ -1,5 +1,5 @@
 import React from 'react';
-import './LoginForm.css';
+import './loginForm.css';
 
 const LoginForm = () =>{
      
@@ -16,4 +16,6 @@ const LoginForm = () =>{
 
 };
 
-export default LoginForm;
+export {
+    LoginForm
+};

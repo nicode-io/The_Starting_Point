@@ -1,27 +1,29 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
-    Reservation,
-    Register,
+    ReservationPage,
+    RegisterPage,
     Dashboard,
     Files,
     Events,
     FileDetail,
     LoginPage,
-    Header
+    Header,
+    Nav
 } from '../components/index';
 
 const Routes = () => {
     return (
         <Switch>
             <Route path="/reservation">
-                <Reservation />
-            </Route> 
-            <Route path="/files/invoices">
-                <Files file="invoices" />
+                <Header />
+                <ReservationPage />
+                <Nav />
             </Route>
-            <Route path="/files/reservations">
-                <Files file="reservations" />
+            <Route path="/files">
+                <Header />
+                <Files />
+                <Nav />
             </Route>
             <Route path="/files/invoices/:invoiceId">
                 <FileDetail file="invoices" />
@@ -30,13 +32,17 @@ const Routes = () => {
                 <FileDetail file="reservations" />
             </Route>
             <Route path="/events">
+                <Header />
                 <Events />
+                <Nav />
             </Route> 
             <Route path="/login">
+                <Header />
                 <LoginPage />
+                <Nav />
             </Route>
             <Route path="/register">
-                <Register />
+                <RegisterPage />
                 <Nav />
             </Route>
             <Route path="/">

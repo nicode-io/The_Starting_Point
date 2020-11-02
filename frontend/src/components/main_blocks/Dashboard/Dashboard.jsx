@@ -1,10 +1,10 @@
 import React from "react";
-import {EventsCarousel, FilesOverview, ReservationSummary} from "../..";
+import {EventsCarousel, FilesOverview, ReservationsList} from "../..";
 
 export function Dashboard() {
     return (
         <main>
-            <ReservationSummary />
+            <ReservationsList />
             <FilesOverview />
             <EventsCarousel />
         </main>

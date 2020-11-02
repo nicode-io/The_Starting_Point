@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ReservationList() {
+export function ReservationsList() {
     return (
         <section>
             
