@@ -1,6 +1,6 @@
 // Export Individuals Components
-export { ChooseDate } from "./individuals/ChooseDate/ChooseDate";
-export { ChooseMachine } from "./individuals/ChooseMachine/ChooseMachine";
+export { Calendar } from "./individuals/Calendar/Calendar";
+export { MachinePicker } from "./individuals/MachinePicker/MachinePicker";
 export { ConfirmThanks } from "./individuals/ConfirmThanks/ConfirmThanks";
 export { FormField } from "./individuals/FormField/FormField";
 export { ValidateCta} from "./individuals/ValidateCta/ValidateCta";
