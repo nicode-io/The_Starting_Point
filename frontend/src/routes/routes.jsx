@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Home, Reservation, News, Document, Login, Register} from '../components';
+import { Reservation, News, Document, Login, Register} from '../components';
+import TemplateGlobal from '../layouts/template-global/template-global';
 
 const Routes = () => {
     return (
@@ -20,8 +21,11 @@ const Routes = () => {
             <Route path="/reservation">
                 <Reservation />
             </Route> 
-            <Route path="/">
-                <Home />
+            <Route path="/test">
+                <TemplateGlobal />
+            </Route>
+            <Route path="/test_deux">
+                <TemplateGlobal />
             </Route>
         </Switch>
     )
