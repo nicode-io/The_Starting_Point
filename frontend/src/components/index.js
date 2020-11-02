@@ -5,26 +5,29 @@ export { ConfirmThanks } from "./individuals/ConfirmThanks/ConfirmThanks";
 export { Event } from "./individuals/Event/Event";
 export { EventsCarousel } from "./individuals/EventsCarousel/EventsCarousel";
 export { FilesList } from "./individuals/FilesList/FilesList";
-export { LastFiles } from "./individuals/LastFiles/LastFiles";
+export { FilesSummary } from "./individuals/FilesSummary/FilesSummary";
 export { Login } from "./individuals/Login/Login";
 export { ReservationSummary } from "./individuals/ReservationSummary/ReservationSummary";
 export { ReservationValidation } from "./individuals/ReservationValidation/ReservationValidation";
 export { SubscriptionAdvantage } from "./individuals/SubscriptionAdvantage/SubscriptionAdvantage";
-export { SubscriptionForm } from "./individuals/SubscriptionForm/SubscriptionForm";
-export { ValidationCta} from "./individuals/ValidationCta/ValidationCta";
+export { RegisterForm } from "./individuals/RegisterForm/RegisterForm";
+export { ValidateCta} from "./individuals/ValidateCta/ValidateCta";
 
 // Export Main Blocks Components
 export { Dashboard } from "./main_blocks/Dashboard/Dashboard";
-export { FilesSummary } from "./main_blocks/FilesSummary/FilesSummary";
+export { Events } from "./main_blocks/Events/Events";
+export { Files } from "./main_blocks/Files/Files";
 export { Header } from "./main_blocks/Header/Header";
+export { LoginPage } from "./main_blocks/LoginPage/LoginPage";
 export { Nav } from "./main_blocks/Nav/Nav";
+export { Register } from "./main_blocks/Register/Register";
 
 // Export Section Blocks Components
 export { EventDetail } from "./section_blocks/EventDetail/EventDetail";
 export { EventsList } from "./section_blocks/EventsList/EventsList";
-export { FileDetail } from "./section_blocks/FileDetail/FileDetail";
+export { FileDetail } from "./main_blocks/FileDetail/FileDetail";
 export { Files } from "./section_blocks/Files/Files";
-export { Reservation } from "./section_blocks/Reservation/Reservation";
+export { Reservation } from "./main_blocks/Reservation/Reservation";
 export { UserType } from "./section_blocks/UserType/UserType";
 
 // Export Templates
