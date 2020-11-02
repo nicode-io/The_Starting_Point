@@ -1,6 +1,7 @@
 // export nav and header section.
 export { default as Header } from "./header/header";
 export { default as Nav } from "./nav/nav";
+export { default as UsersList } from "./users-list/users-list";
 
 // export pages section.
 export { Home } from "./pages/home";

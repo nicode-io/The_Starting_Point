@@ -3,7 +3,7 @@ const User = require('../models/User');
 exports.getAllUser = async (req, res) => {
     try {
         const users = await User.find();
-        res.json(user);
+        res.json(users);
     } catch (error) {
         console.log(error);
         // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
