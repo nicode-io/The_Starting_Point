@@ -1,27 +1,48 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Home, Reservation, News, Document, Login, Register} from '../components';
+import {
+    Reservation,
+    Register,
+    Dashboard,
+    Files,
+    Events,
+    FileDetail,
+    LoginPage,
+    Header
+} from '../components/index';
 
 const Routes = () => {
     return (
         <Switch>
-            <Route path="/register">
-                <Register />
-            </Route> 
-            <Route path="/login">
-                <Login />
-            </Route> 
-            <Route path="/document">
-                <Document />
-            </Route> 
-            <Route path="/news">
-                <News />
-            </Route> 
             <Route path="/reservation">
                 <Reservation />
             </Route> 
+            <Route path="/files/invoices">
+                <Files file="invoices" />
+            </Route>
+            <Route path="/files/reservations">
+                <Files file="reservations" />
+            </Route>
+            <Route path="/files/invoices/:invoiceId">
+                <FileDetail file="invoices" />
+            </Route>
+            <Route path="/files/reservations/:reservationId">
+                <FileDetail file="reservations" />
+            </Route>
+            <Route path="/events">
+                <Events />
+            </Route> 
+            <Route path="/login">
+                <LoginPage />
+            </Route>
+            <Route path="/register">
+                <Register />
+                <Nav />
+            </Route>
             <Route path="/">
-                <Home />
+                <Header />
+                <Dashboard />
+                <Nav />
             </Route>
         </Switch>
     )
