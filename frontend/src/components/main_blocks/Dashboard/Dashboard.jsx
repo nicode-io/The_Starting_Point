@@ -1,11 +1,11 @@
 import React from "react";
-import {EventsCarousel, FilesSummary, ReservationSummary} from "../..";
+import {EventsCarousel, FilesOverview, ReservationSummary} from "../..";
 
 export function Dashboard() {
     return (
         <main>
             <ReservationSummary />
-            <FilesSummary />
+            <FilesOverview />
             <EventsCarousel />
         </main>
     )
