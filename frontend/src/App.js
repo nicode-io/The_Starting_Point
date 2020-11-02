@@ -7,9 +7,9 @@ import Routes from './routes/routes';
 function App() {
   return (
     <Router>
-        <Nav/>
         <Header/>
         <Routes/>
+        <Nav />
     </Router>
   );
 }
