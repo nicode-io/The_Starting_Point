@@ -40,11 +40,11 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // ROUTE FOR MACHINES
 
-// router.get('/machines' , machinesController.getAllMachine );
+router.get('/machines' , machinesController.getAllMachines );
 
 // router.post('/add-machine' , machinesController.postMachine);
 
-// router.get('/:machineId' , machinesController.getMachine);
+router.get('/:machineId' , machinesController.getMachine);
 
 // router.get('/edit-machine/:machineId', machinesController.getEditMachine);
 

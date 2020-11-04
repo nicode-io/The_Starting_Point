@@ -9,6 +9,7 @@ export const getAllUsers = () => api.get(`/users`);
 export const updateUserById = (id, payload) => api.put(`/edit-user/${id}`, payload);
 export const deleteUserById = id => api.delete(`/delete-user/${id}`);
 export const getUserById = id => api.get(`/${id}`);
+export const getAllMachines = () => api.get(`/machines`);
 
 const apis = {
     insertUser,
@@ -16,6 +17,7 @@ const apis = {
     updateUserById,
     deleteUserById,
     getUserById,
+    getAllMachines,
 }
 
 export default apis;
