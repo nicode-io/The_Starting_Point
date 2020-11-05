@@ -6,9 +6,6 @@ BeCode Charleroi
 ## V1 - Sprint - Work done - Progressive enhancement
 ## V2 - Integrate SASS
 
-### Project link :
-[GitHub page](https://nicode-io.github.io/01-03-Turlututu/)
-
 ### BeCode Intensive Bootcamp
 
 In ten months, you have a wonderful opportunity to become a great Junior App & Web Developer. We are motivated by inclusion and the spirit of sharing!
