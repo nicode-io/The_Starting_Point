@@ -4,13 +4,13 @@
 
 ###  Index
 
--   Python Crash Course
--   Alien Invasion
--   Skelethon Django
--   Django Unframed
--   Data Anlysis
--   Django Unleashed
--   Python One-Liners
+-   Bootstrap Restaurant
+-   Cadavre Exquis
+-   Cogip
+-   Cookie Clicker
+-   JS Data
+-   MarkDown Discovery
+-   RealTimeChat
 
 ---
 
