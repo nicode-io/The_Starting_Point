@@ -1,0 +1,89 @@
+
+.fontResto {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  color: $ni-red;
+}
+
+.fontRestoSmall {
+  font-family: 'Lobster', cursive;
+}
+
+.jumbotron {
+  background-image: url(/assets/img/bgJumbotron.jpg);
+  background-repeat: no-repeat;
+  border-radius: unset;
+  .btnJumbotron {
+    background: $dark-red;
+    border: none;
+  }
+}
+
+.teamIntro {
+  background: $icy-white;
+  border-radius: 4vw;
+}
+
+.collapseMenu {
+  margin-bottom: 2vh;
+}
+
+.newsSection{
+  margin: 2vh 1vw;
+}
+.wine {
+  background-image: url(/assets/img/bgWine.jpg);
+  color: $icy-white;
+}
+.btnWine {
+  background: $o-dark-red;
+  border: 1px solid $red;
+  color: $light-grey;
+  align-self: center;
+}
+.wineModal {
+  color: $dark-grey;
+}
+
+.monthMenu {
+  background-image: url(/assets/img/bgMonth.jpg);
+  color: $black;
+  .btnMonthMenu {
+    background: $o-dark-grey;
+    border: 1px solid $dark-grey;
+    color: $icy-white;
+    align-self: center;
+  }
+}
+
+footer {
+  background: $light-grey;
+  .copyright {
+    font-family: 'Lobster', cursive;
+    font-size: 0.8rem;
+  }
+}
+
+
+// Media queries
+@media only screen and (min-width: 1024px) {
+  .ni-body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .global {
+      width: 70vw;
+    }
+  }
+  .jumbotron {
+    background-image: url(/assets/img/bigBgJumbotron.jpg);
+    background-repeat: no-repeat;
+    border-radius: unset;
+    .foodJumbo {
+      width: 30vw;
+      height: auto;
+    }
+  }
+}

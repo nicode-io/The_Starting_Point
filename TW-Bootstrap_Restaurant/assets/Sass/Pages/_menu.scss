@@ -1,0 +1,38 @@
+.ge-cursor-pointer{
+  cursor: pointer;
+  color: $icy-white;
+}
+
+#ge-menu{ 
+  hr{
+    max-width: 200px;
+    border: .06em dashed $primary;
+  }
+  section{
+    border: .05em $primary solid;
+    -webkit-box-shadow: 5px 5px 5px 0px $secondary, inset 4px 4px 15px 0px $secondary, 5px 5px 15px 5px $secondary; 
+    box-shadow: 5px 5px 5px 0px $secondary, inset 4px 4px 15px 0px $secondary, 5px 5px 15px 5px $secondary;
+    border-radius: 1em;
+  }
+  article{
+    padding: 0;
+    margin: 0;
+  }
+  h2{
+    text-shadow: 2px 2px 0 lighten($secondary,25%), 4px 4px 0 lighten($secondary,50%);
+    font-size: 1.7em;
+  }
+  h3{
+    color: transparent;
+    background: $secondary;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    font-size: 1.4em;
+  }
+  h4{
+    font-size: 1.2em;
+  }
+}
+
