@@ -138,7 +138,7 @@ To:  **21-03-2021**
   
 ---
 
-##### The Summer Pastures
+## The Summer Pastures
 > :cow2: :goat: :ram: :horse: Workshops - Upgrading stacks (+/- 2 months)
 
   * **M**ongoDB **E**xpress **R**eact **N**ode
