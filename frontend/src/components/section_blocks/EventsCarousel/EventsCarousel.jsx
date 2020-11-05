@@ -5,7 +5,7 @@ import './eventsCarousel.css';
 
 const EventsCarousel = () => {
 
-    let sliderArr = [1, 2, 3];
+    let sliderArr = [<img src="https://picsum.photos/400"/>, <img src="https://picsum.photos/401"/>, <img src="https://picsum.photos/480"/>];
 
     const [x, setX] = useState(0)
     const goLeft = () => {

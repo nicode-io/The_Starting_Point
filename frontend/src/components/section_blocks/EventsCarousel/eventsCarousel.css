@@ -1,5 +1,5 @@
 .slider {
-  border: 2px solid #004d95;
+  border: 3px solid #004d95;
   border-radius: 20px;
   height: 20vh;
   width: 90%;
@@ -13,7 +13,6 @@
 }
 
 .slide {
-  border: 1px solid grey;
   min-width: 100%;
   height: 15vh;
   transition: 0.5s;
@@ -23,12 +22,18 @@
 
 }
 
+.slide img{
+    width: 100%;
+}
+
 #goLeft {
     position: absolute;
     left: 0;
     background: none;
     border: none;
-    font-size: 3vh;
+    font-size: 4vh;
+    color: darkgray;
+    padding: 0;
 }
 
 #goRight {
@@ -36,5 +41,7 @@
   right: 0;
   background: none;
   border: none;
-  font-size: 3vh;
+  font-size: 4vh;
+  color: darkgray;
+  padding: 0;
 }
