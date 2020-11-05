@@ -1,0 +1,64 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(/assets/img/bg.png); }
+  body #title {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #f13635;
+    font-size: 3.5rem; }
+  body #scoreLineOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    color: #fff;
+    font-size: 3rem; }
+    body #scoreLineOne article {
+      padding: 0 10vw; }
+  body #scoreLineTwo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+    color: #f13635; }
+    body #scoreLineTwo article {
+      padding: 0 10vw; }
+  body #game canvas {
+    background: rgba(53, 54, 58, 0.5);
+    border-radius: 2rem; }
+/*# sourceMappingURL=style.css.map */

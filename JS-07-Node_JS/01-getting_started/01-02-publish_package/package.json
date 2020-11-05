@@ -1,0 +1,16 @@
+{
+  "name": "@nicode-io/holidates",
+  "version": "1.0.0",
+  "description": "Give holidays for a country",
+  "main": "index.js",
+  "dependencies": {
+    "country-list": "^2.2.0",
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicode-IO",
+  "license": "MIT"
+}

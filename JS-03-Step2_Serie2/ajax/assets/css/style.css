@@ -1,0 +1,36 @@
+body {
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center; }
+  body #quote {
+    background: greenyellow;
+    border: purple dashed 5px; }
+    body #quote #quotes {
+      color: red;
+      font-size: 3rem;
+      border: green 4px dotted; }
+    body #quote #author {
+      color: red;
+      font-size: 3rem;
+      border: green 2rem dotted; }
+    body #quote #img {
+      border: blue 8px dotted;
+      border-radius: 3rem; }
+  body #paurtefaulio {
+    background: yellow;
+    color: green;
+    font-size: 3rem;
+    border: 2rem blueviolet solid; }
+/*# sourceMappingURL=style.css.map */

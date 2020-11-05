@@ -1,0 +1,90 @@
+@import 'mixins';
+
+body {
+    @include flexboxColumn;
+    background: rgba(193, 227, 228, 0.5);
+    font-family: 'Waiting for the Sunrise', cursive;
+    h1 {
+        img {
+            width: 10vw;
+            height: auto;
+        }
+    }
+    #hangmanGame {
+        #startGame {
+            @include flexboxRow;
+            .start {
+                background: rgba(193, 227, 228, 1);
+                box-shadow: 5px 0px 10px rgba(42, 97, 200, 0.8);
+                border: none;
+                border-radius: 0.3vw;
+                margin: 2vh;
+                padding: 1vw;
+                font-family: 'Press Start 2P', cursive;
+            }
+        }
+        #score {
+            @include flexboxRow;
+            font-family: 'Press Start 2P', cursive;
+            #points{
+                margin-left: 1vw;
+                font-family: inherit;
+            }
+        }
+        #canvas {
+            @include flexboxRow;
+        }
+        #wordPrint {
+            @include flexboxRow;
+            width: 90vw;
+            span {
+                margin: 2vw;
+                font-size: 3rem;
+                font-weight: 900;
+            } 
+        }
+        #keyboard {
+            @include flexboxRow;
+            padding: 1vh;
+            border-radius: 1vh;
+            background: rgba(60, 46, 38, 0.1);
+            button {
+                width: 4vw;
+                border: none;
+                border-radius: 0.4vw;
+                margin: 1.6vw;
+                padding: 1vw;
+                box-shadow: 5px 0px 15px rgba(193, 227, 238, 1);
+                font-family: 'Waiting for the Sunrise', cursive;
+                font-size: 1.5rem;
+                font-weight: 900;
+            }
+        }
+        #endGame {
+            font-family: 'Press Start 2P', cursive;
+            #win {
+                visibility: hidden;
+                width: 80vw;
+                height: 50vh;
+                @include flexboxColumn;
+                position: fixed;
+                top: 20%;
+                left: 10%;
+                font-size: 5rem;
+                color: rgba(242, 153, 58, 1);
+            }
+            #loose {
+                visibility: hidden;
+                width: 80vw;
+                height: 50vh;
+                @include flexboxColumn;
+                position: fixed;
+                top: 20%;
+                left: 10%;
+                font-size: 5rem;
+                color: red;
+                text-align: center;
+            }
+        }
+    }
+}
