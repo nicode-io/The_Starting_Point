@@ -97,7 +97,7 @@ To:  **21-03-2021**
   * PYTHON
     * :white_check_mark: [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
     * :negative_squared_cross_mark: [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
-    * :white_wheck_mark: [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django) 
+    * :white_check_mark: [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django) 
 
 ----
 
