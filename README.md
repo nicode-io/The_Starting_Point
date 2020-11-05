@@ -111,8 +111,8 @@ To:  **21-03-2021**
     * :white_check_mark: [OOP in PHP](https://github.com/php-nicode/PHP-03-OOP_PHP) 
     * :white_check_mark: [TeamWork  : COGIP](https://github.com/Becode-TeamWork/TW-Cogip) 
       * *Those awesome people work with me on this project*:   
-      :star:[François Wauters](https://github.com/fwauters) 
-      :star:[Aleksandra Slovik](https://github.com/88aleksandra88)  
+      :star:[François Wauters](https://github.com/fwauters)  
+      :star:[Aleksandra Slovik](https://github.com/88aleksandra88)   
       :star:[Robin Jacquemart](https://github.com/JackRob)  
   * SQL 
     * :white_check_mark: [SQL in PHP](https://github.com/php-nicode/PHP-04-SQL) 
@@ -132,9 +132,9 @@ To:  **21-03-2021**
     * :white_check_mark: [Node.js - Introduction](https://github.com/Javascripter-Nicode/JS-07-Node_JS)
     * :construction: [TeamWork - RealTimeChat](https://github.com/nicode-io/TW-RealTimeChat)
       * *Those awesome people work with me on this project*:  
-      :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)  
-      :star:[Marie Pierard](https://github.com/Marie-Pierard)   
-      :star:[Jean-Claude Brognez](https://github.com/jcbrognez) 
+      :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)   
+      :star:[Marie Pierard](https://github.com/Marie-Pierard)    
+      :star:[Jean-Claude Brognez](https://github.com/jcbrognez)  
   
 ---
 
@@ -144,17 +144,17 @@ To:  **21-03-2021**
   * **M**ongoDB **E**xpress **R**eact **N**ode
     * :construction: [Customer Project : FAB-LAB Charleroi](https://github.com/nicode-io/Fabulab) 
       * *Those awesome people work with me on this project*:   
-      :star:[Bastien Dewerse](https://github.com/DewerseB)
-      :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)
-      :star:[Robby Delvaux](https://github.com/Delvaux1986)
-      :star:[Simon Duquaine](https://github.com/simonduquaine) 
+      :star:[Bastien Dewerse](https://github.com/DewerseB)  
+      :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)  
+      :star:[Robby Delvaux](https://github.com/Delvaux1986)  
+      :star:[Simon Duquaine](https://github.com/simonduquaine)   
   * PYTHON
     * :construction: [Becode Cursus](https://github.com/nicode-io/PYT-08-Becode_Cursus) 
     * :construction: Team Workshop Python
       * *Those awesome people work with me on this project*:   
-      :star:[John Laterre](https://github.com/epictete)
-      :star:[Simon Duquaine](https://github.com/simonduquaine) 
-      :star:[Chris Vdld](https://github.com/ch-vdld-dev)
+      :star:[John Laterre](https://github.com/epictete)  
+      :star:[Simon Duquaine](https://github.com/simonduquaine)   
+      :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
   * VUE.JS
     * :white_check_mark: [VUE-Authors_Component]
       
