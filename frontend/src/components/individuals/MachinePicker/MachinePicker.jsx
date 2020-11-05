@@ -23,7 +23,6 @@ export function MachinePicker() {
     
     }, []);
 
-<<<<<<< HEAD
     return (
         <div>
             <p>SA MARCHEEEEE </p>
@@ -36,12 +35,6 @@ export function MachinePicker() {
                     </option>
                 ))}
             </select>
-=======
-export function MachinePicker(props) {
-    return (
-        <div>
-            <p>SA MARCHEEEEE {props.name}</p>
->>>>>>> C07-MachinePicker
         </div>
     );
 }
