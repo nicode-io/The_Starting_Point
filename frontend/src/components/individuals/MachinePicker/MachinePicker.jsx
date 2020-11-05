@@ -2,10 +2,10 @@ import React from 'react';
 
 
 
-export function MachinePicker() {
+export function MachinePicker(props) {
     return (
         <div>
-            <p>SA MARCHEEEEE </p>
+            <p>SA MARCHEEEEE {props.name}</p>
         </div>
     );
 }
