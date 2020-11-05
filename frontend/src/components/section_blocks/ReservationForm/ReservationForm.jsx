@@ -1,5 +1,5 @@
 import React from 'react';
-import {MachinePicker} from '../..';
+import { MachinePicker } from '../..';
 
 export function ReservationForm() {
     return (
@@ -7,6 +7,7 @@ export function ReservationForm() {
             <form>
                 This is a reservation form
                 <MachinePicker />
+                
             </form>
         </section>
     )

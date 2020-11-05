@@ -1,4 +1,5 @@
 const express = require('express');
+
 // IMPORT CONTROLLERS 
 const controllers = require('../controllers/controllers');
 const usersController = require('../controllers/users');
@@ -16,7 +17,7 @@ router.get('/users', usersController.getAllUser);
 
 router.post('/add-user', usersController.postUser);
 
-router.get('/:userId' , usersController.getUser);
+router.get('/user/:userId' , usersController.getUser);
 
 // router.get('/edit-user/:userId' , usersController.getEditUser);
 
@@ -40,11 +41,11 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // ROUTE FOR MACHINES
 
-router.get('/machines' , machinesController.getAllMachines );
+router.get('/machines', machinesController.getAllMachines );
 
-// router.post('/add-machine' , machinesController.postMachine);
+ router.post('/add-machine' , machinesController.postMachine);
 
-router.get('/:machineId' , machinesController.getMachine);
+router.get('/machine/:machineId' , machinesController.getMachine);
 
 // router.get('/edit-machine/:machineId', machinesController.getEditMachine);
 

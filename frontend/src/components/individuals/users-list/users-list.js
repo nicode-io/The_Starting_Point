@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../api';
+import api from '../../../api';
 
-function UsersList() {
+export function UsersList() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
@@ -9,7 +9,7 @@ function UsersList() {
     useEffect( () => {
         async function fetchData() {
         setIsLoaded(true);
-        await api.getAllUsers()
+        await api.getAll('/users')
         .then((data) => {
             setIsLoaded(true);
             setUsers(data.data);
@@ -41,5 +41,3 @@ function UsersList() {
         );
     }
 }
-
-export default UsersList;

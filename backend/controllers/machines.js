@@ -1,6 +1,6 @@
 const Machine = require('../models/Machine');
 
-exports.getAllMachines = async(req, res) => {
+exports.getAllMachines = async (req, res) => {
     try {
         console.log('on entre dans la méthode');
         const machines = await Machine.find();
