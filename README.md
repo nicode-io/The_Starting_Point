@@ -1,4 +1,4 @@
-#  (◉ ͜ʖ◉))ﾉ彡 MYLEARNING PATH :  PYTHON ✧٩(•́⌄•́๑)
+#  (◉ ͜ʖ◉))ﾉ彡 MY LEARNING PATH :  PYTHON ✧٩(•́⌄•́๑)
 >   My learning projects in Python
 
 
