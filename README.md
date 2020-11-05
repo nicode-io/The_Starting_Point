@@ -96,7 +96,7 @@ To:  **21-03-2021**
     * :white_check_mark: [LightRIS - Minimal Tetris](https://github.com/Javascripter-Nicode/JS-06-LightRis)
   * PYTHON
     * :white_check_mark: [Python Crash Course](https://github.com/Pythonizer-Nicode/PYT-01-PythonCrashCourse) 
-    * :construction: [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
+    * :negative_squared_cross_mark: [Alien Invasion - PYGAME](https://github.com/Pythonizer-Nicode/PYT-02-AlienInvasion)  
     * :white_wheck_mark: [Skelethon - DJANGO](https://github.com/Pythonizer-Nicode/PYT-03-Skelethon_Django) 
 
 ----
@@ -126,8 +126,8 @@ To:  **21-03-2021**
     * :white_check_mark: [Another Wordpress (beginner's guide)](https://github.com/Wordpress-Nicode/WP-01-Another_Wordpress_Guide)
   * PYTHON
     * :white_check_mark: [Django Unframed](https://github.com/Pythonizer-Nicode/PYT-04-Django_Unframed)
-    * :construction: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
-    * :construction: [Django Unleashed](https://github.com/nicode-io/Django_Unleashed)
+    * :negative_squared_cross_mark: [Data Analysis](https://github.com/Pythonizer-Nicode/PYT-05-Data_Analysis)
+    * :white_check_mark: [Django Unleashed](https://github.com/nicode-io/Django_Unleashed)
   * JAVASCRIPT
     * :white_check_mark: [Node.js - Introduction](https://github.com/Javascripter-Nicode/JS-07-Node_JS)
     * :construction: [TeamWork - RealTimeChat](https://github.com/nicode-io/TW-RealTimeChat)
@@ -138,11 +138,27 @@ To:  **21-03-2021**
   
 ---
 
-### And the best is yet to come ... :
-
 ##### The Summer Pastures
 > :cow2: :goat: :ram: :horse: Workshops - Upgrading stacks (+/- 2 months)
 
+  * **M**ongoDB **E**xpress **R**eact **N**ode
+    * :construction: [Customer Project : FAB-LAB Charleroi](https://github.com/nicode-io/Fabulab) 
+      * *Those awesome people work with me on this project*:   
+      :star:[Bastien Dewerse](https://github.com/DewerseB)
+      :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)
+      :star:[Robby Delvaux](https://github.com/Delvaux1986)
+      :star:[Simon Duquaine](https://github.com/simonduquaine) 
+  * PYTHON
+    * :construction: [Becode Cursus](https://github.com/nicode-io/PYT-08-Becode_Cursus) 
+    * :construction: Team Workshop Python
+      * *Those awesome people work with me on this project*:   
+      :star:[John Laterre](https://github.com/epictete)
+      :star:[Simon Duquaine](https://github.com/simonduquaine) 
+      :star:[Chris Vdld](https://github.com/ch-vdld-dev)
+  * VUE.JS
+    * :white_check_mark: [VUE-Authors_Component]
+      
+      
 #### The Valley
 > :dart: :raised_hands: :racehorse: :dragon: :rocket: Internship (3 months)  
 
@@ -157,5 +173,3 @@ So feel strongly to give me any recommandation about my work, advice for future 
 If you are looking to hire a strong hybrid and atypical profile in your team do not hesitate to contact me to check if we can share a project together !  
 Thanks by advance for that :heart:  
 
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
