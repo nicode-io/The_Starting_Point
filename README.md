@@ -130,7 +130,7 @@ To:  **21-03-2021**
     * :white_check_mark: [Django Unleashed](https://github.com/nicode-io/Django_Unleashed)
   * JAVASCRIPT
     * :white_check_mark: [Node.js - Introduction](https://github.com/Javascripter-Nicode/JS-07-Node_JS)
-    * :construction: [TeamWork - RealTimeChat](https://github.com/nicode-io/TW-RealTimeChat)
+    * :white_check_mark: [TeamWork - RealTimeChat](https://github.com/nicode-io/TW-RealTimeChat)
       * *Those awesome people work with me on this project*:  
       :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)   
       :star:[Marie Pierard](https://github.com/Marie-Pierard)    
