@@ -1,32 +1,25 @@
-#  (◉ ͜ʖ◉))ﾉ彡 MYLEARNING PATH :  MERN ✧٩(•́⌄•́๑)
->   My learning projects in MERN stack
+# (◉ ͜ʖ◉))ﾉ彡 VUE COMPONENT ✧٩(•́⌄•́๑)
+>   First component
 
+![](vue-logo.png)
 
-###  Index
+### Description 
+> Start 04-11-2020
 
-####    MERN
--   Learning REACT
--   Sales App
--   Becode REACT
--   REACT Color
-
-####    MEVN
-- Authors component
+This tiny component was asked as an interview technical test for my internship.
+It consist of getting objects from a JSON file and stream them in a list, allowing to sort this list by Like or Comment asc/desc. 
 
 ---
 
-### Description
+### Installation 
+>   Steps to see the result
 
-This repository contains all tiny projects realised during my Becode Bootcamp.
-Some are cleared, some are under construction and even some will never be finished.
-My main goals is to learn, practise and learn ;)
+-   Run  ```npm install```
+-   Run ```npm run serve```
+-   Go to ```localhost:8080```
+-   Click on the two top buttons to sort, ascending/descending, authors by like or comment criteria
 
 ---
-
-### **BeCode** Intensive Bootcamp     
-This project took place in my learning path in BeCode (see below) to full stack web developer.
-In seven months you have a wonderful luck to become a great web developer. Inclusion and share spirit is your daily feeling !  
-Give maximum to get maximum :rocket:
 
 ### COLLABORATION
 
@@ -35,14 +28,12 @@ After an intensive 7 month bootcamp at Becode where I was able to acquire the su
 Positive spirit, with an unquenchable thirst for learning, committed and structured, I like to take up challenges and always progress by giving the best of myself. 
 If you have a project, no matter how big or small, don't hesitate to share it, we always have to win by doing things alongside others.  
 
-See you soon!  
+See you soon! 
 
 ### TIMELINE
 [:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)  
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-
 
 
 
