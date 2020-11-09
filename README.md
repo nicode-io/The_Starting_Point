@@ -30,7 +30,7 @@ My second Django's project. This one aims to go deeper in the knowledge of this 
 *   Viewing project / check setup: ```$ python manage.py runserver``` then go: *http://127.0.0.1:8000/
 
 ####    Starting an app
-*   Activate your vritual environment
+*   Activate your virtual environment
 *   Create app: ```$ python manage.py startapp app_name```
 *   Add app to **settings.py**: 
     *   Open **settings.py**
