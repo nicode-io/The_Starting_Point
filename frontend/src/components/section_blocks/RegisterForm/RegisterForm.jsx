@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormSubmit } from '../../individuals/FormSubmit/FormSubmit';
+import { FormSubmit } from '../..';
 
 export function RegisterForm() {
     return (
