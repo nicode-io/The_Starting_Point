@@ -9,7 +9,7 @@ const Header = () => {
             <Link to="/" className={`nav-link${useLocation().pathname === "/" ? " is-current" : ""}`}>
                 <img src='https://www.fablab-charleroi.be/wp-content/themes/bootstrapspada4/assets/images/logo-header.png' alt='Logo FabLab'></img>
             </Link>
-            <Menu>
+            <Menu isOpen={true}>
                 <h1>Menu</h1>
                 <Link to="/" className={`nav-link${useLocation().pathname === "/" ? " is-current" : ""}`}><span></span> Home</Link>
                 <Link to="/reservation" className={`nav-link${useLocation().pathname === "/reservation" ? " is-current" : ""}`}><span></span> Reservation</Link>
