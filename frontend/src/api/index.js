@@ -4,18 +4,19 @@ const api = axios.create({
     baseURL: 'http://localhost:8080'
 });
 
-export const insertUser = payload => api.post(`/add-user`, payload);
-export const getAllUsers = () => api.get(`/users`);
-export const updateUserById = (id, payload) => api.put(`/edit-user/${id}`, payload);
-export const deleteUserById = id => api.delete(`/delete-user/${id}`);
-export const getUserById = id => api.get(`/${id}`);
+export const getAll = (route) => api.get(route);
+export const getById = (route, id) => api.get(`${route}/${id}`);
+export const insertNew = (route, payload) => api.post(route, payload);
+export const updateById = (route ,id, payload) => api.put(`${route}/${id}`, payload);
+export const deleteById = (route, id) => api.delete(`${route}/${id}`);
+
 
 const apis = {
-    insertUser,
-    getAllUsers,
-    updateUserById,
-    deleteUserById,
-    getUserById,
+    getAll,
+    getById,
+    insertNew,
+    updateById,
+    deleteById
 }
 
 export default apis;

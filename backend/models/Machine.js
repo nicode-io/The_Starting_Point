@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const MachineSchema = mongoose.Schema({
-    name : {
-        type : String,
-        required:true
-    },
-    category : {
+    name: {
         type: String,
         required:true
     },
-    tarif : {
+    category: {
+        type: String,
+        required:true
+    },
+    tarif: {
         type: Number,
         required : true
     }
