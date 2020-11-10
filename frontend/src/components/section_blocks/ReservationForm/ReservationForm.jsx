@@ -14,6 +14,8 @@ export function ReservationForm() {
                 <FormField label="Message" type="textarea" />
                 <FormField label="yes" type="checkbox" />
                 <FormField label="no" type="checkbox" />
+                <FormField label="Submit" type="submit" />
+                <FormField label="Button" type="button" />
                 {/* import MachinePicker, Calendar */}
             </form>
         </section>
