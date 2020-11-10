@@ -3,7 +3,7 @@ export { Calendar } from "./individuals/Calendar/Calendar";
 export { MachinePicker } from "./individuals/MachinePicker/MachinePicker";
 export { ConfirmThanks } from "./individuals/ConfirmThanks/ConfirmThanks";
 export { FormField } from "./individuals/FormField/FormField";
-export { ValidateCta} from "./individuals/ValidateCta/ValidateCta";
+export { FormSubmit } from "./individuals/FormSubmit/FormSubmit";
 
 // Export Main Blocks Components
 export { Dashboard } from "./main_blocks/Dashboard/Dashboard";
