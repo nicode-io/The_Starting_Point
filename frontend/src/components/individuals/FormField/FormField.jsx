@@ -13,7 +13,12 @@ export function FormField(props) {
         field = <div>
                     <input name={props.label} type={props.type} value={props.label} />
                 </div>
-    } else  {
+    } else if (props.type === "radio") {
+        field = <div>
+                    <label for={props.label}>{props.label}</label>
+                    <input id={props.label} type={props.type} value={props.label} name={props.name} />
+                </div>
+    }else  {
         field = <div>
                     <label for={props.label}>{props.label}</label>
                     <input name={props.label} type={props.type} />

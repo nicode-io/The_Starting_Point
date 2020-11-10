@@ -5,13 +5,17 @@ const MachineSchema = mongoose.Schema({
         type: String,
         required:true
     },
-    category: {
-        type: String,
-        required:true
-    },
     tarif: {
         type: Number,
         required : true
+    },
+    available: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
+    comment: {
+        type: String,
     }
 });
 

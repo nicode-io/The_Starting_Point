@@ -18,6 +18,10 @@ const ReservationSchema = mongoose.Schema({
             return !this.usernotlogged;
         }
     },
+    archive: {
+        type: Boolean,
+        default: false,
+    },
     startdate: {
         type: Date,
         required: true
