@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const MachineSchema = mongoose.Schema({
     name: {
@@ -11,8 +12,12 @@ const MachineSchema = mongoose.Schema({
     },
     tarif: {
         type: Number,
-        required : true
-    }
+        required :true
+    },
+    invoice : [{
+        type : Schema.Types.ObjectId,
+        ref : "Invoice"
+    }]
 });
 
 module.exports = mongoose.model('Machine', MachineSchema);

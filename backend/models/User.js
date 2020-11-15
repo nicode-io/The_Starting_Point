@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const UserSchema = mongoose.Schema({
     firstname: {
@@ -20,7 +21,11 @@ const UserSchema = mongoose.Schema({
     },
     company: {
         type: String,
-    }
+    },
+    invoice : [{
+        type : Schema.Types.ObjectId,
+        ref : "Invoice"
+    }]
 });
 
 module.exports = mongoose.model('User', UserSchema);

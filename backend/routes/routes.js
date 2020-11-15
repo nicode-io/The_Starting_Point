@@ -27,7 +27,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // ROUTE FOR INVOICES
 
-// router.get('/invoices' , invoicesController.getAllInvoice);
+router.get('/invoices' , invoicesController.getAllInvoice);
 
 // router.post('/add-invoice' , invoicesController.postInvoice);
 
