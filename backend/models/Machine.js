@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const MachineSchema = mongoose.Schema({
+const MachineSchema = new Schema({
     name: {
         type: String,
         required:true
@@ -16,7 +16,8 @@ const MachineSchema = mongoose.Schema({
     },
     invoice : [{
         type : Schema.Types.ObjectId,
-        ref : "Invoice"
+        ref : "Invoice",
+        
     }]
 });
 

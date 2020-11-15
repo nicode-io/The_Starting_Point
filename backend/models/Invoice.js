@@ -1,22 +1,26 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const InvoiceSchema = Schema({
-    owner : [{
+const InvoiceSchema = new Schema({
+    user : [{
         type : Schema.Types.ObjectId,
-        ref : "User"
+        ref : "User",
+        required : true
     }],
-    booking : [{
+    reservation : [{
         type : Schema.Types.ObjectId,
-        ref : "Reservation"
+        ref : "Reservations",
+        required : true
     }],
     product : [{
         type : Schema.Types.ObjectId,
-        ref : "Product"
+        ref : "Products",
+        required : true
     }],
-    tarif : [{
+    machines : [{
         type : Schema.Types.ObjectId,
-        ref : "Machines"
+        ref : "Machines",
+        required : true
     }]
 
     
