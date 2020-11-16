@@ -21,7 +21,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 ## :file_folder: Index
 -   [SERVER INITIALISATION](#server-initialisation) 
     -   [SSH](#SSH) 
-    -   [USERS & ROOT USER](#users-&-root-user)
+    -   [USERS MANAGEMENT](#users-management)
     -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
 -   [INSTALL LAMP STACK](#install-lamp-stack)
     -   [Apache](#apache)
