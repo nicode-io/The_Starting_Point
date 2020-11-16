@@ -59,8 +59,9 @@ In this part, we approach the basics of artificial intelligence through librarie
 These libraries are used in the different projects:
 * [Speech Recognition](https://www.codinground.com/speech-recognition/)
 * [PyAudio](https://pypi.org/project/PyAudio/)
-
-
+* [Dlib](https://pypi.org/project/dlib/)
+* [NumPy](https://numpy.org/)
+* [Face Recognition](https://pypi.org/project/face-recognition/)
 
 
 ---
