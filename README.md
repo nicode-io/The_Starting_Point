@@ -27,6 +27,8 @@ This workshop aims to initiate people and make them discover this beautiful lang
 
 ### Initiation
 
+To Be Updated
+
 ---
 
 ### Django
@@ -48,7 +50,7 @@ It also includes .PDF files of the Prezi slideshow, an online and dynamic versio
 
 ### AI
 
-To be updated
+To Be Updated
 
 
 
