@@ -53,8 +53,8 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 
 ### SERVER INITIALISATION
--   [SSH](#SSH)
--   [USERS & ROOT USER](#users-&-root-user)
+-   [SSH](#ssh)
+-   [USERS MANAGEMENT](#users-management)
 -   [BASIC SECURITY](#basic-security)
 
     ##    SSH
@@ -71,12 +71,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
                 ``` UseKeychain yes```  
                 ``` IdentityFile ~/.ssh/id_rsa```  
         *   ```$ ssh-add -K ~/.ssh/id_rsa```  
-
     *   ###    Copy SSH key in clipboard   
         *   ```$ pbcopy < ~/.ssh/key_name.pub```    
             or  (if you don't have pbcopy for example)  
         *   ```$ cat ~/.ssh/key_name.pub``` and copy terminal output
-
     *   ###   Connect to SSH to (virtual) private server  
         *   ```$ ssh-copy-id username@your_server_IP```  
         *   ```$ ssh 'user@host```You'll be asked by local system for key password  
@@ -84,70 +82,70 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
     ---
 
-    ##    USERS & ROOT USER
+    ##    USERS MANAGEMENT
     >   Set up users, you should not use root as daily user
 
-    *   ###   Switch to root user 
+    *   Switch to root user 
         *   ```$ sudo -i```
-
-    *   ###   Change root user's password
+    *   Change root user's password
         *   ```$ passwd```
-
-    *   ###    Create user with sudo rights  
+    *   Create user with sudo rights  
         *   ```$ sudo adduser username```   
         *   Enter user information and validate   
         *   Add user to sudo group    
             *   ```$ sudo usermod -aG sudo username```      
         *   Check if the user is in sudo group    
             *   ```$ id username```    
-
-    *   ###   Ask for ROOT access with you sudo User 
+    *   Ask for **root** permissions while using your user
         *   ```$ su -```
-        *   Enter **ROOT** password
-        *   You now working as ROOT user with same rights 
+        *   Enter **root** password
 
     ---
 
 
-    ##    BASIC SECURITY FIRST STEP
+    ##    BASIC SECURITY
     >   Avoid major beginner's security breach
 
     *  ###  Edit **SSHD_CONFIG** file
         *   First be sure you have at least root ssh access and another user with sudo privileges too
-        *   ```$ sudo nano /etc/ssh/sshd_config```
-        *   Uncomment line: 
-            ```PasswordAuthentication yes``` and change it to:
-            ```PasswordAuthentication no```     
-        *   Set *PermitRootLogin* to **no**
-        *   Add : *AllowUsers **username*** Add a space between usernames if you have many
-        *   Save and close file
-        *   ```$ sudo systemctl restart ssh```
-        *   Keep server connection alive with your local computer:
-            *   Add or uncomment the following lines: 
-                *   ```ServerAliveInterval 120```
-                *    ```TCPKeepAlive yes```
-            *   On your local computer:  
+        *   Open **sshd_config** file
+            *   ```$ sudo nano /etc/ssh/sshd_config```
+        *   Set
+            *   ```PermitRootLogin``` to **no**
+        *   Set (uncomment) 
+            *   ```PasswordAuthentication```  to **no**
+        *   Add : 
+            *   ```AllowUsers username``` 
+            *   Add a space between differents usernames
+        *   Keep server connection alive with your local computer
+            *   Set (uncomment)
+                *    ```TCPKeepAlive``` to **yes**
+            *   On your local computer 
                 *   ```$ sudo nano /etc/ssh/ssh_config```
                 *   Add the following line:  ```ServerAliveInterval 120```
-        *   **WARNING** Before leaving your server connection: 
-            *   Be sure to have restart SSH service with ```$ sudo systemctl restart ssh```
+        *   Save and close **SSHD_CONFIG** file
+        *   Restart SSH service
+            *   ```$ sudo systemctl restart ssh```
+        *   **WARNING**: Before leaving your server connection 
+            *   Be sure to have restart SSH service
+                *   ```$ sudo systemctl restart ssh```
             *   Open a new terminal window and log to your server in a new SSH session 
-            *   If you modify the SSH connection port use: ```$ ssh username@ip -pXX``` (XX is the new port number)
+            *   If you modify the SSH connection port use
+                *   ```$ ssh username@ip -pXX``` (where XX is the new port number)
 
-    ---
-
-    *   ##   Setting up basic firewall
+    *   ###   Set up Ubuntu firewall
         *   Each applications have its own settings for firewall    
-            you can see the app list :  
+            you can see the app list 
             *   ```$ sudo ufw app list```
-        *   Enable firewall :
+        *   Enable firewall
             *   ```$ sudo ufw enable```
         *   Authorize application (ex:OpenSSH)     
             *   ```$ sudo ufw allow OpenSSH```
+        *   Allow HTTP & HTTPS
+            *    ```$ sudo ufw allow proto tcp from any to any port 80,443```
+        *   Allow specific port (ex: new SSH port)
         *   Check status
             *   ```$ sudo ufw status```
-        *   Allow HTTP & HTTPS
-            *   HTTP/HTTPS: ```$ sudo ufw allow proto tcp from any to any port 80,443```
     
     --- 
 
