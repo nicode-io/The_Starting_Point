@@ -33,18 +33,21 @@ To Be Updated
 
 ### Django
 
-If you want to start from scratch the project to get a better understanding,
+In this part, we aim to discover the (best) powerfull framework which is Django.
+We started with a small project to understand the MTV models and the ORM power. 
+
+* If you want to start from scratch the project to get a better understanding,
 you can visit [THIS REPOSITORY](https://github.com/nicode-io/Workshop_Python_Django/blob/master/README.md)
 
-This part contains a starting project which includes:
-*   Basic structure 
-*   An app "Event" 
-*   Models 
-*   Views
-*   Forms
-*   Templates
+* This part contains a starting project which includes:
+  *   Basic structure 
+  *   An app "Event" 
+  *   Models 
+  *   Views
+  *   Forms
+  *   Templates
 
-It also includes .PDF files of the Prezi slideshow, an online and dynamic version of it is available [HERE](https://prezi.com/view/7GGLxCYaLUDdi1pdfKwK). 
+* It also includes .PDF files of the Prezi slideshow, an online and dynamic version of it is available [HERE](https://prezi.com/view/7GGLxCYaLUDdi1pdfKwK). 
 
 ---
 
