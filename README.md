@@ -1,22 +1,16 @@
 #   (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE 
-#   TO (VIRTUAL) PRIVATE SERVER ✧٩(•́⌄•́๑)
->   Want to host multiple websites on your own private server?  
->   Want to be free to configure your server as you like ?  
->   Let's start together ! 
+#   TO (VIRTUAL) PRIVATE SERVER ✧٩(•́⌄•́๑) 
+>   Are your starting using a (virtual) private server ?  
+>   Let's start together to avoid the main pitfalls ! 
 
 
 ## Description 
 > Last Update: 16-11-2020
 
-A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a (virtual) private server to host a multitude of websites and applications.
-
-When you see::warning:, this refers directly to server, files or users' security
-
-Little disclaimer: made by a rookie for the rookie, there's for sure missing things (I'll complete with times) and bad things (I'll improve myself). 
-
+The purpose of this guide is first of all to collect the information that helped me during my first tests on a VPS. It is certainly not exhaustive, it doesn't explain everything but it will be able to guide you in your first steps in order to avoid multiple relocations or the basic security flaws you may encounter. If you find it useful, if you have remarks, suggestions or if you think that some parts are obsolete: contact me. I will be happy to answer you.   
+Good reading to all!
 
 ---
-
 
 ## :file_folder: Index
 -   [SERVER INITIALISATION](#server-initialisation) 
