@@ -23,6 +23,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [SSH](#SSH) 
     -   [USERS & ROOT USER](#users-&-root-user)
     -   [BASIC SECURITY FIRST STEP](#basic-security-first-step)
+-   [INSTALL LAMP STACK](#install-lamp-stack)
+    -   [Apache](#apache)
+    -   [MySQL](#mysql)
+    -   [PHP](#php)
 -   [WEB HOSTING](#basic-for-web-hosting)
     -   [DOMAIN REDIRECTION](#domain-redirection) 
     -   [SFTP ACCESS](#sftp-access)
@@ -52,7 +56,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 ---
 
 
-### SERVER INITIALISATION
+# SERVER INITIALISATION
 -   [SSH](#ssh)
 -   [USERS MANAGEMENT](#users-management)
 -   [BASIC SECURITY](#basic-security)
@@ -142,8 +146,55 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Check status
             *   ```$ sudo ufw status```
     
-    --- 
+--- 
 
+#   INSTALL LAMP STACK
+-   [Apache](#apache)
+-   [MySQL](#mysql)
+-   [PHP](#php)
+
+    ##  Apache
+    >   A web server
+
+    *   ### Installation
+        *   ```$ sudo apt update && sudo apt upgrade -y```
+        *   ```$ sudo apt install -y apache2```
+        *   ```$ sudo ufw allow 'Apache Full'```
+    *  ###  Check configuration 
+        *   ```$ sudo apache2ctl configtest```  
+        *   Result should be **Syntax OK** 
+        *   Do not take into account **AH00558 error** for now
+        
+    ##  MySQL
+    >   A relationnal database manager
+    
+    *   ### Installation
+        *   ```$ sudo apt install -y mysql-server```
+        *   Configure security and password validator
+            *   ```$ sudo mysql_secure_installation```
+            *   Select **y|Y**
+            *   Choose a level of security **2** (adivce)
+            *   Choose a root password for MySQL
+            *   Answer **y|Y** to all following questions
+            
+    *   ### Check configuration
+        *   ```$ sudo mysql```
+        *   You are now in MySQL console
+        *   ```mysql> exit```
+        
+    ##  PHP
+    >   A well-known programming language, notably used in wordpress
+    
+    *   ### Installation
+        *   ```$ sudo apt update && sudo apt -y upgrade```
+        *   ```$ sudo apt install -y php libapache2-mod-php php-mysql```
+        *   ```$ sudo phpenmod pdo_mysql```
+        *   ```$ sudo service apache2 restart```
+        
+    *   ### Check configuration
+        *   ```$ php -v``` 
+        
+---
 
 ### BASICS FOR WEB HOSTINGS
 >  :wrench: Apps, Virtual Hosts, databases
@@ -181,13 +232,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   Password: *Password used for SSH connection to your (virtual) private server*
         *   Connect, accept fingerprint if asked
 
-    ####    APACHE
-    >   Your web hosting server, mandatory for websites hosting/development
-
-    *   #####   Installation
-        *   ```$ sudo apt update && sudo apt upgrade```
-        *   ```$ sudo apt-get install apache2```
-        *   ```$ sudo ufw allow 'Apache'```
+    ---
 
     ####    VIRTUAL HOSTS
     >   One virtual host and file folder are needed for each website you'll host    
@@ -345,18 +390,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
 
 ### PROGRAMMING LANGUAGE
 > The start of everything in digital world, programming languages transform every ideas into working solutions. Find the one who fits to you and your goals and say **Hello World**
--   [PHP](#php)
+
 -   [PYTHON](#python)
 
-    ####    PHP
-    >   A very popular programming language 
-    *   #####   Install PHP and PHP modules
-        *   ```$ sudo apt update && sudo apt upgrade```
-        *   ```sudo apt install -y php7.4-mysql```
-        *   ```sudo phpenmod pdo_mysql```
-        *   ```$ php -v``` check wich version is installed
-            Install PHP modules (example:)
-        *   ```sudo service apache2 restart```
+
 
     ####    PYTHON
     >   A powerfull programming language for Web-Development as for I.A and data-science
