@@ -20,7 +20,7 @@
 
 ### Description
 
-This repository contains the three parts of our workshop realised during my Becode Bootcamp.
+This repository contains the three parts of our workshop realised during my Becode Bootcamp.  
 This workshop aims to initiate people and make them discover this beautiful language who's Python.
 
 ---
@@ -33,7 +33,7 @@ To Be Updated
 
 ### Django
 
-In this part, we aim to discover the (best) powerfull framework which is Django.
+In this part, we aim to discover the (best) powerfull framework which is Django.   
 We started with a small project to understand the MTV models and the ORM power. 
 
 * If you want to start from scratch the project to get a better understanding,
