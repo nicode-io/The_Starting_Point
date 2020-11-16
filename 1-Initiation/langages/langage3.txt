@@ -1,0 +1,116 @@
+class MainClass
+    {
+        public static void Main(String[] args)
+        {
+           System.out.println("Jeu P F C" );    
+
+            int scor;
+            int scor2;
+             
+            String texte= null;
+            int choix;
+             
+            String choix2;
+             
+            scor=0;
+            scor2=0;
+             
+            choix=0;
+            choix2="P";
+             
+            do{
+                System.out.println(" " );
+                do{
+                   System.out.println("P, F ou C?" ); 
+                }
+                while(texte!= "P" && texte!= "F" && texte!="C" ) ;
+             
+                if (texte == "P" ){
+                     choix=0;
+                } 
+                if (texte == "F" ){
+                     choix=1;
+                } 
+                if (texte == "C" ){
+                     choix=2; 
+                } 
+                System.out.println(" " );
+                System.out.println("joueur1: " + texte);
+                 
+                int nb = (int) Math.random()*3;
+             
+                if ( nb == 0 ){
+                     choix2="P";
+                }
+                if ( nb == 1 ){
+                     choix2="F";
+                }
+                if ( nb == 2 ){
+                     choix2="C";
+                }
+                System.out.println("ordinateur: " + choix2);
+             
+                System.out.println(" " );
+                if (choix==0 && nb==0){
+                   System.out.println("Partie Nulle." );
+                }
+                else{
+                    if (choix==0 && nb==1){
+                        System.out.println("F recouvre P." );
+                        scor2 = scor2 + 1;
+                    }
+                    else{
+                        if (choix==0 && nb==2){
+                            System.out.println("P casse C." );
+                            scor = scor + 1;
+                        }
+                    }
+                }
+                   
+                if (choix==1 && nb==0){
+                    System.out.println("F enveloppe P." );
+                    scor = scor + 1;
+                }
+                else{
+                    if (choix==1 && nb==1){
+                       System.out.println("Partie Nulle." );
+                    }
+                    else{
+                        if (choix==1 && nb==2){
+                            System.out.println("C coupe F." );
+                            scor2 = scor2 + 1;
+                        }
+                    }
+                }
+                 
+                if (choix==2 && nb==0){
+                    System.out.println("P casse C." );
+                    scor2 = scor2 + 1;
+                }
+                else{
+                    if (choix==2 && nb==1){
+                        System.out.println("C coupe P." );
+                        scor = scor + 1;
+                    }
+                    else{
+                        if (choix==2 && nb==2){
+                            System.out.println("Partie Nulle." );
+                        }
+                    }
+                }
+             
+                System.out.println(" " );
+                System.out.println("Les scores sont :" );
+                System.out.println("Joueur1 : " + scor);
+                System.out.println("Ordinateur : " + scor2);
+             
+                 
+                System.out.println(" " );
+                do{
+                   System.out.println ("Encore une partie?(O/N)" ); 
+                }while(texte!="N" && texte!="O" ) ;
+                 
+            }while(texte!="N" );
+            //Fin de la boucle  
+        }
+    }
