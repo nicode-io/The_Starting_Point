@@ -12,9 +12,9 @@
 
 ###  Index
 
--   Initiation
--   Django
--   AI
+-   [Initiation](#initiation)
+-   [Django](#django)
+-   [AI](#ai)
 
 ---
 
@@ -25,6 +25,25 @@ This workshop aims to initiate people and make them discover this beautiful lang
 
 ---
 
+### Initiation
+
+---
+
+### Django
+
+This part contains a starting project which includes:
+*   Basic structure 
+*   An app "Event" 
+*   Models 
+*   Views
+*   Forms
+*   Templates
+
+It also includes .PDF files of the Prezi slideshow, an online and dynamic version of it is available [HERE](https://prezi.com/view/7GGLxCYaLUDdi1pdfKwK). 
+
+---
+
+### AI
 
 ---
 
