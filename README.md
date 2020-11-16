@@ -31,6 +31,9 @@ This workshop aims to initiate people and make them discover this beautiful lang
 
 ### Django
 
+If you want to start from scratch the project to get a better understanding,
+you can visit [THIS REPOSITORY](https://github.com/nicode-io/Workshop_Python_Django/blob/master/README.md)
+
 This part contains a starting project which includes:
 *   Basic structure 
 *   An app "Event" 
