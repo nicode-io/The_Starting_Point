@@ -6,7 +6,7 @@
 
 
 ## Description 
-> Start 15-08-2020
+> Last Update: 16-11-2020
 
 A small, unpretentious guide that brings together the information collected from different sites in order to best organize the first steps of installing the various tools on a (virtual) private server to host a multitude of websites and applications.
 
