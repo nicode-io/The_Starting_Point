@@ -27,7 +27,8 @@ This workshop aims to initiate people and make them discover this beautiful lang
 
 ### Initiation
 
-To Be Updated
+This part contains basic examples of Python syntax realized through a paper stone cisseaux game.
+The game is realized in command line as well as in a more graphical version thanks to a [tkInter](https://wiki.python.org/moin/TkInter).
 
 ---
 
@@ -53,7 +54,7 @@ you can visit [THIS REPOSITORY](https://github.com/nicode-io/Workshop_Python_Dja
 
 ### AI
 
-To Be Updated
+In this part, we approach the basics of artificial intelligence through libraries allowing us to respond, to recognise sound and finally, facial recognition.
 
 
 
