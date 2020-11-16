@@ -26,6 +26,10 @@ This workshop aims to initiate people and make them discover this beautiful lang
 ---
 
 
+To be updated
+
+
+
 ---
 
 ### **BeCode** Intensive Bootcamp     
