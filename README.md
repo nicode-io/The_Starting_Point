@@ -27,6 +27,13 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [Apache](#apache)
     -   [MySQL](#mysql)
     -   [PHP](#php)
+-   [PHPMYADMIN](#phpmyadmin)
+    -   [Installation](#installation)
+    -   [Apache Configuration](#apache-configuration)
+    -   [Users Privileges](#users-privileges)
+    -   [Remote Access](#remote-access)
+    -   [Secure Instance](#secure-instance)
+    
 -   [WEB HOSTING](#basic-for-web-hosting)
     -   [DOMAIN REDIRECTION](#domain-redirection) 
     -   [SFTP ACCESS](#sftp-access)
@@ -119,6 +126,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   Keep server connection alive with your local computer
             *   Set (uncomment)
                 *    ```TCPKeepAlive``` to **yes**
+            *   Set (uncomment)
+                *    ```ClientAliveInterval``` to **120**
+            *   Set (uncomment)
+                *    ```ClientAliveCountMax``` to **0**
             *   On your local computer 
                 *   ```$ sudo nano /etc/ssh/ssh_config```
                 *   Add the following line:  ```ServerAliveInterval 120```
@@ -178,6 +189,10 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
             *   Answer **y|Y** to all following questions
             
     *   ### Check configuration
+        *   ```$ systemctl status mysql.service```
+        *   You should see "Server is operationnal" and many others informations
+        
+    *   ### MySQL Console
         *   ```$ sudo mysql```
         *   You are now in MySQL console
         *   ```mysql> exit```
@@ -195,6 +210,84 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ php -v``` 
         
 ---
+
+##    PHPMYADMIN
+>   PHPMyAdmin allows you to manage MariaDB/MySQL databases remotely
+-   [Installation](#installation)
+-   [Apache Configuration](#apache-configuration)
+-   [Users Privileges](#users-privileges)
+-   [Remote Access](#remote-access)
+-   [Secure Instance](#secure-instance)
+
+    *   ### Installation
+        *   ```$ sudo mysql```
+        *   ```mysql> UNINSTALL COMPONENT "file://component_validate_password";```
+        *   ```$ sudo apt install -y phpmyadmin php-mbstring php-zip php-gd php-json php-curl```
+        *   When prompted, select **apache2** with **spacebar**
+            *   **WARNING** Be sure you see **[*] apache2**
+        *   Click **<Ok>**
+        *   Click **<Yes>**
+        *   Choose a password
+
+        *   ```$ sudo mysql```
+        *   ```mysql> INSTALL COMPONENT "file://component_validate_password";```
+        *   ```$ sudo phpenmod mbstring```
+        
+    *   ### Apache Configuration
+        *   ```$ sudo nano /etc/apache2/apache2.conf```
+        *   At the end of the file add followings:  
+            *   ```# Include phpMyAdmin```  
+            *   ```Include /etc/phpmyadmin/apache.conf```
+        *   ```$ sudo systemctl restart apache2```
+            
+    *   ### Users Privileges
+        *   ```$ sudo mysql```
+        *   ```mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;```
+        *   Change **root** password type
+            *   ```mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'new_strong_password';```
+        *   Create your own superuser
+            *   ```mysql> CREATE USER 'username'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'new_strong_password';```
+        *   Give privileges to your own superuser
+            *   ```mysql> GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;```
+        *   ```mysql> exit```
+
+    *   ### Remote Access
+        *   On your local computer, browse the following   
+            *   ```http://your_server_IP/phpmyadmin```
+        *   Enter your superuser credentials
+        
+    *   ### Secure Instance
+        *  ```$ sudo nano /etc/apache2/conf-available/phpmyadmin.conf```
+        *   In **<Directory /usr/share/phpmyadmin>** add
+            *   ```AllowOverride all```
+        *   ```$ sudo systemctl restart apache2```
+        *   ```$ sudo nano /usr/share/phpmyadmin/.htaccess```
+        *   Add following lines to the file  
+            AuthType Basic  
+            AuthName "Restricted Files"  
+            AuthUserFile /etc/phpmyadmin/.htpasswd  
+            Require valid-user  
+        *   Define password for htaccess file
+            *   ```$ sudo htpasswd -c /etc/phpmyadmin/.htpasswd username```
+        *   ```$ sudo systemctl restart apache2```
+        *   On your local computer, browse the following   
+            *   ```http://your_server_IP/phpmyadmin```
+        *   You should be prompted now for the credentials you just defined before accessing phpMyAdmin
+    
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### BASICS FOR WEB HOSTINGS
 >  :wrench: Apps, Virtual Hosts, databases
@@ -385,7 +478,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
                 **allow from 192.0.2** to allow all the range from 0 to 255
             
 
----
 
 
 ### PROGRAMMING LANGUAGE
@@ -535,25 +627,7 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     -   [COMPOSER](#composer)
     -   [PHP MAILER](#php-mailer)
 
-    ####    PHPMYADMIN
-    >   PHPMyAdmin is a GUI, accesible remotely, that allows you to administrate MariaDB/MySQL easily. 
 
-    *   #####   Installation
-        *   ```$ sudo apt install phpmyadmin```
-    *   #####   Configure Apache for PHPMyAdmin
-        *   ```$ sudo nano /etc/apache2/apache2.conf```
-        *   At the end of the file add followings:  
-            *Include phpMyAdmin*    
-            **Include /etc/phpmyadmin/apache.conf** 
-    *   #####   Create an SQL superuser if you don't have one
-        *   ```$ sudo mysql -u root```
-        *   ```MariaDB [...]> CREATE USER user_name@localhost IDENTIFIED BY user_password;```
-        *   ```MariaDB [...]> GRANT ALL PRIVILEGES ON *.* TO user_name@localhost IDENTIFIED BY user_password;``` to give all access
-    *   #####   Accessing PHPMyAdmin remotely
-        *   On your local computer, browse the following:   
-            **http://your_server_IP/phpmyadmin
-        *   Enter your SQL superuser credentials
-        *   You now have access to the admin panel from everywhere
     
     ####    COMPOSER
     >   Composer is a popular dependency management tool for PHP, created mainly to facilitate installation and updates for project dependencies. Composer is also commonly used to bootstrap new projects based on popular PHP frameworks, such as Symfony and Laravel.
