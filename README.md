@@ -80,8 +80,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
         *   ```$ ssh 'user@host```You'll be asked by local system for key password  
         *   It's ok, from now you can connect without having to type a password on this computer   
 
-    ---
-
     ##    USERS MANAGEMENT
     >   Set up users, you should not use root as daily user
 
@@ -99,9 +97,6 @@ Little disclaimer: made by a rookie for the rookie, there's for sure missing thi
     *   Ask for **root** permissions while using your user
         *   ```$ su -```
         *   Enter **root** password
-
-    ---
-
 
     ##    BASIC SECURITY
     >   Avoid major beginner's security breach
