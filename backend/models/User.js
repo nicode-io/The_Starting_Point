@@ -20,6 +20,11 @@ const UserSchema = mongoose.Schema({
     },
     company: {
         type: String,
+    },
+    usertype: {
+        type: String,
+        default: "user",
+        required: true,
     }
 });
 

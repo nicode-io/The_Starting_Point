@@ -6,17 +6,17 @@ export function ReservationForm() {
     return (
         <section>
             <form>
-                This is a reservation form
                 <MachinePicker />
                 
-                <FormField label="Name" type="text" />
+                <FormField label="Nom" type="text" />
                 <FormField label="Email" type="email" />
+                <p>Avez-vous besoin d'accompagnement ?</p>
+                <div>
+                    <FormField label="oui" type="radio" name="Test" />
+                    <FormField label="non" type="radio" name="Test" />
+                </div>
                 <FormField label="Message" type="textarea" />
-                <FormField label="yes" type="checkbox" />
-                <FormField label="no" type="checkbox" />
-                <FormField label="Submit" type="submit" />
-                <FormField label="Button" type="button" />
-                {/* import MachinePicker, Calendar */}
+                <FormField label="Réserver" type="submit" />
             </form>
         </section>
     )
