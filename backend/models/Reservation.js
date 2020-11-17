@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
-// const Machine = require('./Machine');
+const Schema = mongoose.Schema;
 
-const ReservationSchema = mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
+const ReservationSchema = new Schema({
     usernotlogged: {
         type: String,
         required: () => {
@@ -13,7 +9,8 @@ const ReservationSchema = mongoose.Schema({
         }
     },
     userlogged: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref : "User",
         required: () => {
             return !this.usernotlogged;
         }
@@ -30,10 +27,10 @@ const ReservationSchema = mongoose.Schema({
         type: Date,
         required:true
     },
-    // machine:  [{ 
-    //     type: Machine.ObjectId, 
-    //     ref: 'Machine' 
-    // }]
+    invoice : {
+        type : Schema.Types.ObjectId,
+        ref : "Invoice"
+    }
 });
 
 module.exports = mongoose.model('Reservation', ReservationSchema);
