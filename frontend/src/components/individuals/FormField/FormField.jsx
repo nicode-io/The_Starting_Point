@@ -1,7 +1,7 @@
 import React from "react";
 
 export function FormField(props) {
-    // props.label props.type
+    // props.label props.type props.name
     let field;
     
     if (props.type === "textarea") {
@@ -18,7 +18,7 @@ export function FormField(props) {
                     <label for={props.label}>{props.label}</label>
                     <input id={props.label} type={props.type} value={props.label} name={props.name} />
                 </div>
-    }else  {
+    } else  {
         field = <div>
                     <label for={props.label}>{props.label}</label>
                     <input name={props.label} type={props.type} />
