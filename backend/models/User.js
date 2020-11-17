@@ -22,6 +22,10 @@ const UserSchema = new Schema({
     company: {
         type: String,
     },
+    reservation: [{
+        type : Schema.Types.ObjectId,
+        ref : "Reservation"
+    }],
     invoice : [{
         type : Schema.Types.ObjectId,
         ref : "Invoice"
