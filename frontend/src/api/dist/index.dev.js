@@ -3,11 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.deleteById = exports.updateById = exports.insertNew = exports.getById = exports.getAll = void 0;
+exports["default"] = exports.getUsersSessions = exports.deleteById = exports.updateById = exports.insertNew = exports.getById = exports.getAll = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+_axios["default"].defaults.withCredentials = true;
 
 var api = _axios["default"].create({
   baseURL: 'http://localhost:8080'
@@ -42,12 +44,19 @@ var deleteById = function deleteById(route, id) {
 };
 
 exports.deleteById = deleteById;
+
+var getUsersSessions = function getUsersSessions(route) {
+  return api.get("".concat(route));
+};
+
+exports.getUsersSessions = getUsersSessions;
 var apis = {
   getAll: getAll,
   getById: getById,
   insertNew: insertNew,
   updateById: updateById,
-  deleteById: deleteById
+  deleteById: deleteById,
+  getUsersSessions: getUsersSessions
 };
 var _default = apis;
 exports["default"] = _default;

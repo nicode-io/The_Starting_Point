@@ -24,8 +24,7 @@ export function MachinePicker() {
     }, []);
 
     return (
-        <div>
-            <label for="machinePicker">Machine: </label>
+        <label for="machinePicker">Machine: 
             <select name="machinePicker">
                 <option value="" selected>choisissez la machine</option>
                 {machines.map(machine => (
@@ -34,7 +33,7 @@ export function MachinePicker() {
                     </option>
                 ))}
             </select>
-        </div>
+        </label>
     );
 }
 

@@ -6,6 +6,7 @@ export function ReservationForm() {
     return (
         <section>
             <form>
+                This is a reservation form<br />
                 <MachinePicker />
                 
                 <FormField label="Nom" type="text" />

@@ -9,12 +9,22 @@ exports.getAllUser = async (req, res) => {
         // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
     }
 }
+// Method for the sessions
+exports.getSessionUser = (req, res)=>{
+    if (req.session.user) {
+        res.send({loggedIn: true, user: req.session.user});
+    }else{
+        res.send({loggedIn: false});
+    }
+}
 
 exports.getUser = async (req, res) => {
     const userId = req.params.userId;
 
     try {
         const user = await User.findById(userId, (user) => user);
+        req.session.user = user;
+        console.log(req.session.user);
         res.json(user);
     } catch (error) {
         console.log(error);
