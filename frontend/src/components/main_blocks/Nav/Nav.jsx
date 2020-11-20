@@ -11,7 +11,7 @@ const Nav = () => {
                 <Link to="/" className={`nav-link${useLocation().pathname === "/" ? " is-current" : ""}`}><FontAwesomeIcon icon={faHome} /></Link>
                 <Link to="/reservation" className={`nav-link${useLocation().pathname === "/reservation" ? " is-current" : ""}`}><FontAwesomeIcon icon={faShoppingBasket} /></Link>
                 <Link to="/files" className={`nav-link${useLocation().pathname === "/files" ? " is-current" : ""}`}><FontAwesomeIcon icon={faFile} /></Link>
-                <Link to="/events" className={`nav-link${useLocation().pathname === "/events" ? " is-current" : ""}`}><FontAwesomeIcon icon={faInfoCircle} /></Link>
+                <Link to="/register" className={`nav-link${useLocation().pathname === "/register" ? " is-current" : ""}`}><FontAwesomeIcon icon={faInfoCircle} /></Link>
             </div>
         </nav>
     )
