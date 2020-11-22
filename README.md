@@ -149,14 +149,16 @@ To:  **21-03-2021**
       :star:[Robby Delvaux](https://github.com/Delvaux1986)  
       :star:[Simon Duquaine](https://github.com/simonduquaine)   
   * PYTHON
-    * :construction: [Becode Cursus](https://github.com/nicode-io/PYT-08-Becode_Cursus) 
-    * :construction: Team Workshop Python
+    * :white_check_mark: [Django Tuto](https://github.com/Pythonizer-Nicode/PYT-08-Workshop_Python_Django) 
+    * :white_check_mark: Team Workshop Python
       * *Those awesome people work with me on this project*:   
       :star:[John Laterre](https://github.com/epictete)  
       :star:[Simon Duquaine](https://github.com/simonduquaine)   
       :star:[Chris Vdld](https://github.com/ch-vdld-dev)  
   * VUE.JS
     * :white_check_mark: [VUE-Authors_Component]
+  * PHP - WORDPRESS
+    * :construction: [Learning Deep Wordpress](https://github.com/nicode-io/Learning_Wordpress)   
       
       
 #### The Valley
