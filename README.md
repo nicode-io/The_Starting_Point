@@ -34,9 +34,9 @@ Good reading to all!
     -   [Installation](#installation)
     -   [Get SSL Certificate](#get-ssl-certificate)
     -   [Test SSL Configuration](#test-ssl-configuration)
--   [.HTACCESS](#.htaccess)
+-   [HTACCESS](#.htaccess)
     -   [Apache Configuration](#apache-configuration)
-    -   [.HTACCESS file](#.htaccess-file)
+    -   [HTACCESS file](#.htaccess-file)
 -   [WORDPRESS](#wordpress)
     -   [Create Database](#create-database)
     -   [Additionnal PHP Extensions](#additionnal-php-extensions)
@@ -330,10 +330,10 @@ Good reading to all!
 
 ---
 
-#   .HTACCESS
+#   HTACCESS
 >   Repeat for each of your virtual host
 -   [Apache Configuration](#apache-configuration)
--   [.HTACCESS file](#.htaccess-file)
+-   [HTACCESS file](#.htaccess-file)
     
     *   ### Set up Apache
         *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
@@ -404,6 +404,8 @@ Good reading to all!
         *   ```$ sudo chown -R www-data:www-data /var/www/domainname/public_html``` 
         *   ```$ sudo find /var/www/domainname/public_html -type d -exec chmod 750 {} \;```
         *   ```$ sudo find /var/www/domainname/public_html -type f -exec chmod 640 {} \;```
+        *   Add your server user to www-data group, for example to allow SFTP file writing
+            *   ```sudo usermod -a -G www-data username```
 
     *   ### Configure WordPress Configuration File
         *   ```$ curl -s https://api.wordpress.org/secret-key/1.1/salt/```
