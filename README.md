@@ -347,7 +347,7 @@ Good reading to all!
     
     *   ### Create & configure .HTACCESS file
         *   ```$ cd /var/www/domainname.com/public_html```
-        *   ```$ sudo touch .htacess```
+        *   ```$ sudo touch .htaccess```
         *   ```$ sudo nano .htaccess``` and add
             *   ```Options -Indexes```
         *   This file can be edited for redirection, 404 page, filters, ...
