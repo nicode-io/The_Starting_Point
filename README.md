@@ -379,12 +379,16 @@ Good reading to all!
         *   ```$ sudo apt install -y php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip```
         *   ```su```
 
-    *   ### Enable HTACCESS Overrides
+    *   ### Enable HTACCESS Overrides / Change max upload size     
         *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
         *   Add followings:
             ```<Directory /var/www/domainname/public_html/>```      
             ```     AllowOverride All```    
             ```</Directory>```
+            ```php_value upload_max_filesize 64M```
+            ```php_value post_max_size 64M```
+            ```php_value max_execution_time 300```
+            ```php_value max_input_time 300```
 
     *   ### Enable Rewrite Module
         *   ```$ sudo a2enmod rewrite```
