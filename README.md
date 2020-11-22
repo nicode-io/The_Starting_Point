@@ -339,10 +339,10 @@ Good reading to all!
         *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
         *   Add following lines after the **</virtualHost>** line:   
             ```<Directory /var/www/domainname.com/public_html> ```
-            ```    Options Indexes FollowSymLinks  ```
-            ```    AllowOverride All   ```
-            ```    Require all granted ```
-            ```</Directory>   ```
+            ```    Options Indexes FollowSymLinks  ```     
+            ```    AllowOverride All   ```    
+            ```    Require all granted ```    
+            ```</Directory>   ```     
         *   ```$ sudo systemctl restart apache2```
     
     *   ### Create & configure .HTACCESS file
