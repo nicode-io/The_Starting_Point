@@ -40,7 +40,7 @@ Good reading to all!
 -   [WORDPRESS](#wordpress)
     -   [Create Database](#create-database)
     -   [Additionnal PHP Extensions](#additionnal-php-extensions)
-    -   [Enable .HTACCESS Overrides](#enabling-.htaccess-overrides)
+    -   [Enable HTACCESS Overrides](#enabling-.htaccess-overrides)
     -   [Enable Rewrite Module](#enable-rewrite-module)
     -   [Get Wordpress](#get-wordpress)
     -   [Configure Wordpress Directory](#configure-wordpress-directory)
@@ -333,7 +333,7 @@ Good reading to all!
 #   HTACCESS
 >   Repeat for each of your virtual host
 -   [Apache Configuration](#apache-configuration)
--   [HTACCESS file](#.htaccess-file)
+-   [HTACCESS file](#htaccess-file)
     
     *   ### Set up Apache
         *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
@@ -358,7 +358,7 @@ Good reading to all!
 >   The most used CMS currently 
 -   [Create Database](#create-database)
 -   [Additionnal PHP Extensions](#additionnal-php-extensions)
--   [Enable .HTACCESS Overrides](#enabling-.htaccess-overrides)
+-   [Enable HTACCESS Overrides](#enabling-.htaccess-overrides)
 -   [Enable Rewrite Module](#enable-rewrite-module)
 -   [Get Wordpress](#get-wordpress)
 -   [Configure Wordpress Directory](#configure-wordpress-directory)
@@ -379,7 +379,7 @@ Good reading to all!
         *   ```$ sudo apt install -y php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip```
         *   ```su```
 
-    *   ### Enable .HTACCESS Overrides
+    *   ### Enable HTACCESS Overrides
         *   ```$ sudo nano /etc/apache2/sites-available/domainname.com.conf```
         *   Add followings:
             ```<Directory /var/www/domainname/public_html/>```      
