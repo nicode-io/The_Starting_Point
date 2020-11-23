@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormField } from '../..';
 import './loginForm.css';
 
 const LoginForm = () =>{
@@ -7,9 +8,9 @@ const LoginForm = () =>{
         
         <section className="log_form">
             <form action="#" method="POST" className="log_form">
-                <input type="text" name="login" id="login" autocomplete="off" placeholder="Entrez votre login"/>
-                <input type="password" name="password" id="password" autocomplete="off" placeholder="Entrez votre password"/>
-                <input type="submit" value="Envoyer" id="log_submit"/>
+                <FormField label="Email" type="email" required={true} />
+                <FormField label="Password" type="password" required={true} />
+                <FormField label="Login" type="submit" />
             </form>
         </section>
     )

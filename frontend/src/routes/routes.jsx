@@ -43,6 +43,7 @@ const Routes = () => {
                 <Nav />
             </Route>
             <Route path="/register">
+                <Header />
                 <RegisterPage />
                 <Nav />
             </Route>
