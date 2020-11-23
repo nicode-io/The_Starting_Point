@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../../api';
+import "./machinePicker.css";
 
 export function MachinePicker() {
     const [error, setError] = useState(null);
@@ -24,16 +25,20 @@ export function MachinePicker() {
     }, []);
 
     return (
-        <label for="machinePicker">Machine: 
-            <select name="machinePicker">
-                <option value="" selected>choisissez la machine</option>
-                {machines.map(machine => (
-                    <option value={machine._id}>
-                        {machine.name} {machine.category} {machine.tarif}
-                    </option>
-                ))}
-            </select>
-        </label>
+        <div id="machine-picker">
+            <p><label for="machinePicker">RÉSERVATION</label></p> 
+            <p>
+                <select name="machinePicker">
+                    <option value="" selected>Choisir une machine</option>
+                    {machines.map(machine => (
+                        <option value={machine._id}>
+                            {machine.name} {machine.category} {machine.tarif}
+                        </option>
+                    ))}
+                </select>
+            </p>
+        </div>
+
     );
 }
 
