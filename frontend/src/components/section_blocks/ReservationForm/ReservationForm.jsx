@@ -8,7 +8,10 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 export function ReservationForm() {
-    const [startDate, setStartDate] = useState(new Date());
+    const [date, setDate] = useState(new Date());
+    const [startHour, setStartHour] = useState(new Date());
+    const [endHour, setEndHour] = useState(new Date());
+
     return (
         <section>
             <form>
@@ -17,7 +20,25 @@ export function ReservationForm() {
                 
                 <FormField label="Nom" type="text" />
                 <FormField label="Email" type="email" />
-                <DatePicker dateFormat="dd/MM/yyyy" selected={startDate} onChange={date => setStartDate(date)} />
+                <DatePicker dateFormat="dd/MM/yyyy" selected={date} onChange={date => setDate(date)} />
+                <DatePicker
+                    selected={startHour}
+                    onChange={startHour => setStartHour(startHour)}
+                    showTimeSelect
+                    showTimeSelectOnly
+                    timeIntervals={30}
+                    timeCaption="Time"
+                    dateFormat="h:mm aa"
+                />
+                <DatePicker
+                    selected={endHour}
+                    onChange={endHour => setEndHour(endHour)}
+                    showTimeSelect
+                    showTimeSelectOnly
+                    timeIntervals={30}
+                    timeCaption="Time"
+                    dateFormat="h:mm aa"
+                />
                 <p>Avez-vous besoin d'accompagnement ?</p>
                 <div>
                     <FormField label="oui" type="radio" name="Test" />
