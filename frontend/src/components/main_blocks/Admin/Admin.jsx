@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import { Link, useLocation } from 'react-router-dom';
 import "./admin.css";
-import { MachineForm } from "../..";
+import { MachineForm, ProductForm } from "../..";
 
 export function Admin() {
     let params = useParams();
@@ -15,6 +15,8 @@ export function Admin() {
     } else if (params.view === "management") {
         tab = <section>
                 <MachineForm edit={false} />
+                ---------------------------------
+                <ProductForm edit={false} />
             </section>
     } else {
         tab = <section>
