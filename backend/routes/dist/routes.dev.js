@@ -20,13 +20,14 @@ var router = express.Router(); // ROUTE FOR USERS
 router.get('/users', usersController.getAllUser); // Route for the sessions
 
 router.get('/user', usersController.getSessionUser);
-router.post('/add-user', usersController.postUser);
-router.get('/user/:userId', usersController.getUser); // router.get('/edit-user/:userId' , usersController.getEditUser);
+router.post('/add-user', usersController.postUser); //router.get('/user/:userId' , usersController.getUser);
+
+router.post('/authe/:email', usersController.getUser); // router.get('/edit-user/:userId' , usersController.getEditUser);
 
 router.post('/edit-user', usersController.postEditUser);
 router["delete"]('/delete-user/:userId', usersController.postDeleteUser); // ROUTE FOR INVOICES
-// router.get('/invoices' , invoicesController.getAllInvoice);
-// router.post('/add-invoice' , invoicesController.postInvoice);
+
+router.get('/invoices', invoicesController.getAllInvoice); // router.post('/add-invoice' , invoicesController.postInvoice);
 // router.get('/:invoiceId' , invoicesController.getInvoice);
 // router.get('/edit-invoice/:invoiceId', invoicesController.getEditInvoice);
 // router.post('/edit-invoice' , invoicesController.postEditInvoice);

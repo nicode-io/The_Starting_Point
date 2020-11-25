@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.getUsersSessions = exports.deleteById = exports.updateById = exports.insertNew = exports.getById = exports.getAll = void 0;
+exports["default"] = exports.getUsersSessions = exports.deleteById = exports.updateById = exports.insertNew = exports.getBy = exports.getById = exports.getAll = void 0;
 
 var _axios = _interopRequireDefault(require("axios"));
 
@@ -26,6 +26,12 @@ var getById = function getById(route, id) {
 };
 
 exports.getById = getById;
+
+var getBy = function getBy(route, email, payload) {
+  return api.post("".concat(route, "/").concat(email), payload);
+};
+
+exports.getBy = getBy;
 
 var insertNew = function insertNew(route, payload) {
   return api.post(route, payload);
@@ -56,6 +62,7 @@ var apis = {
   insertNew: insertNew,
   updateById: updateById,
   deleteById: deleteById,
+  getBy: getBy,
   getUsersSessions: getUsersSessions
 };
 var _default = apis;

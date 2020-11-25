@@ -2,6 +2,10 @@
 
 var User = require('../models/User');
 
+var bcrypt = require('bcrypt');
+
+var saltRounds = 10;
+
 exports.getAllUser = function _callee(req, res) {
   var users;
   return regeneratorRuntime.async(function _callee$(_context) {
@@ -46,37 +50,53 @@ exports.getSessionUser = function (req, res) {
 };
 
 exports.getUser = function _callee2(req, res) {
-  var userId, user;
+  var email;
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
-          userId = req.params.userId;
+          email = req.params.email;
           _context2.prev = 1;
           _context2.next = 4;
-          return regeneratorRuntime.awrap(User.findById(userId, function (user) {
-            return user;
+          return regeneratorRuntime.awrap(User.findOne({
+            email: email
+          }, function (err, doc) {
+            if (err) throw err;
+            console.log(doc);
+            console.log(email);
+            console.log(req.body);
+
+            if (!doc) {
+              console.log('The user is not register');
+            } else {
+              bcrypt.compare(req.body.password, doc.password, function (err, result) {
+                if (result) {
+                  console.log('you are logged in as ' + doc.lastname);
+                  req.session.user = doc;
+                  console.log(req.session.user);
+                  res.json(doc);
+                } else if (err) {
+                  console.log('incorrect password ' + user.password);
+                }
+              });
+            }
           }));
 
         case 4:
-          user = _context2.sent;
-          req.session.user = user;
-          console.log(req.session.user);
-          res.json(user);
-          _context2.next = 13;
+          _context2.next = 9;
           break;
 
-        case 10:
-          _context2.prev = 10;
+        case 6:
+          _context2.prev = 6;
           _context2.t0 = _context2["catch"](1);
           console.log(_context2.t0); // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
 
-        case 13:
+        case 9:
         case "end":
           return _context2.stop();
       }
     }
-  }, null, null, [[1, 10]]);
+  }, null, null, [[1, 6]]);
 };
 
 exports.postUser = function (req, res) {
@@ -84,21 +104,34 @@ exports.postUser = function (req, res) {
       firstname = _req$body.firstname,
       lastname = _req$body.lastname,
       email = _req$body.email,
+      tel = _req$body.tel,
       password = _req$body.password,
-      company = _req$body.company;
+      company = _req$body.company,
+      reservation = _req$body.reservation,
+      invoice = _req$body.invoice,
+      usertype = _req$body.usertype;
+  var user = new User({
+    firstname: firstname,
+    lastname: lastname,
+    email: email,
+    tel: tel,
+    password: password,
+    company: company,
+    reservation: reservation,
+    invoice: invoice,
+    usertype: usertype
+  });
+  bcrypt.genSalt(saltRounds, function (err, salt) {
+    bcrypt.hash(user.password, salt, function (err, hash) {
+      user.password = hash;
 
-  try {
-    var user = new User({
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      password: password,
-      company: company
+      try {
+        user.save(); // définir le comportement de l'app en cas de réussite
+      } catch (error) {
+        console.log(error); // définir le comportement de l'app en cas d'erreur
+      }
     });
-    user.save(); // définir le comportement de l'app en cas de réussite
-  } catch (error) {
-    console.log(error); // définir le comportement de l'app en cas d'erreur
-  }
+  });
 }; // exports.getEditUser = (req, res) => {
 //     // A GERE UNIQUEMENT ADMIN AURA DROIT
 // }
@@ -126,7 +159,8 @@ exports.postEditUser = function (req, res) {
 };
 
 exports.postDeleteUser = function _callee3(req, res) {
-  var userId, user;
+  var userId, _user;
+
   return regeneratorRuntime.async(function _callee3$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
@@ -140,8 +174,8 @@ exports.postDeleteUser = function _callee3(req, res) {
           }));
 
         case 4:
-          user = _context3.sent;
-          console.log(user);
+          _user = _context3.sent;
+          console.log(_user);
           console.log('User Deleted'); // définir le comportement de l'app en cas de réussite
 
           _context3.next = 12;

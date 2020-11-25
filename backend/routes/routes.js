@@ -20,7 +20,9 @@ router.get('/user', usersController.getSessionUser);
 
 router.post('/add-user', usersController.postUser);
 
-router.get('/user/:userId' , usersController.getUser);
+//router.get('/user/:userId' , usersController.getUser);
+
+router.post('/authe/:email' , usersController.getUser);
 
 // router.get('/edit-user/:userId' , usersController.getEditUser);
 
