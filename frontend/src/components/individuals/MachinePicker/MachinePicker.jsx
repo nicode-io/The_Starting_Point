@@ -29,7 +29,7 @@ export function MachinePicker() {
                 <option value="" selected>choisissez la machine</option>
                 {machines.map(machine => (
                     <option value={machine._id}>
-                        {machine.name} {machine.category} {machine.tarif}
+                        {machine.name} {machine.category} {machine.tarif}€/h.
                     </option>
                 ))}
             </select>
