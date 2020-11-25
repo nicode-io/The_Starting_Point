@@ -17,8 +17,9 @@ exports.getProduct = async(req, res) => {
         console.log(error);
     }
 }
-exports.postProduct = (req, res) => {
+exports.postProduct = async(req, res) => {
     const { name , category , tarif , stock } = req.body;
+    console.log(req.body);
     try {
         const product = new Product({name : name , category : category , tarif : tarif , stock : stock});
         product.save();

@@ -60,7 +60,7 @@ router.get('/machine/:machineId' , machinesController.getMachine);
 
 // router.get('/products', productsController.getAllProduct );
 
-// router.post('/add-product' , productsController.postMachine);
+router.post('/add-product' , productsController.postProduct);
 
 // router.get('/:productId' , productsController.getProduct);
 
