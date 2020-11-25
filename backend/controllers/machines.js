@@ -32,10 +32,16 @@ exports.postMachine = async(req, res) => {
         
     
 }
-exports.getEditMachine = (req, res) => {
-// uniquement admin a droit
+exports.getEditMachine = async(req, res) => {
+    const machineId = req.body.machineId;
+    try {
+        const machine = await Machine.findById(machineId , (machine) => machine )
+        res.json(machine);
+    }catch(error) {
+        console.log(error);
+    }
 }
-exports.postEditMachine = (req, res) => {
+exports.postEditMachine = async(req, res) => {
 // pareil
     const machineId = req.body.machineId;
     const {name , category , tarif } = req.body;

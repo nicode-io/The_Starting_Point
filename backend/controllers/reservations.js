@@ -17,7 +17,7 @@ exports.getReservation = async(req, res) => {
         console.log(error);
     }
 }
-exports.postReservation = (req, res) => {
+exports.postReservation = async(req, res) => {
     const {name , usernotlogged , userlogged , startdate , enddate} = req.body;
     try{
         const reservation = new Reservation({name:name, usernotlogged:usernotlogged , userlogged:userlogged , startdate:startdate , enddate:enddate});
@@ -26,10 +26,10 @@ exports.postReservation = (req, res) => {
         console.log(error);
     }
 }
-exports.getEditReservation = (req, res) => {
+exports.getEditReservation = async(req, res) => {
     // A GERE UNIQUEMENT ADMIN AURA DROIT
 }
-exports.postEditReservation = (req, res) => {
+exports.postEditReservation = async(req, res) => {
     const reservationId = req.body.reservationId;
     const {name,usernotlogged,userlogged,startdate,enddate} = req.body;
 

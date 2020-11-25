@@ -27,10 +27,10 @@ exports.postProduct = async(req, res) => {
         console.log(error);
     }
 }
-exports.getEditProduct = (req, res) => {
+exports.getEditProduct = async(req, res) => {
     // a GERE UNIQUEMENT ADMIN AURA DROIT
 }
-exports.postEditProduct = (req, res) => {   
+exports.postEditProduct = async(req, res) => {   
     const productId = req.body.productId;
     const {name, category, tarif, stock} = req.body;
 

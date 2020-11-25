@@ -1,11 +1,11 @@
 const Invoice = require('../models/Invoice');
-const InvoiceModel = require('../models/Invoice');
+
 
 exports.getAllInvoice = async(req, res) => {
     
     try{
         console.log('on rentre dans le blog try');
-        let allInvoice = await InvoiceModel.find().populate('User');
+        let allInvoice = await Invoice.find().populate('User');
         res.json(allInvoice);
     }catch(error){
         console.log(error);
