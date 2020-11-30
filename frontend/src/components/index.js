@@ -1,7 +1,7 @@
 // Export Individuals Components
 export { Calendar } from "./individuals/Calendar/Calendar";
 export { MachinePicker } from "./individuals/MachinePicker/MachinePicker";
-export { UsersList } from "./individuals/users-list/users-list";
+export { UsersList } from "./individuals/UsersList/UsersList";
 export { ConfirmThanks } from "./individuals/ConfirmThanks/ConfirmThanks";
 export { FormField } from "./individuals/FormField/FormField";
 

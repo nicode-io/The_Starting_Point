@@ -1,10 +1,13 @@
 import React from 'react';
 import { LoginForm } from '../..';
+import './loginPage.css';
 
 const LoginPage = () => {
     return (
-        <main className="log_main">
-            <h1 className="log_title">Login page</h1>
+        <main>
+            <section className={"login-header"}>
+                <h1>Connexion</h1>
+            </section>
             <LoginForm />
         </main>
     )

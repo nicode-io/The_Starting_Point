@@ -1,45 +1,89 @@
-
-#date-picker, #name-email {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.3rem;
-}
-#date-picker > *, #name-email > * {
-    margin-top: 0.4rem;
-}
-#date-picker-hour {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#picker-hour {
-    width: 10vw;
-}
-#main {
-    height: 80vh;
-    display: block;
-}
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
 }
-#form-submit {
-    padding: 0 1rem;
-    width: 50vw;
+/* Steps title */
+form > #steps {
+    width: 70vw;
+    border-radius: 10px;
+    background: #004d95;
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
+    color: #fff;
+    text-align: center;
 }
-#nom, #email, #datepicker-element {
-    border-radius: 0.3rem;
+/* Name & Email field */
+#name-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-
-@media only screen and (min-width: 1024px) {
-    #form-submit {
-        padding: 0 1rem;
-        width: 15vw;
-    }
-  }
+#name-email > p {
+    height: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#name-email > p > input {
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    border-bottom: #004d95 0.1rem solid;
+    width: 60vw;
+}
+/* Date and hour choice */
+#date-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Additionnal infos */
+#need-help {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#need-help > p {
+    height: 1vh;
+}
+#need-help-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#choice-yes {
+    padding-right: 1rem;
+}
+/* Submit */
+.reservation-submit {
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+    width: 60vw;
+    height: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reservation-submit > p > input[type=submit]{
+    height: 5vh;
+    width: 40vw;
+    border-radius: 10px;
+    background: rgb(209, 62, 136);
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
+    border: none;
+    cursor:pointer;
+    color: #fff;
+}
