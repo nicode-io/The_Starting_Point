@@ -6,6 +6,7 @@ export { ConfirmThanks } from "./individuals/ConfirmThanks/ConfirmThanks";
 export { FormField } from "./individuals/FormField/FormField";
 
 // Export Main Blocks Components
+export { Admin } from "./main_blocks/Admin/Admin";
 export { Dashboard } from "./main_blocks/Dashboard/Dashboard";
 export { EventDetail } from "./main_blocks/EventDetail/EventDetail";
 export { Events } from "./main_blocks/Events/Events";
@@ -17,7 +18,7 @@ export { Nav } from "./main_blocks/Nav/Nav";
 export { RegisterPage } from "./main_blocks/RegisterPage/RegisterPage";
 export { ReservationPage } from "./main_blocks/ReservationPage/ReservationPage";
 
-// Export Section Blocks Components
+// Export Public Section Blocks Components
 export { EventsCarousel } from "./section_blocks/EventsCarousel/EventsCarousel";
 export { EventsList } from "./section_blocks/EventsList/EventsList";
 export { FilesOverview } from "./section_blocks/FilesOverview/FilesOverview";
@@ -29,3 +30,7 @@ export { ReservationForm } from "./section_blocks/ReservationForm/ReservationFor
 export { ReservationItem } from "./section_blocks/ReservationItem/ReservationItem";
 export { ReservationsList } from "./section_blocks/ReservationsList/ReservationsList";
 export { UserType } from "./section_blocks/UserType/UserType";
+
+// Export Admin Section Blocks Components
+export { MachineForm } from "./sections_admin/MachineForm/MachineForm";
+export { ProductForm } from "./sections_admin/ProductForm/ProductForm";

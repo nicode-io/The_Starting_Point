@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
+    Admin,
     ReservationPage,
     RegisterPage,
     Dashboard,
@@ -42,7 +43,13 @@ const Routes = () => {
                 <Nav />
             </Route>
             <Route path="/register">
+                <Header />
                 <RegisterPage />
+                <Nav />
+            </Route>
+            <Route path="/admin/:view">
+                <Header />
+                <Admin />
                 <Nav />
             </Route>
             <Route path="/">

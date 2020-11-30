@@ -15,9 +15,14 @@ const router = express.Router();
 
 router.get('/users', usersController.getAllUser);
 
+// Route for the sessions
+router.get('/user', usersController.getSessionUser);
+
 router.post('/add-user', usersController.postUser);
 
-router.get('/user/:userId' , usersController.getUser);
+//router.get('/user/:userId' , usersController.getUser);
+
+router.post('/authe/:email' , usersController.getUser);
 
 // router.get('/edit-user/:userId' , usersController.getEditUser);
 
@@ -27,7 +32,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 // ROUTE FOR INVOICES
 
-// router.get('/invoices' , invoicesController.getAllInvoice);
+router.get('/invoices' , invoicesController.getAllInvoice);
 
 // router.post('/add-invoice' , invoicesController.postInvoice);
 
@@ -57,7 +62,7 @@ router.get('/machine/:machineId' , machinesController.getMachine);
 
 // router.get('/products', productsController.getAllProduct );
 
-// router.post('/add-product' , productsController.postMachine);
+router.post('/add-product' , productsController.postProduct);
 
 // router.get('/:productId' , productsController.getProduct);
 

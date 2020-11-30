@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import { FormField } from '../..';
 import './loginForm.css';
+import api from '../../../api';
 
 const LoginForm = () =>{
-     
+    const [userEmail, setUserEmail] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+    const handleSubmit = ()=>{
+        api.getBy('/authe', userEmail,{
+            email: userEmail, 
+            password: userPassword
+        }).then((response) => {
+            console.log(response);
+        }, (error) => {
+            console.error(error);
+            
+        });
+    }
+
     return (
         
         <section className="log_form">
-            <form action="#" method="POST" className="log_form">
-                <input type="text" name="login" id="login" autocomplete="off" placeholder="Entrez votre login"/>
-                <input type="password" name="password" id="password" autocomplete="off" placeholder="Entrez votre password"/>
-                <input type="submit" value="Envoyer" id="log_submit"/>
+            <form onSubmit={handleSubmit} className="log_form">
+                <FormField label="Email" type="email" required={true} callback={fieldValue => setUserEmail(fieldValue)}/>
+                <FormField label="Password" type="password" required={true} callback={fieldValue => setUserPassword(fieldValue)}/>
+                <FormField label="Login" type="submit" />
             </form>
         </section>
     )

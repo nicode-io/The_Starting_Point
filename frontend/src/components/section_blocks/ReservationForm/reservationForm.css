@@ -1,0 +1,45 @@
+
+#date-picker, #name-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+}
+#date-picker > *, #name-email > * {
+    margin-top: 0.4rem;
+}
+#date-picker-hour {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#picker-hour {
+    width: 10vw;
+}
+#main {
+    height: 80vh;
+    display: block;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#form-submit {
+    padding: 0 1rem;
+    width: 50vw;
+}
+#nom, #email, #datepicker-element {
+    border-radius: 0.3rem;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    #form-submit {
+        padding: 0 1rem;
+        width: 15vw;
+    }
+  }
