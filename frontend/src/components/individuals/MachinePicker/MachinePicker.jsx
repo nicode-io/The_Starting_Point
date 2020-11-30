@@ -25,20 +25,16 @@ export function MachinePicker() {
     }, []);
 
     return (
-        <div id="machine-picker">
-            <p><label for="machinePicker">RÉSERVATION</label></p> 
-            <p>
-                <select name="machinePicker">
-                    <option value="" selected>Choisir une machine</option>
-                    {machines.map(machine => (
-                        <option value={machine._id}>
-                            {machine.name} {machine.category} {machine.tarif}
-                        </option>
-                    ))}
-                </select>
-            </p>
-        </div>
-
+        <label for="machinePicker">Machine: 
+            <select name="machinePicker">
+                <option value="" selected>choisissez la machine</option>
+                {machines.map(machine => (
+                    <option value={machine._id}>
+                        {machine.name} {machine.category} {machine.tarif}€/h.
+                    </option>
+                ))}
+            </select>
+        </label>
     );
 }
 

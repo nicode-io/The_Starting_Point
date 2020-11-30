@@ -1,3 +1,4 @@
+const { response } = require('express');
 const Machine = require('../models/Machine');
 
 exports.getAllMachines = async (req, res) => {
@@ -20,19 +21,27 @@ exports.getMachine = async(req, res) => {
         console.log(error);
     }
 }
-exports.postMachine = (req, res) => {
-    const {name , category , tarif } = req.body;
+exports.postMachine = async(req, res) => {
+    const {name , tarif, available , comment } = req.body;
     try{
-        const machine = new Machine({name : name , category : category , tarif : tarif });
+        const machine = new Machine({name : name , available : available , tarif : tarif , comment: comment});
         machine.save();
     }catch(error){
         console.log(error);
     }
+        
+    
 }
-exports.getEditMachine = (req, res) => {
-// uniquement admin a droit
+exports.getEditMachine = async(req, res) => {
+    const machineId = req.body.machineId;
+    try {
+        const machine = await Machine.findById(machineId , (machine) => machine )
+        res.json(machine);
+    }catch(error) {
+        console.log(error);
+    }
 }
-exports.postEditMachine = (req, res) => {
+exports.postEditMachine = async(req, res) => {
 // pareil
     const machineId = req.body.machineId;
     const {name , category , tarif } = req.body;

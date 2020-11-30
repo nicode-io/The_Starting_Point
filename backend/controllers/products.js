@@ -17,8 +17,9 @@ exports.getProduct = async(req, res) => {
         console.log(error);
     }
 }
-exports.postProduct = (req, res) => {
+exports.postProduct = async(req, res) => {
     const { name , category , tarif , stock } = req.body;
+    console.log(req.body);
     try {
         const product = new Product({name : name , category : category , tarif : tarif , stock : stock});
         product.save();
@@ -26,10 +27,10 @@ exports.postProduct = (req, res) => {
         console.log(error);
     }
 }
-exports.getEditProduct = (req, res) => {
+exports.getEditProduct = async(req, res) => {
     // a GERE UNIQUEMENT ADMIN AURA DROIT
 }
-exports.postEditProduct = (req, res) => {   
+exports.postEditProduct = async(req, res) => {   
     const productId = req.body.productId;
     const {name, category, tarif, stock} = req.body;
 
