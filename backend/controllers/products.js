@@ -1,3 +1,4 @@
+const { response } = require('express');
 const Product = require('../models/Product');
 
 exports.getAllProduct = async(req, res) => {

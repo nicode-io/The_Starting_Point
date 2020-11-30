@@ -34,3 +34,5 @@ export { UserType } from "./section_blocks/UserType/UserType";
 // Export Admin Section Blocks Components
 export { MachineForm } from "./sections_admin/MachineForm/MachineForm";
 export { ProductForm } from "./sections_admin/ProductForm/ProductForm";
+export { Management } from "./sections_admin/Management/Management";
+export { Edit } from "./sections_admin/Edit/Edit";
