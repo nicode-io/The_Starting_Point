@@ -1,12 +1,13 @@
+import './registerPage.css';
 import React from "react";
-import { RegisterForm, LoginForm } from "../..";
+import { RegisterForm } from "../..";
 
 export function RegisterPage() {
     return (
         <main>
-            <h2>Login</h2>
-            <LoginForm />
-            <h2>Register</h2>
+            <section className={"register-header"}>
+                <h1>Inscription</h1>
+            </section>
             <RegisterForm />
         </main>
     )

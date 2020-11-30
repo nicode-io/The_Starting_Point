@@ -15,22 +15,24 @@ export function ReservationForm() {
     const [endHour, setEndHour] = useState(new Date());
 
     return (
-        <section id="main">
-            <article id="form">
+        <main id="main">
+            <section id="form">
                 <form>
                     <MachinePicker />
-                    <div id="name-email">
-                        <FormField id="nom" type="text" placeholder="Nom"/>
-                        <FormField  id="email" type="email" placeholder="Email" />
-                    </div>
-                    <div id="date-picker">
-                        <DatePicker 
+                    <p id={"steps"}>2 - VOS COORDONNEES </p>
+                    <article id="name-email">
+                        <p><input type="text" placeholder="Nom"/></p>
+                        <p><input type="email" placeholder="Email"/></p>
+                    </article>
+                    <p id={"steps"}>3 - DATE, HEURE ET INFOS </p>
+                    <article id="date-picker">
+                        <p>Le&nbsp;<DatePicker
                             dateFormat="dd/MM/yyyy" 
                             selected={date} 
                             onChange={date => setDate(date)} 
                             id="datepicker-element"
-                        />
-                        <DatePicker
+                        /></p>
+                        <p>De&nbsp;<DatePicker
                             selected={startHour}
                             onChange={startHour => setStartHour(startHour)}
                             showTimeSelect
@@ -39,8 +41,8 @@ export function ReservationForm() {
                             timeCaption="Time"
                             dateFormat="h:mm aa"
                             id="datepicker-element"
-                        />
-                        <DatePicker
+                        /></p>
+                        <p>A&nbsp;&nbsp;<DatePicker
                             selected={endHour}
                             onChange={endHour => setEndHour(endHour)}
                             showTimeSelect
@@ -49,19 +51,22 @@ export function ReservationForm() {
                             timeCaption="Time"
                             dateFormat="h:mm aa"
                             id="datepicker-element"
-                        />
-                    </div>
-                    <p>Avez-vous besoin d'accompagnement ?</p>
-
-                    <FormField label="oui" type="radio" name="Test" />
-                    <FormField label="non" type="radio" name="Test" />
-
-                    <p id="message">
-                        <FormField label="Message" type="textarea" placeholder="message"/>
-                    </p>
-                    <FormField label="Réserver" type="submit" id="form-submit" class="btn btn-primary"/>
+                        /></p>
+                    </article>
+                    <article id={"need-help"}>
+                        {/*<p>Besoin de conseils ?</p>*/}
+                        {/*<article id={"need-help-choice"}>*/}
+                        {/*    <p id={"choice-yes"}><FormField label="OUI&nbsp;&nbsp;" type="radio" name="Test" /></p>*/}
+                        {/*    <p><FormField label="NON&nbsp;&nbsp;" type="radio" name="Test" /></p>*/}
+                        {/*</article>*/}
+                        <p>Informations complémentaires</p>
+                        <p><FormField type="textarea" placeholder="Describe yourself here..."/></p>
+                    </article>
+                    <article className={"reservation-submit"}>
+                        <p><input label="Réserver" type="submit" id="form-submit" value={"Je réserve"}/></p>
+                    </article>
                 </form>
-            </article>
-        </section>
+            </section>
+        </main>
     )
 }

@@ -13,13 +13,9 @@
   margin: 0;
   color: white;
 }
-
-.hea-main img{
-    width: 10vh;
-    padding-left: 2.5vh;
+img {
+  width: 120px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 /* Position and sizing of burger button */
 .bm-burger-button {
