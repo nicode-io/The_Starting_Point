@@ -10,7 +10,8 @@ import {
     FileDetail,
     LoginPage,
     Header,
-    Nav
+    Nav,
+    Edit
 } from '../components/index';
 
 const Routes = () => {
@@ -57,6 +58,7 @@ const Routes = () => {
                 <Dashboard />
                 <Nav />
             </Route>
+            <Route path="/edit/:id" children={<Edit />} />
         </Switch>
     )
 }

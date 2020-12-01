@@ -35,4 +35,4 @@ export { UserType } from "./section_blocks/UserType/UserType";
 export { MachineForm } from "./sections_admin/MachineForm/MachineForm";
 export { ProductForm } from "./sections_admin/ProductForm/ProductForm";
 export { Management } from "./sections_admin/Management/Management";
-export { Edit } from "./sections_admin/Edit/Edit";
+export { Edit } from './sections_admin/Edit/Edit';

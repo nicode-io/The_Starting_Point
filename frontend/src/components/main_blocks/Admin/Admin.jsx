@@ -5,7 +5,7 @@ import "./admin.css";
 import { MachineForm, ProductForm , Management , Edit } from "../..";
 
 
-export function Admin() {
+export function Admin(props) {
     let params = useParams();
     let tab;
     console.log(params.view);
@@ -17,11 +17,10 @@ export function Admin() {
         tab = <section>
                 <Management />
             </section>
-    } else if (params.view === "edit/{id}"){
+    } else if (params.view === "edit"){
         tab =   <section>     
                     <Edit />
                 </section>
-                console.log(params);
     } else {
         tab = <section>
                 Agenda
@@ -39,3 +38,4 @@ export function Admin() {
         </main>
     )
 }
+

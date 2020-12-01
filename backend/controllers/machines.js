@@ -34,6 +34,7 @@ exports.postMachine = async(req, res) => {
 }
 exports.getEditMachine = async(req, res) => {
     const machineId = req.body.machineId;
+    console.log('on rentre dans ma methode dans le controller ');
     try {
         const machine = await Machine.findById(machineId , (machine) => machine )
         res.json(machine);
