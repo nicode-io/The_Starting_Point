@@ -7,31 +7,36 @@ import {  useLocation } from 'react-router-dom';
 
 export function Edit(props){
     const [isLoaded, setIsLoaded] = useState(false);
-    const [error, setError] = useState(null);
-    const [machine, setMachine] = useState([]);
+    // const [error, setError] = useState(null);
+    const [machine, setMachine] = useState('');
     let params = useLocation().pathname;
-
+    let splitParams = params.split('/');
+    let id = splitParams[3];
+    
     async function getMachineForEdit(){
-        
-        await api.getById('/machine/:machineId', )
-        .then((data) =>{
-            console.log("ON RENTRE DANS LE GETMACHINEFOR EDIT");
-            setIsLoaded = true;
-            setMachine(data.data);            
-        },
-        (error) => {
-            
-            setError(error);
+        try {
+            await api.getById('/machine', id)
+            .then((data) => {
+                console.log("ON RENTRE DANS LE GETMACHINEFOR EDIT");
+                console.log(data.data);
+                setMachine(data.data);         
+                setIsLoaded(true);           
+            });
+        } catch (error) {
             console.log(error);
-        })
         }
-        // getMachineForEdit(id); 
-         console.log(params);
-           
+    }
+
+    useEffect(() => {
+        (!isLoaded) && getMachineForEdit();
+    })
+    
     return (
         <section>
             <h1>EDIT SECTION</h1>
-           
+            {Object.keys(machine).map((key) => {
+                return <p>{key} : {machine[key]} </p>
+            })}
         </section>
     )
 }
