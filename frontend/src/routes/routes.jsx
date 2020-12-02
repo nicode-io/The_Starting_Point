@@ -58,7 +58,6 @@ const Routes = () => {
                 <Dashboard />
                 <Nav />
             </Route>
-            <Route path="/edit/:id" children={<Edit />} />
         </Switch>
     )
 }

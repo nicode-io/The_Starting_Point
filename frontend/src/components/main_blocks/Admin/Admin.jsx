@@ -17,9 +17,17 @@ export function Admin(props) {
         tab = <section>
                 <Management />
             </section>
-    } else if (params.view === "edit"){
+    }  else if (params.view === "edit"){
         tab =   <section>     
                     <Edit />
+                </section>
+    }else if (params.view === "add-machine"){
+        tab =   <section>     
+                    <MachineForm />
+                </section>
+    }else if (params.view === "add-product"){
+        tab =   <section>     
+                    <ProductForm />
                 </section>
     } else {
         tab = <section>
