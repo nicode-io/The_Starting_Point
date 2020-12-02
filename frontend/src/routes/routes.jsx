@@ -10,8 +10,7 @@ import {
     FileDetail,
     LoginPage,
     Header,
-    Nav,
-    Edit
+    Nav
 } from '../components/index';
 
 const Routes = () => {

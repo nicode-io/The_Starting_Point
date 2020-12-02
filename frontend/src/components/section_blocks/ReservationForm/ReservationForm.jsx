@@ -56,9 +56,9 @@ export function ReservationForm() {
                     <FormField label="oui" type="radio" name="Test" />
                     <FormField label="non" type="radio" name="Test" />
 
-                    <p id="message">
+                    <div id="message">
                         <FormField label="Message" type="textarea" placeholder="message"/>
-                    </p>
+                    </div>
                     <FormField label="Réserver" type="submit" id="form-submit" class="btn btn-primary"/>
                 </form>
             </article>

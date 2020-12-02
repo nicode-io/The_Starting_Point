@@ -1,4 +1,4 @@
-import React , {useState , useEffect}from 'react';
+import React ,{ useState }from 'react';
 import { FormField } from '../..';
 
 import api from '../../../api';
@@ -31,7 +31,6 @@ export function MachineForm(props) {
         <section>
             <form onSubmit={handleSubmit} className="log-form">
                 {(typeof props.edit !== 'undefined' && props.edit) ? "Modifier" : "Ajouter"}
-                
                 <FormField label="Name" type="text" callback={fieldValue => setName(fieldValue)}/>
                 <FormField label="Tarif" type="number" callback={fieldValue => setTarif(fieldValue)}/>
                 <FormField label="Oui" type="radio" name="Disponibilite" callback={fieldValue => handleAvailability(fieldValue)}/>

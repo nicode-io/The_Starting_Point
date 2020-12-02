@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { FormField } from '../..';
 import './loginForm.css';
 import api from '../../../api';

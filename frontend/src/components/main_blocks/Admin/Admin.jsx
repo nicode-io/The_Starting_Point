@@ -37,9 +37,9 @@ export function Admin(props) {
     return (
         <main>
             <div className="d-flex justify-content-center">
-                <Link to="/admin/agenda" className={`admin-nav-link${useLocation().pathname === "/admin/agenda" ? " is-current" : ""}`} className="ml-2">Agenda</Link>
-                <Link to="/admin/pendingusers" className={`admin-nav-link${useLocation().pathname === "/admin/pendingusers" ? " is-current" : ""}`} className="ml-2">Utilisateurs en attente</Link>
-                <Link to="/admin/management" className={`admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`} className="ml-2">Gestion</Link>
+                <Link to="/admin/agenda" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/agenda" ? " is-current" : ""}`}>Agenda</Link>
+                <Link to="/admin/pendingusers" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/pendingusers" ? " is-current" : ""}`}>Utilisateurs en attente</Link>
+                <Link to="/admin/management" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`}>Gestion</Link>
             </div>
             {tab}
 
