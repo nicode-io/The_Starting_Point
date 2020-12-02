@@ -2,7 +2,7 @@ import React from "react";
 import "./formField.css";
 
 export function FormField(props,{data}) {
-    // props.label props.type props.name
+    // props.label props.type props.name props.value
     let field;
     let required = (props.required !== undefined) ? props.required : false;
 
@@ -23,7 +23,7 @@ export function FormField(props,{data}) {
     } else  {
         field = <div style={props.style}>
                     <label for={props.label}>{props.label}</label>
-                    <input name={props.label} type={props.type} required={required} onChange={e => props.callback(e.target.value)}/>
+                    <input value={props.value} name={props.label} type={props.type} required={required} onChange={e => props.callback(e.target.value)}/>
                 </div>
     }
 
