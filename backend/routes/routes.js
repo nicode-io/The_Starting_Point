@@ -50,7 +50,7 @@ router.get('/machines', machinesController.getAllMachines );
 
  router.post('/add-machine' , machinesController.postMachine);
 
-router.get('/machine/:machineId' , machinesController.getEditMachine);
+router.get('/machine/:machineId' , machinesController.getMachine);
 
 // router.get('/edit-machine/:machineId', machinesController.getEditMachine);
 

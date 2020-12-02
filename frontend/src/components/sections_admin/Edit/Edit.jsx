@@ -34,7 +34,7 @@ export function Edit(props){
     return (
         <section>
             <h1>EDIT SECTION</h1>
-            {Object.keys(machine).map((key) => {
+            {(machine !== null) && Object.keys(machine).map((key) => {
                 return <p>{key} : {machine[key]} </p>
             })}
         </section>
