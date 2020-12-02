@@ -34,13 +34,15 @@ exports.postMachine = async(req, res) => {
 }
 exports.postEditMachine = async(req, res) => {
 // pareil
-    const machineId = req.body.machineId;
-    const {name , category , tarif } = req.body;
+    const machineId = req.params.machineId;
+    const {name , tarif, invoice, available, comment } = req.body;
 
     Machine.findById(machineId).then((machine) => {
         machine.name = name ;
-        machine.category = category;
         machine.tarif = tarif;
+        machine.invoice = invoice;
+        machine.available = available;
+        machine.comment = comment;
 
         return machine.save();
     }).then(() => {

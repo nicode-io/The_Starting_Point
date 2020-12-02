@@ -52,7 +52,7 @@ router.get('/machines', machinesController.getAllMachines );
 
 router.get('/machine/:machineId' , machinesController.getMachine);
 
-router.post('/machine' , machinesController.postEditMachine);
+router.put('/machine/:machineId' , machinesController.postEditMachine);
 
 // router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
 
@@ -66,7 +66,7 @@ router.post('/add-product' , productsController.postProduct);
 
 router.get('/product/:productId', productsController.getProduct);
 
-router.post('/product' , productsController.postEditProduct);
+router.put('/product/:productId' , productsController.postEditProduct);
 
 // router.delete('/delete-product/:productId', productsController.deleteProduct);
 

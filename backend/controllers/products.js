@@ -32,14 +32,15 @@ exports.getEditProduct = async(req, res) => {
     // a GERE UNIQUEMENT ADMIN AURA DROIT
 }
 exports.postEditProduct = async(req, res) => {   
-    const productId = req.body.productId;
-    const {name, category, tarif, stock} = req.body;
+    const productId = req.params.productId;
+    const {name, category, tarif, stock, invoice} = req.body;
 
     Product.findById(productId).then((product) => {
         product.name = name;
         product.category = category;
         product.tarif = tarif;
         product.stock = stock;
+        product.invoice = invoice;
 
         return product.save();
     })
