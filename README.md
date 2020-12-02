@@ -54,11 +54,21 @@ Good reading to all!
 
 
 # SERVER INITIALISATION
+-   [BASICS](#basics)
 -   [SSH](#ssh)
 -   [USERS MANAGEMENT](#users-management)
 -   [BASIC SECURITY](#basic-security)
 
-    ##    SSH
+    ##  BASICS
+    
+    *   ### Choose and modify hostname
+        *   ```hostnametl set-hostname yourservername```
+        *   Check with ```hostname``` 
+    *   ### Add host 
+        *   ```sudo nano /etc/hosts```
+        *   Add a line with your server IP and its name
+
+    ##  SSH
     >   Link your computer with an SSH key to secure remote communication
 
     *   ###   Create SSH key
@@ -80,24 +90,15 @@ Good reading to all!
         *   ```$ ssh-copy-id username@your_server_IP```  
         *   ```$ ssh 'user@host```You'll be asked by local system for key password  
         *   It's ok, from now you can connect without having to type a password on this computer   
-
-    ##    USERS MANAGEMENT
-    >   Set up users, you should not use root as daily user
-
-    *   Switch to root user 
-        *   ```$ sudo -i```
-    *   Change root user's password
-        *   ```$ passwd```
-    *   Create user with sudo rights  
-        *   ```$ sudo adduser username```   
-        *   Enter user information and validate   
-        *   Add user to sudo group    
-            *   ```$ sudo usermod -aG sudo username```      
-        *   Check if the user is in sudo group    
-            *   ```$ id username```    
-    *   Ask for **root** permissions while using your user
-        *   ```$ su -```
-        *   Enter **root** password
+    
+    *   ### Another way to register SSH KEY
+        *   On your server: 
+            *   ```mkdir -p ~/.ssh```
+        *   On your computer:
+            *   ```scp ~/.ssh/id_rsa.pub username@serverip:~/.ssh/authorized_keys```
+        *   On your server:
+            *   ```sudo chmod 700 ~/.ssh/```
+            *   ```sudo chmod 600 ~/.ssh/*```
 
     ##    BASIC SECURITY
     >   Avoid major beginner's security breach
