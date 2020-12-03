@@ -10,6 +10,7 @@ export function Management() {
     const [error, setError] = useState(null);
     const [machines, setMachines] = useState([]);
     const [products, setProducts] = useState([]);
+    const [message, setMessage] = useState('');
 
 
     useEffect( () => {
@@ -35,17 +36,40 @@ export function Management() {
         
         fetchData();
         fetchProduct();
-        
-
-    
     }, []);
-
+        function deleteItemById(type ,id){
+            try{
+                let txt;
+                if (window.confirm(`Voulez vous supprimer un(e) ${type}`)) {
+                    txt = true;
+                } else {
+                    txt = false;
+                }
+                if(txt){
+                    api.deleteById(`/delete-${type}`, id)
+                    
+                        setMessage(`${type} a été supprimer`)
+                    
+                    
+                    console.log('Item Deleted !!');
+                }else{
+                    console.log('delete not CONFIRM !!!');
+                }
+            }catch(error){
+                console.log(error);
+            }
+            
+            
+            
+            
+        }
         
 
     return (
        
         <Fragment>
          <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
+           {message} 
             <div className="d-flex justify-content-around align-items-center w-50">
                 <h2>Machines</h2>
                 <Link to={`/admin/add-machine`}>
@@ -73,9 +97,9 @@ export function Management() {
                         </Link>
                     </td>
                     <td>
-                        
+                        <span onClick={() => deleteItemById('machine', machine._id)} >
                             <FontAwesomeIcon icon={faMinusSquare} size="2x" />
-                       
+                        </span>
                     </td>
                     </tr>
                     ))}
@@ -109,9 +133,9 @@ export function Management() {
                         </Link>
                     </td>
                     <td>
-
+                        <span onClick={() => deleteItemById('product', product._id)} >
                             <FontAwesomeIcon icon={faMinusSquare} size="2x" />
-
+                        </span>
                     </td>
                     </tr>
                     ))}

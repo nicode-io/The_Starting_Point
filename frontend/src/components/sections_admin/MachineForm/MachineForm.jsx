@@ -12,7 +12,6 @@ export function MachineForm(props) {
         (availability === "Oui") ? setDisponibilite(true) : setDisponibilite(false);
     }
     const handleSubmit = () => {
-        // props.edit = 'Ajouter';
         api.insertNew('/add-machine',{
             name : name,
             tarif : tarif,

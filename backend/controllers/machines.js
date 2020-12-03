@@ -52,8 +52,7 @@ exports.postEditMachine = async(req, res) => {
     });
 }
 exports.deleteMachine = async(req, res) => {
-    const machineId = req.body.machineId;
-
+    const machineId = req.params.machineId;
     try {
         const machine = await Machine.findByIdAndDelete(machineId , (machine) => machine);
         res.send(200);
