@@ -1,4 +1,4 @@
-import React , {useState , useEffect}from 'react';
+import React ,{ useState }from 'react';
 import { FormField } from '../..';
 import api from '../../../api';
 
@@ -23,7 +23,6 @@ export function ProductForm(props) {
     }
     return (
         <section>
-            
             <form onSubmit={handleSubmit} className="log-form">
                 {(typeof props.edit !== 'undefined' && props.edit) ? "Modifier" : "Ajouter"}
                 

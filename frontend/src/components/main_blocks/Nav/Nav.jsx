@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './nav.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faFile, faInfoCircle, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faFile, faInfoCircle, faShoppingBasket} from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
     return (

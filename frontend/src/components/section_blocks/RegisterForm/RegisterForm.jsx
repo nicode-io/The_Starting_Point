@@ -10,7 +10,6 @@ export function RegisterForm() {
     const [tel, setTel] = useState('');
     const [company, setCompany] = useState('');
     const [password, setPassword] = useState('');
-    const [usertype, setUsertype] = useState('user');
     const handleSubmit = ()=>{
         api.insertNew('/add-user',{
             firstname: firstname, 
@@ -19,7 +18,6 @@ export function RegisterForm() {
             tel: tel,
             password: password,
             company: company,
-            usertype: usertype
         }).then((response) => {
             console.log(response);
         }, (error) => {

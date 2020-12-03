@@ -3,34 +3,33 @@ import api from '../../../api';
 import "./machinePicker.css";
 
 export function MachinePicker() {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
+    // const [error, setError] = useState(null);
+    // const [isLoaded, setIsLoaded] = useState(false);
     const [machines, setMachines] = useState([]);
 
     useEffect( () => {
         async function fetchData() {
-        setIsLoaded(true);
+        // setIsLoaded(true);
         await api.getAll('/machines')
         .then((data) => {
-            setIsLoaded(true);
+            // setIsLoaded(true);
             setMachines(data.data);
         },
         (error) => {
-            setIsLoaded(true);
-            setError(error);
+            // setIsLoaded(true);
+            // setError(error);
         }
         )}
         fetchData();
-    
     }, []);
 
     return (
-        <section class={"machine-picker"}>
-            <label for="machinePicker">1 - CHOIX MACHINE </label>
+        <section className={"machine-picker"}>
+            <label htmlFor="machinePicker">1 - CHOIX MACHINE </label>
             <select name="machinePicker">
                 <option value="" selected>Choisir une machine</option>
                 {machines.map(machine => (
-                    <option value={machine._id}>
+                    <option key={"option-" + machine._id} value={machine._id}>
                         {machine.name} {machine.category} {machine.tarif}€/h.
                     </option>
                 ))}

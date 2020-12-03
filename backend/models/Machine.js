@@ -26,6 +26,7 @@ const MachineSchema = new Schema({
     },
     comment: {
         type: String,
+        default : " "
     }
 });
 

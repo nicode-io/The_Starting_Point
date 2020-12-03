@@ -19,18 +19,7 @@ export { RegisterPage } from "./main_blocks/RegisterPage/RegisterPage";
 export { ReservationPage } from "./main_blocks/ReservationPage/ReservationPage";
 
 // Export Public Section Blocks Components
-export { EventsCarousel } from "./section_blocks/EventsCarousel/EventsCarousel";
-export { EventsList } from "./section_blocks/EventsList/EventsList";
-export { FilesOverview } from "./section_blocks/FilesOverview/FilesOverview";
-export { InvoiceItem } from "./section_blocks/InvoiceItem/InvoiceItem";
-export { InvoicesList } from "./section_blocks/InvoicesList/InvoicesList";
-export { LoginForm } from "./section_blocks/LoginForm/LoginForm";
-export { RegisterForm } from "./section_blocks/RegisterForm/RegisterForm";
-export { ReservationForm } from "./section_blocks/ReservationForm/ReservationForm";
-export { ReservationItem } from "./section_blocks/ReservationItem/ReservationItem";
-export { ReservationsList } from "./section_blocks/ReservationsList/ReservationsList";
-export { UserType } from "./section_blocks/UserType/UserType";
+export * from "./section_blocks";
 
 // Export Admin Section Blocks Components
-export { MachineForm } from "./sections_admin/MachineForm/MachineForm";
-export { ProductForm } from "./sections_admin/ProductForm/ProductForm";
+export * from "./sections_admin";
