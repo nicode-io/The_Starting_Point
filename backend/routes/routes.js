@@ -48,13 +48,13 @@ router.get('/invoices' , invoicesController.getAllInvoice);
 
 router.get('/machines', machinesController.getAllMachines );
 
- router.post('/add-machine' , machinesController.postMachine);
+router.post('/add-machine' , machinesController.postMachine);
 
 router.get('/machine/:machineId' , machinesController.getMachine);
 
 router.put('/machine/:machineId' , machinesController.postEditMachine);
 
-// router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
+router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
 
 // ROUTE FOR PRODUCTS
 
@@ -68,7 +68,7 @@ router.get('/product/:productId', productsController.getProduct);
 
 router.put('/product/:productId' , productsController.postEditProduct);
 
-// router.delete('/delete-product/:productId', productsController.deleteProduct);
+router.delete('/delete-product/:productId', productsController.deleteProduct);
 
 // ROUTE FOR RESERVATIONS 
 
