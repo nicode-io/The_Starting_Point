@@ -8,32 +8,25 @@ import { MachineForm, ProductForm , Management , Edit } from "../..";
 export function Admin(props) {
     let params = useParams();
     let tab;
-    console.log(params.view);
+
     if (params.view === "pendingusers") {
         tab = <section>
                 Users to validate
             </section>
     } else if (params.view === "management") {
-        tab = <section>
-                <Management />
-            </section>
-    }  else if (params.view === "edit"){
-        tab =   <section>     
-                    <Edit />
-                </section>
-    }else if (params.view === "add-machine"){
-        tab =   <section>     
-                    <MachineForm />
-                </section>
+        tab = <Management />
+    } else if (params.view === "edit"){
+        tab = <Edit />
+    } else if (params.view === "add-machine"){
+        tab = <MachineForm />
     }else if (params.view === "add-product"){
-        tab =   <section>     
-                    <ProductForm />
-                </section>
+        tab = <ProductForm />
     } else {
         tab = <section>
                 Agenda
             </section>
     }
+
     return (
         <main>
             <div className="d-flex justify-content-center">

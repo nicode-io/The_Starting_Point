@@ -23,7 +23,6 @@ export function ProductForm(props) {
     }
     return (
         <section>
-            
             <form onSubmit={handleSubmit} className="log-form">
                 {(typeof props.edit !== 'undefined' && props.edit) ? "Modifier" : "Ajouter"}
                 
