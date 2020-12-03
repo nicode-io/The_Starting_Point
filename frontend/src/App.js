@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import './App.css';
-import { getUsersSessions } from './api/index';
 import { BrowserRouter as Router } from "react-router-dom";
+
+import { getUsersSessions } from './api/index';
 import Routes from './routes/routes';
+import { Header, Nav } from './components/commons';
+import './App.css';
 
 
 function App() {
@@ -15,7 +17,9 @@ useEffect(()=>{
 
   return (
     <Router>
-        <Routes/>
+        <Header />
+        <Routes />
+        <Nav />
     </Router>
   );
 }
