@@ -11,9 +11,15 @@ export function FormField(props,{data}) {
                     <label htmlFor={props.label}>{props.label}</label>
                     <textarea name={props.label} onChange={e => props.callback(e.target.value)}/>
                 </div>
-    } else if (props.type === "submit" || props.type === "button") {
+    } else if (props.type === "submit") {
         field = <div style={props.style}>
                     <input name={props.label} type={props.type} value={props.label} onChange={e => props.callback(e.target.value)}/>
+                </div>
+    } else if (props.type === "button") {
+        field = <div style={props.style}>
+                    <button onClick={props.callback} className="ff-button">
+                        {props.children}
+                    </button>
                 </div>
     } else if (props.type === "radio") {
         field = <div style={props.style}>

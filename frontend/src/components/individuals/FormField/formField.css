@@ -46,4 +46,13 @@
     align-items: center;
 }
 
+.ff-button {
+    border: none;
+    background-color: transparent;
+    color: #ff4444;
+}
+
+.ff-button:hover {
+    color: #CC0000;
+}
 

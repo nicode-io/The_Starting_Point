@@ -1,7 +1,7 @@
 const express = require('express');
 
 // IMPORT CONTROLLERS 
-const controllers = require('../controllers/controllers');
+// const controllers = require('../controllers/controllers');
 const usersController = require('../controllers/users');
 const invoicesController = require('../controllers/invoices');
 const machinesController = require('../controllers/machines');

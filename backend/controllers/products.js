@@ -9,6 +9,7 @@ exports.getAllProduct = async(req, res) => {
         console.log(error);
     }
 }
+
 exports.getProduct = async(req, res) => {
     const productId = req.params.productId;
     try {
@@ -18,23 +19,21 @@ exports.getProduct = async(req, res) => {
         console.log(error);
     }
 }
+
 exports.postProduct = async(req, res) => {
     const { name , category , tarif , stock } = req.body;
-    console.log(req.body);
     try {
         const product = new Product({name : name , category : category , tarif : tarif , stock : stock});
         product.save();
+        res.send(200);
     }catch(error){
         console.log(error);
     }
 }
-exports.getEditProduct = async(req, res) => {
-    // a GERE UNIQUEMENT ADMIN AURA DROIT
-}
+
 exports.postEditProduct = async(req, res) => {   
     const productId = req.params.productId;
     const {name, category, tarif, stock, invoice} = req.body;
-
     Product.findById(productId).then((product) => {
         product.name = name;
         product.category = category;
@@ -45,16 +44,17 @@ exports.postEditProduct = async(req, res) => {
         return product.save();
     })
     .then(() => {
-        console.log('Product Updated');
+        res.send(200);
     }).catch((error) => {
         console.log(error);
     })
 }
+
 exports.deleteProduct = async(req, res) => {
-    const productId = req.body.productId;
+    const productId = req.params.productId;
     try {
         const product = await Product.findByIdAndDelete(productId , (product) => product);
-        console.log(product + 'This product as been deleted');
+        res.send(200);
     }catch(error){
         console.log(error);
     }

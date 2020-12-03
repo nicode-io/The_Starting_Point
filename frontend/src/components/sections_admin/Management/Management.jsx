@@ -3,6 +3,7 @@ import api from '../../../api';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusSquare, faPenSquare, faPlusSquare} from '@fortawesome/free-solid-svg-icons'
+import { FormField } from '../..';
 
 
 
@@ -12,58 +13,50 @@ export function Management() {
     const [products, setProducts] = useState([]);
     const [message, setMessage] = useState('');
 
-
-    useEffect( () => {
-        async function fetchData() {
-        await api.getAll('/machines')
+    async function fetchAllData(type) {
+        await api.getAll(`/${type}s`)
         .then((data) => {
-            setMachines(data.data);
+            if (type === "machine") {
+                setMachines(data.data);
+            } else if (type === "product") {
+                setProducts(data.data);
+            }
         },
         (error) => {
             setError(error);
         }
-        )}
-        async function fetchProduct(){
-            await api.getAll('/products')
-            .then((data) => {
-                setProducts(data.data);
-            },
-            (error) => {
-                setError(error);
-                console.log(error);
-            })
-        }
-        
-        fetchData();
-        fetchProduct();
-    }, []);
-        function deleteItemById(type ,id){
-            try{
-                let txt;
-                if (window.confirm(`Voulez vous supprimer un(e) ${type}`)) {
-                    txt = true;
-                } else {
-                    txt = false;
-                }
-                if(txt){
-                    api.deleteById(`/delete-${type}`, id)
-                    
-                        setMessage(`${type} a été supprimer`)
-                    
-                    
-                    console.log('Item Deleted !!');
-                }else{
-                    console.log('delete not CONFIRM !!!');
-                }
-            }catch(error){
-                console.log(error);
+    )}
+
+    async function deleteItemById(type, id, name){
+        try {
+            let txt;
+            if (window.confirm(`Voulez vous supprimer un(e) ${type}`)) {
+                txt = true;
+            } else {
+                txt = false;
             }
-            
-            
-            
-            
+            if(txt){
+                await api.deleteById(`/delete-${type}`, id)
+                .then((res) => {
+                    if (res.status === 200) {
+                        setMessage(`${name} supprimé(e)`);
+                        fetchAllData(`${type}`);
+                    } else {
+                        setMessage(`Probleme`);
+                    }
+                })
+            }else{
+                console.log('delete not CONFIRM !!!');
+            }
+        } catch(error) {
+            console.log(error);
         }
-        
+    }
+
+    useEffect( () => {
+        fetchAllData("machine");
+        fetchAllData("product");
+    }, []);
 
     return (
        
@@ -80,10 +73,10 @@ export function Management() {
             <table className="table w-50 text-center">
                 <thead className="thead-dark">
                     <tr>
-                    <th scope="col">name</th>
-                    <th scope="col">Tarif</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th style={{width: '50%'}} scope="col">Nom</th>
+                    <th style={{width: '20%'}} scope="col">Tarif</th>
+                    <th style={{width: '15%'}} scope="col">Modifier</th>
+                    <th style={{width: '15%'}} scope="col">Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -97,9 +90,9 @@ export function Management() {
                         </Link>
                     </td>
                     <td>
-                        <span onClick={() => deleteItemById('machine', machine._id)} >
+                        <FormField type="button" callback={() => deleteItemById('machine', machine._id, machine.name)}>
                             <FontAwesomeIcon icon={faMinusSquare} size="2x" />
-                        </span>
+                        </FormField>
                     </td>
                     </tr>
                     ))}
@@ -113,13 +106,13 @@ export function Management() {
                         <FontAwesomeIcon icon={faPlusSquare} size="2x" />
                     </Link>
             </div>
-            <table className="table w-50 align-item-center">
+            <table className="table w-50 text-center">
                 <thead className="thead-dark">
                     <tr>
-                    <th scope="col">name</th>
-                    <th scope="col">Tarif</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th style={{width: '50%'}} scope="col">Nom</th>
+                    <th style={{width: '20%'}} scope="col">Tarif</th>
+                    <th style={{width: '15%'}} scope="col">Modifier</th>
+                    <th style={{width: '15%'}} scope="col">Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -133,9 +126,9 @@ export function Management() {
                         </Link>
                     </td>
                     <td>
-                        <span onClick={() => deleteItemById('product', product._id)} >
+                        <FormField type="button" callback={() => deleteItemById('product', product._id)}>
                             <FontAwesomeIcon icon={faMinusSquare} size="2x" />
-                        </span>
+                        </FormField>
                     </td>
                     </tr>
                     ))}
