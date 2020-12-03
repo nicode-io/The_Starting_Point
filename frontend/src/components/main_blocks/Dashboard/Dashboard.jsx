@@ -9,7 +9,7 @@ export function Dashboard() {
             <ReservationsList />
             <FilesOverview />
             <EventsCarousel />
-            <Link to="/admin/management">Admin</Link>
+            <Link to="/admin">Admin</Link>
         </main>
     )
 }

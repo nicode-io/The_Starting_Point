@@ -47,7 +47,7 @@ const Routes = () => {
                 <RegisterPage />
                 <Nav />
             </Route>
-            <Route path="/admin/:view">
+            <Route path={["/admin/:view", "/admin"]}>
                 <Header />
                 <Admin />
                 <Nav />

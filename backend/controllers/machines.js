@@ -56,6 +56,7 @@ exports.deleteMachine = async(req, res) => {
 
     try {
         const machine = await Machine.findByIdAndDelete(machineId , (machine) => machine);
+        res.send(200);
         console.log(machine);
         console.log('Machine Deleted');
     }catch(err) {
