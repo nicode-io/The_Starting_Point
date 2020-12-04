@@ -12,6 +12,7 @@ export const insertNew = (route, payload) => api.post(route, payload);
 export const updateById = (route ,id, payload) => api.put(`${route}/${id}`, payload);
 export const deleteById = (route, id) => api.delete(`${route}/${id}`);
 export const getUsersSessions = (route) => api.get(`${route}`);
+export const desrtoySessions = (route) => api.get(`${route}`);
 
 
 const apis = {

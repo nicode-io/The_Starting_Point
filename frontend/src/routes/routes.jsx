@@ -13,16 +13,16 @@ import {
     Nav
 } from '../components/index';
 
-const Routes = () => {
+const Routes = (props) => {
     return (
         <Switch>
             <Route path="/reservation">
-                <Header />
+                 <Header user={props.user} />
                 <ReservationPage />
                 <Nav />
             </Route>
             <Route path="/files">
-                <Header />
+                 <Header user={props.user} />
                 <Files />
                 <Nav />
             </Route>
@@ -33,27 +33,27 @@ const Routes = () => {
                 <FileDetail file="reservations" />
             </Route>
             <Route path="/events">
-                <Header />
+                 <Header user={props.user} />
                 <Events />
                 <Nav />
             </Route> 
             <Route path="/login">
-                <Header />
+                 <Header user={props.user} />
                 <LoginPage />
                 <Nav />
             </Route>
             <Route path="/register">
-                <Header />
+                 <Header user={props.user} />
                 <RegisterPage />
                 <Nav />
             </Route>
             <Route path="/admin/:view">
-                <Header />
+                 <Header user={props.user} />
                 <Admin />
                 <Nav />
             </Route>
             <Route path="/">
-                <Header />
+                 <Header user={props.user} />
                 <Dashboard />
                 <Nav />
             </Route>
