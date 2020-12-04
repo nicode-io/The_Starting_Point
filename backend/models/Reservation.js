@@ -33,6 +33,10 @@ const ReservationSchema = new Schema({
         ref: 'reservedMachine',
         required: true,
     },
+    comment : {
+        type : String,
+        default : ''
+    }
     // invoice : {
     //     type : Schema.Types.ObjectId,
     //     ref : "Invoice_id"

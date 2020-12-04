@@ -18,6 +18,7 @@ export function ReservationForm(props) {
     const [name, setName] = useState('');
     const [mail , setMail] = useState('');
     const [machine, setMachine] = useState();
+    const [comment, setComment] = useState();
     
     // On crée une nouvelle reservation en utilisant le Model Reservation et on lui passe l id de la machine pour la relation
     const handleReservation = () => {
@@ -27,7 +28,8 @@ export function ReservationForm(props) {
                 usernotlogged: name,
                 userlogged : 'FALSE',
                 startdate : startHour,
-                enddate : endHour
+                enddate : endHour,
+                comment: comment,
             }).then((response) => {
                 console.log(response);
             },(error) => {
@@ -90,7 +92,7 @@ export function ReservationForm(props) {
                         {/*    <p><FormField label="NON&nbsp;&nbsp;" type="radio" name="Test" /></p>*/}
                         {/*</article>*/}
                         <p>Informations complémentaires</p>
-                        <FormField type="textarea" placeholder="Si vous avez des demandes particulières"/>
+                        <FormField type="textarea" placeholder="Si vous avez des demandes particulières" callback={fieldValue => setComment(fieldValue)}/>
                     </article>
                     <article className={"reservation-submit"}>
                         <FormField label="Je réserve" type="submit" id="form-submit"/>
