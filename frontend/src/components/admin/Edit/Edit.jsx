@@ -33,7 +33,7 @@ export function Edit(props){
    
     // METHOD FOR UPDATE ITEM 
     
-    async function updateItemFromId(e){
+    async function updateItemFromId(){
         try{
             await api.updateById(`/${type}`, id, item)
             // .then((response) => {

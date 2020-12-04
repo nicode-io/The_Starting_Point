@@ -34,7 +34,7 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 router.get('/invoices' , invoicesController.getAllInvoice);
 
-// router.post('/add-invoice' , invoicesController.postInvoice);
+router.post('/add-invoice' , invoicesController.postInvoice);
 
 // router.get('/:invoiceId' , invoicesController.getInvoice);
 
@@ -72,9 +72,9 @@ router.delete('/delete-product/:productId', productsController.deleteProduct);
 
 // ROUTE FOR RESERVATIONS 
 
-// router.get('/reservations' , reservationsController.getReservation);
+router.get('/reservations' , reservationsController.getReservation);
 
-// router.post('/add-reservation' , reservationsController.postReservation);
+router.post('/add-reservation' , reservationsController.postReservation);
 
 // router.get('/:reservationId' , reservationsController.getReservation);
 

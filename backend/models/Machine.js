@@ -14,10 +14,14 @@ const MachineSchema = new Schema({
         type: Number,
         required :true
     },
-    invoice : [{
+    invoice_id: [{
         type : Schema.Types.ObjectId,
         ref : "Invoice",
         
+    }],
+    machines :[{
+        type: Schema.Types.ObjectId,
+        ref : 'Machine'
     }],
     available: {
         type: Boolean,
