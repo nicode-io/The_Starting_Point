@@ -1,9 +1,12 @@
 .hea-main {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #004d95;
-  height: 10vh;
+  top: 0px;
+  width: 100%;
+  height: 12vh;
   border-bottom: 2px lightgray solid;
 }
 

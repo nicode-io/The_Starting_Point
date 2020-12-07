@@ -9,7 +9,7 @@ export function FormField(props,{data}) {
     if (props.type === "textarea") {
         field = <div style={props.style}>
                     <label htmlFor={props.label}>{props.label}</label>
-                    <textarea name={props.label} onChange={e => props.callback(e.target.value)}/>
+                    <textarea name={props.label} placeholder={props.placeholder} onChange={e => props.callback(e.target.value)} />
                 </div>
     } else if (props.type === "submit") {
         field = <div style={props.style}>
@@ -29,7 +29,7 @@ export function FormField(props,{data}) {
     } else  {
         field = <div style={props.style}>
                     <label htmlFor={props.label}>{props.label}</label>
-                    <input value={props.value} name={props.label} type={props.type} required={required} onChange={e => props.callback(e.target.value)}/>
+                    <input value={props.value} name={props.label} type={props.type} required={required} placeholder={props.placeholder} onChange={e => props.callback(e.target.value)}/>
                 </div>
     }
 

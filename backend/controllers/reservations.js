@@ -18,10 +18,11 @@ exports.getReservation = async(req, res) => {
     }
 }
 exports.postReservation = async(req, res) => {
-    const {name , usernotlogged , userlogged , startdate , enddate} = req.body;
+    const { usernotlogged , userlogged , startdate , enddate, machine , comment} = req.body;
     try{
-        const reservation = new Reservation({name:name, usernotlogged:usernotlogged , userlogged:userlogged , startdate:startdate , enddate:enddate});
+        const reservation = new Reservation({ usernotlogged:usernotlogged , userlogged:userlogged , startdate:startdate , enddate:enddate, machine: machine , comment:comment});
         reservation.save();
+        res.sendStatus(200);
     }catch(error) {
         console.log(error);
     }

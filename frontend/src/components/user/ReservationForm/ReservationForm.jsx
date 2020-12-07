@@ -2,6 +2,7 @@ import React from 'react';
 import { FormField } from '../../commons';
 import { MachinePicker } from '../index';
 import "./reservationForm.css";
+import api from '../../../api/index';
 // IMPORT FOR CALENDAR
 import  { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -9,20 +10,51 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 
-export function ReservationForm() {
+export function ReservationForm(props) {
     const [date, setDate] = useState(new Date());
     const [startHour, setStartHour] = useState(new Date());
     const [endHour, setEndHour] = useState(new Date());
-
+    const [isLogged , setItsLogged] = useState();
+    const [name, setName] = useState('');
+    const [mail , setMail] = useState('');
+    const [machine, setMachine] = useState();
+    const [comment, setComment] = useState();
+    
+    // On crée une nouvelle reservation en utilisant le Model Reservation et on lui passe l id de la machine pour la relation
+    const handleReservation = () => {
+        try{
+            api.insertNew('/add-reservation', {
+                machine: machine,
+                usernotlogged: name,
+                userlogged : 'FALSE',
+                startdate : startHour,
+                enddate : endHour,
+                comment: comment,
+            }).then((response) => {
+                console.log(response);
+            },(error) => {
+                console.error(error);
+                
+            })
+        }catch(error){
+            console.log(error);
+        }
+    }
+    // On gere le menu déroulant pour a chaque fois assigné l'id de la machine
+    let handleChange = (event) => {
+        setMachine(event.target.value);
+    }
+    
+    // Return visuel du reservationForm
     return (
         <main id="main">
             <section id="form">
-                <form>
-                    <MachinePicker />
+                <form onSubmit={handleReservation}>
+                    <MachinePicker  onChange={handleChange}/>
                     <p id={"steps"}>2 - VOS COORDONNEES </p>
                     <article id="name-email">
-                        <p><input type="text" placeholder="Nom"/></p>
-                        <p><input type="email" placeholder="Email"/></p>
+                        <FormField type="text" name="Nom" placeholder="Nom" callback={fieldValue => setName(fieldValue)} />
+                        <FormField type="email" name="Email" placeholder="E-mail" callback={fieldValue => setMail(fieldValue)}/>
                     </article>
                     <p id={"steps"}>3 - DATE, HEURE ET INFOS </p>
                     <article id="date-picker">
@@ -60,10 +92,10 @@ export function ReservationForm() {
                         {/*    <p><FormField label="NON&nbsp;&nbsp;" type="radio" name="Test" /></p>*/}
                         {/*</article>*/}
                         <p>Informations complémentaires</p>
-                        <p><FormField type="textarea" placeholder="Describe yourself here..."/></p>
+                        <FormField type="textarea" placeholder="Si vous avez des demandes particulières" callback={fieldValue => setComment(fieldValue)}/>
                     </article>
                     <article className={"reservation-submit"}>
-                        <p><input label="Réserver" type="submit" id="form-submit" value={"Je réserve"}/></p>
+                        <FormField label="Je réserve" type="submit" id="form-submit"/>
                     </article>
                 </form>
             </section>

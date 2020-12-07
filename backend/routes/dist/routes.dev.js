@@ -47,8 +47,8 @@ router.get('/machine/:machineId', machinesController.getMachine); // router.get(
 // router.post('/edit-product' , productsController.postEditProduct);
 // router.delete('/delete-product/:productId', productsController.deleteProduct);
 // ROUTE FOR RESERVATIONS 
-// router.get('/reservations' , reservationsController.getReservation);
-// router.post('/add-reservation' , reservationsController.postReservation);
+router.get('/reservations' , reservationsController.getReservation);
+router.post('/add-reservation' , reservationsController.postReservation);
 // router.get('/:reservationId' , reservationsController.getReservation);
 // router.get('/edit-reservation/:reservationId' , reservationsController.getEditReservation);
 // router.post('/edit-reservation' , reservationsController.postEditReservation);

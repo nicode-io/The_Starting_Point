@@ -33,9 +33,9 @@ export const Template = () => {
     </Fragment>
 
     const FILES = <Fragment>
-            This is a list of all your documents
-            <InvoicesList />
-            <ReservationsList />
+        This is a list of all your documents
+        <InvoicesList />
+        <ReservationsList />
     </Fragment>
 
     if (params.view === "reservation") {

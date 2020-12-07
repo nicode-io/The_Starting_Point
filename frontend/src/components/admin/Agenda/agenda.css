@@ -1,0 +1,39 @@
+.agenda {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ag-day {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ag-period {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    min-height: 40px;
+    width: 40px;
+    min-width: 40px;
+    /* background-color: teal; */
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.ag-period-full {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+.ag-period-empty {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}

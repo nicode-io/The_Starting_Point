@@ -8,13 +8,14 @@ const ReservationSchema = new Schema({
             return !this.userlogged;
         }
     },
-    userlogged: {
-        type: Schema.Types.ObjectId,
-        ref : "User",
-        required: () => {
-            return !this.usernotlogged;
-        }
-    },
+    // userlogged: {
+    //     type: Schema.Types.ObjectId,
+    //     ref : "User",
+    //     required: () => {
+    //         return !this.usernotlogged;
+    //     }
+    // },
+    // A CHECK QUAND LA SESSION SERA OK
     archive: {
         type: Boolean,
         default: false,
@@ -27,10 +28,19 @@ const ReservationSchema = new Schema({
         type: Date,
         required:true
     },
-    invoice : {
-        type : Schema.Types.ObjectId,
-        ref : "Invoice"
+    machine : {
+        type: Schema.Types.ObjectId,
+        ref: 'reservedMachine',
+        required: true,
+    },
+    comment : {
+        type : String,
+        default : ''
     }
+    // invoice : {
+    //     type : Schema.Types.ObjectId,
+    //     ref : "Invoice_id"
+    // }
 });
 
 module.exports = mongoose.model('Reservation', ReservationSchema);

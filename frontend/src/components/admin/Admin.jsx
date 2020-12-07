@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import { Link, useLocation } from 'react-router-dom';
 import "./admin.css";
-import { MachineForm, ProductForm , Management , Edit } from "./index";
+import { Agenda, MachineForm, ProductForm , Management , Edit } from "./index";
 
 
 export function Admin(props) {
@@ -22,9 +22,7 @@ export function Admin(props) {
     }else if (params.view === "add-product"){
         tab = <ProductForm />
     } else {
-        tab = <section>
-                Agenda
-            </section>
+        tab = <Agenda />
     }
 
     return (
@@ -35,7 +33,7 @@ export function Admin(props) {
                 <Link to="/admin/management" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`}>Gestion</Link>
             </div>
             {tab}
-
+            <div style={{height: '15vh'}}></div>
         </main>
     )
 }
