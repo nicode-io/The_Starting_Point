@@ -13,8 +13,10 @@
   margin: 0;
   color: white;
 }
-img {
-  width: 120px;
+
+.header-logo {
+  width: 90px;
+  margin-left: 0.7vh;
 }
 
 /* Position and sizing of burger button */

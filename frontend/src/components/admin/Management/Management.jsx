@@ -73,10 +73,10 @@ export function Management() {
             <table className="table w-50 text-center">
                 <thead className="thead-dark">
                     <tr>
-                    <th style={{width: '50%'}} scope="col">Nom</th>
-                    <th style={{width: '20%'}} scope="col">Tarif</th>
-                    <th style={{width: '15%'}} scope="col">Modifier</th>
-                    <th style={{width: '15%'}} scope="col">Supprimer</th>
+                    <th style={{width: '25%'}} scope="col">Nom</th>
+                    <th style={{width: '25%'}} scope="col">Tarif</th>
+                    <th style={{width: '25%'}} scope="col">Modifier</th>
+                    <th style={{width: '25%'}} scope="col">Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -99,7 +99,7 @@ export function Management() {
                 </tbody>
             </table>
         </section>
-        <section className="d-flex justify-content-center align-items-center flex-column mt-3">
+        <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
             <div className="d-flex justify-content-around align-items-center w-50">
                     <h2>Produits</h2>
                     <Link to={`/admin/add-product`}>
@@ -109,10 +109,10 @@ export function Management() {
             <table className="table w-50 text-center">
                 <thead className="thead-dark">
                     <tr>
-                    <th style={{width: '50%'}} scope="col">Nom</th>
-                    <th style={{width: '20%'}} scope="col">Tarif</th>
-                    <th style={{width: '15%'}} scope="col">Modifier</th>
-                    <th style={{width: '15%'}} scope="col">Supprimer</th>
+                    <th style={{width: '25%'}} scope="col">Nom</th>
+                    <th style={{width: '25%'}} scope="col">Tarif</th>
+                    <th style={{width: '25%'}} scope="col">Modifier</th>
+                    <th style={{width: '25%'}} scope="col">Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -134,6 +134,7 @@ export function Management() {
                     ))}
                 </tbody>
             </table>
+            <div class="bottom-nav"></div>
         </section>
     </Fragment>
     );

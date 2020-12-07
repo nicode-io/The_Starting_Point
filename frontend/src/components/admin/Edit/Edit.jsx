@@ -92,9 +92,9 @@ export function Edit(props){
             
                 <section className="text-center">
                     <h1>EDIT SECTION</h1>
-                    <form onSubmit={updateItemFromId}> 
+                    <form className="edit-form" onSubmit={updateItemFromId}> 
                         {itemToDisplay}
-                        <FormField type="submit" label="Mettre a jour" />
+                        <FormField type="submit" label="Mettre à jour" />
                     </form>
                 </section>
             

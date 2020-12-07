@@ -12,7 +12,7 @@ const Header = () => {
         <header className="hea-main">
             <section className={"header-logo"}>
                 <Link to="/" className={`head-link${useLocation().pathname === "/" ? " is-current" : ""}`}>
-                    <img src={logo} alt='Logo FabLab'></img>
+                    <img  className="header-logo" src={logo} alt='Logo FabLab'></img>
                 </Link>
             </section>
 

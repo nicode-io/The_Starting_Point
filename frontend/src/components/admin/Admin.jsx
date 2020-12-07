@@ -1,8 +1,10 @@
 import React from "react";
 import { useParams } from "react-router";
 import { Link, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserClock, faCalendarAlt, faEdit } from '@fortawesome/free-solid-svg-icons'
 import "./admin.css";
-import { MachineForm, ProductForm , Management , Edit } from "./index";
+import { MachineForm, ProductForm, Management, Edit } from "./index";
 
 
 export function Admin(props) {
@@ -11,32 +13,38 @@ export function Admin(props) {
 
     if (params.view === "pendingusers") {
         tab = <section>
-                Users to validate
+            Users to validate
             </section>
     } else if (params.view === "management") {
         tab = <Management />
-    } else if (params.view === "edit"){
+    } else if (params.view === "edit") {
         tab = <Edit />
-    } else if (params.view === "add-machine"){
+    } else if (params.view === "add-machine") {
         tab = <MachineForm />
-    }else if (params.view === "add-product"){
+    } else if (params.view === "add-product") {
         tab = <ProductForm />
     } else {
         tab = <section>
-                Agenda
+            Agenda
             </section>
     }
 
     return (
         <main>
-            <div className="d-flex justify-content-center">
-                <Link to="/admin/agenda" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/agenda" ? " is-current" : ""}`}>Agenda</Link>
-                <Link to="/admin/pendingusers" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/pendingusers" ? " is-current" : ""}`}>Utilisateurs en attente</Link>
-                <Link to="/admin/management" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`}>Gestion</Link>
-            </div>
+            <ul class="nav nav-tabs d-flex justify-content-around ">
+                <li class="nav-item">
+                    <Link to="/admin/agenda" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/agenda" ? " is-current" : ""}`}><FontAwesomeIcon icon={faCalendarAlt} size="1vh" />    </Link>
+                </li>
+                <li class="nav-item">
+                    <Link to="/admin/pendingusers" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/pendingusers" ? " is-current" : ""}`}><FontAwesomeIcon icon={faUserClock} size="1vh" /></Link>
+                </li>
+                <li class="nav-item">
+                    <Link to="/admin/management" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`}><FontAwesomeIcon icon={faEdit} size="1vh" /></Link>
+                </li>
+            </ul>
             {tab}
 
-        </main>
+        </main >
     )
 }
 
