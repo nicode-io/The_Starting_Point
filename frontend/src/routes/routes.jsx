@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Template } from '../components/user/Template';
 import { Admin } from '../components/admin/Admin';
 
-const Routes = () => {
+const Routes = (props) => {
     return (
         <Switch>
             <Route path={["/admin/:view", "/admin"]}>

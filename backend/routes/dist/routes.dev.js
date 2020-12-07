@@ -22,7 +22,7 @@ router.get('/users', usersController.getAllUser); // Route for the sessions
 router.get('/user', usersController.getSessionUser);
 router.post('/add-user', usersController.postUser); //router.get('/user/:userId' , usersController.getUser);
 
-router.post('/authe/:email', usersController.getUser); // router.get('/edit-user/:userId' , usersController.getEditUser);
+router.post('/auth/:email', usersController.authUser); // router.get('/edit-user/:userId' , usersController.getEditUser);
 
 router.post('/edit-user', usersController.postEditUser);
 router["delete"]('/delete-user/:userId', usersController.postDeleteUser); // ROUTE FOR INVOICES
@@ -41,8 +41,8 @@ router.get('/machine/:machineId', machinesController.getMachine); // router.get(
 // router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
 // ROUTE FOR PRODUCTS
 // router.get('/products', productsController.getAllProduct );
-// router.post('/add-product' , productsController.postMachine);
-// router.get('/:productId' , productsController.getProduct);
+
+router.post('/add-product', productsController.postProduct); // router.get('/:productId' , productsController.getProduct);
 // router.get('/edit-product/:productId', productsController.getEditMachine);
 // router.post('/edit-product' , productsController.postEditProduct);
 // router.delete('/delete-product/:productId', productsController.deleteProduct);

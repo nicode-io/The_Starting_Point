@@ -22,7 +22,9 @@ router.post('/add-user', usersController.postUser);
 
 //router.get('/user/:userId' , usersController.getUser);
 
-router.post('/authe/:email' , usersController.getUser);
+router.post('/auth/:email' , usersController.authUser);
+
+router.get('/logout' , usersController.destroySessionUser);
 
 // router.get('/edit-user/:userId' , usersController.getEditUser);
 
