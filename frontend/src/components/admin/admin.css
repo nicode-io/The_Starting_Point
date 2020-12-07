@@ -6,3 +6,13 @@
     font-weight: bold;
     font-family: 'Lato', sans-serif;
   }
+
+main{
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-bottom: 12vh;
+}

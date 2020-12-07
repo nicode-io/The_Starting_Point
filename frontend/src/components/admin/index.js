@@ -1,5 +1,6 @@
 // Export Admin Section Blocks Components
-export { MachineForm } from "./MachineForm/MachineForm";
-export { ProductForm } from "./ProductForm/ProductForm";
-export { Management } from "./Management/Management";
+export { Agenda } from "./Agenda/Agenda";
 export { Edit } from './Edit/Edit';
+export { MachineForm } from "./MachineForm/MachineForm";
+export { Management } from "./Management/Management";
+export { ProductForm } from "./ProductForm/ProductForm";
