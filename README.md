@@ -61,8 +61,12 @@ Good reading to all!
 
     ##  BASICS
     
+    *   ### Update your server
+        *   ```$ sudo apt update && sudo apt upgrade -y```
+        *   ```$ sudo reboot```
+    
     *   ### Choose and modify hostname
-        *   ```hostnametl set-hostname yourservername```
+        *   ```hostnamectl set-hostname yourservername```
         *   Check with ```hostname``` 
     *   ### Add host 
         *   ```sudo nano /etc/hosts```
