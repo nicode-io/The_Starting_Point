@@ -74,7 +74,7 @@ router.delete('/delete-product/:productId', productsController.deleteProduct);
 
 // ROUTE FOR RESERVATIONS 
 
-router.get('/reservations' , reservationsController.getReservation);
+router.get('/reservations' , reservationsController.getAllReservation);
 
 router.post('/add-reservation' , reservationsController.postReservation);
 

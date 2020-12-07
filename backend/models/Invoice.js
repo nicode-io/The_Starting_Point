@@ -5,22 +5,20 @@ const InvoiceSchema = new Schema({
     user : {
         type : Schema.Types.ObjectId,
         ref : "User",
-        required : true
     },
     reservation : {
         type : Schema.Types.ObjectId,
-        ref : "Reservations",
+        ref : "Reservation",
         required : true
     },
     machines : {
         type : Schema.Types.ObjectId,
-        ref : "Machines",
+        ref : "Machine",
         required : true
     },
     product : [{
         type : Schema.Types.ObjectId,
         ref : "Products",
-        required : true
     }]    
 });
 

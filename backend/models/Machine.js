@@ -19,6 +19,10 @@ const MachineSchema = new Schema({
         ref : "Invoice",
         
     }],
+    reservation : [{
+        type : Schema.Types.ObjectId,
+        ref : "machineReserved"
+    }],
     machines :[{
         type: Schema.Types.ObjectId,
         ref : 'Machine'

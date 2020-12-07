@@ -2,7 +2,7 @@ const Reservation = require('../models/Reservation');
 
 exports.getAllReservation = async(req, res) => {
     try {
-        const reservations = await Reservation.find();
+        const reservations = await Reservation.find().populate('machineReserved');
         res.json(reservations);
     }catch(error){
         console.log(error);
