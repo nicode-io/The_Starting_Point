@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import DatePicker from 'react-datepicker';
 import api from '../../../api';
-import { FormField } from "../../commons";
+import { FormField, Modal } from "../../commons";
 import './agenda.css';
 
 
@@ -31,6 +31,8 @@ export function Agenda(props) {
     const [selectedDay, setSelectedDay] = useState(new Date());
     const [agenda, setAgenda] = useState([]);
 
+    const [isModalVisible, setisModalVisible] = useState(false);
+    const [modalReservations, setModalReservations] = useState([]);
 
     /**
      * Creates an array containing every working day of a week in {Date} format
@@ -97,7 +99,19 @@ export function Agenda(props) {
         return timestamps;
     }
 
-    const timestamps = getTimestamps(WORKINGHOURS, PERIOD);
+    const DatePickerCustomInput = ({value, onClick}) => {
+        return (
+            <input style={{marginLeft: 0, fontSize: '0.8rem'}} className="ag-period" onClick={onClick} value={value} />
+        )
+    }
+
+    const displayReservations = (reservations) => {
+        setModalReservations(reservations);
+        setisModalVisible(true);
+        // return (<Modal />);
+        // console.log(reservations);
+    }
+
     // async function getItemById(type ,id){
     //     try {
     //         await api.getById(`/${type}`, id)
@@ -121,28 +135,32 @@ export function Agenda(props) {
 
     useEffect(() => {        
         (selectedDay !== undefined) && createAgenda(mapWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, PERIOD, RESERVATIONS);
-        let timestamps = getTimestamps(WORKINGHOURS, PERIOD);
-        console.log(timestamps);
     }, [selectedDay])
     
     return (
-            <section className="text-center">
-                <DatePicker
+            <section className="section-agenda text-center">
+                {/* <DatePicker
                     dateFormat="dd/MM/yyyy"
                     selected={selectedDay}
                     filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
                     onChange={date => setSelectedDay(date)}
-                />
+                /> */}
                 {(agenda !== undefined) &&
                     <div className="agenda">
                         <div className="ag-day">
-                            <div className="ag-period">
-
-                            </div>
-                            {timestamps.map((timestamp) => {
+                            {/* <div className="ag-period"> */}
+                                <DatePicker
+                                    dateFormat="dd/MM/yyyy"
+                                    selected={selectedDay}
+                                    filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
+                                    customInput={<DatePickerCustomInput />}
+                                    onChange={date => setSelectedDay(date)}
+                                />
+                            {/* </div> */}
+                            {getTimestamps(WORKINGHOURS, PERIOD).map((timestamp) => {
                                 return (
-                                    <div className="ag-period">
-                                        {timestamp}
+                                    <div className="ag-period ag-period-title">
+                                        <p>{timestamp}</p>
                                     </div>
                                 )
                             })}
@@ -150,13 +168,16 @@ export function Agenda(props) {
                         {agenda.map((day) => {
                             return (
                                 <div className="ag-day" key={WEEK[day[0].name.getDay()]}>
-                                    <div className="ag-period">
-                                        <p>{WEEK[day[0].name.getDay()]}</p>
-                                        <p>{day[0].name.getDate() + "/" + day[0].name.getMonth() + "/" + day[0].name.getFullYear()}</p>
+                                    <div className="ag-period ag-period-title">
+                                        <p>{WEEK[day[0].name.getDay()].substring(0,3)}</p>
+                                        <p>{day[0].name.getDate() + "/" + (day[0].name.getMonth() + 1)}</p>
+                                        {/* + "/" + day[0].name.getFullYear() */}
                                     </div>
                                     {day.map((period) => {
                                             return (
-                                                <div className={(period.reservations.length > 0) ? "ag-period ag-period-full" : "ag-period ag-period-empty"} key={WEEK[day[0].name.getDay()] + "-" + period.name.getHours() + "h" + period.name.getMinutes()}>
+                                                <div className={(period.reservations.length > 0) ? "ag-period ag-period-full" : "ag-period ag-period-empty"} 
+                                                key={WEEK[day[0].name.getDay()] + "-" + period.name.getHours() + "h" + period.name.getMinutes()}
+                                                onClick={() => displayReservations(period.reservations)}>
                                                     {period.reservations.length}
                                                 </div>
                                             )
@@ -166,6 +187,7 @@ export function Agenda(props) {
                         })}
                     </div>
                 }
+                <Modal isVisible={isModalVisible} setIsVisible={setisModalVisible} data={modalReservations} />
             </section>
     )
 }

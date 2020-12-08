@@ -1,0 +1,31 @@
+.modalContainer {
+    position: fixed;
+    z-index: 900;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 12vh 0;
+    top: 0;
+    left: 0;
+    max-height: 76vh;
+    width: 100%;
+    /* top: 50%;
+    left: 50%; */
+    color: white;
+    background-color: rgb(0, 77, 149);
+    overflow-y: scroll;
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.modalButton {
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+}

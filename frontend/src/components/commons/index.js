@@ -4,4 +4,5 @@ export { UsersList } from "./UsersList/UsersList";
 export { ConfirmThanks } from "./ConfirmThanks/ConfirmThanks";
 export { FormField } from "./FormField/FormField";
 export { Header } from "./Header/Header";
+export { Modal } from "./Modal/Modal";
 export { Nav } from "./Nav/Nav";
