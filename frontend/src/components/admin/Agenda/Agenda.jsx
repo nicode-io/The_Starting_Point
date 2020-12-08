@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import DatePicker from 'react-datepicker';
 import api from '../../../api';
 import { FormField, Modal } from "../../commons";
@@ -41,7 +41,8 @@ export function Agenda(props) {
     const [agenda, setAgenda] = useState([]);
 
     const [isModalVisible, setisModalVisible] = useState(false);
-    const [modalData, setModalData] = useState({});
+    const [modalPeriod, setModalPeriod] = useState();
+    // const [modalData, setModalData] = useState({});
 
     const dateToString = (date) => {
         let string = date.getHours() + "h" + (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());
@@ -121,40 +122,54 @@ export function Agenda(props) {
     }
 
     const displayPeriod = (period) => {
-        setModalData({
-            title: period.name,
-            content: createModalContent(period),
-        });
+        setModalPeriod(period);
+        // setModalData({
+        //     title: period.name,
+        //     content: createModalContent(period),
+        // });
         setisModalVisible(true);
     }
 
-    const createModalContent = (period) => {
-        console.log(period)
+    const createModalData = (period) => {
         return (
-            (period.reservations.length > 0)
-            ? period.reservations.map((reservation) => {
-                    return (
-                        <div className="ag-reservationContainer">
-                            <div className={(period.startDate.getTime() === reservation.startdate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationFull"}>
-                                <p>{dateToString(reservation.startdate)}</p>
+            <Fragment>
+                {(period.reservations.length > 0)
+                    ? period.reservations.map((reservation) => {
+                        return (
+                            <div className="ag-reservationContainer">
+                                <div className={(period.startDate.getTime() === reservation.startdate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationFull"}>
+                                    <p>{dateToString(reservation.startdate)}</p>
+                                </div>
+                                <div className="ag-reservation">
+                                    <p>ID: {reservation._id}</p>
+                                    <p>Machine: {reservation.machine.name}</p>
+                                </div>
+                                <div className={(period.endDate.getTime() === reservation.enddate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationFull"}>
+                                    <p>{dateToString(reservation.enddate)}</p>
+                                </div>
                             </div>
-                            <div className="ag-reservation">
-                                <p>ID: {reservation._id}</p>
-                                <p>Machine: {reservation.machine.name}</p>
-                                {/* <p>Début: {dateToString(reservation.startdate)} - Fin: {dateToString(reservation.enddate)}</p> */}
-                            </div>
-                            <div className={(period.endDate.getTime() === reservation.enddate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationFull"}>
-                                <p>{dateToString(reservation.enddate)}</p>
-                            </div>
-                        </div>
-                    )
-                })
-            : <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
+                        )
+                    })
+                    : <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p>
+                }
+            </Fragment>
         )
     }
-                        
+    
+    const previousPeriod = () => {
+        agenda.map((day) => {
+            (day.indexOf(modalPeriod) > 0) && displayPeriod(day[day.indexOf(modalPeriod) - 1]);
+        })
+    }
+
+    const nextPeriod = () => {
+        agenda.map((day) => {
+            ((day.indexOf(modalPeriod) >= 0) & (day.indexOf(modalPeriod) < day.length - 1)) && displayPeriod(day[day.indexOf(modalPeriod) + 1]);
+        })
+    }
+
     // async function getItemById(type ,id){
     //     try {
     //         await api.getById(`/${type}`, id)
@@ -182,24 +197,16 @@ export function Agenda(props) {
     
     return (
             <section className="section-agenda text-center">
-                {/* <DatePicker
-                    dateFormat="dd/MM/yyyy"
-                    selected={selectedDay}
-                    filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
-                    onChange={date => setSelectedDay(date)}
-                /> */}
                 {(agenda !== undefined) &&
                     <div className="agenda">
                         <div className="ag-day">
-                            {/* <div className="ag-period"> */}
-                                <DatePicker
-                                    dateFormat="dd/MM/yyyy"
-                                    selected={selectedDay}
-                                    filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
-                                    customInput={<DatePickerCustomInput />}
-                                    onChange={date => setSelectedDay(date)}
-                                />
-                            {/* </div> */}
+                            <DatePicker
+                                dateFormat="dd/MM/yyyy"
+                                selected={selectedDay}
+                                filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
+                                customInput={<DatePickerCustomInput />}
+                                onChange={date => setSelectedDay(date)}
+                            />
                             {getTimestamps(WORKINGHOURS, PERIOD).map((timestamp) => {
                                 return (
                                     <div className="ag-period ag-period-title">
@@ -229,7 +236,7 @@ export function Agenda(props) {
                         })}
                     </div>
                 }
-                <Modal isVisible={isModalVisible} setIsVisible={setisModalVisible} data={modalData} />
+                {(modalPeriod !== undefined) && <Modal isVisible={isModalVisible} setIsVisible={setisModalVisible} title={modalPeriod.name} content={createModalData(modalPeriod)} previous={previousPeriod} next={nextPeriod} />}
             </section>
     )
 }
