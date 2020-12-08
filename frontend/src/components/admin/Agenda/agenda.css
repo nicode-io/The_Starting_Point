@@ -53,3 +53,45 @@
     background-color: white;
     border: 1px solid black;
 }
+
+.ag-reservationContainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    /* margin: 0.2rem; */
+    /* background-color: green; */
+}
+
+.ag-reservation {
+    width: 80%;
+    color: black;
+    background-color: lightblue;
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
+    margin: 0.5rem 0;
+}
+
+.ag-reservationBorder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    min-width: 50px;
+    color: black;
+    background-color: cadetblue;
+    margin: 0.5rem 0;
+}
+
+.ag-reservationFull {
+    background-color: lightblue;
+}
+
+/* .ag-reservationBorderLeft {
+    border-left: 1px solid black;
+}
+
+.ag-reservationBorderRight {
+    border-right: 1px solid black;
+} */
