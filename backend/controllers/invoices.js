@@ -2,10 +2,8 @@ const Invoice = require('../models/Invoice');
 
 
 exports.getAllInvoice = async(req, res) => {
-    
     try{
-        console.log('on rentre dans le blog try');
-        let allInvoice = await Invoice.find().populate('User');
+        let allInvoice = await Invoice.find().populate('reservation machineUseInInvoice');
         res.json(allInvoice);
     }catch(error){
         console.log(error);
@@ -20,7 +18,15 @@ exports.getInvoice = async(req, res) => {
         console.log(error);
     }
 }
-exports.postInvoice = (req, res) => {
+exports.postInvoice = async(req, res) => {
+    try{
+        const invoice = new Invoice(req.body);
+        invoice.save();
+        console.log(invoice);
+        res.sendStatus(200);
+    }catch(error){
+        console.log(error);
+    }
 
 }
 exports.getEditInvoice = (req, res) => {

@@ -25,7 +25,7 @@ const UserSchema = new Schema({
     company: {
         type: String,
     },
-    reservation: [{
+    reservations: [{
         type : Schema.Types.ObjectId,
         ref : "Reservation"
     }],

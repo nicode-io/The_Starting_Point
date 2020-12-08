@@ -22,6 +22,7 @@ export function ReservationForm(props) {
     
     // On crée une nouvelle reservation en utilisant le Model Reservation et on lui passe l id de la machine pour la relation
     const handleReservation = () => {
+        
         try{
             api.insertNew('/add-reservation', {
                 machine: machine,
@@ -31,15 +32,18 @@ export function ReservationForm(props) {
                 enddate : endHour,
                 comment: comment,
             }).then((response) => {
+                
                 console.log(response);
             },(error) => {
                 console.error(error);
                 
             })
+            // saveReservationInInvoices();
         }catch(error){
             console.log(error);
         }
     }
+   
     // On gere le menu déroulant pour a chaque fois assigné l'id de la machine
     let handleChange = (event) => {
         setMachine(event.target.value);

@@ -38,7 +38,7 @@ export function InvoiceForm(props){
                     <option value="" >Choisir une machine</option>
                     {reservations.map(reservation => (
                         <option key={"option-" + reservation._id} value={reservation._id} name={reservation._id}>
-                            {reservation.usernotlogged}{reservation.machine.name}
+                            {reservation.usernotlogged} {reservation.machine.name}
                         </option>
                     ))}
                 </select>
