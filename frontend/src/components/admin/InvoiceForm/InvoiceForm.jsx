@@ -1,36 +1,29 @@
-// IL FAUDRA RECUP POUR LES INVOICES ( USER ou Personne qui reserve 
-//                                     une RESERVATION (menu deroulant avec les reservs)
-//                                     Une MACHINE QUI EST DANS LA RESERVATION DEJA
-//                                      PRODUCTS (optionnel))
-// IMPORT
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../../../api';
-import { FormField } from '../../commons';
 
 
-// LE COMPONENT
 export function InvoiceForm(props){
-    // VAR & HOOKS
-    const [user, setUser] = useState([]);
-    const [reservations, setReservations] = useState([]);
-    const [products, setProducts] = useState([]);
 
-    // METHOD FOR GET ALL RESERVATION
+    // Variables
+    const [reservations, setReservations] = useState([]);
+        // const [user, setUser] = useState([]); TBD
+        // const [products, setProducts] = useState([]); TBD
+
+    // Get all reservations
     async function getAllReservations(){
         await api.getAll('/reservations')
         .then((data) =>{
             setReservations(data.data);
-        },
-        (error) => {
+        }, (error) => {
             console.log(error);
-        }
-        )
+        });
     }
 
     useEffect( () => {
         getAllReservations();
     }, []);
-    //RETURN AKA RENDER
+
+    // Render the dropdown list with Machines
     return (
         <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
             <form>
@@ -43,16 +36,6 @@ export function InvoiceForm(props){
                     ))}
                 </select>
             </form>
-                    {console.log(reservations)}
-                    
-                
         </section>
     )
-
-
-
-
-
-
-
 }

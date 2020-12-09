@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+/**
+ * Database Product schema
+ */
+
+// Define schema
 const ProductSchema = new Schema({
     name : {
         type: String,
@@ -24,4 +30,5 @@ const ProductSchema = new Schema({
     }]
 });
 
+// Export schema
 module.exports = mongoose.model('Product', ProductSchema);

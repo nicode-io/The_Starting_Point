@@ -1,6 +1,12 @@
 const { response } = require('express');
 const Product = require('../models/Product');
 
+
+/**
+ * Product controller
+ */
+
+// Get a list of all products
 exports.getAllProduct = async(req, res) => {
     try {
         const products = await Product.find();
@@ -10,6 +16,7 @@ exports.getAllProduct = async(req, res) => {
     }
 }
 
+// Get a product according to its ID
 exports.getProduct = async(req, res) => {
     const productId = req.params.productId;
     try {
@@ -20,6 +27,7 @@ exports.getProduct = async(req, res) => {
     }
 }
 
+// Create a new product
 exports.postProduct = async(req, res) => {
     const { name , category , tarif , stock } = req.body;
     try {
@@ -31,6 +39,7 @@ exports.postProduct = async(req, res) => {
     }
 }
 
+// Edit a product according to its ID
 exports.postEditProduct = async(req, res) => {   
     const productId = req.params.productId;
     const {name, category, tarif, stock, invoice} = req.body;
@@ -50,6 +59,7 @@ exports.postEditProduct = async(req, res) => {
     })
 }
 
+// Delete a machine according to its ID
 exports.deleteProduct = async(req, res) => {
     const productId = req.params.productId;
     try {
