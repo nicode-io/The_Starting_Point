@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import api from '../../../api';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMinusSquare, faPenSquare, faPlusSquare} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMinusSquare, faPenSquare, faPlusSquare} from '@fortawesome/free-solid-svg-icons';
 import { FormField } from '../../commons';
 
 

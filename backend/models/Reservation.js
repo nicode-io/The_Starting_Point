@@ -30,17 +30,17 @@ const ReservationSchema = new Schema({
     },
     machine : {
         type: Schema.Types.ObjectId,
-        ref: 'reservedMachine',
+        ref: 'Machine',
         required: true,
     },
     comment : {
         type : String,
         default : ''
+    },
+    invoice : {
+        type : Schema.Types.ObjectId,
+        ref : "Invoice"
     }
-    // invoice : {
-    //     type : Schema.Types.ObjectId,
-    //     ref : "Invoice_id"
-    // }
 });
 
 module.exports = mongoose.model('Reservation', ReservationSchema);

@@ -22,6 +22,7 @@ export function ReservationForm(props) {
     
     // On crée une nouvelle reservation en utilisant le Model Reservation et on lui passe l id de la machine pour la relation
     const handleReservation = () => {
+        
         try{
             api.insertNew('/add-reservation', {
                 machine: machine,
@@ -31,15 +32,18 @@ export function ReservationForm(props) {
                 enddate : endHour,
                 comment: comment,
             }).then((response) => {
+                
                 console.log(response);
             },(error) => {
                 console.error(error);
                 
             })
+            // saveReservationInInvoices();
         }catch(error){
             console.log(error);
         }
     }
+   
     // On gere le menu déroulant pour a chaque fois assigné l'id de la machine
     let handleChange = (event) => {
         setMachine(event.target.value);
@@ -57,6 +61,7 @@ export function ReservationForm(props) {
                         <FormField type="email" name="Email" placeholder="E-mail" callback={fieldValue => setMail(fieldValue)}/>
                     </article>
                     <p id={"steps"}>3 - DATE, HEURE ET INFOS </p>
+                    
                     <article id="date-picker">
                         <p>Le&nbsp;<DatePicker
                             dateFormat="dd/MM/yyyy" 
@@ -84,6 +89,7 @@ export function ReservationForm(props) {
                             dateFormat="h:mm aa"
                             id="datepicker-element"
                         /></p>
+                        {console.log(date)}
                     </article>
                     <article id={"need-help"}>
                         {/*<p>Besoin de conseils ?</p>*/}
