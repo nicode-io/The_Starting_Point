@@ -38,7 +38,7 @@ router.get('/invoices' , invoicesController.getAllInvoice);
 
 router.post('/add-invoice' , invoicesController.postInvoice);
 
-// router.get('/:invoiceId' , invoicesController.getInvoice);
+router.get('/invoice/:invoiceId' , invoicesController.getInvoice);
 
 // router.get('/edit-invoice/:invoiceId', invoicesController.getEditInvoice);
 

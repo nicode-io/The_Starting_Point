@@ -29,25 +29,52 @@ export function Invoices() {
         }
         )};
     // Method for get all Invoices
+    
     async function getAllInvoices() {
         await api.getAll(`/invoices`)
         .then((data) => {
-            console.log(data.data);
             setInvoices(data.data);
-            console.log(invoices);
                 
         },
         (error) => {
             setError(error);
         }
         )};
-    
+    // Method for good displaying date in invoice & reservations
+
+    function displayDate(dateInJson){
+        let date = new Date(dateInJson);
+        let string = date.getDate() +"/"+ (date.getMonth() +1) +"/"+ date.getFullYear()+"" ;
+        return string;
+    }
+
+    function displayHour(dateInJson){
+        let date = new Date(dateInJson);
+        let string = date.getHours() +"h"+ (date.getMonth() +1);
+        return string;
+    }
     // use Effect for refresh state
     useEffect( () => {
         getAllReservations();
         getAllInvoices();
     }, []);
-    // Method to call before render
+    // Method for transform Reservation to Invoice
+    async function transformToInvoice(reservationId, machineId){
+        let txt;
+        if (window.confirm(`Voulez vous transformer cette résérvation en facture ?`)) {
+                txt = true;
+            } else {
+                txt = false;
+            }
+            if(txt){
+                const machineSelected = await api.getById('/machine', machineId);
+                await api.insertNew('/add-invoice', {
+                    reservation:reservationId,
+                    machineUseInInvoice:machineSelected.data.name
+                });
+                window.location.reload(false);
+            }
+    }
     
     return (
         <Fragment>
@@ -58,20 +85,19 @@ export function Invoices() {
                         <tr>
                         <th style={{width: '20%'}} scope="col">Nom</th>
                         <th style={{width: '20%'}} scope="col">Machine</th>
-                        <th style={{width: '20%'}} scope="col">Début</th>
-                        <th style={{width: '20%'}} scope="col">Fin</th>
+                        <th style={{width: '20%'}} scope="col">Date</th>
+                        <th style={{width: '20%'}} scope="col">Horaires</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {console.log(invoices)}
                     {invoices.map(invoice => (
                         <tr key={"list-" + invoice.reservation._id}>
                         <td>{invoice.reservation.usernotlogged}</td>
-                        <td>{invoice.reservation.machine}</td>
-                        <td>{invoice.reservation.startdate}</td>
-                        <td>{invoice.reservation.enddate}</td>
+                        <td>{invoice.machineUseInInvoice}</td>
+                        <td>{displayDate(invoice.reservation.startdate)}</td>
+                        <td>{displayHour(invoice.reservation.startdate)} à {displayHour(invoice.reservation.enddate)}</td>
                         </tr>
-                        ))};
+                        ))}
                     </tbody>
                     </table>
             </section>
@@ -80,30 +106,27 @@ export function Invoices() {
                 <table className="table w-50 text-center">
                     <thead className="thead-dark">
                         <tr>
-                        <th style={{width: '20%'}} scope="col">Nom</th>
-                        <th style={{width: '20%'}} scope="col">Machine</th>
-                        <th style={{width: '20%'}} scope="col">Début</th>
-                        <th style={{width: '20%'}} scope="col">Fin</th>
-                        <th style={{width: '20%'}} scope="col">Transformer en facture</th>
+                        <th style={{width: '22.5%'}} scope="col">Nom</th>
+                        <th style={{width: '22.5%'}} scope="col">Machine</th>
+                        <th style={{width: '22.5%'}} scope="col">Date</th>
+                        <th style={{width: '22.5%'}} scope="col">Horaires</th>
+                        <th style={{width: '10%'}} scope="col">Transformer en facture</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {console.log(reservations)}
                     {reservations.map(reservation => (
                         <tr key={"list-" + reservation._id}>
                         <td>{reservation.usernotlogged}</td>
                         <td>{reservation.machine.name}</td>
-                        <td>{reservation.startdate}</td>
-                        <td>{reservation.startdate}</td>
+                        <td>{displayDate(reservation.startdate)}</td>
+                        <td>{displayHour(reservation.startdate)} à {displayHour(reservation.enddate)}</td>
                         <td>
-                        <FormField type="button" callback={() => api.insertNew('/add-invoice', {
-                                                                    reservation:reservation._id,
-                                                                })}>
+                        <FormField type="button" callback={() => transformToInvoice(reservation._id, reservation.machine._id)}>
                             <FontAwesomeIcon icon={faPlusSquare} size="2x" />
                         </FormField>
                         </td>
                         </tr>
-                        ))};
+                        ))}
                     </tbody>
                 </table>
             </section>

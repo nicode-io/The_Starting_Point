@@ -3,7 +3,7 @@ const Invoice = require('../models/Invoice');
 
 exports.getAllInvoice = async(req, res) => {
     try{
-        let allInvoice = await Invoice.find().populate('reservation machineUseInInvoice');
+        let allInvoice = await Invoice.find().populate('reservation');
         res.json(allInvoice);
     }catch(error){
         console.log(error);
@@ -20,6 +20,7 @@ exports.getInvoice = async(req, res) => {
 }
 exports.postInvoice = async(req, res) => {
     try{
+        console.log(req.body)
         const invoice = new Invoice(req.body);
         invoice.save();
         console.log(invoice);

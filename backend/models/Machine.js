@@ -31,10 +31,6 @@ const MachineSchema = new Schema({
         type: String,
         default : " "
     },
-    machineUseInInvoice : {
-        type : Schema.Types.ObjectId,
-        ref : "Machine"
-    }
 });
 
 module.exports = mongoose.model('Machine', MachineSchema);

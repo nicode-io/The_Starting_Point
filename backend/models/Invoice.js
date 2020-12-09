@@ -12,8 +12,7 @@ const InvoiceSchema = new Schema({
         required: true,        
     },
     machineUseInInvoice : {
-        type: Schema.Types.ObjectId,
-        ref: 'Machine',
+        type: String,
         required: true,
     },
       
