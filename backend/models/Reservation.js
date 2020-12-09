@@ -8,13 +8,14 @@ const ReservationSchema = new Schema({
             return !this.userlogged;
         }
     },
-    userlogged: {
-        type: Schema.Types.ObjectId,
-        ref : "User",
-        required: () => {
-            return !this.usernotlogged;
-        }
-    },
+    // userlogged: {
+    //     type: Schema.Types.ObjectId,
+    //     ref : "User",
+    //     required: () => {
+    //         return !this.usernotlogged;
+    //     }
+    // },
+    // A CHECK QUAND LA SESSION SERA OK
     archive: {
         type: Boolean,
         default: false,
@@ -26,6 +27,15 @@ const ReservationSchema = new Schema({
     enddate: {
         type: Date,
         required:true
+    },
+    machine : {
+        type: Schema.Types.ObjectId,
+        ref: 'Machine',
+        required: true,
+    },
+    comment : {
+        type : String,
+        default : ''
     },
     invoice : {
         type : Schema.Types.ObjectId,

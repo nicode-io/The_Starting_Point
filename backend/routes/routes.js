@@ -1,7 +1,7 @@
 const express = require('express');
 
 // IMPORT CONTROLLERS 
-const controllers = require('../controllers/controllers');
+// const controllers = require('../controllers/controllers');
 const usersController = require('../controllers/users');
 const invoicesController = require('../controllers/invoices');
 const machinesController = require('../controllers/machines');
@@ -22,7 +22,9 @@ router.post('/add-user', usersController.postUser);
 
 //router.get('/user/:userId' , usersController.getUser);
 
-router.post('/authe/:email' , usersController.getUser);
+router.post('/auth/:email' , usersController.authUser);
+
+router.get('/logout' , usersController.destroySessionUser);
 
 // router.get('/edit-user/:userId' , usersController.getEditUser);
 
@@ -34,9 +36,9 @@ router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 
 router.get('/invoices' , invoicesController.getAllInvoice);
 
-// router.post('/add-invoice' , invoicesController.postInvoice);
+router.post('/add-invoice' , invoicesController.postInvoice);
 
-// router.get('/:invoiceId' , invoicesController.getInvoice);
+router.get('/invoice/:invoiceId' , invoicesController.getInvoice);
 
 // router.get('/edit-invoice/:invoiceId', invoicesController.getEditInvoice);
 
@@ -48,35 +50,33 @@ router.get('/invoices' , invoicesController.getAllInvoice);
 
 router.get('/machines', machinesController.getAllMachines );
 
- router.post('/add-machine' , machinesController.postMachine);
+router.post('/add-machine' , machinesController.postMachine);
 
 router.get('/machine/:machineId' , machinesController.getMachine);
 
-// router.get('/edit-machine/:machineId', machinesController.getEditMachine);
+router.put('/machine/:machineId' , machinesController.postEditMachine);
 
-// router.post('/edit-machine' , machinesController.postEditMachine);
-
-// router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
+router.delete('/delete-machine/:machineId', machinesController.deleteMachine);
 
 // ROUTE FOR PRODUCTS
 
-// router.get('/products', productsController.getAllProduct );
+router.get('/products', productsController.getAllProduct );
 
 router.post('/add-product' , productsController.postProduct);
 
 // router.get('/:productId' , productsController.getProduct);
 
-// router.get('/edit-product/:productId', productsController.getEditMachine);
+router.get('/product/:productId', productsController.getProduct);
 
-// router.post('/edit-product' , productsController.postEditProduct);
+router.put('/product/:productId' , productsController.postEditProduct);
 
-// router.delete('/delete-product/:productId', productsController.deleteProduct);
+router.delete('/delete-product/:productId', productsController.deleteProduct);
 
 // ROUTE FOR RESERVATIONS 
 
-// router.get('/reservations' , reservationsController.getReservation);
+router.get('/reservations' , reservationsController.getAllReservation);
 
-// router.post('/add-reservation' , reservationsController.postReservation);
+router.post('/add-reservation' , reservationsController.postReservation);
 
 // router.get('/:reservationId' , reservationsController.getReservation);
 

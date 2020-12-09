@@ -14,11 +14,14 @@ const MachineSchema = new Schema({
         type: Number,
         required :true
     },
-    invoice : [{
+    machine : {
         type : Schema.Types.ObjectId,
-        ref : "Invoice",
-        
-    }],
+        ref : "Reservation"
+    },
+    // machines :[{
+    //     type: Schema.Types.ObjectId,
+    //     ref : 'Machine'
+    // }],
     available: {
         type: Boolean,
         default: true,
@@ -26,7 +29,8 @@ const MachineSchema = new Schema({
     },
     comment: {
         type: String,
-    }
+        default : " "
+    },
 });
 
 module.exports = mongoose.model('Machine', MachineSchema);

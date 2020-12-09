@@ -1,0 +1,105 @@
+.agenda {
+    display: flex;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+    /* background-color: lightblue; */
+}
+
+.ag-day {
+    display: flex;
+    flex-direction: column;
+    width: 13%;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: red; */
+    margin: 5px;
+}
+
+.ag-period {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    min-height: 40px;
+    width: 100%;
+    /* min-width: ; */
+    max-width: 100px;
+    /* background-color: teal; */
+    margin: 5px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+.ag-period p {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.ag-period-title {
+    color: white;
+    background-color: rgb(0, 77, 149);
+}
+
+.ag-period-full {
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.ag-period-empty {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.ag-reservationContainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    /* margin: 0.2rem; */
+    /* background-color: green; */
+}
+
+.ag-reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    color: black;
+    background-color: lightblue;
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
+    margin: 0.5rem 0;
+}
+
+.ag-reservationContainer p {
+    margin: 0.2rem 0;
+}
+
+.ag-reservationBorder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    min-width: 50px;
+    color: black;
+    background-color: cadetblue;
+    margin: 0.5rem 0;
+}
+
+.ag-reservationEnd {
+    background-color: lightblue;
+}
+
+/* .ag-reservationBorderLeft {
+    border-left: 1px solid black;
+}
+
+.ag-reservationBorderRight {
+    border-right: 1px solid black;
+} */

@@ -1,0 +1,53 @@
+.register-form {
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
+}
+
+/* Main form fields */
+.register-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3vh;
+}
+.register-field > p {
+    height: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Form labels */
+.register-field > p > label {
+    height: 0.5rem;
+    font-size: 0.9rem;
+    color: #004d95;
+}
+
+/* Form inputs */
+.register-field > p > input {
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    border-bottom: #004d95 0.1rem solid;
+    width: 60vw;
+}
+
+/* Form submit */
+.register-submit {
+    margin-top: 2vh;
+    width: 60vw;
+}
+.register-submit > p > input[type=submit] {
+    width: 50vw;
+    height: 6vh;
+    background: rgb(209, 62, 136);
+    border: none;
+    border-radius: 0.3rem;
+    cursor:pointer;
+    color: #fff;
+}

@@ -12,11 +12,52 @@ exports.getAllUser = async (req, res) => {
     }
 }
 // Method for the sessions
-exports.getSessionUser = (req, res)=>{
+exports.getSessionUser = async (req, res, next)=>{
     if (req.session.user) {
         res.send({loggedIn: true, user: req.session.user});
     }else{
         res.send({loggedIn: false});
+    }
+    next();
+}
+exports.destroySessionUser = async (req, res, next)=>{
+req.session.destroy();
+res.send({loggedIn: false});
+    next();
+}
+
+exports.authUser = async (req, res) => {
+    const email = req.params.email;
+    try {
+        await User.findOne({email: email},(err, doc)=>{
+            if(err) throw err;
+            if(!doc){
+                res.status(403).json({
+                    message: 'The user is not register.'
+                });
+                console.log('The user is not register.');
+            }else{
+                bcrypt.compare(req.body.password, doc.password, function(err, result) {
+                    if(result){
+                    console.log('you are logged in as ' + doc.lastname);
+                    req.session.user = doc;
+                    res.status(200).json(
+                        {loggedIn: true,message: "Login Successfuly!" , user: req.session.user}
+                    );
+                    }else if(err){
+                        res.status(403).json({
+                            message: 'incorrect password.'
+                        });
+                        console.log('incorrect password ' + user.password);
+                    }
+                });
+
+            }
+        });
+
+    } catch (error) {
+        console.log(error);
+        // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
     }
 }
 
@@ -26,26 +67,13 @@ exports.getUser = async (req, res) => {
     try {
         await User.findOne({email: email},(err, doc)=>{
             if(err) throw err;
-            console.log(doc);
-            console.log(email);
-            console.log(req.body);
             if(!doc){
-                console.log('The user is not register');
+                console.log('User not found');
+                res.send({message: 'User not found!'})
             }else{
-                
-                bcrypt.compare(req.body.password, doc.password, function(err, result) {
-                    if(result){
-                    console.log('you are logged in as ' + doc.lastname);
-                    req.session.user = doc;
-                    console.log(req.session.user);
-                    res.json(doc);
-                    }else if(err){
-                        console.log('incorrect password ' + user.password);
-                    }
-                });
-                
-                    
-            }
+                console.log(req.doc);
+                res.json(doc);
+            }      
         });
 
     } catch (error) {

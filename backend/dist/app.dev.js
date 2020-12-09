@@ -8,36 +8,41 @@ var bodyParser = require('body-parser');
 
 var cookieParser = require('cookie-parser');
 
+var MongoStore = require("connect-mongo")(session);
+
 var cors = require('cors');
 
 var mongoose = require('mongoose');
 
 var app = express();
 
-var routes = require('./routes/routes'); // Then pass them to cors:
+var routes = require('./routes/routes');
 
+var database = "mongodb+srv://username:123password@cluster0.2sv4t.gcp.mongodb.net/fabulab?retryWrites=true&w=majority"; // Then pass them to cors:
 
 app.use(cors({
-  origin: ["http://localhost:3000"],
+  origin: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-app.use(cookieParser());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(session({
-  key: "userInfo",
   secret: "teamworkfablabproject2020",
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
   cookie: {
-    expires: 1000 * 60 * 60 * 24
-  }
+    maxAge: 30 * 60000
+  } // store: new MongoStore({
+  //     mongooseConnection: mongoose.connection,
+  //     ttl: (30 * 60000 ) / 1000
+  //   })
+
 }));
 app.use('/', routes);
-var database = "mongodb+srv://username:123password@cluster0.2sv4t.gcp.mongodb.net/fabulab?retryWrites=true&w=majority";
 var port = process.env.PORT || 8080;
 mongoose.connect(database, {
   useCreateIndex: true,
