@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Template } from '../components/user/Template';
+import { Template } from '../components/customer/Template';
 import { Admin } from '../components/admin/Admin';
 
 const Routes = (props) => {

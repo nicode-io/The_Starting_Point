@@ -1,15 +1,25 @@
 import React ,{ useState }from 'react';
-import { FormField } from '../../commons';
 import api from '../../../api';
+import { FormField } from '../../commons';
 
+
+/**
+ * This component allow admin user to
+ * create Products and add them to the
+ * database
+ * @param props
+ * @returns {JSX.Element}
+ */
 export function ProductForm(props) {
-    const [name , setName] = useState('');
-    const [category , setCategory] = useState('');
-    const [tarif , setTarif] = useState('');
-    const [stock , setStock] = useState('');
-    
+
+    // Variable
+    const [name, setName] = useState('');
+    const [category, setCategory] = useState('');
+    const [tarif, setTarif] = useState('');
+    const [stock, setStock] = useState('');
+
+    // Manage admin user input
     const handleSubmit = () => {
-        
         api.insertNew('/add-product',{
             name : name,
             tarif : tarif,
@@ -21,15 +31,15 @@ export function ProductForm(props) {
             console.log(error);
         });
     }
+
+    // Display the product creation form
     return (
         <section>
-            <form onSubmit={handleSubmit} className="log-form">
-                {(typeof props.edit !== 'undefined' && props.edit) ? "Modifier" : "Ajouter"}
-                
-                <FormField label="Name" type="text" callback={fieldValue => setName(fieldValue)}/>
-                <FormField label="Tarif" type="number" callback={fieldValue => setTarif(fieldValue)}/>
-                <FormField label="Category" type="text" callback={fieldValue => setCategory(fieldValue)}/>
-                <FormField label="Stock" type="number" callback={fieldValue => setStock(fieldValue)}/>
+            <form onSubmit={ handleSubmit } className="log-form">
+                <FormField label="Name" type="text" callback={fieldValue => setName(fieldValue)} />
+                <FormField label="Tarif" type="number" callback={fieldValue => setTarif(fieldValue)} />
+                <FormField label="Category" type="text" callback={fieldValue => setCategory(fieldValue)} />
+                <FormField label="Stock" type="number" callback={fieldValue => setStock(fieldValue)} />
                 <FormField label="Submit" type="submit" />
             </form>
         </section>

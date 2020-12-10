@@ -1,15 +1,17 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+/**
+ * Database Machine schema
+ */
+
+// Define schema
 const MachineSchema = new Schema({
     name: {
         type: String,
         required:true
     },
-    // category: {
-    //     type: String,
-    //     required:true
-    // },
     tarif: {
         type: Number,
         required :true
@@ -18,10 +20,6 @@ const MachineSchema = new Schema({
         type : Schema.Types.ObjectId,
         ref : "Reservation"
     },
-    // machines :[{
-    //     type: Schema.Types.ObjectId,
-    //     ref : 'Machine'
-    // }],
     available: {
         type: Boolean,
         default: true,
@@ -31,6 +29,16 @@ const MachineSchema = new Schema({
         type: String,
         default : " "
     },
+    // TBD
+    // category: {
+    //     type: String,
+    //     required:true
+    // },
+    // machines :[{
+    //     type: Schema.Types.ObjectId,
+    //     ref : 'Machine'
+    // }],
 });
 
+// Export schema
 module.exports = mongoose.model('Machine', MachineSchema);

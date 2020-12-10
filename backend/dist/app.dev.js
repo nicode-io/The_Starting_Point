@@ -1,24 +1,16 @@
 "use strict";
 
 var express = require('express');
-
-var session = require('express-session');
-
 var bodyParser = require('body-parser');
-
-var cookieParser = require('cookie-parser');
-
-var MongoStore = require("connect-mongo")(session);
-
-var cors = require('cors');
-
 var mongoose = require('mongoose');
-
-var app = express();
-
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var cors = require('cors');
+var MongoStore = require("connect-mongo")(session);
 var routes = require('./routes/routes');
+var app = express();
+var database = "mongodb+srv://username:123password@cluster0.2sv4t.gcp.mongodb.net/fabulab?retryWrites=true&w=majority";
 
-var database = "mongodb+srv://username:123password@cluster0.2sv4t.gcp.mongodb.net/fabulab?retryWrites=true&w=majority"; // Then pass them to cors:
 
 app.use(cors({
   origin: true,
