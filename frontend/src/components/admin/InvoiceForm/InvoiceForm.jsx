@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../../api';
 
-
+/**
+ * This component allows
+ *
+ * @returns {JSX.Element}
+ */
 export function InvoiceForm(props){
 
     // Variables
@@ -23,7 +27,7 @@ export function InvoiceForm(props){
         getAllReservations();
     }, []);
 
-    // Render the dropdown list with Machines
+    // Render the component
     return (
         <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
             <form>

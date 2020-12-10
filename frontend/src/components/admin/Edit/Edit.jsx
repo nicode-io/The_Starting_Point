@@ -5,7 +5,7 @@ import { FormField } from "../../commons";
 
 
 /**
- * This function allow admin users to edit items
+ * This component allow admin users to edit items
  * like Machine, Products, ...
  * @returns {JSX.Element}
  */
