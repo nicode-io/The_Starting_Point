@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+/**
+ * Database Reservation schema
+ */
+
+// Define schema
 const ReservationSchema = new Schema({
     usernotlogged: {
         type: String,
@@ -8,14 +14,6 @@ const ReservationSchema = new Schema({
             return !this.userlogged;
         }
     },
-    // userlogged: {
-    //     type: Schema.Types.ObjectId,
-    //     ref : "User",
-    //     required: () => {
-    //         return !this.usernotlogged;
-    //     }
-    // },
-    // A CHECK QUAND LA SESSION SERA OK
     archive: {
         type: Boolean,
         default: false,
@@ -41,6 +39,15 @@ const ReservationSchema = new Schema({
         type : Schema.Types.ObjectId,
         ref : "Invoice"
     }
+    // TBD
+    // userlogged: {
+    //     type: Schema.Types.ObjectId,
+    //     ref : "User",
+    //     required: () => {
+    //         return !this.usernotlogged;
+    //     }
+    // },
 });
 
+// Export schema
 module.exports = mongoose.model('Reservation', ReservationSchema);

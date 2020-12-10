@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormField } from '../..';
+import { FormField } from '../../commons/FormField/FormField';
 import './loginForm.css';
 import api from '../../../api';
 

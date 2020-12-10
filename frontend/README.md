@@ -1,68 +1,119 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# (◉ ͜ʖ◉))ﾉ彡 FABLAB PROJECT ✧٩(•́⌄•́๑)
+>   Customer project realised during our BeCode's bootcamp
 
-In the project directory, you can run:
 
-### `npm start`
+##  Index
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   [Description](#description)
+-   [Release Notes](#release-notes)
+-   [Toolbox](#toolbox)
+-   [The Teams](#the-teams)
+    -   Woods 3.21
+    -   ...
+-   [Timeline](#timeline)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Born from a request from the FabLab team of Charleroi, composed of Delphine and Sylvain, this project aims to improve the user experience "Client" but especially the user experience "Admin".
+Indeed, several tools had to be centralized in order to make the management of reservations, estimates and finally invoicing easier.
+The first step of this project was carried out by a Woods 3.21 team composed of :
+- :star: [Bastien Dewerse - PM Tech](https://github.com/DewerseB)
+- :star: [Nicolas Denoël - PM Orga](https://github.com/nicode-io)
+- :star: [Mohamed Shmayssany](https://github.com/M-Shmayssany)
+- :star: [Robby Delvaux](https://github.com/Delvaux1986)
+- :star: [Simon Duquaine](https://github.com/simonduquaine)
 
-### `npm run build`
+During this one, we were able to create a functional prototype allowing us to reserve a machine during a specific time slot chosen by the client.
+A reservation is then established, the rental price of the machine being defined automatically, this one can be modified before validating the final invoice.
+On the administrator's side: the administrator can create, modify and delete machines and related products. 
+He can consult the reservations through a calendar that allows him to navigate between the days and the different time slots in order to consult the use of the machines.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+##  Release Notes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### V 0.2
+>   Upgrade with components
 
-### `npm run eject`
+-   Admin section with management of:
+    -   Invoices 
+    -   Reservations
+    -   Machines
+    -   Products
+-   Agenda for admin users:
+    -   See all (un)available time slots
+    -   See reservation details on hover/click
+-   Set global design with a touch of neomorphism
+-   Introduce login system / user management
+-   Code refactor / Documentation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### V 0.1
+>   Set up project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   Choose packages to be used in project
+-   Create a first skeleton
+-   Manage communication between back-end and front-end
+-   Header / Footer / Navigation
+-   Machine picker
+-   Image Carousel
+-   Relations and Models
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+##  [Toolbox](#toolbox)
+>   Tools used in our project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Main language: JAVASCRIPT
+Main framework: REACT 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Packages back-end:
+-   Bcrypt 
+-   Body-parser
+-   Concurrently
+-   Connect-mongo
+-   Cookie-parser
+-   Cors
+-   Express
+-   Express-session
+-   Mongoose
 
-### Code Splitting
+Packages front-end:
+-   Axios
+-   Bootstrap
+-   Fortawesome
+-   React-bootstrap
+-   React-datepicker
+-   React-dom
+-   React-router
+-   React-router-dom
+-   React-scripts
+-   Reactstrap
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+---
 
-### Analyzing the Bundle Size
+##  [The Teams](#the-teams)
+>   The great people under the hood
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Woods 3.21 
+Born from a very nice meeting within the BeCode bootcamp of woods 3.21, our team was ideally composed of both back-end and front-end enthusiasts.
 
-### Making a Progressive Web App
+Our two PMs, Bastien and Nicolas, were complementary profiles, one for his technical background and the other for his experience in team management.
+Intense exchanges and discussions but often very prolific in terms of results, an enriching experience in terms of project management.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Robby and Mohamed worked with Bastien on the back-end of the project, routing, API, MongoDB/Mongoose etc...
+Simon and Nicolas worked on the visual aspect of the components as well as the coherence and unity of the project.
 
-### Advanced Configuration
+In the end, this first "real" project allowed us to realize the capabilities we have and those we need to acquire as well. From the importance of preparing a project to the importance of respecting a deadline by sometimes making concessions on the final result. A very nice professional experience, but above all a human one.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Thank you Fabulab Team!
 
-### Deployment
+### Who's next ?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+---
 
-### `npm run build` fails to minify
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

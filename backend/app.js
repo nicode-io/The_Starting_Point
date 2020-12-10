@@ -1,17 +1,18 @@
-const express = require('express');
-const session = require('express-session');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const MongoStore = require("connect-mongo")(session);
-const cors = require('cors');
 const mongoose = require('mongoose');
-
-const app = express();
+const express = require('express');
 const routes = require('./routes/routes');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+const MongoStore = require("connect-mongo")(session);
 
+// Create main app as an express app
+const app = express();
+// Define database link
 const database = "mongodb+srv://username:123password@cluster0.2sv4t.gcp.mongodb.net/fabulab?retryWrites=true&w=majority";
-// Then pass them to cors:
 
+// Use cors
 app.use(cors({
     origin: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -33,10 +34,9 @@ app.use(session({
 
 app.use('/', routes);
 
+// Database connection
 const port = process.env.PORT || 8080;
-
-mongoose
-    .connect(database, {
+mongoose.connect(database, {
         useCreateIndex: true,
         useUnifiedTopology: true,
         useNewUrlParser: true,

@@ -7,30 +7,41 @@ import "./admin.css";
 import { Agenda, MachineForm, ProductForm , Management , Edit ,Invoices , InvoiceForm} from "./index";
 
 
+/**
+ * This component is the main admin section.
+ * It displays the content of each admin component
+ * according to view params
+ * @param props
+ * @returns {JSX.Element}
+ */
 export function Admin(props) {
-    let params = useParams();
-    let tab;
 
+    // Variables
+    let params = useParams();
+    let tabContent;
+
+    // Display component content according to view params
     if (params.view === "pendingusers") {
-        tab = <section>
+        tabContent = <section>
             Users to validate
             </section>
     } else if (params.view === "management") {
-        tab = <Management />
+        tabContent = <Management />
     } else if (params.view === "edit") {
-        tab = <Edit />
+        tabContent = <Edit />
     } else if (params.view === "add-machine") {
-        tab = <MachineForm />
+        tabContent = <MachineForm />
     }else if (params.view === "add-product") {
-        tab = <ProductForm />
+        tabContent = <ProductForm />
     }else if (params.view === "add-invoice") {
-        tab = <InvoiceForm />
+        tabContent = <InvoiceForm />
     }else if (params.view === "invoices") {
-        tab = <Invoices />
+        tabContent = <Invoices />
     } else {
-        tab = <Agenda />
+        tabContent = <Agenda />
     }
 
+    // Render the admin menu
     return (
         <main>
             <ul class="nav nav-tabs d-flex justify-content-around ">
@@ -38,7 +49,7 @@ export function Admin(props) {
                     <Link to="/admin/agenda" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/agenda" ? " is-current" : ""}`}><FontAwesomeIcon icon={faCalendarAlt} size="1vh" />    </Link>
                 </li>
                 <li class="nav-item">
-                    <Link to="/admin/invoices" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/inoices" ? " is-current" : ""}`}><FontAwesomeIcon icon={faFileAlt} size="1vh" /></Link>
+                    <Link to="/admin/invoices" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/invoices" ? " is-current" : ""}`}><FontAwesomeIcon icon={faFileAlt} size="1vh" /></Link>
                 </li>
                 <li class="nav-item">
                     <Link to="/admin/pendingusers" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/pendingusers" ? " is-current" : ""}`}><FontAwesomeIcon icon={faUserClock} size="1vh" /></Link>
@@ -47,8 +58,7 @@ export function Admin(props) {
                     <Link to="/admin/management" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`}><FontAwesomeIcon icon={faEdit} size="1vh" /></Link>
                 </li>
             </ul>
-            {tab}
-            <div style={{height: '15vh'}}></div>
+            {tabContent}
         </main>
     )
 }

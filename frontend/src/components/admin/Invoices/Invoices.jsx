@@ -1,24 +1,25 @@
-// LES IMPORTS :p
-import React, { useState, useEffect, Fragment } from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import api from '../../../api';
-import { Link } from 'react-router-dom';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinusSquare, faPenSquare, faPlusSquare} from '@fortawesome/free-solid-svg-icons';
 import { FormField } from '../../commons';
 
 
+/**
+ * This component is used to manage reservations list
+ * and invoices list. It adds management for these like
+ * transforming reservation into invoice
+ * @param props
+ * @returns {JSX.Element}
+ */
+export function Invoices(props) {
 
+    // Variables
+    const [error, setError] = useState();
+    const [invoices, setInvoices] = useState([]);
+    const [reservations, setReservations] = useState([]);
 
-
-export function Invoices() {
-    // Var & Hooks
-    const [error,setError] = useState();
-    const [invoices,setInvoices] = useState([]);
-    const [reservations , setReservations] = useState([]);
-    
-    
-    //Method for Get all Reservations.
-
+    // Get all reservations
     async function getAllReservations() {
         await api.getAll(`/reservations`)
         .then((data) => {
@@ -26,56 +27,52 @@ export function Invoices() {
         },
         (error) => {
             setError(error);
-        }
-        )};
-    // Method for get all Invoices
-    
+        })
+    }
+
+    // Get all Invoices
     async function getAllInvoices() {
         await api.getAll(`/invoices`)
         .then((data) => {
             setInvoices(data.data);
-                
         },
         (error) => {
             setError(error);
-        }
-        )};
-    // Method for good displaying date in invoice & reservations
+        })
+    }
 
+    // Display formatted dates in invoice & reservations
     function displayDate(dateInJson){
         let date = new Date(dateInJson);
-        let string = date.getDate() +"/"+ (date.getMonth() +1) +"/"+ date.getFullYear()+"" ;
-        return string;
+        return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "";
     }
 
     function displayHour(dateInJson){
         let date = new Date(dateInJson);
-        let string = date.getHours() +"h"+ (date.getMonth() +1);
-        return string;
+        return date.getHours() + "h" + (date.getMonth() + 1);
     }
+
     // use Effect for refresh state
     useEffect( () => {
         getAllReservations();
         getAllInvoices();
     }, []);
+
     // Method for transform Reservation to Invoice
     async function transformToInvoice(reservationId, machineId){
         let txt;
-        if (window.confirm(`Voulez vous transformer cette résérvation en facture ?`)) {
-                txt = true;
-            } else {
-                txt = false;
-            }
-            if(txt){
-                const machineSelected = await api.getById('/machine', machineId);
-                await api.insertNew('/add-invoice', {
-                    reservation:reservationId,
-                    machineUseInInvoice:machineSelected.data.name
-                });
-                window.location.reload(false);
-            }
+        txt = window.confirm(`Voulez vous transformer cette résérvation en facture ?`);
+        if(txt){
+            const machineSelected = await api.getById('/machine', machineId);
+            await api.insertNew('/add-invoice', {
+                reservation:reservationId,
+                machineUseInInvoice:machineSelected.data.name
+            });
+            window.location.reload(false);
+        }
     }
-    
+
+    // Render invoices and reservations lists
     return (
         <Fragment>
             <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
@@ -99,7 +96,7 @@ export function Invoices() {
                         </tr>
                         ))}
                     </tbody>
-                    </table>
+                </table>
             </section>
             <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
                 <h2 className="text-center">Résérvations</h2>

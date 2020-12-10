@@ -1,28 +1,35 @@
 import React from 'react';
+import api from '../../../api/index';
+import DatePicker from "react-datepicker";
 import { FormField } from '../../commons';
 import { MachinePicker } from '../index';
+import { useState } from "react";
 import "./reservationForm.css";
-import api from '../../../api/index';
-// IMPORT FOR CALENDAR
-import  { useState } from "react";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 
-
+/**
+ * This component manage the reservation form,
+ * one of the most important part of the project.
+ * It allows a user to choose a Machine, a time slot
+ * and then validate his reservation.
+ * @param props
+ * @returns {JSX.Element}
+ */
 export function ReservationForm(props) {
+
+    // Variables
     const [date, setDate] = useState(new Date());
     const [startHour, setStartHour] = useState(new Date());
     const [endHour, setEndHour] = useState(new Date());
-    const [isLogged , setItsLogged] = useState();
+        // const [isLogged , setItsLogged] = useState(); TBD
     const [name, setName] = useState('');
     const [mail , setMail] = useState('');
     const [machine, setMachine] = useState();
     const [comment, setComment] = useState();
     
-    // On crée une nouvelle reservation en utilisant le Model Reservation et on lui passe l id de la machine pour la relation
+    // Create a new reservation according to Reservation model and Machine ID
     const handleReservation = () => {
-        
         try{
             api.insertNew('/add-reservation', {
                 machine: machine,
@@ -38,18 +45,18 @@ export function ReservationForm(props) {
                 console.error(error);
                 
             })
-            // saveReservationInInvoices();
+                // saveReservationInInvoices(); TBD
         }catch(error){
             console.log(error);
         }
     }
    
-    // On gere le menu déroulant pour a chaque fois assigné l'id de la machine
+    // Manage user Machine's choice
     let handleChange = (event) => {
         setMachine(event.target.value);
     }
     
-    // Return visuel du reservationForm
+    // Display Reservation form
     return (
         <main id="main">
             <section id="form">
@@ -62,14 +69,19 @@ export function ReservationForm(props) {
                     </article>
                     <p id={"steps"}>3 - DATE, HEURE ET INFOS </p>
                     
-                    <article id="date-picker">
-                        <p>Le&nbsp;<DatePicker
+                    <section id="date-picker">
+                        <article>
+                            Le&nbsp;
+                            <DatePicker
                             dateFormat="dd/MM/yyyy" 
                             selected={date} 
                             onChange={date => setDate(date)} 
                             id="datepicker-element"
-                        /></p>
-                        <p>De&nbsp;<DatePicker
+                            />
+                        </article>
+                        <article>
+                            De&nbsp;
+                            <DatePicker
                             selected={startHour}
                             onChange={startHour => setStartHour(startHour)}
                             showTimeSelect
@@ -78,8 +90,11 @@ export function ReservationForm(props) {
                             timeCaption="Time"
                             dateFormat="h:mm aa"
                             id="datepicker-element"
-                        /></p>
-                        <p>A&nbsp;&nbsp;<DatePicker
+                            />
+                        </article>
+                        <article>
+                            A&nbsp;&nbsp;
+                            <DatePicker
                             selected={endHour}
                             onChange={endHour => setEndHour(endHour)}
                             showTimeSelect
@@ -88,17 +103,12 @@ export function ReservationForm(props) {
                             timeCaption="Time"
                             dateFormat="h:mm aa"
                             id="datepicker-element"
-                        /></p>
-                        {console.log(date)}
-                    </article>
+                            />
+                        </article>
+                    </section>
                     <article id={"need-help"}>
-                        {/*<p>Besoin de conseils ?</p>*/}
-                        {/*<article id={"need-help-choice"}>*/}
-                        {/*    <p id={"choice-yes"}><FormField label="OUI&nbsp;&nbsp;" type="radio" name="Test" /></p>*/}
-                        {/*    <p><FormField label="NON&nbsp;&nbsp;" type="radio" name="Test" /></p>*/}
-                        {/*</article>*/}
                         <p>Informations complémentaires</p>
-                        <FormField type="textarea" placeholder="Si vous avez des demandes particulières" callback={fieldValue => setComment(fieldValue)}/>
+                        <FormField type="textarea" placeholder="Demandes spécifiques / Commentaires" callback={fieldValue => setComment(fieldValue)}/>
                     </article>
                     <article className={"reservation-submit"}>
                         <FormField label="Je réserve" type="submit" id="form-submit"/>

@@ -1,9 +1,17 @@
 import React ,{ useState }from 'react';
+import api from '../../../api';
 import { FormField } from '../../commons';
 
-import api from '../../../api';
 
+/**
+ * This component allows admin users
+ * to create a new Machine
+ * @param props
+ * @returns {JSX.Element}
+ */
 export function MachineForm(props) {
+
+    // Variables
     const [name , setName] = useState('');
     const [tarif , setTarif] = useState('');
     const [disponibilite , setDisponibilite] = useState('');
@@ -22,10 +30,9 @@ export function MachineForm(props) {
         }, (error) => {
             console.log(error);
         });
-        
     }
     
-    
+    // Render the Machine creation form
     return (
         <section>
             <form onSubmit={handleSubmit} className="log-form">
