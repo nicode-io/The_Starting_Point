@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import DatePicker from 'react-datepicker';
 import {Modal} from "../../commons";
+import api from '../../../api';
 import './agenda.css';
 
 
@@ -45,6 +46,7 @@ export function Agenda(props) {
     }
 
     const [selectedDay, setSelectedDay] = useState(selectedDayInit());
+    const [reservations, setReservations] = useState([]);
     const [agenda, setAgenda] = useState([]);
     const [modalPeriod, setModalPeriod] = useState();
     const [isModalVisible, setisModalVisible] = useState(false);
@@ -129,7 +131,9 @@ export function Agenda(props) {
                 let periodName = WEEK[date.getDay()] + " " + dateToString(periodStartDate) + " - " + dateToString(periodEndDate);
                 let periodReservations = [];
                 reservations.map((reservation) => {
-                    (periodStartDate.getTime() >= reservation.startdate && periodStartDate.getTime() < reservation.enddate) 
+                    let reservationStartDate = new Date(reservation.startdate);
+                    let reservationEndDate = new Date(reservation.enddate);
+                    (periodStartDate.getTime() >= reservationStartDate.getTime() & periodStartDate.getTime() < reservationEndDate.getTime()) 
                         && periodReservations.push(reservation);
                 })
                 day.push({startDate: periodStartDate, endDate: periodEndDate, name: periodName, reservations: periodReservations})
@@ -150,6 +154,7 @@ export function Agenda(props) {
      * @param {Object} period the period of time to display
      */
     const displayPeriod = (period) => {
+        console.log(reservations);
         setModalPeriod(period);
         setisModalVisible(true);
     }
@@ -190,17 +195,19 @@ export function Agenda(props) {
             <Fragment>
                 {(period.reservations.length > 0)
                     ? period.reservations.map((reservation) => {
+                        let reservationStartDate = new Date(reservation.startdate);
+                        let reservationEndDate = new Date(reservation.enddate);
                         return (
                             <section className="ag-reservationContainer">
-                                <article className={(period.startDate.getTime() === reservation.startdate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
-                                    <p>{dateToString(reservation.startdate)}</p>
+                                <article className={(period.startDate.getTime() === reservationStartDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                    <p>{dateToString(reservationStartDate)}</p>
                                 </article>
                                 <article className="ag-reservation">
                                     <p>ID: {reservation._id}</p>
                                     <p>Machine: {reservation.machine.name}</p>
                                 </article>
-                                <article className={(period.endDate.getTime() === reservation.enddate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
-                                    <p>{dateToString(reservation.enddate)}</p>
+                                <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                    <p>{dateToString(reservationEndDate)}</p>
                                 </article>
                             </section>
                         )
@@ -213,30 +220,39 @@ export function Agenda(props) {
         )
     }
 
-    // async function getItemById(type ,id){
+    // Get all reservations
+    async function getAllReservations() {
+        await api.getAll(`/reservations`)
+        .then((data) => {
+            setReservations(data.data);     
+        },
+        (error) => {
+            console.log(error);
+        })
+    }
+
+    // async function getReservations(startDate, endDate){
     //     try {
-    //         await api.getById(`/${type}`, id)
+    //         await api.getAllLike(`/reservations`, {startdate: {$gte: startDate}, enddate: {$lte: endDate}})
     //         .then((data) => {
-    //             setItem(data.data);     
-    //             setIsLoaded(true);
-    //             setisUpdated(false);         
+    //             setReservations(data.data);     
+    //             // setIsLoaded(true);
+    //             // setisUpdated(false);         
     //         });
     //     } catch (error) {
     //         console.log(error);
     //     }
     // }
-    
-    // USE EFFECT FOR CHECK IF IS LOADED OR NOT
-    
-    // useEffect(() => {
-    //     (!isLoaded) && getItemById(type,id);
-    //     console.log(item);
-    //     console.log(isUpdated);
-    // })
 
-    useEffect(() => {        
-        (selectedDay !== undefined) && createAgenda(generateWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, TIMEPERIOD, RESERVATIONS);
-    }, [selectedDay])
+    useEffect(() => {
+        getAllReservations();
+        console.log("Get")
+    }, [])
+
+    useEffect(() => {
+        console.log(reservations);
+        (selectedDay !== undefined) && createAgenda(generateWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, TIMEPERIOD, reservations);
+    }, [reservations, selectedDay])
     
     return (
             <section className="section-agenda text-center">

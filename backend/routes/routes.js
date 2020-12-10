@@ -67,6 +67,7 @@ router.delete('/delete-product/:productId', productsController.deleteProduct);
  * Reservation routes
  */
 router.get('/reservations' , reservationsController.getAllReservation);
+router.post('/reservations', reservationsController.getAllReservation);
 router.post('/add-reservation' , reservationsController.postReservation);
     // router.get('/:reservationId' , reservationsController.getReservation); TDB
     // router.get('/edit-reservation/:reservationId' , reservationsController.getEditReservation); TDB
