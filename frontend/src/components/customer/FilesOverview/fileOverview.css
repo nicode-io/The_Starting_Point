@@ -1,10 +1,10 @@
-.main-home {
+.main-files-overview {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.home {
+.files-overview {
     width: 80vw;
     max-width: 700px;
     border-radius: 10px;

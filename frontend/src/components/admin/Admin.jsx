@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserClock, faCalendarAlt, faEdit, faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import "./admin.css";
-import { Agenda, MachineForm, ProductForm , Management , Edit ,Invoices , InvoiceForm} from "./index";
+import { Agenda, Edit, Invoices, InvoiceForm, MachineForm, Management, ProductForm, Users } from "./index";
 
 
 /**
@@ -22,9 +22,7 @@ export function Admin(props) {
 
     // Display component content according to view params
     if (params.view === "pendingusers") {
-        tabContent = <section>
-            Users to validate
-            </section>
+        tabContent = <Users />
     } else if (params.view === "management") {
         tabContent = <Management />
     } else if (params.view === "edit") {

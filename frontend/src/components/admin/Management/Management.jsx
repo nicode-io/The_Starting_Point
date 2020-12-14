@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusSquare, faPenSquare, faPlusSquare} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { FormField } from '../../commons';
+import './management.css';
 
 
 /**
@@ -64,83 +65,84 @@ export function Management(props) {
 
     // Render the edition tools
     return (
-        <Fragment>
-             <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
-               {message}
-                <div className="d-flex justify-content-around align-items-center w-50">
-                    <h2>Machines</h2>
-                    <Link to={`/admin/add-machine`}>
-                        <FontAwesomeIcon icon={faPlusSquare} size="2x" />
-                    </Link>
-                </div>
-
-                <table className="table w-50 text-center">
-                    <thead className="thead-dark">
-                        <tr>
-                        <th style={{width: '25%'}} scope="col">Nom</th>
-                        <th style={{width: '25%'}} scope="col">Tarif</th>
-                        <th style={{width: '25%'}} scope="col">Modifier</th>
-                        <th style={{width: '25%'}} scope="col">Supprimer</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {machines.map(machine => (
-                        <tr key={"list-" + machine._id}>
-                        <td>{machine.name}</td>
-                        <td>{machine.tarif}€/h</td>
-                        <td>
-                            <Link to={`edit/machine/${machine._id}`}>
-                                <FontAwesomeIcon icon={faPenSquare} size="2x" />
-                            </Link>
-                        </td>
-                        <td>
-                            <FormField type="button" callback={() => deleteItemById('machine', machine._id, machine.name)}>
-                                <FontAwesomeIcon icon={faMinusSquare} size="2x" />
-                            </FormField>
-                        </td>
-                        </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </section>
-            <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
-                <article className="d-flex justify-content-around align-items-center w-50">
-                        <h2>Produits</h2>
-                        <Link to={`/admin/add-product`}>
-                            <FontAwesomeIcon icon={faPlusSquare} size="2x" />
+        <>
+            <section className={"main-list"}>
+                <article className="white-container">
+                    {message}
+                    <section className="list-title">
+                        <h2>Machines</h2>
+                        <Link to={`/admin/add-machine`}>
+                            <i className="far fa-plus-square add-icon"></i>
                         </Link>
-                </article>
-                <article>
-                    <table className="table w-50 text-center">
-                        <thead className="thead-dark">
-                            <tr>
+                    </section>
+                    <table className="table text-center">
+                        <thead className="banner-list">
+                        <tr>
                             <th style={{width: '25%'}} scope="col">Nom</th>
                             <th style={{width: '25%'}} scope="col">Tarif</th>
                             <th style={{width: '25%'}} scope="col">Modifier</th>
                             <th style={{width: '25%'}} scope="col">Supprimer</th>
-                            </tr>
+                        </tr>
                         </thead>
                         <tbody>
-                        {products.map(product => (
-                            <tr key={"list-" + product._id}>
-                            <td>{product.name}</td>
-                            <td>{product.tarif}€/h</td>
-                            <td>
-                                <Link to={`edit/product/${product._id}`}>
-                                    <FontAwesomeIcon icon={faPenSquare} size="2x" />
-                                </Link>
-                            </td>
-                            <td>
-                                <FormField type="button" callback={() => deleteItemById('product', product._id)}>
-                                    <FontAwesomeIcon icon={faMinusSquare} size="2x" />
-                                </FormField>
-                            </td>
+                        {machines.map(machine => (
+                            <tr key={"list-" + machine._id}>
+                                <td>{machine.name}</td>
+                                <td>{machine.tarif}€/h</td>
+                                <td>
+                                    <Link to={`edit/machine/${machine._id}`}>
+                                        <i className="far fa-edit edit-icon"></i>
+                                    </Link>
+                                </td>
+                                <td>
+                                    <FormField type="button" callback={() => deleteItemById('machine', machine._id, machine.name)}>
+                                        <i className="far fa-trash-alt delete-icon"></i>
+                                    </FormField>
+                                </td>
                             </tr>
-                            ))}
+                        ))}
                         </tbody>
                     </table>
                 </article>
             </section>
-        </Fragment>
+            <section className="main-list">
+                <article className={"white-container"}>
+                    <section className="list-title">
+                        <h2>Produits</h2>
+                        <Link to={`/admin/add-product`}>
+                            <i className="far fa-plus-square add-icon"></i>
+                        </Link>
+                    </section>
+                    <table className="table text-center">
+                        <thead className={"banner-list"}>
+                        <tr>
+                            <th style={{width: '25%'}} scope="col">Nom</th>
+                            <th style={{width: '25%'}} scope="col">Tarif</th>
+                            <th style={{width: '25%'}} scope="col">Modifier</th>
+                            <th style={{width: '25%'}} scope="col">Supprimer</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {products.map(product => (
+                            <tr key={"list-" + product._id}>
+                                <td>{product.name}</td>
+                                <td>{product.tarif}€/h</td>
+                                <td>
+                                    <Link to={`edit/product/${product._id}`}>
+                                        <i className="far fa-edit edit-icon"></i>
+                                    </Link>
+                                </td>
+                                <td>
+                                    <FormField type="button" callback={() => deleteItemById('product', product._id)}>
+                                        <i className="far fa-trash-alt delete-icon"></i>
+                                    </FormField>
+                                </td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+        </>
     );
 }

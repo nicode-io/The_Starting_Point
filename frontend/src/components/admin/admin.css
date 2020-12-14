@@ -9,20 +9,21 @@ main{
 }
 
 .admin-main > ul {
+    height: 4vh;
+    max-height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     list-style-type: none;
+    padding-top: 1vh;
 }
 
-
-.admin-nav-link {
-    padding: 0.5vw;
-    color: #004d95;
-    text-decoration: none;
-    font-size: 4vh;
-  }
+.nav-item {
+    height: 4vh;
+    max-height: 50px;
+}
 
 .nav-item > a {
     border-radius: 10px;
@@ -30,6 +31,8 @@ main{
     box-shadow:  5px 5px 10px #d9d9d9,
     -5px -5px 10px #ffffff;
     padding: 1vw;
+    font-size: 1.5rem;
+
 }
 
 .nav-item > a:hover{

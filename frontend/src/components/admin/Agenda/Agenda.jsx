@@ -187,29 +187,33 @@ export function Agenda(props) {
      */
     const createModalContent = (period) => {
         return (
-            <Fragment>
-                {(period.reservations.length > 0)
-                    ? period.reservations.map((reservation) => {
-                        return (
-                            <section className="ag-reservationContainer">
-                                <article className={(period.startDate.getTime() === reservation.startdate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
-                                    <p>{dateToString(reservation.startdate)}</p>
-                                </article>
-                                <article className="ag-reservation">
-                                    <p>ID: {reservation._id}</p>
-                                    <p>Machine: {reservation.machine.name}</p>
-                                </article>
-                                <article className={(period.endDate.getTime() === reservation.enddate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
-                                    <p>{dateToString(reservation.enddate)}</p>
-                                </article>
-                            </section>
-                        )
-                    })
-                    : <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    </p>
-                }
-            </Fragment>
+            <>
+                <section className={"main-list"}>
+                    <article className={"agenda-item"}>
+                        {(period.reservations.length > 0)
+                            ? period.reservations.map((reservation) => {
+                                return (
+                                    <section className="ag-reservationContainer">
+                                        <article className={(period.startDate.getTime() === reservation.startdate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                            <p>{dateToString(reservation.startdate)}</p>
+                                        </article>
+                                        <article className="ag-reservation">
+                                            <p>ID: {reservation._id}</p>
+                                            <p>Machine: {reservation.machine.name}</p>
+                                        </article>
+                                        <article className={(period.endDate.getTime() === reservation.enddate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                            <p>{dateToString(reservation.enddate)}</p>
+                                        </article>
+                                    </section>
+                                )
+                            })
+                            : <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </p>
+                        }
+                    </article>
+                </section>
+            </>
         )
     }
 

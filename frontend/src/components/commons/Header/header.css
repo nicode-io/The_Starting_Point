@@ -32,6 +32,7 @@
   box-shadow:  5px 5px 10px #00417f,
   -5px -5px 10px #0059ab;
   color: #fff;
+  font-size: 1.3rem;
 }
 
 #btn-admin:hover, #btn-login:hover {

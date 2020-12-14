@@ -16,7 +16,7 @@ import slidefour from '../../../assets/images/fablab-slide4.png';
 export function EventsCarousel () {
 
     // Variables
-    let sliderArr = [<img src={slidefour}  alt={'engagement premier'}/>, <img src={slidefour}  alt={'engagement second'}/>, <img src={slidefour}  alt={'engagement troisième'}/>, <img src={slidefour}  alt={'engagement quatrième'}/>];
+    let sliderArr = [<img src={slideone}  alt={'engagement premier'}/>, <img src={slidetwo}  alt={'engagement second'}/>, <img src={slidethree}  alt={'engagement troisième'}/>, <img src={slidefour}  alt={'engagement quatrième'}/>];
     const [x, setX] = useState(0)
     const goLeft = () => {
         x === 0 ? setX(-100 * (sliderArr.length - 1)) : setX(x + 100);
