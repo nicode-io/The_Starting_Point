@@ -1,4 +1,13 @@
+.main-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .register-form {
+    width: 80vw;
+    max-width: 700px;
     border-radius: 10px;
     background: #ffffff;
     box-shadow:  -10px -10px 20px #d9d9d9,
@@ -7,6 +16,8 @@
 
 /* Main form fields */
 .register-field {
+    width: 70vw;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +34,8 @@
 
 /* Form labels */
 .register-field > p > label {
+    width: 70vw;
+    max-width: 650px;
     height: 0.5rem;
     font-size: 0.9rem;
     color: #004d95;
@@ -30,6 +43,8 @@
 
 /* Form inputs */
 .register-field > p > input {
+    width: 70vw;
+    max-width: 650px;
     text-align: left;
     border: none;
     border-radius: 0;
@@ -41,13 +56,26 @@
 .register-submit {
     margin-top: 2vh;
     width: 60vw;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .register-submit > p > input[type=submit] {
-    width: 50vw;
+    width: 35vw;
+    max-width: 350px;
     height: 6vh;
     background: rgb(209, 62, 136);
     border: none;
     border-radius: 0.3rem;
     cursor:pointer;
     color: #fff;
+}
+.register-submit > p > input[type=submit]:hover {
+    width: 35vw;
+    max-width: 350px;
+    border-radius: 10px;
+    background: #c24c86;
+    box-shadow: inset 5px 5px 10px #a54172,
+    inset -5px -5px 10px #df579a;
 }

@@ -11,3 +11,4 @@ export { ReservationForm } from "./ReservationForm/ReservationForm";
 export { ReservationItem } from "./ReservationItem/ReservationItem";
 export { ReservationsList } from "./ReservationsList/ReservationsList";
 export { UserType } from "./UserType/UserType";
+export { Home } from "./Home/Home";
