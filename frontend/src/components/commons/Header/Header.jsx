@@ -1,8 +1,7 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import './header.css';
 import logo from '../../../assets/images/logo-header.png';
 import { Link, useLocation } from 'react-router-dom';
-import { FormField } from '../';
 
 const Header = (props) => {
 console.log(props);

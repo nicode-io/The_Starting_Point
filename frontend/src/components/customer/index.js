@@ -2,6 +2,7 @@
 export { EventsCarousel } from "./EventsCarousel/EventsCarousel";
 export { EventsList } from "./EventsList/EventsList";
 export { FilesOverview } from "./FilesOverview/FilesOverview";
+export { Home } from "./Home/Home";
 export { InvoiceItem } from "./InvoiceItem/InvoiceItem";
 export { InvoicesList } from "./InvoicesList/InvoicesList";
 export { LoginForm } from "./LoginForm/LoginForm";
@@ -11,4 +12,3 @@ export { ReservationForm } from "./ReservationForm/ReservationForm";
 export { ReservationItem } from "./ReservationItem/ReservationItem";
 export { ReservationsList } from "./ReservationsList/ReservationsList";
 export { UserType } from "./UserType/UserType";
-export { Home } from "./Home/Home";
