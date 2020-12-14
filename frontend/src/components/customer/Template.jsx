@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, useParams } from 'react-router-dom';
-import {EventsCarousel, FilesOverview, ReservationsList, ReservationForm, InvoicesList, RegisterForm, LoginForm} from "./index";
+import {EventsCarousel, FilesOverview, Home, InvoicesList, LoginForm, RegisterForm, ReservationForm, ReservationsList } from "./index";
 import "./template.css";
 
 /**
@@ -26,8 +26,8 @@ export const Template = () => {
         <Fragment>
             <ReservationsList />
             <FilesOverview />
+            <Home />
             <EventsCarousel />
-            <Link to="/admin">Admin</Link>
         </Fragment>;
 
     // 2. Reservation content

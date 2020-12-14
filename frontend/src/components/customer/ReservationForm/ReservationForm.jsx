@@ -58,14 +58,14 @@ export function ReservationForm(props) {
     
     // Display Reservation form
     return (
-        <main id="main">
-            <section id="form">
+        <secion class="main-form">
+            <article class="res-form">
                 <form onSubmit={handleReservation}>
                     <MachinePicker  onChange={handleChange}/>
                     <p id={"steps"}>2 - VOS COORDONNEES </p>
                     <article id="name-email">
-                        <FormField type="text" name="Nom" placeholder="Nom" callback={fieldValue => setName(fieldValue)} />
-                        <FormField type="email" name="Email" placeholder="E-mail" callback={fieldValue => setMail(fieldValue)}/>
+                        <FormField className={"step-field"} type="text" name="Nom" placeholder="Nom" callback={fieldValue => setName(fieldValue)} />
+                        <FormField className={"step-field"} type="email" name="Email" placeholder="E-mail" callback={fieldValue => setMail(fieldValue)}/>
                     </article>
                     <p id={"steps"}>3 - DATE, HEURE ET INFOS </p>
                     
@@ -108,13 +108,13 @@ export function ReservationForm(props) {
                     </section>
                     <article id={"need-help"}>
                         <p>Informations complémentaires</p>
-                        <FormField type="textarea" placeholder="Demandes spécifiques / Commentaires" callback={fieldValue => setComment(fieldValue)}/>
+                        <FormField className={"comment-area"} type="textarea" placeholder="Demandes spécifiques / Commentaires" callback={fieldValue => setComment(fieldValue)}/>
                     </article>
                     <article className={"reservation-submit"}>
-                        <FormField label="Je réserve" type="submit" id="form-submit"/>
+                        <FormField label="Je réserve" type="submit"/>
                     </article>
                 </form>
-            </section>
-        </main>
+            </article>
+        </secion>
     )
 }

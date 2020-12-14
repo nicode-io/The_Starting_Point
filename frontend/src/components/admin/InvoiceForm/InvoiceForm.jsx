@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import api from '../../../api';
 
 /**
- * This component allows
- *
+ * TBD - This component is not
+ * actually used
  * @returns {JSX.Element}
  */
 export function InvoiceForm(props){

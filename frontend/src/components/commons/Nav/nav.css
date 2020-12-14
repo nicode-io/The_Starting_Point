@@ -12,10 +12,10 @@
 
 .nav-link {
   margin-top: 0.1rem;
-  border-radius: 25px;
-  background: linear-gradient(145deg, #00529f, #004586);
-  box-shadow:  8px 8px 16px #00417f,
-  -8px -8px 16px #0059ab;
+  border-radius: 10px;
+  background: #004d95;
+  box-shadow:  5px 5px 10px #00417f,
+  -5px -5px 10px #0059ab;
   color: white;
   text-decoration: none;
   font-size: 4vh;
@@ -31,18 +31,18 @@
 }
 
 .nav-link:hover {
-  border-radius: 25px;
+  border-radius: 10px;
   background: linear-gradient(145deg, #004586, #00529f);
-  box-shadow:  8px 8px 16px #00417f,
-  -8px -8px 16px #0059ab;
+  box-shadow:  5px 5px 10px #00417f,
+  -5px -5px 10px #0059ab;
   color:#fff;
 }
 
 .nav-main .nav-link.is-current {
-  border-radius: 25px;
+  border-radius: 10px;
   background: #004d95;
-  box-shadow: inset 8px 8px 16px #00417f,
-  inset -8px -8px 16px #0059ab;
+  box-shadow: inset 5px 5px 10px #00417f,
+  inset -5px -5px 10px #0059ab;
   color: rgb(209, 62, 136);
 }
 

@@ -1,28 +1,51 @@
-.admin-nav-link {
-    color: #343a40;
-    text-decoration: none;
-    font-size: 4vh;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  }
-
 main{
-    height: 78vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10vh;
-    margin-bottom: 12vh;
+    margin-top: 13vh;
+    margin-bottom: 13vh;
+
+}
+
+.admin-main > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+
+.admin-nav-link {
+    padding: 0.5vw;
+    color: #004d95;
+    text-decoration: none;
+    font-size: 4vh;
+  }
+
+.nav-item > a {
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow:  5px 5px 10px #d9d9d9,
+    -5px -5px 10px #ffffff;
+    padding: 1vw;
 }
 
 .nav-item > a:hover{
-  color: #004d95 !important;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  5px 5px 10px #d9d9d9,
+    -5px -5px 10px #ffffff;
+    color: rgb(194, 76, 134);
 }
 
-.bottom-nav {
-  height: 10vh;
+.nav-item .is-current {
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: inset 5px 5px 10px #d9d9d9,
+    inset -5px -5px 10px #ffffff;
+    color: rgb(194, 76, 134);
 }
 
 form {

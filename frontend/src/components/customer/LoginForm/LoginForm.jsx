@@ -19,21 +19,24 @@ const LoginForm = () =>{
     }
 
     return(
-        <section className={"login-form"}>
-            <form onSubmit={handleSubmit}>
-                <article className={"login-field"}>
-                    <p><label>E-mail</label></p>
-                    <p><input type="email" placeholder="Email" required={true} onChange={e => setUserEmail(e.target.value)}/></p>
-                </article>
-                <article className={"login-field"}>
-                    <p><label>Mot de passe</label></p>
-                    <p><input type="password" placeholder={"Mot de passe"} required={true} onChange={e => setUserPassword(e.target.value)}/></p>
-                </article>
-                <article className={"login-submit"}>
-                    <p><input label={"submit"} type={"submit"} value={"Se connecter"} /></p>
-                </article>
-            </form>
+        <section className={"main-login"}>
+            <article className={"login-form"}>
+                <form onSubmit={handleSubmit}>
+                    <section className={"login-field"}>
+                        <p><label>E-mail</label></p>
+                        <p><input type="email" placeholder="Email" required={true} onChange={e => setUserEmail(e.target.value)}/></p>
+                    </section>
+                    <section className={"login-field"}>
+                        <p><label>Mot de passe</label></p>
+                        <p><input type="password" placeholder={"Mot de passe"} required={true} onChange={e => setUserPassword(e.target.value)}/></p>
+                    </section>
+                    <section className={"login-submit"}>
+                        <p><input label={"submit"} type={"submit"} value={"Se connecter"} /></p>
+                    </section>
+                </form>
+            </article>
         </section>
+
     )
 };
 
