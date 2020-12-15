@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserClock, faCalendarAlt, faEdit } from '@fortawesome/free-solid-svg-icons'
 import "./admin.css";
-import { Agenda, MachineForm, ProductForm , Management , Edit } from "./index";
+import { Agenda, MachineForm, ProductForm , Management , Edit, UsersForm, UserEdit } from "./index";
 
 
 export function Admin(props) {
@@ -23,6 +23,10 @@ export function Admin(props) {
         tab = <MachineForm />
     } else if (params.view === "add-product") {
         tab = <ProductForm />
+    } else if (params.view === "users") {
+        tab = <UsersForm />
+    } else if (params.view === "user-edit") {
+        tab = <UserEdit />
     } else {
         tab = <Agenda />
     }

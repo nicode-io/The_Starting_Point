@@ -17,8 +17,12 @@ router.get('/users', usersController.getAllUser);
 
 // Route for the sessions
 router.get('/user', usersController.getSessionUser);
+router.get('/user/:id', usersController.getUserByID);
 
 router.post('/add-user', usersController.postUser);
+
+router.put('/edit-user', usersController.putEditUser);
+
 
 //router.get('/user/:userId' , usersController.getUser);
 
@@ -26,9 +30,6 @@ router.post('/auth/:email' , usersController.authUser);
 
 router.get('/logout' , usersController.destroySessionUser);
 
-// router.get('/edit-user/:userId' , usersController.getEditUser);
-
-router.post('/edit-user', usersController.postEditUser);
 
 router.delete('/delete-user/:userId' , usersController.postDeleteUser);
 

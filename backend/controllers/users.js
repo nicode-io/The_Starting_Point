@@ -60,7 +60,26 @@ exports.authUser = async (req, res) => {
         // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
     }
 }
+exports.getUserByID = async (req, res) => {
+    const id = req.params.id;
 
+    try {
+        await User.findOne({_id: id},(err, doc)=>{
+            if(err) throw err;
+            if(!doc){
+                console.log('User not found');
+                res.send({message: 'User not found!'})
+            }else{
+                console.log(req.doc);
+                res.json(doc);
+            }      
+        });
+
+    } catch (error) {
+        console.log(error);
+        // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
+    }
+}
 exports.getUser = async (req, res) => {
     const email = req.params.email;
 
@@ -106,28 +125,32 @@ exports.postUser = (req, res) => {
 //     // A GERE UNIQUEMENT ADMIN AURA DROIT
 // }
 
-exports.postEditUser = (req, res) => {
+exports.putEditUser = (req, res) => {
     // A GERE UNIQUEMENT ADMIN AURA DROIT
-    const userId = req.body.petId;
-    const { firstname, lastname, email, company } = req.body;
-
+    const userId = req.body.id;
+    
+    const { firstname, lastname, email, tel, company, type } = req.body;
     User.findById(userId)
-        .then((user) => {
-            user.firstname = firstname;
-            user.lastname = lastname;
-            user.email = email;
-            user.company = company;
-
-            return user.save();
+    .then((user) => {
+        user.firstname = firstname;
+        user.lastname = lastname;
+        user.email = email;
+        user.tel = tel;
+        user.company = company;
+        user.usertype = type;
+        
+        
+        user.save();
         })
         .then(() => {
             console.log('User Updated');
+            
             // définir le comportement de l'app en cas de réussite
         })
         .catch((err) => {
-            console.log(err);
+            console.log("Error: " + err);
             // définir le comportement de l'app en cas d'erreur
-        });
+        }); 
 }
 
 exports.postDeleteUser = async (req, res) => {
