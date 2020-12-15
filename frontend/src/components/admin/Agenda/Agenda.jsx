@@ -14,24 +14,6 @@ import './agenda.css';
  */
 export function Agenda(props) {
 
-    // Solid reservations before using database data
-    const RESERVATIONS = [{
-        startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 15),
-        enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16),
-        _id: 42,
-        machine: {name: "Imprimante 3D"},
-    },{
-        startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16),
-        enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 17),
-        _id: 43,
-        machine: {name: "Decoupeuse"},
-    },{
-        startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 15, 30),
-        enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16, 30),
-        _id: 44,
-        machine: {name: "Petit matériel"},
-    },];
-
     // Define time slots for reservations
     // Monday -> Friday // 9h30 -> 17h30 // 5 * 16 time periods of 30min
     const WEEK = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
