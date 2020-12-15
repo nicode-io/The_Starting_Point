@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import DatePicker from 'react-datepicker';
 import {Modal} from "../../commons";
+import api from '../../../api';
 import './agenda.css';
 
 
@@ -12,24 +13,6 @@ import './agenda.css';
  * @returns {JSX.Element}
  */
 export function Agenda(props) {
-
-    // Solid reservations before using database data
-    const RESERVATIONS = [{
-        startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 15),
-        enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16),
-        _id: 42,
-        machine: {name: "Imprimante 3D"},
-    },{
-        startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16),
-        enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 17),
-        _id: 43,
-        machine: {name: "Decoupeuse"},
-    },{
-        startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 15, 30),
-        enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16, 30),
-        _id: 44,
-        machine: {name: "Petit matériel"},
-    },];
 
     // Define time slots for reservations
     // Monday -> Friday // 9h30 -> 17h30 // 5 * 16 time periods of 30min
@@ -45,6 +28,7 @@ export function Agenda(props) {
     }
 
     const [selectedDay, setSelectedDay] = useState(selectedDayInit());
+    const [reservations, setReservations] = useState([]);
     const [agenda, setAgenda] = useState([]);
     const [modalPeriod, setModalPeriod] = useState();
     const [isModalVisible, setisModalVisible] = useState(false);
@@ -129,7 +113,9 @@ export function Agenda(props) {
                 let periodName = WEEK[date.getDay()] + " " + dateToString(periodStartDate) + " - " + dateToString(periodEndDate);
                 let periodReservations = [];
                 reservations.map((reservation) => {
-                    (periodStartDate.getTime() >= reservation.startdate && periodStartDate.getTime() < reservation.enddate) 
+                    let reservationStartDate = new Date(reservation.startdate);
+                    let reservationEndDate = new Date(reservation.enddate);
+                    (periodStartDate.getTime() >= reservationStartDate.getTime() & periodStartDate.getTime() < reservationEndDate.getTime()) 
                         && periodReservations.push(reservation);
                 })
                 day.push({startDate: periodStartDate, endDate: periodEndDate, name: periodName, reservations: periodReservations})
@@ -217,30 +203,24 @@ export function Agenda(props) {
         )
     }
 
-    // async function getItemById(type ,id){
-    //     try {
-    //         await api.getById(`/${type}`, id)
-    //         .then((data) => {
-    //             setItem(data.data);     
-    //             setIsLoaded(true);
-    //             setisUpdated(false);         
-    //         });
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
-    
-    // USE EFFECT FOR CHECK IF IS LOADED OR NOT
-    
-    // useEffect(() => {
-    //     (!isLoaded) && getItemById(type,id);
-    //     console.log(item);
-    //     console.log(isUpdated);
-    // })
+    // Get all reservations
+    async function getAllReservations() {
+        await api.getAll(`/reservations`)
+        .then((data) => {
+            setReservations(data.data);     
+        },
+        (error) => {
+            console.log(error);
+        })
+    }
 
-    useEffect(() => {        
-        (selectedDay !== undefined) && createAgenda(generateWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, TIMEPERIOD, RESERVATIONS);
-    }, [selectedDay])
+    useEffect(() => {
+        getAllReservations();
+    }, [])
+
+    useEffect(() => {
+        (selectedDay !== undefined) && createAgenda(generateWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, TIMEPERIOD, reservations);
+    }, [reservations, selectedDay])
     
     return (
             <section className="section-agenda text-center">
