@@ -18,6 +18,7 @@ main{
     align-items: center;
     list-style-type: none;
     padding-top: 1vh;
+    padding-left: 0;
 }
 
 .nav-item {

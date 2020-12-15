@@ -78,10 +78,10 @@ export function Management(props) {
                     <table className="table text-center">
                         <thead className="banner-list">
                         <tr>
-                            <th style={{width: '25%'}} scope="col">Nom</th>
-                            <th style={{width: '25%'}} scope="col">Tarif</th>
-                            <th style={{width: '25%'}} scope="col">Modifier</th>
-                            <th style={{width: '25%'}} scope="col">Supprimer</th>
+                            <th>Nom</th>
+                            <th>Tarif</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -116,10 +116,10 @@ export function Management(props) {
                     <table className="table text-center">
                         <thead className={"banner-list"}>
                         <tr>
-                            <th style={{width: '25%'}} scope="col">Nom</th>
-                            <th style={{width: '25%'}} scope="col">Tarif</th>
-                            <th style={{width: '25%'}} scope="col">Modifier</th>
-                            <th style={{width: '25%'}} scope="col">Supprimer</th>
+                            <th>Nom</th>
+                            <th>Tarif</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
                         </tr>
                         </thead>
                         <tbody>

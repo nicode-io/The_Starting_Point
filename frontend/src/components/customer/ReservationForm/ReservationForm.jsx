@@ -20,14 +20,14 @@ export function ReservationForm(props) {
 
     // Variables
     const [date, setDate] = useState(new Date());
-    const [startHour, setStartHour] = useState();
-    const [endHour, setEndHour] = useState();
+    const [startHour, setStartHour] = useState(new Date());
+    const [endHour, setEndHour] = useState(new Date());
     // const [isLogged , setItsLogged] = useState(); TBD
     const [name, setName] = useState('');
-    const [mail , setMail] = useState('');
+    const [mail, setMail] = useState('');
     const [machine, setMachine] = useState();
     const [comment, setComment] = useState();
-    
+
     // Create a new reservation according to Reservation model and Machine ID
     const handleReservation = () => {
         let startDate = new Date(date);
@@ -43,48 +43,48 @@ export function ReservationForm(props) {
                 enddate : endDate,
                 comment: comment,
             }).then((response) => {
-                
+
                 console.log(response);
-            },(error) => {
+            }, (error) => {
                 console.error(error);
-                
+
             })
-                // saveReservationInInvoices(); TBD
-        }catch(error){
+            // saveReservationInInvoices(); TBD
+        } catch (error) {
             console.log(error);
         }
     }
-   
+
     // Manage user Machine's choice
     let handleChange = (event) => {
         setMachine(event.target.value);
     }
-    
+
     // Display Reservation form
     return (
         <secion class="main-form">
             <article class="res-form">
                 <form onSubmit={handleReservation}>
-                    <MachinePicker  onChange={handleChange}/>
-                    <p id={"steps"}>2 - VOS COORDONNEES </p>
+                    <MachinePicker onChange={handleChange} />
+                    <p className={"steps"}>2 - VOS COORDONNEES </p>
                     <article id="name-email">
                         <FormField className={"step-field"} type="text" name="Nom" placeholder="Nom" callback={fieldValue => setName(fieldValue)} />
-                        <FormField className={"step-field"} type="email" name="Email" placeholder="E-mail" callback={fieldValue => setMail(fieldValue)}/>
+                        <FormField className={"step-field"} type="email" name="Email" placeholder="E-mail" callback={fieldValue => setMail(fieldValue)} />
                     </article>
-                    <p id={"steps"}>3 - DATE, HEURE ET INFOS </p>
-                    
+                    <p className={"steps"}>3 - DATE, HEURE ET INFOS </p>
+
                     <section id="date-picker">
                         <article>
-                            Le&nbsp;
+                            <p>Le</p>
                             <DatePicker
-                            dateFormat="dd/MM/yyyy" 
-                            selected={date} 
-                            onChange={date => setDate(date)} 
-                            id="datepicker-element"
+                                dateFormat="dd/MM/yyyy"
+                                selected={date}
+                                onChange={date => setDate(date)}
+                                id="datepicker-element"
                             />
                         </article>
                         <article>
-                            De&nbsp;
+                            <p>De</p>
                             <DatePicker
                             selected={startHour}
                             onChange={startHour => setStartHour(startHour.setSeconds(0, 0))}
@@ -97,7 +97,7 @@ export function ReservationForm(props) {
                             />
                         </article>
                         <article>
-                            A&nbsp;&nbsp;
+                            <p>À</p>
                             <DatePicker
                             selected={endHour}
                             onChange={endHour => setEndHour(endHour.setSeconds(0, 0))}
@@ -112,10 +112,10 @@ export function ReservationForm(props) {
                     </section>
                     <article id={"need-help"}>
                         <p>Informations complémentaires</p>
-                        <FormField className={"comment-area"} type="textarea" placeholder="Demandes spécifiques / Commentaires" callback={fieldValue => setComment(fieldValue)}/>
+                        <FormField className={"comment-area"} type="textarea" placeholder="Demandes spécifiques / Commentaires" callback={fieldValue => setComment(fieldValue)} />
                     </article>
                     <article className={"reservation-submit"}>
-                        <FormField label="Je réserve" type="submit"/>
+                        <FormField label="Je réserve !" type="submit" />
                     </article>
                 </form>
             </article>
