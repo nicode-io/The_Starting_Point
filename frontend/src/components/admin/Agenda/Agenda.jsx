@@ -178,17 +178,19 @@ export function Agenda(props) {
                     <article className={"agenda-item"}>
                         {(period.reservations.length > 0)
                             ? period.reservations.map((reservation) => {
+                                const reservationStartDate = new Date(reservation.startdate);
+                                const reservationEndDate = new Date(reservation.enddate);
                                 return (
                                     <section className="ag-reservationContainer">
-                                        <article className={(period.startDate.getTime() === reservation.startdate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
-                                            <p>{dateToString(reservation.startdate)}</p>
+                                        <article className={(period.startDate.getTime() === reservationStartDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                            <p>{dateToString(reservationStartDate)}</p>
                                         </article>
                                         <article className="ag-reservation">
                                             <p>ID: {reservation._id}</p>
                                             <p>Machine: {reservation.machine.name}</p>
                                         </article>
-                                        <article className={(period.endDate.getTime() === reservation.enddate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
-                                            <p>{dateToString(reservation.enddate)}</p>
+                                        <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                            <p>{dateToString(reservationEndDate)}</p>
                                         </article>
                                     </section>
                                 )
