@@ -154,7 +154,6 @@ export function Agenda(props) {
      * @param {Object} period the period of time to display
      */
     const displayPeriod = (period) => {
-        console.log(reservations);
         setModalPeriod(period);
         setisModalVisible(true);
     }
@@ -246,11 +245,9 @@ export function Agenda(props) {
 
     useEffect(() => {
         getAllReservations();
-        console.log("Get")
     }, [])
 
     useEffect(() => {
-        console.log(reservations);
         (selectedDay !== undefined) && createAgenda(generateWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, TIMEPERIOD, reservations);
     }, [reservations, selectedDay])
     

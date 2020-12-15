@@ -8,7 +8,7 @@ const Reservation = require('../models/Reservation');
 // Get a list of all reservations
 exports.getAllReservation = async(req, res) => {
     try {
-        const reservations;
+        let reservations = [];
         (req.body) 
             ? reservations = await Reservation.find(req.body.match).populate('machine')
             : reservations = await Reservation.find().populate('machine');
