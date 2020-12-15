@@ -68,7 +68,7 @@ export function RegisterForm() {
                         <p><input type="password" placeholder="Choisir un mot de passe" required={true} onChange={fieldValue => setPassword(fieldValue)} /></p>
                     </article>
                     <article className={"register-submit"}>
-                        <p><input className={"register-btn"} label={"submit"} type={"submit"} value={"S'enregistrer"} /></p>
+                        <p><input className={"register-btn"} label={"submit"} type={"submit"} value={"Je m'inscris !"} /></p>
                     </article>
                 </form>
             </article>

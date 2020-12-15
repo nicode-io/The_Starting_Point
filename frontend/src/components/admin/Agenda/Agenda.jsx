@@ -1,6 +1,6 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
-import {Modal} from "../../commons";
+import { Modal } from "../../commons";
 import './agenda.css';
 
 
@@ -18,17 +18,17 @@ export function Agenda(props) {
         startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 15),
         enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16),
         _id: 42,
-        machine: {name: "Imprimante 3D"},
-    },{
+        machine: { name: "Imprimante 3D" },
+    }, {
         startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16),
         enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 17),
         _id: 43,
-        machine: {name: "Decoupeuse"},
-    },{
+        machine: { name: "Decoupeuse" },
+    }, {
         startdate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 15, 30),
         enddate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 16, 30),
         _id: 44,
-        machine: {name: "Petit matériel"},
+        machine: { name: "Petit matériel" },
     },];
 
     // Define time slots for reservations
@@ -129,19 +129,19 @@ export function Agenda(props) {
                 let periodName = WEEK[date.getDay()] + " " + dateToString(periodStartDate) + " - " + dateToString(periodEndDate);
                 let periodReservations = [];
                 reservations.map((reservation) => {
-                    (periodStartDate.getTime() >= reservation.startdate && periodStartDate.getTime() < reservation.enddate) 
+                    (periodStartDate.getTime() >= reservation.startdate && periodStartDate.getTime() < reservation.enddate)
                         && periodReservations.push(reservation);
                 })
-                day.push({startDate: periodStartDate, endDate: periodEndDate, name: periodName, reservations: periodReservations})
+                day.push({ startDate: periodStartDate, endDate: periodEndDate, name: periodName, reservations: periodReservations })
             }
             agenda.push(day);
         })
         setAgenda(agenda);
     }
 
-    const DatePickerCustomInput = ({value, onClick}) => {
+    const DatePickerCustomInput = ({ value, onClick }) => {
         return (
-            <input style={{marginLeft: 0, fontSize: '0.8rem'}} className="ag-period" onClick={onClick} value={value} />
+            <div id="date-choice"><input style={{ marginLeft: 0, fontSize: '0.8rem' }} className="ag-period" onClick={onClick} value={value} /></div>
         )
     }
 
@@ -162,7 +162,7 @@ export function Agenda(props) {
             (day.indexOf(modalPeriod) > 0)
                 ? displayPeriod(day[day.indexOf(modalPeriod) - 1])
                 : ((day.indexOf(modalPeriod) === 0) & (index > 0))
-                    && displayPeriod(agenda[index - 1][agenda[index - 1].length - 1]);
+                && displayPeriod(agenda[index - 1][agenda[index - 1].length - 1]);
         })
     }
 
@@ -174,7 +174,7 @@ export function Agenda(props) {
             ((day.indexOf(modalPeriod) >= 0) && (day.indexOf(modalPeriod) < day.length - 1))
                 ? displayPeriod(day[day.indexOf(modalPeriod) + 1])
                 : ((day.indexOf(modalPeriod) === day.length - 1) & (index < agenda.length - 1))
-                    && displayPeriod(agenda[index + 1][0]);
+                && displayPeriod(agenda[index + 1][0]);
         })
     }
 
@@ -207,9 +207,7 @@ export function Agenda(props) {
                                     </section>
                                 )
                             })
-                            : <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                            </p>
+                            : <p>Pas de réservation en cours.</p>
                         }
                     </article>
                 </section>
@@ -229,61 +227,61 @@ export function Agenda(props) {
     //         console.log(error);
     //     }
     // }
-    
+
     // USE EFFECT FOR CHECK IF IS LOADED OR NOT
-    
+
     // useEffect(() => {
     //     (!isLoaded) && getItemById(type,id);
     //     console.log(item);
     //     console.log(isUpdated);
     // })
 
-    useEffect(() => {        
+    useEffect(() => {
         (selectedDay !== undefined) && createAgenda(generateWeek(selectedDay, WORKINGDAYS), WORKINGHOURS, TIMEPERIOD, RESERVATIONS);
     }, [selectedDay])
-    
+
     return (
-            <section className="section-agenda text-center">
-                {(agenda !== undefined) &&
-                    <section className="agenda">
-                        <article className="ag-day">
-                            <DatePicker
-                                dateFormat="dd/MM/yyyy"
-                                selected={selectedDay}
-                                filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
-                                customInput={<DatePickerCustomInput />}
-                                onChange={date => setSelectedDay(date)}
-                            />
-                            {generateTimestamps(WORKINGHOURS, TIMEPERIOD).map((timestamp) => {
-                                return (
-                                    <div className="ag-period ag-period-title">
-                                        <p>{timestamp}</p>
-                                    </div>
-                                )
-                            })}
-                        </article>
-                        {agenda.map((day) => {
+        <section className="section-agenda text-center">
+            {(agenda !== undefined) &&
+                <section className="agenda">
+                    <article className="ag-day">
+                        <DatePicker
+                            dateFormat="dd/MM"
+                            selected={selectedDay}
+                            filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
+                            customInput={<DatePickerCustomInput />}
+                            onChange={date => setSelectedDay(date)}
+                        />
+                        {generateTimestamps(WORKINGHOURS, TIMEPERIOD).map((timestamp) => {
                             return (
-                                <section className="ag-day" key={WEEK[day[0].startDate.getDay()]}>
-                                    <article className="ag-period ag-period-title">
-                                        <p>{WEEK[day[0].startDate.getDay()].substring(0,3)}</p>
-                                        <p>{day[0].startDate.getDate() + "/" + (day[0].startDate.getMonth() + 1)}</p>
-                                    </article>
-                                    {day.map((period) => {
-                                        return (
-                                            <p className={(period.reservations.length > 0) ? "ag-period ag-period-full" : "ag-period ag-period-empty"}
-                                            key={period.name}
-                                            onClick={() => displayPeriod(period)}>
-                                                {period.reservations.length}
-                                            </p>
-                                        )
-                                    })}
-                                </section>
+                                <div className="ag-period ag-period-title">
+                                    <p>{timestamp}</p>
+                                </div>
                             )
                         })}
-                    </section>
-                }
-                {(modalPeriod !== undefined) && <Modal isVisible={isModalVisible} setIsVisible={setisModalVisible} title={modalPeriod.name} content={createModalContent(modalPeriod)} previous={previousPeriod} next={nextPeriod} />}
-            </section>
+                    </article>
+                    {agenda.map((day) => {
+                        return (
+                            <section className="ag-day" key={WEEK[day[0].startDate.getDay()]}>
+                                <article className="ag-period ag-period-title">
+                                    <p>{WEEK[day[0].startDate.getDay()].substring(0, 3)}</p>
+                                    <p>{day[0].startDate.getDate() + "/" + (day[0].startDate.getMonth() + 1)}</p>
+                                </article>
+                                {day.map((period) => {
+                                    return (
+                                        <p className={(period.reservations.length > 0) ? "ag-period ag-period-full" : "ag-period ag-period-empty"}
+                                            key={period.name}
+                                            onClick={() => displayPeriod(period)}>
+                                            {period.reservations.length}
+                                        </p>
+                                    )
+                                })}
+                            </section>
+                        )
+                    })}
+                </section>
+            }
+            {(modalPeriod !== undefined) && <Modal isVisible={isModalVisible} setIsVisible={setisModalVisible} title={modalPeriod.name} content={createModalContent(modalPeriod)} previous={previousPeriod} next={nextPeriod} />}
+        </section>
     )
 }

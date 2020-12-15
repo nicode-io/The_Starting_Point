@@ -45,7 +45,7 @@ export function Invoices(props) {
     // Display formatted dates in invoice & reservations
     function displayDate(dateInJson){
         let date = new Date(dateInJson);
-        return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "";
+        return date.getDate() + "/" + (date.getMonth() + 1);
     }
 
     function displayHour(dateInJson){
@@ -82,10 +82,10 @@ export function Invoices(props) {
                     <table className="table text-center">
                         <thead className="banner-list">
                         <tr>
-                            <th style={{width: '20%'}} scope="col">Nom</th>
-                            <th style={{width: '20%'}} scope="col">Machine</th>
-                            <th style={{width: '20%'}} scope="col">Date</th>
-                            <th style={{width: '20%'}} scope="col">Horaires</th>
+                            <th>Nom</th>
+                            <th>Machine</th>
+                            <th>Date</th>
+                            <th>Horaires</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -107,18 +107,18 @@ export function Invoices(props) {
                     <table className="table text-center">
                         <thead className="banner-list">
                         <tr>
-                            <th style={{width: '22.5%'}} scope="col">Nom</th>
-                            <th style={{width: '22.5%'}} scope="col">Machine</th>
-                            <th style={{width: '22.5%'}} scope="col">Date</th>
-                            <th style={{width: '22.5%'}} scope="col">Horaires</th>
-                            <th style={{width: '10%'}} scope="col">Facturer</th>
+                            <th>Nom</th>
+                            {/* <th>Machine</th> */}
+                            <th>Date</th>
+                            <th>Horaires</th>
+                            <th>Facturer</th>
                         </tr>
                         </thead>
                         <tbody>
                         {reservations.map(reservation => (
                             <tr key={"list-" + reservation._id}>
                                 <td>{reservation.usernotlogged}</td>
-                                <td>{reservation.machine.name}</td>
+                                {/* <td>{reservation.machine.name}</td> */}
                                 <td>{displayDate(reservation.startdate)}</td>
                                 <td>{displayHour(reservation.startdate)} à {displayHour(reservation.enddate)}</td>
                                 <td>

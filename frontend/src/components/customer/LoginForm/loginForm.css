@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+
 .main-login {
     display: flex;
     flex-direction: column;
@@ -12,7 +14,20 @@
     background: #ffffff;
     box-shadow:  -10px -10px 20px #d9d9d9,
     10px 10px 20px #ffffff;
+    margin-top: 1.5vh;
 }
+
+.login-form form {
+    padding: 0;
+}
+
+.login-header>h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(209, 62, 136);
+}
+
 /* Main form fields */
 .login-field {
     width: 70vw;
@@ -20,7 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 2rem;
 }
 .login-field > p {
@@ -36,12 +51,13 @@
     width: 70vw;
     max-width: 650px;
     color: #004d95;
+    font-weight: 500;
 }
 
 /* Form inputs */
 .login-field > p > input {
     width: 70vw;
-    max-width: 650px;
+    max-width: 600px;
     text-align: left;
     border: none;
     border-radius: 0;
@@ -70,6 +86,8 @@
     border: none;
     cursor:pointer;
     color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
 }
 .login-submit > p > input:hover {
     width: 50vw;
