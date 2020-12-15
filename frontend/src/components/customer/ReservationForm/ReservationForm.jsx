@@ -20,9 +20,9 @@ export function ReservationForm(props) {
 
     // Variables
     const [date, setDate] = useState(new Date());
-    const [startHour, setStartHour] = useState(new Date());
-    const [endHour, setEndHour] = useState(new Date());
-        // const [isLogged , setItsLogged] = useState(); TBD
+    const [startHour, setStartHour] = useState();
+    const [endHour, setEndHour] = useState();
+    // const [isLogged , setItsLogged] = useState(); TBD
     const [name, setName] = useState('');
     const [mail , setMail] = useState('');
     const [machine, setMachine] = useState();
@@ -30,13 +30,17 @@ export function ReservationForm(props) {
     
     // Create a new reservation according to Reservation model and Machine ID
     const handleReservation = () => {
+        let startDate = new Date(date);
+        startDate.setHours(new Date(startHour).getHours(), new Date(startHour).getMinutes(), 0, 0);
+        let endDate = new Date(date);
+        endDate.setHours(new Date(endHour).getHours(), new Date(endHour).getMinutes(), 0, 0);
         try{
             api.insertNew('/add-reservation', {
                 machine: machine,
                 usernotlogged: name,
                 userlogged : 'FALSE',
-                startdate : startHour,
-                enddate : endHour,
+                startdate : startDate,
+                enddate : endDate,
                 comment: comment,
             }).then((response) => {
                 
@@ -83,7 +87,7 @@ export function ReservationForm(props) {
                             De&nbsp;
                             <DatePicker
                             selected={startHour}
-                            onChange={startHour => setStartHour(startHour)}
+                            onChange={startHour => setStartHour(startHour.setSeconds(0, 0))}
                             showTimeSelect
                             showTimeSelectOnly
                             timeIntervals={30}
@@ -96,7 +100,7 @@ export function ReservationForm(props) {
                             A&nbsp;&nbsp;
                             <DatePicker
                             selected={endHour}
-                            onChange={endHour => setEndHour(endHour)}
+                            onChange={endHour => setEndHour(endHour.setSeconds(0, 0))}
                             showTimeSelect
                             showTimeSelectOnly
                             timeIntervals={30}
