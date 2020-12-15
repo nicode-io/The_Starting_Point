@@ -1,12 +1,12 @@
 import React from "react";
-import "./fileOverview.css";
+import "./user.css";
 
-export function FilesOverview () {
+export function Users () {
     return (
-        <section className={"main-files-overview"}>
-            <section className={"files-overview"}>
+        <section className={"main-user"}>
+            <section className={"user"}>
                 <article className={"jumbotron"}>
-                    <h1>Listing des fichiers de l'utilisateur</h1>
+                    <h1>Gestion des utilisateurs</h1>
                     <p>
                         TO BE CONTINUED ...
                     </p>

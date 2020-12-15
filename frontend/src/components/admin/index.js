@@ -6,3 +6,4 @@ export { Management } from "./Management/Management";
 export { ProductForm } from "./ProductForm/ProductForm";
 export { Invoices } from "./Invoices/Invoices";
 export { InvoiceForm } from "./InvoiceForm/InvoiceForm";
+export { Users } from "./Users/Users";

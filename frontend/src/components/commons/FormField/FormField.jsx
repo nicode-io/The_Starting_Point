@@ -7,7 +7,7 @@ export function FormField(props,{data}) {
     let required = (props.required !== undefined) ? props.required : false;
 
     if (props.type === "textarea") {
-        field = <div style={props.style}>
+        field = <div style={props.style} className={props.className}>
                     <label htmlFor={props.label}>{props.label}</label>
                     <textarea name={props.label} placeholder={props.placeholder} onChange={e => props.callback(e.target.value)} />
                 </div>
@@ -16,7 +16,7 @@ export function FormField(props,{data}) {
                     <input name={props.label} type={props.type} value={props.label} onChange={e => props.callback(e.target.value)}/>
                 </div>
     } else if (props.type === "button") {
-        field = <div style={props.style}>
+            field = <div style={props.style} className={props.className} id={props.id}>
                     <button onClick={props.callback} className="ff-button">
                         {props.children}
                     </button>

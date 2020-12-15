@@ -2,6 +2,7 @@
 export { EventsCarousel } from "./EventsCarousel/EventsCarousel";
 export { EventsList } from "./EventsList/EventsList";
 export { FilesOverview } from "./FilesOverview/FilesOverview";
+export { Home } from "./Home/Home";
 export { InvoiceItem } from "./InvoiceItem/InvoiceItem";
 export { InvoicesList } from "./InvoicesList/InvoicesList";
 export { LoginForm } from "./LoginForm/LoginForm";

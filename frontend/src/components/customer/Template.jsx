@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, useParams } from 'react-router-dom';
-import {EventsCarousel, FilesOverview, ReservationsList, ReservationForm, InvoicesList, RegisterForm, LoginForm} from "./index";
+import {EventsCarousel, FilesOverview, Home, InvoicesList, LoginForm, RegisterForm, ReservationForm, ReservationsList } from "./index";
 import "./template.css";
 
 /**
@@ -23,43 +23,40 @@ export const Template = () => {
 
     // 1. Dashboard content
     const DASHBOARD =
-        <Fragment>
+        <>
             <ReservationsList />
-            <FilesOverview />
-            <EventsCarousel />
-            <Link to="/admin">Admin</Link>
-        </Fragment>;
+            <Home />
+        </>;
 
     // 2. Reservation content
     const RESERVATION =
-        <Fragment>
+        <>
             <ReservationForm />
-        </Fragment>
+        </>
 
     // 3. Login content
     const LOGIN =
-        <Fragment>
+        <>
             <section className={"login-header"}>
                 <h1>Connexion</h1>
             </section>
             <LoginForm />
-        </Fragment>
+        </>
 
     // 4. Register content
     const REGISTER =
-        <Fragment>
+        <>
             <section className={"register-header"}>
                 <h1>Inscription</h1>
             </section>
             <RegisterForm />
-        </Fragment>
+        </>
 
     // 5. Files content
     const FILES =
-        <Fragment>
-            <InvoicesList />
-            <ReservationsList />
-        </Fragment>
+        <>
+            <FilesOverview />
+        </>
 
     // 6. Conditions
     if (params.view === "reservation") {

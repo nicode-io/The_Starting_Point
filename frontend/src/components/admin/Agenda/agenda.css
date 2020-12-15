@@ -1,9 +1,36 @@
+.section-agenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.agenda-item {
+    width: 60vw;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    border-radius: 10px;
+    background: #004d95;
+    box-shadow: inset 5px 5px 10px #00376a,
+    inset -5px -5px 10px #0063c0;
+    padding: 1vh;
+}
+
 .agenda {
     display: flex;
-    /* width: 100%; */
+    width: 90vw;
     align-items: center;
     justify-content: center;
-    /* background-color: lightblue; */
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
+    margin-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 .ag-day {
@@ -95,6 +122,8 @@
 .ag-reservationEnd {
     background-color: lightblue;
 }
+
+/*.react-datepicker-wrapper*/
 
 /* .ag-reservationBorderLeft {
     border-left: 1px solid black;

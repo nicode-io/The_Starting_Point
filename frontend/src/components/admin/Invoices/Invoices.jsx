@@ -3,6 +3,7 @@ import api from '../../../api';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormField } from '../../commons';
+import './invoice.css';
 
 
 /**
@@ -74,59 +75,63 @@ export function Invoices(props) {
 
     // Render invoices and reservations lists
     return (
-        <Fragment>
+        <>
             <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
-                <h2 className="text-center">Factures</h2>
-                <table className="table w-50 text-center">
-                    <thead className="thead-dark">
+                <section className={"white-container"}>
+                    <h2>Factures</h2>
+                    <table className="table text-center">
+                        <thead className="banner-list">
                         <tr>
-                        <th style={{width: '20%'}} scope="col">Nom</th>
-                        <th style={{width: '20%'}} scope="col">Machine</th>
-                        <th style={{width: '20%'}} scope="col">Date</th>
-                        <th style={{width: '20%'}} scope="col">Horaires</th>
+                            <th style={{width: '20%'}} scope="col">Nom</th>
+                            <th style={{width: '20%'}} scope="col">Machine</th>
+                            <th style={{width: '20%'}} scope="col">Date</th>
+                            <th style={{width: '20%'}} scope="col">Horaires</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                    {invoices.map(invoice => (
-                        <tr key={"list-" + invoice.reservation._id}>
-                        <td>{invoice.reservation.usernotlogged}</td>
-                        <td>{invoice.machineUseInInvoice}</td>
-                        <td>{displayDate(invoice.reservation.startdate)}</td>
-                        <td>{displayHour(invoice.reservation.startdate)} à {displayHour(invoice.reservation.enddate)}</td>
-                        </tr>
+                        </thead>
+                        <tbody>
+                        {invoices.map(invoice => (
+                            <tr key={"list-" + invoice.reservation._id}>
+                                <td>{invoice.reservation.usernotlogged}</td>
+                                <td>{invoice.machineUseInInvoice}</td>
+                                <td>{displayDate(invoice.reservation.startdate)}</td>
+                                <td>{displayHour(invoice.reservation.startdate)} à {displayHour(invoice.reservation.enddate)}</td>
+                            </tr>
                         ))}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </section>
             </section>
             <section className="d-flex justify-content-center align-items-center flex-column mt-3 w-100">
-                <h2 className="text-center">Résérvations</h2>
-                <table className="table w-50 text-center">
-                    <thead className="thead-dark">
+                <section className={"white-container"}>
+                    <h2>Réservations</h2>
+                    <table className="table text-center">
+                        <thead className="banner-list">
                         <tr>
-                        <th style={{width: '22.5%'}} scope="col">Nom</th>
-                        <th style={{width: '22.5%'}} scope="col">Machine</th>
-                        <th style={{width: '22.5%'}} scope="col">Date</th>
-                        <th style={{width: '22.5%'}} scope="col">Horaires</th>
-                        <th style={{width: '10%'}} scope="col">Transformer en facture</th>
+                            <th style={{width: '22.5%'}} scope="col">Nom</th>
+                            <th style={{width: '22.5%'}} scope="col">Machine</th>
+                            <th style={{width: '22.5%'}} scope="col">Date</th>
+                            <th style={{width: '22.5%'}} scope="col">Horaires</th>
+                            <th style={{width: '10%'}} scope="col">Facturer</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                    {reservations.map(reservation => (
-                        <tr key={"list-" + reservation._id}>
-                        <td>{reservation.usernotlogged}</td>
-                        <td>{reservation.machine.name}</td>
-                        <td>{displayDate(reservation.startdate)}</td>
-                        <td>{displayHour(reservation.startdate)} à {displayHour(reservation.enddate)}</td>
-                        <td>
-                        <FormField type="button" callback={() => transformToInvoice(reservation._id, reservation.machine._id)}>
-                            <FontAwesomeIcon icon={faPlusSquare} size="2x" />
-                        </FormField>
-                        </td>
-                        </tr>
+                        </thead>
+                        <tbody>
+                        {reservations.map(reservation => (
+                            <tr key={"list-" + reservation._id}>
+                                <td>{reservation.usernotlogged}</td>
+                                <td>{reservation.machine.name}</td>
+                                <td>{displayDate(reservation.startdate)}</td>
+                                <td>{displayHour(reservation.startdate)} à {displayHour(reservation.enddate)}</td>
+                                <td>
+                                    <FormField type="button" callback={() => transformToInvoice(reservation._id, reservation.machine._id)}>
+                                        <i className="fas fa-plus add-icon"></i>
+                                    </FormField>
+                                </td>
+                            </tr>
                         ))}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </section>
             </section>
-        </Fragment>
+        </>
     );
 }
