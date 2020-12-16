@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormField } from '../../commons/FormField/FormField';
+// import { FormField } from '../../commons/FormField/FormField'; The component should use FormField !
 import './loginForm.css';
 import api from '../../../api';
 

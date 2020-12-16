@@ -43,16 +43,16 @@ export function Admin(props) {
     return (
         <main className={"admin-main"}>
             <ul>
-                <li class="nav-item">
+                <li className="nav-item">
                     <Link to="/admin/agenda" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/agenda" ? " is-current" : ""}`}><FontAwesomeIcon icon={faCalendarAlt} />    </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                     <Link to="/admin/invoices" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/invoices" ? " is-current" : ""}`}><FontAwesomeIcon icon={faFileAlt} /></Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                     <Link to="/admin/users" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/users" ? " is-current" : ""}`}><FontAwesomeIcon icon={faUserClock} /></Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                     <Link to="/admin/management" className={`ml-2 admin-nav-link${useLocation().pathname === "/admin/management" ? " is-current" : ""}`}><FontAwesomeIcon icon={faEdit} /></Link>
                 </li>
             </ul>

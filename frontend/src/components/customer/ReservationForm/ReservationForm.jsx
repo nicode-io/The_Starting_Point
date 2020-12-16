@@ -62,8 +62,8 @@ export function ReservationForm(props) {
 
     // Display Reservation form
     return (
-        <secion class="main-form">
-            <article class="res-form">
+        <section className="main-form">
+            <article className="res-form">
                 <form onSubmit={handleReservation}>
                     <MachinePicker onChange={handleChange} />
                     <p className={"steps"}>2 - VOS COORDONNEES </p>
@@ -119,6 +119,6 @@ export function ReservationForm(props) {
                     </article>
                 </form>
             </article>
-        </secion>
+        </section>
     )
 }

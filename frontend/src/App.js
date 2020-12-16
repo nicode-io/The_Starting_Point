@@ -28,7 +28,7 @@ useEffect(()=>{
       });
     }
   });
-},[]);
+},[user]);
 
   return (
     <Router>

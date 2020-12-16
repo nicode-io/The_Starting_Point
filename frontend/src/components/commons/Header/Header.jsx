@@ -16,7 +16,7 @@ console.log(props);
             </section>
             <section className={"hea-btn-group"}>
                 <article>
-                    <Link to="/admin/agenda" id={"btn-admin"} className={`head-link${useLocation().pathname.match(`/admin[\s\S]*`) ? " is-current" : ""}`} style={{display: (!isLogged) ? 'block' : 'block'}}>
+                    <Link to="/admin/agenda" id={"btn-admin"} className={`head-link${useLocation().pathname.match(`/admin[sS]*`) ? " is-current" : ""}`} style={{display: (!isLogged) ? 'block' : 'block'}}>
                         <i className="fas fa-cogs"/>
                     </Link>
                 </article>
