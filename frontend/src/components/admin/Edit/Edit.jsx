@@ -13,7 +13,7 @@ export function Edit(props){
 
     // Variables
     const [isLoaded, setIsLoaded] = useState(false);
-    const [item, setItem ] = useState('');
+    const [item, setItem ] = useState({});
     const [isUpdated, setisUpdated ] = useState(false);
         // const [formValues, setformValues] = useState(''); TBD
     let params = useLocation().pathname;

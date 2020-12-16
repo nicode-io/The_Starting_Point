@@ -27,7 +27,7 @@ export function UserEdit() {
 
     useEffect(() => {
         getUserById();
-    });
+    }, []);
 
     const handleSubmit = () => {
             

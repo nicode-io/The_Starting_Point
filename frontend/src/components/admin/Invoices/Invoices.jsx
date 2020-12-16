@@ -89,10 +89,12 @@ export function Invoices(props) {
                         <tbody>
                         {invoices.map(invoice => (
                             <tr key={"invoice-" + invoice._id}>
-                                <td>{invoice.reservation.usernotlogged}</td>
-                                <td>{invoice.machineUseInInvoice}</td>
-                                <td>{displayDate(invoice.reservation.startdate)}</td>
-                                <td>{displayHours(invoice.reservation.startdate)} à {displayHours(invoice.reservation.enddate)}</td>
+                                {(invoice.reservation) && <>
+                                    <td>{invoice.reservation.usernotlogged}</td>
+                                    <td>{invoice.machineUseInInvoice}</td>
+                                    <td>{displayDate(invoice.reservation.startdate)}</td>
+                                    <td>{displayHours(invoice.reservation.startdate)} à {displayHours(invoice.reservation.enddate)}</td>
+                                </>}
                             </tr>
                         ))}
                         </tbody>
