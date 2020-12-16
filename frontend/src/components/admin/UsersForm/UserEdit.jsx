@@ -14,34 +14,39 @@ export function UserEdit() {
     const [tel, setTel] = useState('');
     const [company, setCompany] = useState('');
     const [type, setType] = useState('');
-useEffect( async () => {
-    user = await api.getById('/user',id);
-        
-        
+
+    const getUserById = async () => {
+        user = await api.getById('/user',id);
         setFirstname(user.data.firstname);
         setLastname(user.data.lastname);
         setEmail(user.data.email);
         setTel(user.data.tel);
         setCompany(user.data.company);
         setType(user.data.usertype);
-},[]);
-const handleSubmit = () => {
-        
-    api.updateById('/edit-user',{
-        id : idUser,
-        firstname : firstname,
-        lastname : lastname,
-        email : email,
-        tel : tel,
-        company: company,
-        type: type
-    }).then((response) =>{
-        console.log(response);
-        
-    }, (error) => {
-        console.log(error);
-    });
-}
+    }
+
+    useEffect(() => {
+        getUserById();
+    },[]);
+
+    const handleSubmit = () => {
+            
+        api.updateById('/edit-user',{
+            id : idUser,
+            firstname : firstname,
+            lastname : lastname,
+            email : email,
+            tel : tel,
+            company: company,
+            type: type
+        }).then((response) =>{
+            console.log(response);
+            
+        }, (error) => {
+            console.log(error);
+        });
+    }
+    
     return (
         <section className="text-center">
             <form onSubmit={handleSubmit}>

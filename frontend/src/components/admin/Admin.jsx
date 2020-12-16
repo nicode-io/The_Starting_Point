@@ -21,18 +21,20 @@ export function Admin(props) {
     let tabContent;
 
     // Display component content according to view params
-    if (params.view === "users") {
+    if (params.view === "invoices") {
+        tabContent = <Invoices />
+    } else if (params.view === "users") {
         tabContent = <UsersForm />
     } else if (params.view === "management") {
         tabContent = <Management />
     } else if (params.view === "edit") {
         tabContent = <Edit />
     } else if (params.view === "add-machine") {
-        tab = <MachineForm />
+        tabContent = <MachineForm />
     } else if (params.view === "add-product") {
-        tab = <ProductForm />
+        tabContent = <ProductForm />
     } else if (params.view === "user-edit") {
-        tab = <UserEdit />
+        tabContent = <UserEdit />
     } else {
         tabContent = <Agenda />
     }
