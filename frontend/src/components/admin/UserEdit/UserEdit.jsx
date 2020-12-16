@@ -48,17 +48,22 @@ export function UserEdit() {
     }
     
     return (
-        <section className="text-center">
-            <form onSubmit={handleSubmit}>
-                <FormField type="text" value={firstname} label="Nom" callback={c=> setFirstname(c)}/>
-                <FormField type="text" value={lastname} label="Prénom" callback={c=> setLastname(c)}/>
-                <FormField type="text" value={email} label="Email" callback={c=> setEmail(c)}/>
-                <FormField type="text" value={tel} label="Tel" callback={c=> setTel(c)}/>
-                <FormField type="text" value={company} label="Company" callback={c=> setCompany(c)}/>
-                <FormField type="text" value={type} label="Type" callback={c=> setType(c)}/>
-                <FormField type="submit" label="Update" />
-            </form>
+        <section className={"main-edit-user"}>
+            <article className="white-container">
+                <section>
+                    <form onSubmit={handleSubmit}>
+                        <FormField type="text" value={firstname} label="Nom" callback={c=> setFirstname(c)}/>
+                        <FormField type="text" value={lastname} label="Prénom" callback={c=> setLastname(c)}/>
+                        <FormField type="text" value={email} label="Email" callback={c=> setEmail(c)}/>
+                        <FormField type="text" value={tel} label="Tel" callback={c=> setTel(c)}/>
+                        <FormField type="text" value={company} label="Company" callback={c=> setCompany(c)}/>
+                        <FormField type="text" value={type} label="Type" callback={c=> setType(c)}/>
+                        <FormField type="submit" label="Update" />
+                    </form>
+                </section>
+            </article>
         </section>
+
     )
 }
 
