@@ -75,6 +75,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.login-submit p{
+    margin-bottom: 0.5rem;
+}
+
 .login-submit > p > input[type=submit] {
     width: 50vw;
     max-width: 400px;
@@ -96,4 +101,16 @@
     background: #c24c86;
     box-shadow: inset 5px 5px 10px #a54172,
     inset -5px -5px 10px #df579a;
+}
+
+.not-signed-up {
+    margin-bottom: 1rem;
+    
+}
+
+.not-signed-up p {
+    color: #c24c86;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
