@@ -26,10 +26,12 @@ router.get('/users', usersController.getAllUser);
  * Session routes
  */
 router.get('/user', usersController.getSessionUser);
+router.get('/user/:id', usersController.getUserByID);
 router.post('/add-user', usersController.postUser);
+router.put('/edit-user', usersController.putEditUser);
+//router.get('/user/:userId' , usersController.getUser);
 router.post('/auth/:email' , usersController.authUser);
 router.get('/logout' , usersController.destroySessionUser);
-router.post('/edit-user', usersController.postEditUser);
 router.delete('/delete-user/:userId' , usersController.postDeleteUser);
     //router.get('/user/:userId' , usersController.getUser); TBD
     // router.get('/edit-user/:userId' , usersController.getEditUser); TBD

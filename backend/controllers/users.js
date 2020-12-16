@@ -68,8 +68,26 @@ exports.authUser = async (req, res) => {
         // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
     }
 }
+exports.getUserByID = async (req, res) => {
+    const id = req.params.id;
 
-// Get a user according to its ID
+    try {
+        await User.findOne({_id: id},(err, doc)=>{
+            if(err) throw err;
+            if(!doc){
+                console.log('User not found');
+                res.send({message: 'User not found!'})
+            }else{
+                console.log(req.doc);
+                res.json(doc);
+            }      
+        });
+
+    } catch (error) {
+        console.log(error);
+        // notifier l'utilisateur d'une erreur, et définir un comportement pour l'app
+    }
+}
 exports.getUser = async (req, res) => {
     const email = req.params.email;
 
@@ -117,19 +135,21 @@ exports.getEditUser = (req, res) => {
     // TBD
 }
 
-exports.postEditUser = (req, res) => {
-    // TBD
-    const userId = req.body.petId;
-    const { firstname, lastname, email, company } = req.body;
-
+exports.putEditUser = (req, res) => {
+    const userId = req.body.id;
+    const { firstname, lastname, email, tel, company, type } = req.body;
+    
     User.findById(userId)
-        .then((user) => {
-            user.firstname = firstname;
-            user.lastname = lastname;
-            user.email = email;
-            user.company = company;
-
-            return user.save();
+    .then((user) => {
+        user.firstname = firstname;
+        user.lastname = lastname;
+        user.email = email;
+        user.tel = tel;
+        user.company = company;
+        user.usertype = type;
+        
+        
+        user.save();
         })
         .then(() => {
             console.log('User Updated');

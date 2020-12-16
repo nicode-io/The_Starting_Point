@@ -7,3 +7,5 @@ export { ProductForm } from "./ProductForm/ProductForm";
 export { Invoices } from "./Invoices/Invoices";
 export { InvoiceForm } from "./InvoiceForm/InvoiceForm";
 export { Users } from "./Users/Users";
+export { UsersForm } from "./UsersForm/UsersForm";
+export { UserEdit } from "./UsersForm/UserEdit";
