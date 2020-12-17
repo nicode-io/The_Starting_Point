@@ -189,7 +189,7 @@ export function Agenda(props) {
                                             <p>Client: {reservation.usernotlogged}</p>
                                             <p>Machine: {reservation.machine.name}</p>
                                             {(reservation.comment !== '') && <p>Commentaires: {reservation.comment}</p>}
-                                            <p>ID: {reservation._id}</p>
+                                            {/* <p>ID: {reservation._id}</p> */}
                                         </article>
                                         <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder ag-reservationEnd" : "ag-reservationBorder"}>
                                             <p>{dateToString(reservationEndDate)}</p>

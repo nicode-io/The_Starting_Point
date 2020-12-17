@@ -88,7 +88,7 @@ export function ReservationForm(props) {
                             <p>De</p>
                             <DatePicker
                             selected={startHour}
-                            filterTime={(time) => ((time.getHours() === 9 && time.getMinutes() === 30) || (time.getHours() > 9 && time.getHours() < 17))}
+                            filterTime={(time) => ((time.getHours() === 9 && time.getMinutes() === 30) || (time.getHours() > 9 && time.getHours() < 17) || (time.getHours() === 17 && time.getMinutes() === 0))}
                             onChange={startHour => setStartHour(startHour.setSeconds(0, 0))}
                             showTimeSelect
                             showTimeSelectOnly
