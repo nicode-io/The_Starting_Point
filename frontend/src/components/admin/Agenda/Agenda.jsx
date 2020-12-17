@@ -182,14 +182,16 @@ export function Agenda(props) {
                                 const reservationEndDate = new Date(reservation.enddate);
                                 return (
                                     <section key={"reservation-" + reservation._id} className="ag-reservationContainer">
-                                        <article className={(period.startDate.getTime() === reservationStartDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                        <article className={(period.startDate.getTime() === reservationStartDate.getTime()) ? "ag-reservationBorder ag-reservationEnd" : "ag-reservationBorder"}>
                                             <p>{dateToString(reservationStartDate)}</p>
                                         </article>
                                         <article className="ag-reservation">
-                                            <p>ID: {reservation._id}</p>
+                                            <p>Client: {reservation.usernotlogged}</p>
                                             <p>Machine: {reservation.machine.name}</p>
+                                            {(reservation.comment !== '') && <p>Commentaires: {reservation.comment}</p>}
+                                            <p>ID: {reservation._id}</p>
                                         </article>
-                                        <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                        <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder ag-reservationEnd" : "ag-reservationBorder"}>
                                             <p>{dateToString(reservationEndDate)}</p>
                                         </article>
                                     </section>
