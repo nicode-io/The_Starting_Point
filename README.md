@@ -21,8 +21,8 @@
 Born from a request from the FabLab team of Charleroi, composed of Delphine and Sylvain, this project aims to improve the user experience "Client" but especially the user experience "Admin".
 Indeed, several tools had to be centralized in order to make the management of reservations, estimates and finally invoicing easier.
 The first step of this project was carried out by a Woods 3.21 team composed of :
-- :star: [Bastien Dewerse - PM Tech](https://github.com/DewerseB)
-- :star: [Nicolas Denoël - PM Orga](https://github.com/nicode-io)
+- :star: [Bastien Dewerse - PM Tech - Back](https://github.com/DewerseB)
+- :star: [Nicolas Denoël - PM Orga - Front](https://github.com/nicode-io)
 - :star: [Mohamed Shmayssany](https://github.com/M-Shmayssany)
 - :star: [Robby Delvaux](https://github.com/Delvaux1986)
 - :star: [Simon Duquaine](https://github.com/simonduquaine)
