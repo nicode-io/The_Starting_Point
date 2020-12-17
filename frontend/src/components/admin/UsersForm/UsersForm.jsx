@@ -86,12 +86,12 @@ export function UsersForm() {
                                     <td>{user.lastname}</td>
                                     <td>
                                         <Link to={`user-edit/${user._id}`}>
-                                            <FontAwesomeIcon icon={faPenSquare} size="2x" />
+                                            <i className="far fa-edit edit-icon"></i>
                                         </Link>
                                     </td>
                                     <td>
                                         <FormField type="button" callback={() => deleteItemById('user', user._id, user.email)}>
-                                            <FontAwesomeIcon icon={faMinusSquare} size="2x" />
+                                            <i className="far fa-trash-alt delete-icon"></i>
                                         </FormField>
                                     </td>
                                 </tr>
