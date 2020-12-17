@@ -24,13 +24,18 @@ export const Template = () => {
     // 1. Dashboard content
     const DASHBOARD =
         <>
-            <ReservationsList />
-            <Home />
+            <main>
+                <ReservationsList />
+                <Home />
+            </main>
         </>;
 
     // 2. Reservation content
     const RESERVATION =
         <>
+            <section className={"login-header"}>
+                <h1>Réservation</h1>
+            </section>
             <ReservationForm />
         </>
 
@@ -55,6 +60,9 @@ export const Template = () => {
     // 5. Files content
     const FILES =
         <>
+            <section className={"login-header"}>
+                <h1>Mes fichiers</h1>
+            </section>
             <FilesOverview />
         </>
 
