@@ -142,7 +142,7 @@ To:  **21-03-2021**
 > :cow2: :goat: :ram: :horse: Workshops - Upgrading stacks (+/- 2 months)
 
   * **M**ongoDB **E**xpress **R**eact **N**ode
-    * :construction: [Customer Project : FAB-LAB Charleroi](https://github.com/nicode-io/Fabulab) 
+    * :white_check_mark: [Customer Project : FAB-LAB Charleroi](https://github.com/nicode-io/Fabulab) 
       * *Those awesome people work with me on this project*:   
       :star:[Bastien Dewerse](https://github.com/DewerseB)  
       :star:[Mohammed Shmayssany](https://github.com/M-Shmayssany)  
@@ -158,7 +158,9 @@ To:  **21-03-2021**
   * VUE.JS
     * :white_check_mark: [VUE-Authors_Component]
   * PHP - WORDPRESS
-    * :construction: [Learning Deep Wordpress](https://github.com/nicode-io/Learning_Wordpress)   
+    * :white_check_mark: Learning Deep Wordpress
+  * REACT & REACT NATIVE
+    * :construction: [First steps with React Native](https://github.com/nicode-io/React_and_Native)
       
       
 #### The Valley
