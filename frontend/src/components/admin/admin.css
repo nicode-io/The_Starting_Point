@@ -1,4 +1,4 @@
-main{
+.admin-main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +11,7 @@ main{
 .admin-main > ul {
     height: 4vh;
     max-height: 50px;
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,6 +20,10 @@ main{
     list-style-type: none;
     padding-top: 1vh;
     padding-left: 0;
+}
+
+.admin-main > ul > li {
+    margin: 0 2vw;
 }
 
 .nav-item {
