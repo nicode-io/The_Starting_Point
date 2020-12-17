@@ -112,22 +112,20 @@ exports.getUser = async (req, res) => {
 // Create a new user
 exports.postUser = (req, res) => {
     const { firstname, lastname, email, tel, password, company, reservation, invoice, usertype } = req.body;
-    
-   
-        const user = new User({ firstname: firstname, lastname: lastname, email: email, tel: tel, password: password, company: company, reservation: reservation, invoice: invoice, usertype: usertype });
-        bcrypt.genSalt(saltRounds, function(err, salt) {
-            bcrypt.hash(user.password, salt, function(err, hash) {
-                user.password = hash;
-                
-                try {
-                    user.save();
-                    // Success behaviour TBD
-                } catch (error) {
-                    console.log(error);
-                    // Error behaviour TBD
-                }
-            });
+    const user = new User({ firstname: firstname, lastname: lastname, email: email, tel: tel, password: password, company: company, reservation: reservation, invoice: invoice, usertype: usertype });
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+        bcrypt.hash(user.password, salt, function(err, hash) {
+            user.password = hash;
+            
+            try {
+                user.save();
+                // Success behaviour TBD
+            } catch (error) {
+                console.log(error);
+                // Error behaviour TBD
+            }
         });
+    });
 }
 
 // Edit a user according to its ID
@@ -136,9 +134,8 @@ exports.getEditUser = (req, res) => {
 }
 
 exports.putEditUser = (req, res) => {
-    const userId = req.body.id;
+    const userId = req.params.userId;
     const { firstname, lastname, email, tel, company, type } = req.body;
-    
     User.findById(userId)
     .then((user) => {
         user.firstname = firstname;
@@ -147,7 +144,6 @@ exports.putEditUser = (req, res) => {
         user.tel = tel;
         user.company = company;
         user.usertype = type;
-        
         
         user.save();
         })
@@ -164,12 +160,11 @@ exports.putEditUser = (req, res) => {
 // Delete a user according to its ID
 exports.postDeleteUser = async (req, res) => {
     // TBD
-    const userId = req.body.userId;
+    const userId = req.params.userId;
 
     try {
         const user = await User.findByIdAndDelete(userId, (user) => user);
-        console.log(user);
-        console.log('User Deleted');
+        res.sendStatus(200);
         // Success behaviour TBD
     } catch (error) {
         console.log(error);

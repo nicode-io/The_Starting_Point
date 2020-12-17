@@ -30,10 +30,9 @@ export function UserEdit() {
         getUserById();
     }, []);
 
-    const handleSubmit = () => {
-
-        api.updateById('/edit-user', {
-            id: idUser,
+    const handleSubmit = async () => {
+        await api.updateById('/edit-user', idUser, {
+            // id: idUser,
             firstname: firstname,
             lastname: lastname,
             email: email,

@@ -28,7 +28,7 @@ router.get('/users', usersController.getAllUser);
 router.get('/user', usersController.getSessionUser);
 router.get('/user/:id', usersController.getUserByID);
 router.post('/add-user', usersController.postUser);
-router.put('/edit-user', usersController.putEditUser);
+router.put('/edit-user/:userId', usersController.putEditUser);
 //router.get('/user/:userId' , usersController.getUser);
 router.post('/auth/:email' , usersController.authUser);
 router.get('/logout' , usersController.destroySessionUser);
