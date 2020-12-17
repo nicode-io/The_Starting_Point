@@ -45,27 +45,27 @@ export function RegisterForm() {
                 <form onSubmit={handleSubmit} className="reg_form">
                     <article className={"register-field"}>
                         <p><label>Prénom</label></p>
-                        <p><input type="text" placeholder="Prénom" required={true} onChange={fieldValue => setFirstname(fieldValue)} /></p>
+                        <p><input type="text" placeholder="Prénom" required={true} onChange={e => setFirstname(e.target.value)} /></p>
                     </article>
                     <article className={"register-field"}>
                         <p><label>Nom</label></p>
-                        <p><input type="text" placeholder="Nom"required={true} onChange={fieldValue => setLastname(fieldValue)} /></p>
+                        <p><input type="text" placeholder="Nom"required={true} onChange={e => setLastname(e.target.value)} /></p>
                     </article>
                     <article className={"register-field"}>
                         <p><label>Société</label></p>
-                        <p><input type="string" placeholder="Société (si applicable)"onChange={fieldValue => setCompany(fieldValue)} /></p>
+                        <p><input type="string" placeholder="Société (si applicable)"onChange={e => setCompany(e.target.value)} /></p>
                     </article>
                     <article className={"register-field"}>
                         <p><label>Email</label></p>
-                        <p><input type="email" placeholder="Email"required={true} onChange={fieldValue => setEmail(fieldValue)} /></p>
+                        <p><input type="email" placeholder="Email"required={true} onChange={e => setEmail(e.target.value)} /></p>
                     </article>
                     <article className={"register-field"}>
                         <p><label>N° Téléphone</label></p>
-                        <p><input type="tel" placeholder="Numéro de téléphone" onChange={fieldValue => setTel(fieldValue)} /></p>
+                        <p><input type="tel" placeholder="Numéro de téléphone" onChange={e => setTel(e.target.value)} /></p>
                     </article>
                     <article className={"register-field"}>
                         <p><label>Mot de passe</label></p>
-                        <p><input type="password" placeholder="Choisir un mot de passe" required={true} onChange={fieldValue => setPassword(fieldValue)} /></p>
+                        <p><input type="password" placeholder="Choisir un mot de passe" required={true} onChange={e => setPassword(e.target.value)} /></p>
                     </article>
                     <article className={"register-submit"}>
                         <p><input className={"register-btn"} label={"submit"} type={"submit"} value={"Je m'inscris !"} /></p>
