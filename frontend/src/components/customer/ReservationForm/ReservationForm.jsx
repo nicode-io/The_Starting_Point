@@ -62,8 +62,8 @@ export function ReservationForm(props) {
 
     // Display Reservation form
     return (
-        <secion class="main-form">
-            <article class="res-form">
+        <section className="main-form">
+            <article className="res-form">
                 <form onSubmit={handleReservation}>
                     <MachinePicker onChange={handleChange} />
                     <p className={"steps"}>2 - VOS COORDONNEES </p>
@@ -79,6 +79,7 @@ export function ReservationForm(props) {
                             <DatePicker
                                 dateFormat="dd/MM/yyyy"
                                 selected={date}
+                                filterDate={(date) => (date.getDay() !== 0 && date.getDay() !== 6)}
                                 onChange={date => setDate(date)}
                                 id="datepicker-element"
                             />
@@ -87,6 +88,7 @@ export function ReservationForm(props) {
                             <p>De</p>
                             <DatePicker
                             selected={startHour}
+                            filterTime={(time) => ((time.getHours() === 9 && time.getMinutes() === 30) || (time.getHours() > 9 && time.getHours() < 17) || (time.getHours() === 17 && time.getMinutes() === 0))}
                             onChange={startHour => setStartHour(startHour.setSeconds(0, 0))}
                             showTimeSelect
                             showTimeSelectOnly
@@ -100,6 +102,7 @@ export function ReservationForm(props) {
                             <p>À</p>
                             <DatePicker
                             selected={endHour}
+                            filterTime={(time) => (time.getHours() >= 10 && time.getHours() <= 17)}
                             onChange={endHour => setEndHour(endHour.setSeconds(0, 0))}
                             showTimeSelect
                             showTimeSelectOnly
@@ -119,6 +122,6 @@ export function ReservationForm(props) {
                     </article>
                 </form>
             </article>
-        </secion>
+        </section>
     )
 }

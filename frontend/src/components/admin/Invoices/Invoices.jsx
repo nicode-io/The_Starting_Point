@@ -1,7 +1,5 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import api from '../../../api';
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormField } from '../../commons';
 import './invoice.css';
 
@@ -48,9 +46,9 @@ export function Invoices(props) {
         return date.getDate() + "/" + (date.getMonth() + 1);
     }
 
-    function displayHour(dateInJson){
-        let date = new Date(dateInJson);
-        return date.getHours() + "h" + (date.getMonth() + 1);
+    function displayHours(dateInJSON){
+        let date = new Date(dateInJSON);
+        return date.getHours() + "h" + (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes());
     }
 
     // use Effect for refresh state
@@ -90,11 +88,13 @@ export function Invoices(props) {
                         </thead>
                         <tbody>
                         {invoices.map(invoice => (
-                            <tr key={"list-" + invoice.reservation._id}>
-                                <td>{invoice.reservation.usernotlogged}</td>
-                                <td>{invoice.machineUseInInvoice}</td>
-                                <td>{displayDate(invoice.reservation.startdate)}</td>
-                                <td>{displayHour(invoice.reservation.startdate)} à {displayHour(invoice.reservation.enddate)}</td>
+                            <tr key={"invoice-" + invoice._id}>
+                                {(invoice.reservation) && <>
+                                    <td>{invoice.reservation.usernotlogged}</td>
+                                    <td>{invoice.machineUseInInvoice}</td>
+                                    <td>{displayDate(invoice.reservation.startdate)}</td>
+                                    <td>{displayHours(invoice.reservation.startdate)} à {displayHours(invoice.reservation.enddate)}</td>
+                                </>}
                             </tr>
                         ))}
                         </tbody>
@@ -116,11 +116,11 @@ export function Invoices(props) {
                         </thead>
                         <tbody>
                         {reservations.map(reservation => (
-                            <tr key={"list-" + reservation._id}>
+                            <tr key={"reservation-" + reservation._id}>
                                 <td>{reservation.usernotlogged}</td>
                                 {/* <td>{reservation.machine.name}</td> */}
                                 <td>{displayDate(reservation.startdate)}</td>
-                                <td>{displayHour(reservation.startdate)} à {displayHour(reservation.enddate)}</td>
+                                <td>{displayHours(reservation.startdate)} à {displayHours(reservation.enddate)}</td>
                                 <td>
                                     <FormField type="button" callback={() => transformToInvoice(reservation._id, reservation.machine._id)}>
                                         <i className="fas fa-plus add-icon"></i>

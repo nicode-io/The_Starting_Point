@@ -53,7 +53,7 @@ exports.postEditProduct = async(req, res) => {
         return product.save();
     })
     .then(() => {
-        res.send(200);
+        res.sendStatus(200);
     }).catch((error) => {
         console.log(error);
     })

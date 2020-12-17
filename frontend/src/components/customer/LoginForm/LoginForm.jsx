@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FormField } from '../../commons/FormField/FormField';
+// import { FormField } from '../../commons/FormField/FormField'; The component should use FormField !
 import './loginForm.css';
+import { Link } from 'react-router-dom';
 import api from '../../../api';
 
 const LoginForm = () =>{
@@ -32,6 +33,7 @@ const LoginForm = () =>{
                     </section>
                     <section className={"login-submit"}>
                         <p><input label={"submit"} type={"submit"} value={"Se connecter"} /></p>
+                        <Link to="/register" className="not-signed-up"><p>Pas encore enregistré?</p></Link>
                     </section>
                 </form>
             </article>

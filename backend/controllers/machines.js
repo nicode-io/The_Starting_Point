@@ -47,12 +47,12 @@ exports.postEditMachine = async(req, res) => {
         machine.name = name ;
         machine.tarif = tarif;
         machine.invoice = invoice;
-        machine.available = available;
+        machine.available = available || true;
         machine.comment = comment;
 
         return machine.save();
     }).then(() => {
-        res.send(200);
+        res.sendStatus(200);
     }).catch((err) => {
         console.log(err);
     });

@@ -13,7 +13,7 @@ export function Edit(props){
 
     // Variables
     const [isLoaded, setIsLoaded] = useState(false);
-    const [item, setItem ] = useState('');
+    const [item, setItem ] = useState({});
     const [isUpdated, setisUpdated ] = useState(false);
         // const [formValues, setformValues] = useState(''); TBD
     let params = useLocation().pathname;
@@ -60,12 +60,12 @@ export function Edit(props){
     // Check loading
     useEffect(() => {
         (!isLoaded) && getItemById(type,id);
-    })
+    });
 
     // Define item display list
     let itemToDisplay = Object.entries(item).map((key)  => {
         return (
-            <Fragment>
+            <Fragment key={key[0]}>
                 {(key[0][0] !== "_") && <FormField label={key[0]} value={key[1]} callback={(fieldValue) => setItem({...item, ...{[key[0]]: fieldValue} })} /> }
             </Fragment>
         )

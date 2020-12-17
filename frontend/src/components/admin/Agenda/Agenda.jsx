@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import {Modal} from "../../commons";
 import api from '../../../api';
@@ -127,7 +127,7 @@ export function Agenda(props) {
 
     const DatePickerCustomInput = ({ value, onClick }) => {
         return (
-            <div id="date-choice"><input style={{ marginLeft: 0, fontSize: '0.8rem' }} className="ag-period" onClick={onClick} value={value} /></div>
+            <div id="date-choice"><input style={{ marginLeft: 0, fontSize: '0.8rem' }} className="ag-period" onChange={onClick} onClick={onClick} value={value} /></div>
         )
     }
 
@@ -181,15 +181,17 @@ export function Agenda(props) {
                                 const reservationStartDate = new Date(reservation.startdate);
                                 const reservationEndDate = new Date(reservation.enddate);
                                 return (
-                                    <section className="ag-reservationContainer">
-                                        <article className={(period.startDate.getTime() === reservationStartDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                    <section key={"reservation-" + reservation._id} className="ag-reservationContainer">
+                                        <article className={(period.startDate.getTime() === reservationStartDate.getTime()) ? "ag-reservationBorder ag-reservationEnd" : "ag-reservationBorder"}>
                                             <p>{dateToString(reservationStartDate)}</p>
                                         </article>
                                         <article className="ag-reservation">
-                                            <p>ID: {reservation._id}</p>
+                                            <p>Client: {reservation.usernotlogged}</p>
                                             <p>Machine: {reservation.machine.name}</p>
+                                            {(reservation.comment !== '') && <p>Commentaires: {reservation.comment}</p>}
+                                            {/* <p>ID: {reservation._id}</p> */}
                                         </article>
-                                        <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder" : "ag-reservationBorder ag-reservationEnd"}>
+                                        <article className={(period.endDate.getTime() === reservationEndDate.getTime()) ? "ag-reservationBorder ag-reservationEnd" : "ag-reservationBorder"}>
                                             <p>{dateToString(reservationEndDate)}</p>
                                         </article>
                                     </section>
@@ -236,7 +238,7 @@ export function Agenda(props) {
                         />
                         {generateTimestamps(WORKINGHOURS, TIMEPERIOD).map((timestamp) => {
                             return (
-                                <div className="ag-period ag-period-title">
+                                <div key={timestamp} className="ag-period ag-period-title">
                                     <p>{timestamp}</p>
                                 </div>
                             )
