@@ -1,11 +1,10 @@
 "use strict";
 
 var User = require('../models/User');
-
 var bcrypt = require('bcrypt');
-
 var saltRounds = 10;
 
+// User management
 exports.getAllUser = function _callee(req, res) {
   var users;
   return regeneratorRuntime.async(function _callee$(_context) {
@@ -33,9 +32,10 @@ exports.getAllUser = function _callee(req, res) {
       }
     }
   }, null, null, [[0, 7]]);
-}; // Method for the sessions
+};
 
 
+// Session management
 exports.getSessionUser = function _callee2(req, res, next) {
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
@@ -192,19 +192,22 @@ exports.postUser = function (req, res) {
       user.password = hash;
 
       try {
-        user.save(); // définir le comportement de l'app en cas de réussite
+        user.save();
+        // définir le comportement de l'app en cas de réussite
       } catch (error) {
-        console.log(error); // définir le comportement de l'app en cas d'erreur
+        console.log(error);
+        // définir le comportement de l'app en cas d'erreur
       }
     });
   });
-}; // exports.getEditUser = (req, res) => {
-//     // A GERE UNIQUEMENT ADMIN AURA DROIT
-// }
+};
+exports.getEditUser = (req, res) => {
+  // TDB
+}
 
 
 exports.postEditUser = function (req, res) {
-  // A GERE UNIQUEMENT ADMIN AURA DROIT
+  // TDB
   var userId = req.body.petId;
   var _req$body2 = req.body,
       firstname = _req$body2.firstname,

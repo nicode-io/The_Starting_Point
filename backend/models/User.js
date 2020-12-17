@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+/**
+ * Database User schema
+ */
+
+// Define schema
 const UserSchema = new Schema({
     firstname: {
         type: String,
@@ -40,4 +46,5 @@ const UserSchema = new Schema({
     }
 });
 
+// Export schema
 module.exports = mongoose.model('User', UserSchema);

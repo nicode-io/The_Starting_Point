@@ -1,4 +1,4 @@
-import React, { Fragment, useState }from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faArrowCircleLeft, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './modal.css';
@@ -12,7 +12,7 @@ import './modal.css';
  */
 const Modal = (props) => {
     return (
-        <Fragment>
+        <>
             {(props.isVisible)
                 ? <div className="modalContainer">
                     <div className="modalHeader">
@@ -27,7 +27,7 @@ const Modal = (props) => {
                 </div>
                 : null
             }
-        </Fragment>
+        </>
     )
 }
 

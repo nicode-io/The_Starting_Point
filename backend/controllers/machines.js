@@ -1,6 +1,12 @@
 const { response } = require('express');
 const Machine = require('../models/Machine');
 
+
+/**
+ * Machine controller
+ */
+
+// Get a list of all machines
 exports.getAllMachines = async (req, res) => {
     try {
         const machines = await Machine.find();
@@ -10,6 +16,7 @@ exports.getAllMachines = async (req, res) => {
     }
 }
 
+// Get a machine according to its ID
 exports.getMachine = async(req, res) => {
     const machineId = req.params.machineId;
     try {
@@ -20,6 +27,7 @@ exports.getMachine = async(req, res) => {
     }
 }
 
+// Create a new machine
 exports.postMachine = async(req, res) => {
     const {name , tarif, available , comment } = req.body;
     try{
@@ -31,6 +39,7 @@ exports.postMachine = async(req, res) => {
     }
 }
 
+// Edit a machine according to its ID
 exports.postEditMachine = async(req, res) => {
     const machineId = req.params.machineId;
     const {name , tarif, invoice, available, comment } = req.body;
@@ -38,17 +47,18 @@ exports.postEditMachine = async(req, res) => {
         machine.name = name ;
         machine.tarif = tarif;
         machine.invoice = invoice;
-        machine.available = available;
+        machine.available = available || true;
         machine.comment = comment;
 
         return machine.save();
     }).then(() => {
-        res.send(200);
+        res.sendStatus(200);
     }).catch((err) => {
         console.log(err);
     });
 }
 
+// Delete a machine according to its ID
 exports.deleteMachine = async(req, res) => {
     const machineId = req.params.machineId;
     try {

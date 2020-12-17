@@ -1,13 +1,24 @@
 const Reservation = require('../models/Reservation');
 
+
+/**
+ * Reservation controller
+ */
+
+// Get a list of all reservations
 exports.getAllReservation = async(req, res) => {
     try {
-        const reservations = await Reservation.find().populate('machine');
+        let reservations = [];
+        (req.body) 
+            ? reservations = await Reservation.find(req.body.match).populate('machine')
+            : reservations = await Reservation.find().populate('machine');
         res.json(reservations);
     }catch(error){
         console.log(error);
     }
 }
+
+// Get a reservation according to its ID
 exports.getReservation = async(req, res) => {
     const reservationId = req.params.reservationId;
     try{
@@ -17,6 +28,8 @@ exports.getReservation = async(req, res) => {
         console.log(error);
     }
 }
+
+// Create a new reservation
 exports.postReservation = async(req, res) => {
     const { usernotlogged , userlogged , startdate , enddate, machine , comment} = req.body;
     try{
@@ -27,9 +40,12 @@ exports.postReservation = async(req, res) => {
         console.log(error);
     }
 }
+
+// Edit a reservation according to its ID
 exports.getEditReservation = async(req, res) => {
-    // A GERE UNIQUEMENT ADMIN AURA DROIT
+    // TBD
 }
+
 exports.postEditReservation = async(req, res) => {
     const reservationId = req.body.reservationId;
     const {name,usernotlogged,userlogged,startdate,enddate} = req.body;
@@ -48,6 +64,8 @@ exports.postEditReservation = async(req, res) => {
         console.log(error);
     });
 }
+
+// Delete a reservation according to its ID
 exports.deleteReservation = async(req, res) => {
     const reservationId = req.body.reservationId;
 
