@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserClock, faCalendarAlt, faEdit, faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import "./admin.css";
-import { Agenda, Edit, Invoices, InvoiceForm, MachineForm, Management, ProductForm, Users, UsersForm, UserEdit } from "./index";
+import { Agenda, Edit, Invoices, MachineForm, Management, ProductForm, UsersForm, UserEdit } from "./index";
 
 
 /**

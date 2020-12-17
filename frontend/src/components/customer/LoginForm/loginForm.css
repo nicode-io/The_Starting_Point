@@ -93,6 +93,7 @@
     color: #fff;
     font-family: 'Titillium Web', sans-serif;
     font-weight: 600;
+    font-size: 1.5rem;
 }
 .login-submit > p > input:hover {
     width: 50vw;
@@ -101,16 +102,16 @@
     background: #c24c86;
     box-shadow: inset 5px 5px 10px #a54172,
     inset -5px -5px 10px #df579a;
+    font-size: 1.5rem;
 }
 
 .not-signed-up {
-    margin-bottom: 1rem;
-    
+    margin: 1rem 0;
 }
 
 .not-signed-up p {
     color: #c24c86;
     font-family: 'Titillium Web', sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }

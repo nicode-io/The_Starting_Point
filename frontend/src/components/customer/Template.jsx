@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
-import {EventsCarousel, FilesOverview, Home, InvoicesList, LoginForm, RegisterForm, ReservationForm, ReservationsList } from "./index";
+import {FilesOverview, Home, LoginForm, RegisterForm, ReservationForm, ReservationsList } from "./index";
 import "./template.css";
 
 /**

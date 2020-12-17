@@ -80,9 +80,15 @@
     background-color: rgba(194, 76, 134, 0.2);
     color: rgb(194, 76, 134);
     font-weight: 700;
-    border: 1px solid black;
     border-radius: 10px;
     border: rgb(194, 76, 134) solid 2px;
+}
+.ag-period-full:hover {
+    border-radius: 10px;
+    background: #c24c86;
+    box-shadow: inset 20px 20px 60px #a54172,
+    inset -20px -20px 60px #df579a;
+    color: #fff;
 }
 
 .ag-period-empty {
