@@ -7,6 +7,7 @@
 
 -   [Description](#description)
 -   [Backlog](#backlog)
+-   [Objectives](#objectives)
 -   [Release Notes](#release-notes)
 -   [Toolbox](#toolbox)
 -   [The Teams](#the-teams)
@@ -55,6 +56,36 @@ The rules need to be reviewed with the FabLab team to fit their needs.
 The main goal is open to your team, let's upgrade this project with your fresh and new ideas ;)
 You will then be able to integrate the project live so that it can be used on a daily basis by all the members of the FabLab Charleroi, as well as by Delphine and Sylvain, the managers.
 
+---
+
+##  Objectives
+
+### ToDo
+-   Backend
+    -   Validation and sanitization
+    -   Rework relations between Invoices, Reservations and Machines 
+-   Frontend
+    -   Handling response after request success to redirect the user
+    -   Handling message states to provide better feedback to the user
+    -   Admin
+        -   Allow Admin to adjust the reservation time and price before turning it into an invoice
+        -   CRUD for reservations and invoices
+        -   Generate an invoices list for the month (and handle archiving)
+        -   Add a dropdown list to User management for user type, and Machine/Product edit for availability
+        -   Add style to Edit screens
+    -   Customer
+        -   Customize Home screen
+        -   Create Files overview
+        -   Allow to modify/delete a reservation
+        -   Validation for feedback in forms
+    -   Handle session
+        -   Customize the UI according to user status
+        -   Reservation form should handle logged in users, else it should save the mail
+    -   Default hour for the Reservation form should match the time slot
+
+### Bonus
+-   Mailing list and newsletter
+-   Manage Events (display to users and CRUD for admin)
 
 ---
 
