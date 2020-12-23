@@ -159,8 +159,8 @@ To:  **21-03-2021**
     * :white_check_mark: [VUE-Authors_Component]
   * PHP - WORDPRESS
     * :white_check_mark: Learning Deep Wordpress
-  * REACT & REACT NATIVE
-    * :construction: [First steps with React Native](https://github.com/nicode-io/React_and_Native)
+  * REACT
+    * :construction: [Bokkings Manager App](https://github.com/nicode-io/Bookings_Manager_App)
       
       
 #### The Valley
