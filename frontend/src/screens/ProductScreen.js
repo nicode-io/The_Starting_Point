@@ -4,7 +4,7 @@ import { Row, Col, Image, ListGroup, Card, Button, Form } from "react-bootstrap"
 import Rating from "../components/Rating";
 import axios from "axios";
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(0);
 
   const [product, setProduct] = useState({});
@@ -18,6 +18,10 @@ const ProductScreen = ({ match }) => {
 
     fetchProduct();
   }, [match]);
+
+  const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?qty=${qty}`)
+  }
 
   return (
     <>
@@ -88,6 +92,7 @@ const ProductScreen = ({ match }) => {
                 <Button
                   className="btn-block"
                   type="button"
+                  onClick={addToCartHandler}
                   disabled={product.countInStock === 0}
                 >
                   ADD TO CART
