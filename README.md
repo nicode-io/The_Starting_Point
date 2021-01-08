@@ -17,6 +17,8 @@
 This projects aims to train REACT and CRUD / Routing through an e-shop project. 
 It'll have a login system, a products database with stock management and as the final step a payment option through Paypal. 
 
+![](merneshop.png)
+
 ---
 
 ### Installation
