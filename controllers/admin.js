@@ -9,10 +9,7 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
-  const title = req.body.title;
-  const imageUrl = req.body.imageUrl;
-  const price = req.body.price;
-  const description = req.body.description;
+  const { title, imageUrl, price, description } = req.body;
 
   // Magic method created by Sequelize when we create an association
   req.user
@@ -28,20 +25,6 @@ exports.postAddProduct = (req, res, next) => {
       res.redirect('/admin/products');
     })
     .catch(err => console.log(err));
-
-  // Create a new product whith classic no-associations 
-  // Product.create({
-  //   title: title,
-  //   price: price,
-  //   imageUrl: imageUrl,
-  //   description: description
-  // })
-  //   .then(result => {
-  //     // console.log(result)
-  //     console.log('Created Product Successfully');
-  //     res.redirect('/admin/products');
-  //   })
-  //   .catch(err => console.log(err))
 };
 
 exports.getEditProduct = (req, res, next) => {
@@ -69,11 +52,7 @@ exports.getEditProduct = (req, res, next) => {
 };
 
 exports.postEditProduct = (req, res, next) => {
-  const prodId = req.body.productId;
-  const updatedTitle = req.body.title;
-  const updatedPrice = req.body.price;
-  const updatedImageUrl = req.body.imageUrl;
-  const updatedDesc = req.body.description;
+  const { prodId, updatedTitle, updatedPrice, updatedImageUrl, updatedDesc } = req.body;
 
   Product.findByPk(prodId)
     .then(product => {
