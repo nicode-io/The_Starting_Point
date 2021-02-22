@@ -23,6 +23,41 @@ This is done through a simple e-shop project.
 ### Installation
 >   Step by step 
 
+Please note that to run the project you will need a **database.js** file in **/util** directory
+to create the connection to the database. Here's an example of content of this file: 
+
+```const mongodb = require('mongodb');
+const MongoClient = mongodb.MongoClient;
+
+let _db;
+
+const mongoConnect = callback => {
+  MongoClient.connect(
+    'mongodb+srv://<username>:<password>@<username>.ydftq.mongodb.net/nodecursus?retryWrites=true&w=majority'
+  )
+    .then(client => {
+      console.log('Connected!');
+      _db = client.db();
+      callback();
+    })
+    .catch(err => {
+      console.log(err);
+      throw err;
+    });
+};
+
+const getDb = () => {
+  if (_db) {
+    return _db;
+  }
+  throw 'No database found!';
+};
+
+exports.mongoConnect = mongoConnect;
+exports.getDb = getDb;
+```
+
+
 1.  Navigate to project directory
 2.  Run ```npm install```
 3.  Run ```npm start```
