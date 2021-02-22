@@ -23,7 +23,10 @@ This is done through a simple e-shop project.
 ### Installation
 >   Step by step 
 
-TO DO ... 
+1.  Navigate to project directory
+2.  Run ```npm install```
+3.  Run ```npm start```
+4.  Browse [http://localhost3000](http://localhost:3000)
 
 ---
 
