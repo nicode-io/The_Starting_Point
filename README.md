@@ -1,5 +1,5 @@
-# (◉ ͜ʖ◉))ﾉ彡 MERN'e'SHOP ✧٩(•́⌄•́๑)
->   E-Shop learning project
+# (◉ ͜ʖ◉))ﾉ彡 NODE JS CURSUS ✧٩(•́⌄•́๑)
+> FUll learning path to NODE JS
 
 ###  Index
 
@@ -16,7 +16,8 @@
 > Start 10-01-2021
 
 This project aims to study NODEjs and everything related to it: database, REST API, GRAPHQL, authentication, sessions, cookies, CRUD, MVC, Template engine and many others. 
-This is done through a simple e-shop project. 
+This is done through a simple e-shop project.
+A Git branch has been created for each theme of the path in order to be able to observe the evolution of the project or simply choose the part that may be of interest to you.
 
 ---
 
@@ -82,7 +83,8 @@ exports.getDb = getDb;
     Integrate SQL database, using first MySQL than convert with Sequelize ORM
 *   feature/8-Mongo_DB : 
     Convert your application in a no-SQL project with MongoDB
-
+*   feature/9-Mongoose : 
+    Make use of MongoDB easier with Mongoose ORM
 
 
 ---
@@ -91,8 +93,8 @@ exports.getDb = getDb;
 
 Explore the possibilities of Node js through a concrete e-shop project, including:
 *   Application management and routing with Express
-*   CRUD with Sequelize / MySQL
-*   CRUD with Mongoose / MongoDB
+*   CRUD with MySQL database and Sequelize ORM
+*   CRUD with MongoDB nosql-database and Mongoose ORM
 *   (...)  
  
 
