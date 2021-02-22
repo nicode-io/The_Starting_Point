@@ -68,23 +68,33 @@ exports.getDb = getDb;
 ### Branches
 >   Discover project & code evolution by subject
 
-*   feature/2-Express
-*   feature/3-Template-Engine
-*   feature/4-MVC
-*   feature/5-Enhancing-App
-*   feature/6-Dynamic-Routing
-*   feature/7-SQL
-*   feature/8-Mongo_DB
+*   feature/2-Express : 
+    Create an application's skelethon
+*   feature/3-Template-Engine :
+    Use EJS as tempalte engine to create dynamic HTML pages
+*   feature/4-MVC : 
+    Explore model-view-controller to create a better structure for your application
+*   feature/5-Enhancing-App : 
+    First refactor of your app
+*   feature/6-Dynamic-Routing : 
+    Create dynamic routing for your e-shop
+*   feature/7-SQL :
+    Integrate SQL database, using first MySQL than convert with Sequelize ORM
+*   feature/8-Mongo_DB : 
+    Convert your application in a no-SQL project with MongoDB
+
 
 
 ---
 
 ### Achievements
 
-*   Backend management with Node / Express
+Explore the possibilities of Node js through a concrete e-shop project, including:
+*   Application management and routing with Express
 *   CRUD with Sequelize / MySQL
 *   CRUD with Mongoose / MongoDB
-*   Routing 
+*   (...)  
+ 
 
 ---
 
