@@ -2,61 +2,77 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoDbStore = require('connect-mongodb-session')(session); // Store session created by express-session into MongoDbStore
 
-const secret = require('./secret');
+const secret = require('./secret')
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
 const app = express();
+const store = new MongoDbStore({
+  uri: secret.getDb(),
+  collection: 'sessions',
+}); // Create object which use database and connect-mongodb-session
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+const authRoutes = require('./routes/auth');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(
+  session({
+    secret: 'my secret',
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+  })
+); // Express-Session middleware - Automatically set a cookie, use session 'store: store', secure with hash the user id
 
 app.use((req, res, next) => {
-  User.findById('60354569db6ca81032a71efd')
+  if (!req.session.user) {
+    return next();
+  }
+  User.findById(req.session.user._id)
     .then(user => {
-      req.user = user; // Will store a full User instance of mongoose user in the request
+      req.user = user;
       next();
     })
     .catch(err => console.log(err));
-});
+})
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
+app.use(authRoutes);
 
 app.use(errorController.get404);
 
 mongoose
   .connect(
     secret.getDb(),
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
+    { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(result => {
     User.findOne().then(user => {
       if (!user) {
         const user = new User({
-          name: 'Nico',
-          email: 'nico@nicode.io',
+          name: 'Nicode',
+          email: 'nicode@nicode.io',
           cart: {
             items: []
           }
         });
         user.save();
       }
-    })
+    });
     app.listen(3000);
-    console.log('Connected');
+    console.log('App Connected');
   })
   .catch(err => {
-    console.log(err)
+    console.log(err);
   });

@@ -21,13 +21,12 @@ const productSchema = new Schema({
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref: 'User', // Relations that refer to User model
-    required: true,
+    ref: 'User',
+    required: true
   }
 });
 
-module.exports = mongoose.model('Product', productSchema) // Link a schema (here 'productSchema') with a name (here 'Product')
-
+module.exports = mongoose.model('Product', productSchema);
 
 // const mongodb = require('mongodb');
 // const getDb = require('../util/database').getDb;

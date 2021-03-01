@@ -51,6 +51,8 @@ To Be Done
   Convert your application in a no-SQL project with MongoDB
 - feature/9-Mongoose :
   Make use of MongoDB easier with Mongoose ODM (Object-Document Mapping) library
+- feature/10-Cookies_Sessions :
+  Store persistent data on user local machine using sessions and cookies
 
 ---
 
@@ -62,6 +64,7 @@ Explore the possibilities of Node js through a concrete e-shop project, includin
 - CRUD with MySQL database and Sequelize ORM
 - CRUD with MongoDB nosql-database and Mongoose ODM
 - Work with nested objects and refs with MongoDB & Mongoose
+- Save data on user's computer using cookies and sessions
 - (...)
 
 ---
