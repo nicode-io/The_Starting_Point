@@ -6,6 +6,7 @@
 
 - [Description](#description)
 - [Installation](#installation)
+- [Packages](#packages)
 - [Branches](#branches)
 - [Achievements](#achievements)
 - [Collaboration](#collaboration)
@@ -28,6 +29,25 @@ A Git branch has been created for each theme of the path in order to be able to 
 > Step by step
 
 To Be Done
+
+---
+
+### Packages
+
+> NPM packages used in the project
+
+- Body-parser: parse the http request
+- Connect-Mongodb-Session: link Express-Session with MongoDB database
+- Ejs: templating engine to include javascript logic in your html files
+- Express: create an application quickly
+- Express-Handlebars: manage Express handlebars
+- Express-Session: create user session, generate cookies automatically
+- MongoDB: no-SQL MongoDB database manager
+- Mongoose: a great ODM manager to use with MongoDB
+- Mysql2: SQL database manager (for the first part of project)
+- Nodemon: when you're tired of reload your project manually
+- Pug: Another templating engine (used before EJS in the project)
+- Sequelize: a great ORM manager to use with a SQL database
 
 ---
 
@@ -65,6 +85,9 @@ Explore the possibilities of Node js through a concrete e-shop project, includin
 - CRUD with MongoDB nosql-database and Mongoose ODM
 - Work with nested objects and refs with MongoDB & Mongoose
 - Save data on user's computer using cookies and sessions
+- Discover how sessions can hide sensitive informations and work in link with database
+- Explore more deeply the web browser developer tools
+- Use sessions to hide/show content, menus, buttons, ... to the user
 - (...)
 
 ---
