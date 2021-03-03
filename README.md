@@ -40,7 +40,7 @@ To Be Done
 - Connect-Mongodb-Session: link Express-Session with MongoDB database
 - Ejs: templating engine to include javascript logic in your html files
 - Express: create an application quickly
-- Express-Handlebars: manage Express handlebars
+- Express-Handlebars: manage handlebars and templating engine
 - Express-Session: create user session, generate cookies automatically
 - MongoDB: no-SQL MongoDB database manager
 - Mongoose: a great ODM manager to use with MongoDB
@@ -73,6 +73,8 @@ To Be Done
   Make use of MongoDB easier with Mongoose ODM (Object-Document Mapping) library
 - feature/10-Cookies_Sessions :
   Store persistent data on user local machine using sessions and cookies
+- feature/11-Authentication :
+  Create full authentication system
 
 ---
 
