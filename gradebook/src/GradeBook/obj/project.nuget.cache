@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V56lcz2mptcdYfr5EKcL3zZ2oZJrgiiHlgVYLc8TAaVqEIwppV7HjsufEzmMHILnKew6aa2OMIK68WrEbLG7yA==",
+  "dgSpecHash": "AcQwlWtLhYb6GzTZFpl4s1gC07xSZ78k09b/Gu0unkpJ0+YD1Mti9n8ZfMT15bCgiA51/KyUzsiaKepYvDSY0w==",
   "success": true,
-  "projectFilePath": "/Users/nicolasdenoel/CodeMac/C-Sharp Pluralsight/gradebook/src/GradeBook/GradeBook.csproj",
+  "projectFilePath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

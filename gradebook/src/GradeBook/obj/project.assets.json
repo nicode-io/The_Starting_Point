@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nicolasdenoel/CodeMac/C-Sharp Pluralsight/gradebook/src/GradeBook/GradeBook.csproj",
+      "projectUniqueName": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
       "projectName": "GradeBook",
-      "projectPath": "/Users/nicolasdenoel/CodeMac/C-Sharp Pluralsight/gradebook/src/GradeBook/GradeBook.csproj",
+      "projectPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
       "packagesPath": "/Users/nicolasdenoel/.nuget/packages/",
-      "outputPath": "/Users/nicolasdenoel/CodeMac/C-Sharp Pluralsight/gradebook/src/GradeBook/obj/",
+      "outputPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nicolasdenoel/.nuget/NuGet/NuGet.Config"
