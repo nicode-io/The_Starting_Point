@@ -31,7 +31,8 @@ Main goal is to discover code structure, OOP structure, and variables definition
 
 > Discover project & code evolution by subject
 
-- feature/Class_&_Unit_Tests : After an introduction on how is the code structured in a C# project, we create some classes and we've done our first unit test.
+-   feature/Class_&_Unit_Tests : After an introduction on how is the code structured in a C# project, we create some classes and we've done our first unit test.
+-   feature/Reference_&_Value_Types : 
 
 ---
 
