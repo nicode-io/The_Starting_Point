@@ -6,13 +6,14 @@ namespace GradeBook.Tests
     public class BookTests
     {
         [Fact] // Attribute attached to Test1
-        public void Test1()
+        public void BookCalculatesAnAverageGrade()
         {
             // Arrange
             var book = new Book("");
             book.AddGrade(89.1);
             book.AddGrade(90.5);
             book.AddGrade(77.4);
+
             // Act 
             var result = book.GetStatistics();
 

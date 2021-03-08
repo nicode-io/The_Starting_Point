@@ -9,7 +9,7 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
         public Book(string name)
         {
             grades = new List<double>();
-            this.name = name;
+            Name = name;
         }
 
         // Methods
@@ -40,7 +40,6 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
 
         // Variables
         private List<double> grades; // Define a class-scope List which can be accessed through all class methods
-        private string name;
-
+        public string Name;
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CPD5QIHXAcMKf3sKsZrnRuHBRvGUVuFsWBUuNZVFzqVzmrWJVoAtWf+EIEE4AuAbrWQ00nzsu5//gdg5nTxnmQ==",
+  "dgSpecHash": "AvnGJIokJMQ+HidMZBMIr1cpvaXQyq8oXptlIYcng6igUE8KEpNUFp8oTTsj6AVykvrlVtl5mjkUYEt1FqIfTA==",
   "success": true,
-  "projectFilePath": "/Users/nicolasdenoel/CodeMac/C-Sharp Pluralsight/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
+  "projectFilePath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/nicolasdenoel/.nuget/packages/coverlet.collector/1.2.0/coverlet.collector.1.2.0.nupkg.sha512",
     "/Users/nicolasdenoel/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
