@@ -38,8 +38,8 @@ Main goal is to discover code structure, OOP structure, and variables definition
 
 ### Tips
 
--   Using var to define variable don't work as in JS, you can't change the type of the variable multiple time
--   Starting point of all applications is the main method in class Program (created by defatult when using dotnet new ... )
+-   Using var to define variable don't work as in JS, you have to take the type of the variable in account
+-   Starting point of all applications is the 'main' method in class 'Program' (created by defatult when using dotnet new ... )
 -   All code must be in a class
 -   Create your classes in a specific file for each, named with the name of your class
 -   Create your own namespace to put in your classes to avoid using global namespace, cause this will create conflicts (like name's conflict)
