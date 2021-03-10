@@ -3,11 +3,16 @@ using System.Collections.Generic;
 
 namespace GradeBook // Namespace are usefull to get class / method outisde the Global namespace, which is dangerous and can create conflicts
 {
+    // Create an event delegate
+    public delegate void GradeAddedDelegate(object sender, EventArgs args); // Define a model for our event delegate
+
     public class Book // public is used to gain access outside, here in the unit tests
     {
         // Constructor
         public Book(string name)
         {
+            category = ""; // See bottom 'readonly' category variable, the value of category can only be changed inside constructor or variable definition
+            // CATEGORY = ""; won't work, as it's defined as 'const' 
             grades = new List<double>();
             Name = name;
         }
@@ -43,12 +48,18 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
             if (grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+                if (GradeAdded != null) // Check if someone is listening to event (not if it's null)
+                {
+                    GradeAdded(this, new EventArgs()); // Call the event member, 'this' says "I'm the sender", 'new EventArgs' creates a new event's arguments' object
+                }
             }
             else
             {
                 throw new ArgumentException($"Invalide argument: {nameof(grade)}"); // Throw exception and encapsulate argument value with {nameof(grade)}, a throw will crash the program
             }
         }
+
+        public event GradeAddedDelegate GradeAdded; // Define an event member 
 
 
         public Statistics GetStatistics() // GetStatistics method is public and will return object Statistics (see Statistics.cs file)
@@ -106,34 +117,44 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
         private List<double> grades; // Define a class-scope List which can be accessed through all class methods
 
         //* Property - The long syntax 
-        public string Name
-        /* Set a properties, notice we don't have () like in a method.
-        Properties allows us to control how user can have access to private variables of the class */
-        {
-            get // Define behaviour when someone read the property
-            {
-                return name.ToUpper();
-            }
-            set // Define behaviour when someone set the property
-            {
-                if (!String.IsNullOrEmpty(value)) // Add an optionnal condition (example)
-                {
-                    name = value; // value is the implilcit value of the setter
-                }
-            }
-        }
-        private string name;
+        // Set a properties, notice we don't have () like in a method.
+        // Properties allows us to control how user can have access to private variables of the class 
+
+        // public string Name
+        // {
+        //     get // Define behaviour when someone read the property
+        //     {
+        //         return name.ToUpper();
+        //     }
+        //     set // Define behaviour when someone set the property
+        //     {
+        //         if (!String.IsNullOrEmpty(value)) // Add an optionnal condition (example)
+        //         {
+        //             name = value; // value is the implilcit value of the setter
+        //         }
+        //     }
+        // }
+
 
         //* Property - The short syntax
         /* An advantage to use a property in place of a field is that
         you can define accessibility easily, here for example the getter is public
         while the setter is private */
-        public string Name2
+        public string Name
         {
             get;
-            private set;
+            set;
         }
 
+
+        /* Readonly is some kind of a soft-constant in another programming language. 
+        This variable value can only be changed here or in the class' constructor */
+        public readonly string category = "Science";
+
+
+        /* With 'const' keyword, the variable's value can only be defined here, 
+        optionnal public will lead to a readonly accessibility everywhere, Uppercase is a good practise */
+        public const string CATEGORY = "Geography"; //
 
     }
 }

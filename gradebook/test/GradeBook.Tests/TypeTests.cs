@@ -3,8 +3,35 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+    public delegate string WriteDelegate(string message); // Define delegate's model
+
     public class TypeTests
     {
+        int count = 0;
+
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            WriteDelegate log = ReturnMessage; // Assign a method that fits delegate construction to log variable
+            log += IncrementCount; // Assign another method to the same variable
+
+            var result = log("Hello !"); // Use log in replacement of: returnMessage("Hello !")
+
+            Assert.Equal(2, count); // count has been incremented twice, showing that log calls two methods in a row
+        }
+
+        string IncrementCount(string message)
+        {
+            count++;
+            return message.ToLower();
+        }
+
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;
+        }
+
         [Fact]
         public void GetBookReturnsDifferentObjects()
         {

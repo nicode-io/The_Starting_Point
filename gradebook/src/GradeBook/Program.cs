@@ -7,7 +7,11 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
         static void Main(string[] args) // Entry point of application is method called "main" - Method's parameters are a string array called "args"
         {
             //* var keep type of value it is assigned, it's not like in JS !
-            var book = new Book("Micholas' Grade Bookclear");
+            var book = new Book("Micholas' Grade Book");
+            book.GradeAdded += OnGradeAdded; // Use book's delegate 'GradeAdded' and add method 'OnGradeAdded'
+            book.GradeAdded += OnGradeAdded;
+            book.GradeAdded -= OnGradeAdded; // Removes a use of the method 'OnGradeAdded'
+            book.GradeAdded += OnGradeAdded;
 
             while (true)
             {
@@ -46,11 +50,18 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
             // book.Name2 = ""; Cannot be accessed because the setter is set to private
 
 
+            Console.WriteLine(book.category); // With 'readonly', the variable is not static, so you can access to it in class' instance
+            Console.WriteLine(Book.CATEGORY); // The only way to access a const variable, as it is implicitly static. You can't access it's value through class' instance
             Console.WriteLine($"For the book named {book.Name}");
             Console.WriteLine($"The highest grade is {stats.High:N1}");
             Console.WriteLine($"The lowest grade is {stats.Low:N1}");
             Console.WriteLine($"The average grade is {stats.Average:N2}");
             Console.WriteLine($"The letter grade is {stats.Letter}");
+        }
+
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("Grade Added !");
         }
     }
 }
