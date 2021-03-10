@@ -23,17 +23,19 @@ Main goal is to discover code structure, OOP structure, and variables definition
 
 -   Navigate to **src/GradeBook** directory
 -   Run the following command: ```$ dotnet run```
+-   To run unit tests, run the folllowing command: ```$ dotnet test```
 
 ---
 
 ### Branches
 
-> Discover project & code evolution by subject
+> Discover project & code evolution by module
 
 -   feature/Class_&_Unit_Tests : After an introduction on how is the code structured in a C# project, we create some classes and we've done our first unit test.
 -   feature/Reference_&_Value_Types : Learn differences between reference type and value type, how to manage the pointer or the value.
 -   feature/Control_Flow_Executions : Make loops, switches, jumps. Manage error handling and exceptions throws
--   feature/Building_Types : Define properties, getters/setters
+-   feature/Building_Types : Define properties, getters/setters, create/manage/understand delegates and methods multi-casting, manage event with delegates
+-   feature/C#_OOP : Reminder of the OOP pillars, deriving from base class, chaining constructors, abstract classes, interface definition
 
 ---
 
