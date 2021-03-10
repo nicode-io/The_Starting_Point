@@ -3,7 +3,6 @@ C# .Net - Discovery
 - [Description](#description)
 - [Installation](#installation)
 - [Branches](#branches)
-- [Tips](#tips)
 - [Collaboration](#collaboration)
 - [Timeline of my reconversion](#timeline-of-my-reconversion)
 
@@ -32,12 +31,15 @@ Main goal is to discover code structure, OOP structure, and variables definition
 > Discover project & code evolution by subject
 
 -   feature/Class_&_Unit_Tests : After an introduction on how is the code structured in a C# project, we create some classes and we've done our first unit test.
--   feature/Reference_&_Value_Types : 
+-   feature/Reference_&_Value_Types : Learn differences between reference type and value type, how to manage the pointer or the value.
+-   feature/Control_Flow_Executions : Make loops, switches, jumps. Manage error handling and exceptions throws
+-   feature/Building_Types : Define properties, getters/setters
 
 ---
 
 ### Tips
 
+-   C# is case-sensitive language, so x =! X 
 -   Using var to define variable don't work as in JS, you have to take the type of the variable in account
 -   Starting point of all applications is the 'main' method in class 'Program' (created by defatult when using dotnet new ... )
 -   All code must be in a class
@@ -52,6 +54,46 @@ Main goal is to discover code structure, OOP structure, and variables definition
 -   It's very important to make difference between value type and reference type 
 -   To know if a data type is a value type or reference type, select it and click F12. If it's a 'Struct' it's a value type, if it's a 'Class' it's a reference type (a pointer)
 -   String is the only special case, it's ALWAYS a reference type but behave like a value type. Strings are immutable.
+-   You can handle errors through try/catch block
+-   You can chain multiple catch for differents exceptions (ex: ArgumentException, FormatException, ...)
+-   You can end your try/catch block with an optionnal finnaly (so try/catch/finally). Code in finally block will be executed, no matter if an exception is thrown or not
+-   Properties in a class are used to define precise access to a variable.
+-   In a property you can define accessibility of getter and setter (public, private, ...) 
+-   There's two type of syntax, a long and a short one. (ex: see Book.cs, properties Name and Name2)
+-   Within a class, you can use the same method's name if the methods' signatures are different. 
+-   Method's signature is composed of the method's name and the parameters' type, return type is not taking in account in signature
+-   In a switch statement, you can create a variable and make conditionnal test on it, the value of the variable is implicit, it's the value of your swtich's parameter. (ex: Book.cs, switch(result.Average) )
+-   When you define a class variable with the keyword 'readonly' you can only change the variable's value inside a class constructor or in the variable definition (soft constant value)
+-   When you define a class variable with the keyword 'const' you can only change the variable's value inside the variable's
+-   A const variable is written uppercase, it's a good practise and a way to know that you can't change the value outside the variable's definition even if it's a 'public const' for example
+-   A const variable is implicitly static, so you can only access to it with something like: ClassName.CONSTVARIABLE 
+-   A delegate is a type that represents a method with a specific signature and return type
+-   After creating a delegate, you can assign a method to a variable with the following syntax: DelegateName variable = method; !> you don't need the parentheses to call the method <! You can then call: variable(methodParameter);
+-   You can use delegate to call multiple methods with only one variable using: variable += anotherMethod (following example above)
+-   In good practise, delegates are created in a separate file than the class (not applied to this fundamentals)
+-   Events can be managed with delegates, while it's the tricky part of C# Fundamentals it's important to understand how events can be added and substracted through delegate's methods
 
 
----
+--- 
+
+### Collaboration
+
+Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), a computer science enthusiast who is in the middle of his reconversion as a developer.
+
+After 15 years in the commercial sector as a manager and director, I decided to put this career on hold to devote myself fully to development.
+
+Positive spirit, with an unquenchable thirst for learning, committed and structured, I like to take up challenges and always progress by giving the best of myself.
+If you have a project, no matter how big or small, don't hesitate to share it, we always have to win by doing things alongside others.
+
+After an intensive 7 month bootcamp at Becode where I was able to acquire the superpowers of a junior developer and an internship with the awesome team of [ØPP](http://opp.mx).
+[ØPP](http://opp.mx) is a publisher of digital solutions (websites, applications, connected objects...) specialised in engagement techniques and gaming.
+
+Now I am back on my study bench and I take advantage of each day that passes to refine, complete and increase my knowledge in order to find my next work team.
+
+See you soon ! :heart:
+
+### Timeline of my reconversion
+
+[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
