@@ -1,24 +1,116 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace GradeBook // Namespace are usefull to get class / method outisde the Global namespace, which is dangerous and can create conflicts
 {
     // Create an event delegate
     public delegate void GradeAddedDelegate(object sender, EventArgs args); // Define a model for our event delegate
 
-    public class Book // public is used to gain access outside, here in the unit tests
+
+    //? NamedObject class
+    public class NamedObject
+    {
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+
+
+    //? IBook interface
+    /* Define an interface, its pure
+    and only define members but give no 
+    implementation details, naming convention
+    is to start the name with a capital I */
+    public interface IBook
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get; }
+        event GradeAddedDelegate GradeAdded;
+    }
+
+
+    //? Book class
+    /* Create an abstract class to use polymorphism */
+    public abstract class Book : NamedObject, IBook // We add an interface **IBook**, you can add more than one if needed
+    {
+        protected Book(string name) : base(name)
+        {
+        }
+
+        /* Create abstracted methods that will be herited by all children,
+        but for whose we can't provide an implementation here */
+        public abstract event GradeAddedDelegate GradeAdded;
+        public abstract void AddGrade(double grade);
+        public abstract Statistics GetStatistics();
+    }
+
+
+    //? DiskBook class
+    public class DiskBook : Book
+    {
+        public DiskBook(string name) : base(name)
+        {
+        }
+
+        public override event GradeAddedDelegate GradeAdded;
+
+        public override void AddGrade(double grade)
+        {
+            /* 'using' tell the compiler to clean things up after doing all operations in curly braces
+            Compiler will create an hunderhood try/catch/finally block */
+            using (var writer = File.AppendText($"{Name}.txt"))
+            {
+                writer.WriteLine(grade);
+                if (GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+            }
+        }
+
+        public override Statistics GetStatistics()
+        {
+            var result = new Statistics();
+
+            using (var reader = File.OpenText($"{Name}.txt"))
+            {
+                var line = reader.ReadLine();
+                while (line != null)
+                {
+                    var number = double.Parse(line);
+                    result.Add(number);
+                    line = reader.ReadLine();
+                }
+            }
+
+            return result;
+        }
+    }
+
+
+    //? InMemoryBook class
+    public class InMemoryBook : Book // We use inheritance, and we can say Book is a NamedObject. 
     {
         // Constructor
-        public Book(string name)
+        // base() is used to access methods of inherited class, here we invoqued NamedObject with name as parameter
+        public InMemoryBook(string name) : base(name)
         {
             category = ""; // See bottom 'readonly' category variable, the value of category can only be changed inside constructor or variable definition
-            // CATEGORY = ""; won't work, as it's defined as 'const' 
+                           // CATEGORY = ""; won't work, as it's defined as 'const' 
             grades = new List<double>();
             Name = name;
         }
 
         // Methods
-
         public void AddGrade(char letter)
         /* You can use the same method name in a class if the method signature is different. 
         Method signature is composed by method's name and the parameter's type */
@@ -43,7 +135,10 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
             }
         }
 
-        public void AddGrade(double grade)
+        /* We use override on method definition, this 
+        way the inherited abstract method **AddGrade** 
+        is implemented */
+        public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
@@ -59,55 +154,16 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
             }
         }
 
-        public event GradeAddedDelegate GradeAdded; // Define an event member 
+        public override event GradeAddedDelegate GradeAdded; // Define an event member, using override for inheritance management
 
 
-        public Statistics GetStatistics() // GetStatistics method is public and will return object Statistics (see Statistics.cs file)
+        public override Statistics GetStatistics() // GetStatistics method is public and will return object Statistics (see Statistics.cs file)
         {
             var result = new Statistics();
-            result.Average = 0.0;
-            // Calculate higher, lower and average grades
-            result.High = double.MinValue; // Set the variable to the minimum value a double can have
-            result.Low = double.MaxValue; // Set the variable to the maximum value a double can have
 
             for (var i = 0; i < grades.Count; i++)
             {
-                // Break or Continue Statement
-                // if(grades[i] == 42.1)
-                // {
-                //     break;
-                //     Or
-                //     continue;
-                // }
-
-                result.High = Math.Max(grades[i], result.High);
-                result.Low = Math.Min(grades[i], result.Low);
-                result.Average += grades[i];
-            }
-            result.Average /= grades.Count;
-
-            // More advanced switch statement
-            switch (result.Average)
-            {
-                case var d when d >= 90.0: // The variable 'd' will contain result.Average value, 'when' allows to make a test 
-                    result.Letter = 'A';
-                    break;
-
-                case var d when d >= 80.0:
-                    result.Letter = 'B';
-                    break;
-
-                case var d when d >= 70.0:
-                    result.Letter = 'C';
-                    break;
-
-                case var d when d >= 60.0:
-                    result.Letter = 'D';
-                    break;
-
-                default:
-                    result.Letter = 'F';
-                    break;
+                result.Add(grades[i]);
             }
 
             return result;
@@ -140,11 +196,11 @@ namespace GradeBook // Namespace are usefull to get class / method outisde the G
         /* An advantage to use a property in place of a field is that
         you can define accessibility easily, here for example the getter is public
         while the setter is private */
-        public string Name
-        {
-            get;
-            set;
-        }
+        // public string Name
+        // {
+        //     get;
+        //     set;
+        // }
 
 
         /* Readonly is some kind of a soft-constant in another programming language. 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj": {}
+    "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj": {}
   },
   "projects": {
-    "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj": {
+    "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
+        "projectUniqueName": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
         "projectName": "GradeBook",
-        "projectPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
+        "projectPath": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj",
         "packagesPath": "/Users/nicolasdenoel/.nuget/packages/",
-        "outputPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/obj/",
+        "outputPath": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicolasdenoel/.nuget/NuGet/NuGet.Config"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -50,18 +52,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.406/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj": {
+    "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
+        "projectUniqueName": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
         "projectName": "GradeBook.Tests",
-        "projectPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
+        "projectPath": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
         "packagesPath": "/Users/nicolasdenoel/.nuget/packages/",
-        "outputPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/obj/",
+        "outputPath": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/test/GradeBook.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicolasdenoel/.nuget/NuGet/NuGet.Config"
@@ -74,9 +76,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj": {
-                "projectPath": "/Users/nicolasdenoel/CodeMac/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj"
+              "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj": {
+                "projectPath": "/Users/nicolasdenoel/Coding/GitHub/C# .Net - Discovery/gradebook/src/GradeBook/GradeBook.csproj"
               }
             }
           }
@@ -89,6 +92,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -130,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.406/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }
