@@ -118,7 +118,7 @@ If you have a project, no matter how big or small, don't hesitate to share it, w
 Starting 2021, after an intensive 7 month bootcamp at Becode where I was able to acquire the superpowers of a junior developer and an internship with the awesome team of [ØPP](http://opp.mx).
 [ØPP](http://opp.mx) is a publisher of digital solutions (websites, applications, connected objects...) specialised in engagement techniques and gaming.
 
-In March 2021, I decided to go further and follow a .Net developer cursus, oriented Power BI and Sharepoint. This new key feature in my profile will allow my next company to benefits of this so trendy and necessary data analysis. 
+In March 2021, I decided to go further and follow a .Net developer cursus, Power BI & Sharepoint oriented. This new key feature in my profile will allow my next company to benefits of this so trendy and necessary data analysis. 
 
 See you soon ! :heart:
 
