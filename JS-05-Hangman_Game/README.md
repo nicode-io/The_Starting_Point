@@ -3,9 +3,6 @@
 In the game of Hangman, the objective is to discover a word, letter by letter, with a limited number of tries.
 The tries are represented by a drawing of a hanged man.
 
-### Link to the game (gihub pages)
-[START PLAYING](https://nicode-be.github.io/02-04-Hangman_Game/)
-
 ### How to play 
 *   First choose a level:
     *   Easy: 5 letter's english words
