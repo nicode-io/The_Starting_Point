@@ -72,7 +72,7 @@
         +   [Module 2 - Database Creation Content Query](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-07_Creation%20DBSlide%20-%20Database_Content.sql)
         +   [Module 2 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-08_Module_2_Statement.pdf)
         +   [Module 2 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-09_Module_2_Solutions.sql)
-
+    
 ---
 
 ##  C Sharp

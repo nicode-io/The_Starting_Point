@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{9B26463F-A1FE-4228-8D37-D879F1AC1FED}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Introduction/Program.cs">
+    <Files>
+      <File FileName="Introduction/Program.cs" Line="31" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="CSharp_Course" expanded="True">
+            <Node name="Introduction" expanded="True">
+              <Node name="bin" expanded="True">
+                <Node name="Debug" expanded="True">
+                  <Node name="net5.0" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Introduction PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
