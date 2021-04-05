@@ -12,7 +12,7 @@
     -   [Development Module](#development-module)  
     -   [Business Intelligence Module](#business-intelligence-module)  
 -   [Database](#Database)
--   [C#](#c\#)
+-   [C Sharp](#c-sharp)
 -   [ASP dotNET](#asp-dotnet)
 -   [Business Intelligence](#business-intelligence)
 -   [Timeline](#timeline)
