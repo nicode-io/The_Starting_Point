@@ -1,4 +1,4 @@
-C# .Net - Discovery
+#  (◉ ͜ʖ◉))ﾉ彡 C# Fundamentals ✧٩(•́⌄•́๑)
 
 - [Description](#description)
 - [Installation](#installation)
