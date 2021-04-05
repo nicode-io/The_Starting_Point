@@ -13,14 +13,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nicode/Projects/CSharp_Course/Introduction/Introduction.csproj",
+      "projectUniqueName": "/Users/nicode/Development/Projects/Github/ASP.NET_BI_Bootcamp/02-C_Sharp/02-02_Exercises/02-02-01_Fundamentals/Introduction/Introduction.csproj",
       "projectName": "Introduction",
-      "projectPath": "/Users/nicode/Projects/CSharp_Course/Introduction/Introduction.csproj",
+      "projectPath": "/Users/nicode/Development/Projects/Github/ASP.NET_BI_Bootcamp/02-C_Sharp/02-02_Exercises/02-02-01_Fundamentals/Introduction/Introduction.csproj",
       "packagesPath": "/Users/nicode/.nuget/packages/",
-      "outputPath": "/Users/nicode/Projects/CSharp_Course/Introduction/obj/",
+      "outputPath": "/Users/nicode/Development/Projects/Github/ASP.NET_BI_Bootcamp/02-C_Sharp/02-02_Exercises/02-02-01_Fundamentals/Introduction/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nicode/.nuget/NuGet/NuGet.Config"
+        "/Users/nicode/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
