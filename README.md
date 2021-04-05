@@ -54,15 +54,20 @@
 
 ##  Database
 
-1.  Database
-    *   Theory
-        +   [Database Introduction]()
-        +   [Database Introduction - Mindmap]()
-        +   [Reading Cardinalities]()
-        +   [Declarative SQL - Complete Theory]()
-        +   [Declarative SQL - Mindmap]()
-        +   [Execution Order of SELECT]()
-    *   Exercises
+1.  [Database](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/01-Database)
+    *   [Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/01-Database/01-01_Theory)
+        +   [Database Introduction](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-01_Database%20introduction.pdf)
+        +   [Database Introduction - Mindmap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-02_Database%20introduction%20-%20Mindmap.pdf)
+        +   [Reading Cardinalities](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-03_Reading%20cardinalities.pdf)
+        +   [Declarative SQL - Complete Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-04_Declarative%20SQL%20-%20Complete%20theory.pdf)
+        +   [Declarative SQL - Mindmap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-05_Declarative%20SQL%20-%20Mindmap.pdf)
+        +   [Execution Order of SELECT](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-06_Execution%20order%20of%20a%20SELECT.pdf)
+    *   [Exercises](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/01-Database/01-02_Exercices)
+        +   [Exercice 1 - Library](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-01_Library.pdf)
+        +   [Exercice 2 - Cooking Recipe](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-02_Cooking_recipe.pdf)
+        +   [Exercice 3 - Book Editor](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-03_Booking_editor.pdf)
+        +   [Exercice 4 - University](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-04_University.pdf)
+        +   [Module 1 - Statement]()
     
 
 
