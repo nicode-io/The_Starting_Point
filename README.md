@@ -10,7 +10,7 @@
 -   [Bootcamp program](#bootcamp-program)
 -   [Database](#Database)
 -   [C Sharp](#c-sharp)
--   [ASP dot NET](#asp-\.net)
+-   [ASP .NET](#asp-\.net)
 -   [Business Intelligence](#business-intelligence)
 -   [Timeline](#timeline)
 
