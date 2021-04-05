@@ -67,7 +67,7 @@
         +   [Exercice 2 - Cooking Recipe](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-02_Cooking_recipe.pdf)
         +   [Exercice 3 - Book Editor](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-03_Booking_editor.pdf)
         +   [Exercice 4 - University](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-04_University.pdf)
-        +   [Exercice 5 - Airport](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-05_Airport.pdf)
+        +   [Exercice 6 - Airport](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-05_Airport.pdf)
         +   [Module 1 - Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-06_Module_1.pdf)
         +   [Module 2 - Database Creation Query](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-07_Creation%20DBSlide%20-%20Database.sql)
         +   [Module 2 - Database Creation Content Query](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercices/01-02-08_Creation%20DBSlide%20-%20Database_Content.sql)
