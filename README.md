@@ -8,6 +8,9 @@
 ##  INDEX
 
 -   [Bootcamp program](#bootcamp-program)
+    -   [Database Module](#database-module)  
+    -   [Development Module](#development-module)  
+    -   [Business Intelligence Module](#business-intelligence-module)  
 -   [Database](#Database)
 -   [C#](#c\#)
 -   [ASP dotNET](#asp-dotnet)
@@ -19,14 +22,16 @@
 
 ##  Bootcamp Program
 
-### Database Section
+### Database Module
+>   Create, manipulate database
 
 -   Data manipulation
 -   Relational modeling and denormalization 
 -   Development in declarative SQL
 -   Procedural SQL development
 
-### C# Section
+### Development module
+>   Develop applications using ASP.Net 
 
 -   .NET development
 -   C# development
@@ -35,7 +40,8 @@
 -   ASP development in MVC
 -   Web API and consumption in SharePoint
 
-### BI Section 
+### Business Intelligence Module
+>   Collect, analyse data and create reports
 
 -   Business Intelligence
 -   Foundations of BI
@@ -52,7 +58,7 @@
 
 ---
 
-##  C#
+##  C Sharp
 
 
 
