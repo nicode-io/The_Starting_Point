@@ -9,8 +9,8 @@
 
 -   [Bootcamp program](#bootcamp-program)
 -   [Database](#Database)
--   [C \#](#c-\#)
--   [ASP\.NET](#asp\.net)
+-   [C#](#c\#)
+-   [ASP dotNET](#asp-dotnet)
 -   [Business Intelligence](#business-intelligence)
 -   [Timeline](#timeline)
 
@@ -58,7 +58,7 @@
 
 ---
 
-##  ASP.NET
+##  ASP dotNET
 
 
 
