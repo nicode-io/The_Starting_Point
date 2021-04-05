@@ -54,6 +54,16 @@
 
 ##  Database
 
+1.  Database
+    *   Theory
+        +   [Database Introduction]()
+        +   [Database Introduction - Mindmap]()
+        +   [Reading Cardinalities]()
+        +   [Declarative SQL - Complete Theory]()
+        +   [Declarative SQL - Mindmap]()
+        +   [Execution Order of SELECT]()
+    *   Exercises
+    
 
 
 ---
