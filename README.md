@@ -7,11 +7,11 @@
 
 ##  INDEX
 
-- [Bootcamp program](#bootcamp_program)
-- [Database](#database)
-- [C Sharp](#c_sharp)
-- [ASP dot NET](#asp_dot_net)
-- [Business Intelligence](#business_intelligence)
+1.  [Bootcamp program](#bootcamp-program)
+2.  [Database](#Database)
+3.  [C Sharp](#c-sharp)
+- [ASP dot NET](#asp-.net)
+- [Business Intelligence](#business-intelligence)
 - [Timeline](#timeline)
 
 
@@ -60,9 +60,13 @@
 
 ##  ASP.NET
 
+
+
 ---
 
 ##  Business Intelligence
+
+
 
 
 ---
