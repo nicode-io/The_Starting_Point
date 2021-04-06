@@ -1,6 +1,3 @@
-[![LinkedIn][linkedin-shield]](https://www/linkedin.com/in/nicolas-denoel)
-</br>
-
 #  (◉ ͜ʖ◉))ﾉ彡 ASP.NET ⦾ BI ⦾ BOOTCAMP ✧٩(•́⌄•́๑)
 > Business Intelligence ASP.Net Bootcamp 
 
