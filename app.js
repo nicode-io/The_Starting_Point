@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoDbStore = require('connect-mongodb-session')(session); // Store session created by express-session into MongoDbStore
+const csrf = require('csurf');
+const flash = require('connect-flash');
 
-const secret = require('./secret')
+const secret = require('./secret');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
@@ -15,6 +17,9 @@ const store = new MongoDbStore({
   uri: secret.getDb(),
   collection: 'sessions',
 }); // Create object which use database and connect-mongodb-session
+
+// Initialise CSRF token
+const csrfProtection = csrf();
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -33,18 +38,14 @@ app.use(
     store: store,
   })
 ); // Express-Session middleware - Automatically set a cookie, use session 'store: store', secure with hash the user id
+app.use(csrfProtection);
+app.use(flash());
 
 app.use((req, res, next) => {
-  if (!req.session.user) {
-    return next();
-  }
-  User.findById(req.session.user._id)
-    .then(user => {
-      req.user = user;
-      next();
-    })
-    .catch(err => console.log(err));
-})
+  res.locals.isAuthenticated = req.session.isLoggedIn;
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
@@ -58,18 +59,6 @@ mongoose
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(result => {
-    User.findOne().then(user => {
-      if (!user) {
-        const user = new User({
-          name: 'Nicode',
-          email: 'nicode@nicode.io',
-          cart: {
-            items: []
-          }
-        });
-        user.save();
-      }
-    });
     app.listen(3000);
     console.log('App Connected');
   })
