@@ -1,7 +1,3 @@
-
-![MIT License][license-shield]][https://mit-license.org/]
-![LinkedIn][linkedin-shield]][linkedin.com/in/nicolas-denoel]
-
 #  (◉ ͜ʖ◉))ﾉ彡 ASP.NET ⦾ BI ⦾ BOOTCAMP ✧٩(•́⌄•́๑)
 > Technofutur Bootcamp 
 
