@@ -60,6 +60,7 @@
         +   [Declarative SQL - Complete Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-04_Declarative%20SQL%20-%20Complete%20theory.pdf)
         +   [Declarative SQL - Mindmap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-05_Declarative%20SQL%20-%20Mindmap.pdf)
         +   [Execution Order of SELECT](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-06_Execution%20order%20of%20a%20SELECT.pdf)
+        +   [Data Manipulation Language (DML)](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-07_Data%20Manipulation%20Language%20(DML).pdf)
     *   [Exercises](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/01-Database/01-02_Exercices)
         +   [Exercice 1 - Library](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-01_Library.pdf)
         +   [Exercice 2 - Cooking Recipe](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-02_Cooking_recipe.pdf)
