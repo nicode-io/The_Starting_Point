@@ -6,6 +6,7 @@
 
 - [Description](#description)
 - [Installation](#installation)
+- [Packages](#packages)
 - [Branches](#branches)
 - [Achievements](#achievements)
 - [Collaboration](#collaboration)
@@ -31,6 +32,25 @@ To Be Done
 
 ---
 
+### Packages
+
+> NPM packages used in the project
+
+- Body-parser: parse the http request
+- Connect-Mongodb-Session: link Express-Session with MongoDB database
+- Ejs: templating engine to include javascript logic in your html files
+- Express: create an application quickly
+- Express-Handlebars: manage handlebars and templating engine
+- Express-Session: create user session, generate cookies automatically
+- MongoDB: no-SQL MongoDB database manager
+- Mongoose: a great ODM manager to use with MongoDB
+- Mysql2: SQL database manager (for the first part of project)
+- Nodemon: when you're tired of reload your project manually
+- Pug: Another templating engine (used before EJS in the project)
+- Sequelize: a great ORM manager to use with a SQL database
+
+---
+
 ### Branches
 
 > Discover project & code evolution by subject
@@ -51,6 +71,10 @@ To Be Done
   Convert your application in a no-SQL project with MongoDB
 - feature/9-Mongoose :
   Make use of MongoDB easier with Mongoose ODM (Object-Document Mapping) library
+- feature/10-Cookies_Sessions :
+  Store persistent data on user local machine using sessions and cookies
+- feature/11-Authentication :
+  Create full authentication system
 
 ---
 
@@ -62,6 +86,10 @@ Explore the possibilities of Node js through a concrete e-shop project, includin
 - CRUD with MySQL database and Sequelize ORM
 - CRUD with MongoDB nosql-database and Mongoose ODM
 - Work with nested objects and refs with MongoDB & Mongoose
+- Save data on user's computer using cookies and sessions
+- Discover how sessions can hide sensitive informations and work in link with database
+- Explore more deeply the web browser developer tools
+- Use sessions to hide/show content, menus, buttons, ... to the user
 - (...)
 
 ---
