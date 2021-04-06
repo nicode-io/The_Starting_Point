@@ -72,6 +72,8 @@
         +   [Module 2 - Database Creation Content Query](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-08_Creation%20DBSlide%20-%20Database_Content.sql)
         +   [Module 2 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-09_Module_2_Statement.pdf)
         +   [Module 2 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-10_Module_2_Solutions.sql)
+        +   [Module 3 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-11_Module_3_Statement.pdf)
+        +   [Module 3 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-12_Module_3_Solutions.sql)
     
 ---
 
