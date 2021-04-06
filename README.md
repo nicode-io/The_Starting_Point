@@ -1,22 +1,52 @@
-#  (◉ ͜ʖ◉))ﾉ彡 ASP.NET ⦾ BI ⦾ BOOTCAMP ✧٩(•́⌄•́๑)
-> Technofutur Bootcamp 
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+[![Stargazers][stars-shield]][stars-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
----
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-##  INDEX
+  <h3 align="center">ASP.NET ⦾ BI ⦾ BOOTCAMP </h3>
 
--   [Bootcamp program](#bootcamp-program)
-    -   [Database Module](#database-module)  
-    -   [Development Module](#development-module)  
-    -   [Business Intelligence Module](#business-intelligence-module)  
--   [Database](#Database)
--   [C Sharp](#c-sharp)
--   [ASP dotNET](#asp-dotnet)
--   [Business Intelligence](#business-intelligence)
--   [Timeline](#timeline)
-
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
 ---
 
@@ -100,8 +130,43 @@
 
 ---
 
-### Timeline
+
+<!-- TIMELINE -->
+## Timeline
 > Current steps and history of my reconversion
 
 ![Timeline](images/Timeline-21-04-05.png "Reconversion Timeline")
 [:calendar: Discover the timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02)
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Nicolas Denoël - [@twitter_handle](https://twitter.com/Nicode_IO) - [email](mailto:nicolas@nicode.io)
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [BeCode](https://becode.org/)
+* [TechnoFutur](http://www.technofuturtic.be/)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
+[stars-url]: https://github.com/nicode-io/ASP.NET_BI_Bootcamp
+[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
+[license-url]: https://mit-license.org/
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/nicolas-denoel
