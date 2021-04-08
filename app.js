@@ -47,11 +47,17 @@ app.use((req, res, next) => {
   }
   User.findById(req.session.user._id)
     .then(user => {
+      if (!user) {
+        return next();
+      }
       // Store user in requests
       req.user = user;
       next();
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      // Reach error handling middleware in promise
+      next(new Error(err));
+    });
 });
 
 app.use((req, res, next) => {
@@ -64,7 +70,19 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 app.use(authRoutes);
 
+app.get('/500', errorController.get500);
+
 app.use(errorController.get404);
+
+
+// Add special middleware to handling errors
+// Express will skip others middleware if an error is thrown
+// If you have multiple error handling middleware they'll execute
+// from top to bottom like "normal" middleware
+app.use((error, req, res, next) => {
+  // res.status(error.httpStatusCode).render(...);
+  res.render('/500');
+})
 
 mongoose
   .connect(
