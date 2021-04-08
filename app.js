@@ -47,6 +47,7 @@ app.use((req, res, next) => {
   }
   User.findById(req.session.user._id)
     .then(user => {
+      // Store user in requests
       req.user = user;
       next();
     })
