@@ -1,9 +1,9 @@
-# (◉ ͜ʖ◉))ﾉ彡  ✧٩(•́⌄•́๑)
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/nicode-io/NodeCursus">
-    <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Logo" width="80" height="80">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Logo" width="250" height=250">
   </a>
 
 <h3 align="center">NODE JS CURSUS</h3>
