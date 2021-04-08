@@ -2,8 +2,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/nicode-io/NodeCursus">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">NODE JS CURSUS</h3>
@@ -16,20 +16,13 @@
     <br />
     <a href="#description">Description</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="#packages">Packages</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="#branches">Branches</a>
+    ·
+    <a href="#achievements">Achievements</a>
   </p>
-</p>
 
-
-### Index
-
-- [Description](#description)
-- [Installation](#installation)
-- [Packages](#packages)
-- [Branches](#branches)
-- [Achievements](#achievements)
 
 ---
 
