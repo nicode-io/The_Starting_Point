@@ -84,6 +84,7 @@
         +   [C# Fundamentals](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-01_C%23_Fundamentals.pdf)
     *   [Exercises](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Exercises)
         +   [C# Fundamentals](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Exercises/02-02-01_Fundamentals)
+	
 
 
 ---
