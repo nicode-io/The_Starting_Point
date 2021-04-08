@@ -1,6 +1,27 @@
-# (◉ ͜ʖ◉))ﾉ彡 NODE JS CURSUS ✧٩(•́⌄•́๑)
+# (◉ ͜ʖ◉))ﾉ彡  ✧٩(•́⌄•́๑)
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-> FUll learning path to NODE JS
+<h3 align="center">NODE JS CURSUS</h3>
+
+  <p align="center">
+    E-Shop Learning project
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="#description">Description</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</p>
+
 
 ### Index
 
@@ -9,8 +30,6 @@
 - [Packages](#packages)
 - [Branches](#branches)
 - [Achievements](#achievements)
-- [Collaboration](#collaboration)
-- [Timeline of my reconversion](#timeline-of-my-reconversion)
 
 ---
 
@@ -18,41 +37,47 @@
 
 > Start 10-01-2021
 
-This project aims to study NODEjs and everything related to it: database, REST API, GRAPHQL, authentication, sessions, cookies, CRUD, MVC, Template engine and many others.
-This is done through a simple e-shop project.
-A Git branch has been created for each theme of the path in order to be able to observe the evolution of the project or simply choose the part that may be of interest to you.
+This project aims to study NODEjs and everything related to it: database, REST API, GRAPHQL,
+authentication, sessions, cookies, CRUD, MVC, Template engine and many others.
+This is done through an e-shop project.
+
 
 ---
 
 ### Installation
-
 > Step by step
 
-To Be Done
+TODO
 
 ---
 
 ### Packages
-
 > NPM packages used in the project
 
-- Body-parser: parse the http request
-- Connect-Mongodb-Session: link Express-Session with MongoDB database
-- Ejs: templating engine to include javascript logic in your html files
-- Express: create an application quickly
-- Express-Handlebars: manage handlebars and templating engine
-- Express-Session: create user session, generate cookies automatically
-- MongoDB: no-SQL MongoDB database manager
-- Mongoose: a great ODM manager to use with MongoDB
-- Mysql2: SQL database manager (for the first part of project)
-- Nodemon: when you're tired of reload your project manually
-- Pug: Another templating engine (used before EJS in the project)
-- Sequelize: a great ORM manager to use with a SQL database
+-   Bcrypt: hash passwords to store them safely in database
+-   Body-parser: parse the http request
+-   Connect-flash: special area of the session used for storing messages
+-   Connect-Mongodb-Session: link Express-Session with MongoDB database
+-   Csurf: add CSRF protection to your project
+-   Ejs: templating engine to include javascript logic in your html files
+-   Express: create an application quickly
+-   Express-handlebars: manage handlebars and templating engine
+-   Express-session: create user session, generate cookies automatically
+-   Express-validator: sanitize and check format of user input and forms
+-   Lodash: utility library delivering modularity, performance & extras
+-   Marked: markdown parser
+-   MongoDB: no-SQL MongoDB database manager
+-   Mongoose: a great ODM manager to use with MongoDB
+-   Mysql2: SQL database manager (for the first part of project)
+-   Nodemailer: add email sending functionalities
+-   Nodemailer-sendgrid-transport: makes easy use of Sendgrid email server
+-   Nodemon: when you're tired of reload your project manually
+-   Pug: Another templating engine (used before EJS in the project)
+-   Sequelize: a great ORM manager to use with a SQL database
 
 ---
 
 ### Branches
-
 > Discover project & code evolution by subject
 
 - feature/2-Express :
@@ -74,44 +99,39 @@ To Be Done
 - feature/10-Cookies_Sessions :
   Store persistent data on user local machine using sessions and cookies
 - feature/11-Authentication :
-  Create full authentication system
+  Create full authentication system, add CSRF token to views
+- feature/12-Sending emails :
+  Send emails with the help of Sendgrid mail server (need external account)
+- feature/13-Forms&Users_Input_Validation:
+  Sanitize, configure types of data accepted and give feedback to user
+- feature/14-Error_Handlings :
+  Catch errors in differents ways and create error handler middleware
+- feature/15-Upload_Download_Files : 
+  Let user upload/download its own files
 
 ---
 
 ### Achievements
-
-Explore the possibilities of Node js through a concrete e-shop project, including:
+> What I learn with this project
 
 - Application management and routing with Express
 - CRUD with MySQL database and Sequelize ORM
 - CRUD with MongoDB nosql-database and Mongoose ODM
 - Work with nested objects and refs with MongoDB & Mongoose
 - Save data on user's computer using cookies and sessions
-- Discover how sessions can hide sensitive informations and work in link with database
+- Discover how sessions can hide sensitive information and work in link with database
 - Explore more deeply the web browser developer tools
-- Use sessions to hide/show content, menus, buttons, ... to the user
-- (...)
+- Use sessions and authorizations to hide/show content, menus, buttons, ... to the user
+- Use CSRF token, hash user password with Bcrypt
+- Sanitize data received by forms and user input, create custom validations
+- Understand differences between errors, manage them through a error handling middleware
+- Let user upload and download its own files, for example product image 
+- ... 
 
 ---
 
-### Collaboration
-
-Hello, I'm [Nicolas](https://www.linkedin.com/in/nicolas-denoel/), a computer science enthusiast who is in the middle of his reconversion as a developer.
-
-After 15 years in the commercial sector as a manager and director, I decided to put this career on hold to devote myself fully to development.
-
-Positive spirit, with an unquenchable thirst for learning, committed and structured, I like to take up challenges and always progress by giving the best of myself.
-If you have a project, no matter how big or small, don't hesitate to share it, we always have to win by doing things alongside others.
-
-After an intensive 7 month bootcamp at Becode where I was able to acquire the superpowers of a junior developer and an internship with the awesome team of [ØPP](http://opp.mx).
-[ØPP](http://opp.mx) is a publisher of digital solutions (websites, applications, connected objects...) specialised in engagement techniques and gaming.
-
-Now I am back on my study bench and I take advantage of each day that passes to refine, complete and increase my knowledge in order to find my next work team.
-
-See you soon ! :heart:
-
-### Timeline of my reconversion
-
-[:calendar: Discover the great timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2020-06-27)
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+<a href="https://linkedin.com/in/nicolas-denoel">
+  <img align="center" src="https://github.com/devicons/devicon/blob/master/icons/linkedin/linkedin-original.svg" alt="linkedin.com/in/nicolas-denoel" width="40" height="40" />
+</a>  <a href="https://twitter.com/nicode_io">
+  <img align="center" src="https://github.com/devicons/devicon/blob/master/icons/twitter/twitter-original.svg" alt="twitter.com/inicode_io" width="40" height="40" />
+</a>  
