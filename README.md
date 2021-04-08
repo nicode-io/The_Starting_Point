@@ -82,7 +82,7 @@
 2.  [C#](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp)
     *   [Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-01_Theory)
         +   [Fundamentals](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-01_C%23_Fundamentals.pdf)
-    *   [Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-03_Code)
+    *   [Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code)
         +   [Basic Syntax](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-01_Basic_Syntax_Algo/02-02-01_Basic_Syntax_Algo)
         +   [Structures](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-02_Structures/02-02-02_Structures)
 	
