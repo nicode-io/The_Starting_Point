@@ -69,6 +69,7 @@ TODO
 -   Pdfkit: create automated and customized pdf
 -   Pug: Another templating engine (used before EJS in the project)
 -   Sequelize: a great ORM manager to use with a SQL database
+-   Stripe: manage users payments in your website
 
 ---
 
@@ -105,6 +106,8 @@ TODO
   Let user upload/download its own files, create automated PDF invoices to download
 - feature/16-Pagination : 
   Add pagination to shop products page and index page
+- feature/17-Payments : 
+  Add complete checkout process and payment with the help of Stripe (need webhook for prod/scale)
 
 ---
 
@@ -126,7 +129,7 @@ TODO
 - Generate dynamic PDF to create invoices for example and allow user to download its own invoices
 - Manage pagination: previous, next, first, last page
 - Use js script in EJS views to send async requests and manipulate DOM
-- 
+- Use Stripe to manage payments in an eshop, configure checkout process entirely (need webhook for prod)
 - ... 
 
 ---
