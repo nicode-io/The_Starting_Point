@@ -7,6 +7,7 @@ const session = require('express-session');
 const MongoDbStore = require('connect-mongodb-session')(session); // Store session created by express-session into MongoDbStore
 const csrf = require('csurf');
 const flash = require('connect-flash');
+const multer = require('multer');
 
 const secret = require('./secret');
 const errorController = require('./controllers/error');
@@ -21,6 +22,29 @@ const store = new MongoDbStore({
 // Initialise CSRF token
 const csrfProtection = csrf();
 
+// Configure a storage for binaries (multer)
+const fileStorage = multer.diskStorage({
+  destination: ( req, file, callback ) => {
+    callback(null, 'images');
+  },
+  filename: ( req, file, callback ) => {
+    callback(null, new Date().toISOString() + '-' + file.originalname);
+  },
+})
+
+// Configure file filter for binaries (multer)
+const fileFilter = ( req, file, callback ) => {
+  if (
+    file.mimetype === 'image/png' ||
+    file.mimetype === 'image/jpg' ||
+    file.mimetype === 'image/jpeg' ||
+    file.mimetype === 'image/gif'
+  ) {
+    callback(null, true);
+  }
+  callback(null, false);
+}
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -28,7 +52,10 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
+// User Multer to parse request with mix of text and binary inside
+// params name need to match the field name in form
+app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   session({
@@ -41,7 +68,7 @@ app.use(
 app.use(csrfProtection);
 app.use(flash());
 
-app.use((req, res, next) => {
+app.use(( req, res, next ) => {
   if (!req.session.user) {
     return next();
   }
@@ -60,7 +87,7 @@ app.use((req, res, next) => {
     });
 });
 
-app.use((req, res, next) => {
+app.use(( req, res, next ) => {
   res.locals.isAuthenticated = req.session.isLoggedIn;
   res.locals.csrfToken = req.csrfToken();
   next();
@@ -79,15 +106,18 @@ app.use(errorController.get404);
 // Express will skip others middleware if an error is thrown
 // If you have multiple error handling middleware they'll execute
 // from top to bottom like "normal" middleware
-app.use((error, req, res, next) => {
-  // res.status(error.httpStatusCode).render(...);
-  res.render('/500');
+app.use(( error, req, res, next ) => {
+  res.status(500).render('500', {
+    pageTitle: 'Error',
+    path: '/500',
+    isAuthenticated: req.session.isLoggedIn
+  });
 })
 
 mongoose
   .connect(
     secret.getDb(),
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    {useNewUrlParser: true, useUnifiedTopology: true}
   )
   .then(result => {
     app.listen(3000);
