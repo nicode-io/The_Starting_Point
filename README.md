@@ -125,6 +125,8 @@ TODO
 - Let user upload and download its own files, for example product image 
 - Generate dynamic PDF to create invoices for example and allow user to download its own invoices
 - Manage pagination: previous, next, first, last page
+- Use js script in EJS views to send async requests and manipulate DOM
+- 
 - ... 
 
 ---
