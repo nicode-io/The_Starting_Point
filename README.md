@@ -61,6 +61,7 @@
         +   [Declarative SQL - Mindmap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-05_Declarative%20SQL%20-%20Mindmap.pdf)
         +   [Execution Order of SELECT](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-06_Execution%20order%20of%20a%20SELECT.pdf)
         +   [Data Manipulation Language (DML)](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-07_Data%20Manipulation%20Language%20(DML).pdf)
+        +   [Procedural SQL Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-08_T-SQL_Procedural.pdf)
     *   [Exercises](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/01-Database/01-02_Exercices)
         +   [Exercice 1 - Library](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-01_Library.pdf)
         +   [Exercice 2 - Cooking Recipe](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-02_Cooking_recipe.pdf)
@@ -74,6 +75,10 @@
         +   [Module 2 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-10_Module_2_Solutions.sql)
         +   [Module 3 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-11_Module_3_Statement.pdf)
         +   [Module 3 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-12_Module_3_Solutions.sql)
+        +   [Procedural Module 1 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-13_Procadural_Module_1_Statement.pdf)
+        +   [Procedural Module 1 - Exercises' Solutions]()
+        +   [Procedural Module 2 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-15_Procedural_Module_2_Statement.pdf)
+        +   [Procedural Module 2 - Exercises' Solutions]()
     
 ---
 
