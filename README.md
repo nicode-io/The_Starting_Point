@@ -61,10 +61,12 @@ TODO
 -   Marked: markdown parser
 -   MongoDB: no-SQL MongoDB database manager
 -   Mongoose: a great ODM manager to use with MongoDB
+-   Multer: allow you to get binaries (images, files) through requests
 -   Mysql2: SQL database manager (for the first part of project)
 -   Nodemailer: add email sending functionalities
 -   Nodemailer-sendgrid-transport: makes easy use of Sendgrid email server
 -   Nodemon: when you're tired of reload your project manually
+-   Pdfkit: create automated and customized pdf
 -   Pug: Another templating engine (used before EJS in the project)
 -   Sequelize: a great ORM manager to use with a SQL database
 
@@ -100,7 +102,9 @@ TODO
 - feature/14-Error_Handlings :
   Catch errors in differents ways and create error handler middleware
 - feature/15-Upload_Download_Files : 
-  Let user upload/download its own files
+  Let user upload/download its own files, create automated PDF invoices to download
+- feature/16-Pagination : 
+  Add pagination to shop products page and index page
 
 ---
 
@@ -119,6 +123,8 @@ TODO
 - Sanitize data received by forms and user input, create custom validations
 - Understand differences between errors, manage them through a error handling middleware
 - Let user upload and download its own files, for example product image 
+- Generate dynamic PDF to create invoices for example and allow user to download its own invoices
+- Manage pagination: previous, next, first, last page
 - ... 
 
 ---
