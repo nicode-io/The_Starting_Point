@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/NodeCursus.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/shop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/cart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/invoices/invoice-5bb5d4bb26b636bdc25360a3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/invoices/invoice-5bb5dd38273cf9c22f1bece5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/invoices/invoice-6070800cd3966e1c5d5871c8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/invoices/invoice-607088a9ce09191f31354fb8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/invoices/invoice-607095a962752524d5d821ba.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/invoices/invoice-6070cb0be7e6df34478e84ca.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/products.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/2021-04-09T18:28:37.401Z-0fbf989b-6545-4d7a-ae24-a424a9a7cd55.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/2021-04-09T18:39:49.430Z-3a5f89a0-565c-4f73-a0ef-9e3c595b9afd.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/2021-04-09T18:40:03.437Z-2e53cfe0-cd1d-406a-8aff-d8e34d25c6d7.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/2021-04-09T18:40:24.486Z-78f13d27-ff8d-4d15-8e72-e972d3089636.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/2021-04-09T18:40:57.126Z-f235da3f-0549-43cf-bca8-237f881aadb3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware/is-auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/product.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/auth.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/orders.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/shop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../util/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../util/path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/404.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/500.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/admin/edit-product.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/admin/products.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/auth/login.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/auth/new-password.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/auth/reset.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/auth/signup.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/includes/add-to-cart.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/includes/end.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/includes/head.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/includes/navigation.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/includes/pagination.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/shop/cart.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/shop/checkout.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/shop/index.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/shop/orders.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/shop/product-detail.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/shop/product-list.ejs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qyhCPCqXXdtcffpQtK01F1hARK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="" />
+      <created>1618057608489</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618057608489</updated>
+      <workItem from="1618057609654" duration="587000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
