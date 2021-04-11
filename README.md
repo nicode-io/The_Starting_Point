@@ -34,6 +34,13 @@ This project aims to study NODEjs and everything related to it: database, REST A
 authentication, sessions, cookies, CRUD, MVC, Template engine and many others.
 This is done through an e-shop project.
 
+The project is divided in two main projects: 
+
+- 01: ESHOP in MVC: A simple eshop but whith great features like authentication, error handling, ordre and cart management, online payments, ... 
+  Backend and frontend are mixed inside Node with the help EJS views rendering HTML code. 
+- 02-03: REST API: A simple feed of posts also with authentication, error handling, security webtoken, ... 
+  Node backend is totally splitted from frontend: backend is a REST API, frontend is build with REACT
+
 
 ---
 
@@ -57,6 +64,7 @@ TODO
 -   Express-handlebars: manage handlebars and templating engine
 -   Express-session: create user session, generate cookies automatically
 -   Express-validator: sanitize and check format of user input and forms
+-   Jsonwebtoken: create security token to manage authentication and sessions with your REST Api
 -   Lodash: utility library delivering modularity, performance & extras
 -   Marked: markdown parser
 -   MongoDB: no-SQL MongoDB database manager
@@ -108,6 +116,8 @@ TODO
   Add pagination to shop products page and index page
 - feature/17-Payments : 
   Add complete checkout process and payment with the help of Stripe (need webhook for prod/scale)
+- feature/1.0-REST_API :
+  New project, simple posts feed but build with a REST Api and so a totally splitted backend/frontend
 
 ---
 
@@ -130,6 +140,7 @@ TODO
 - Manage pagination: previous, next, first, last page
 - Use js script in EJS views to send async requests and manipulate DOM
 - Use Stripe to manage payments in an eshop, configure checkout process entirely (need webhook for prod)
+- Understand how REST API works: rules, request format, authentication with tokens, routing, and many more
 - ... 
 
 ---

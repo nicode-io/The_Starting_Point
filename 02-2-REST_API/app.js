@@ -11,6 +11,7 @@ const multer = require('multer');
 
 // Import project files
 const feedRoutes = require('./routes/feed');
+const authRoutes = require('./routes/auth');
 const secret = require("./secret");
 
 
@@ -62,16 +63,19 @@ app.use(( req, res, next ) => {
   next();
 });
 
-// Router
+// Routers
 app.use('/feed', feedRoutes);
+app.use('/auth', authRoutes);
 
 // Error Handler (has priority)
 app.use(( error, req, res, next ) => {
   console.log(error);
-  const status = error.statusCode;
+  // || 500 => If not set, default will be 500
+  const status = error.statusCode || 500;
   const message = error.message;
+  const data = error.data;
   // Send http response status and error message
-  res.status(status).json({ message: message });
+  res.status(status).json({ message: message, data: data });
 });
 
 
