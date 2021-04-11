@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T18:02:09.555Z-Avatar ØPP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T18:19:40.210Z-Avatar ØPP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/middleware/is-auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Feed/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/Feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:12:05.279Z-DSC01011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:14:59.049Z-Avatar ØPP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/becode-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/models/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/models/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/routes/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/routes/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qyhCPCqXXdtcffpQtK01F1hARK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="" />
+      <created>1618057608489</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618057608489</updated>
+      <workItem from="1618057609654" duration="587000" />
+      <workItem from="1618058618285" duration="4625000" />
+      <workItem from="1618139214271" duration="377000" />
+      <workItem from="1618143520810" duration="9578000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
