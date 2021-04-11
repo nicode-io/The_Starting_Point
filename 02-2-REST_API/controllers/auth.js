@@ -20,7 +20,7 @@ exports.login = ( req, res, next ) => {
   User.findOne({ email: email })
     .then(user => {
       if ( !user ) {
-        const error = new Error('User not find')
+        const error = new Error('User not find');
         error.statusCode = 401;
         throw error;
       }
@@ -34,7 +34,8 @@ exports.login = ( req, res, next ) => {
         throw error;
       }
       // Generate a new web token
-      const token = jwt.sign({
+      const token = jwt.sign(
+        {
           email: loadedUser.email,
           userId: loadedUser._id.toString()
         },
@@ -46,15 +47,15 @@ exports.login = ( req, res, next ) => {
       res.status(200).json({
         token: token,
         userId: loadedUser._id.toString()
-      })
+      });
     })
     .catch(err => {
       if ( !err.statusCode ) {
         err.statusCode = 500;
       }
       next(err);
-    })
-}
+    });
+};
 
 
 //* PUT
@@ -66,7 +67,7 @@ exports.signup = ( req, res, next ) => {
     const error = new Error('Validation failed');
     error.statusCode = 422;
     // Keep errors
-    error.data = errors.array()
+    error.data = errors.array();
     throw error;
   }
   const email = req.body.email;
@@ -85,13 +86,13 @@ exports.signup = ( req, res, next ) => {
       res.status(201).json({
         message: 'User successfully created',
         userId: result._id,
-      })
+      });
     })
     .catch(err => {
       if ( !err.statusCode ) {
         err.statusCode = 500;
       }
       next(err);
-    })
+    });
 
-}
+};

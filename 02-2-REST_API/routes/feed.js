@@ -1,11 +1,12 @@
 //* IMPORTS
 
 // Import third-party packages
-const express = require( 'express' );
-const { body } = require( 'express-validator' );
+const express = require('express');
+const { body } = require('express-validator');
 
 // Import project files
-const feedController = require( '../controllers/feed' );
+const feedController = require('../controllers/feed');
+const isAuth = require('../middleware/is-auth');
 
 // Create express router
 const router = express.Router();
@@ -17,10 +18,18 @@ const router = express.Router();
 //* GET
 
 // GET /feed/posts
-router.get( '/posts', feedController.getPosts );
+router.get(
+  '/posts',
+  isAuth,
+  feedController.getPosts
+);
 
 // GET /feed/post/:postId
-router.get( '/post/:postId', feedController.getPost );
+router.get(
+  '/post/:postId',
+  isAuth,
+  feedController.getPost
+);
 
 
 //* POST
@@ -28,13 +37,14 @@ router.get( '/post/:postId', feedController.getPost );
 // POST /feed/post - Create a new post
 router.post(
   '/post',
+  isAuth,
   [
-    body( 'title' )
+    body('title')
       .trim()
-      .isLength( { min: 5 } ),
-    body( 'content' )
+      .isLength({ min: 5 }),
+    body('content')
       .trim()
-      .isLength( { min: 5 } )
+      .isLength({ min: 5 })
   ],
   feedController.createPost
 );
@@ -44,13 +54,14 @@ router.post(
 // PUT /feed/post/postId - Edit (replace) a post
 router.put(
   '/post/:postId',
+  isAuth,
   [
-    body( 'title' )
+    body('title')
       .trim()
-      .isLength( { min: 5 } ),
-    body( 'content' )
+      .isLength({ min: 5 }),
+    body('content')
       .trim()
-      .isLength( { min: 5 } )
+      .isLength({ min: 5 })
   ],
   feedController.updatePost
 );
@@ -61,6 +72,7 @@ router.put(
 // DELETE /feed/post/:postId - Delete a post
 router.delete(
   '/post/:postId',
+  isAuth,
   feedController.deletePost
 );
 

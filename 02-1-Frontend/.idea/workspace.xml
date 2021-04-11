@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:12:05.279Z-DSC01011.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:14:59.049Z-Avatar ØPP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:15:09.275Z-EggOfPhoenix_avatar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:15:19.940Z-profil2020-color.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:15:31.135Z-DSC01010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/models/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T18:02:09.555Z-Avatar ØPP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T18:19:40.210Z-Avatar ØPP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/middleware/is-auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Feed/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/Feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-10T15:21:03.604Z-Screenshot 2021-04-10 at 09.35.31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T13:26:59.718Z-Avatar ØPP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:12:05.279Z-DSC01011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T14:14:59.049Z-Avatar ØPP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/images/becode-logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-2-REST_API/models/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/models/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-2-REST_API/routes/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/routes/feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +58,7 @@
       <workItem from="1618057609654" duration="587000" />
       <workItem from="1618058618285" duration="4625000" />
       <workItem from="1618139214271" duration="377000" />
-      <workItem from="1618143520810" duration="6654000" />
+      <workItem from="1618143520810" duration="9578000" />
     </task>
     <servers />
   </component>

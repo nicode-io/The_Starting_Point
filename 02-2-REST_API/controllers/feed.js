@@ -9,6 +9,7 @@ const { validationResult } = require('express-validator');
 
 // Import project files
 const Post = require('../models/post');
+const User = require('../models/user');
 
 //* GET
 
@@ -33,14 +34,14 @@ exports.getPosts = ( req, res, next ) => {
         message: 'Fetch posts successfully',
         posts: posts,
         totalItems: totalItems
-      })
+      });
     })
     .catch(err => {
       if ( !err.statusCode ) {
         err.statusCode = 500;
       }
       next(err);
-    })
+    });
 };
 
 // Fetch a single post
@@ -57,15 +58,15 @@ exports.getPost = ( req, res, next ) => {
       res.status(200).json({
         message: 'Post fetched',
         post: post
-      })
+      });
     })
     .catch(err => {
       if ( !err.statusCode ) {
         err.statusCode = 500;
       }
       next(err);
-    })
-}
+    });
+};
 
 
 //* POST
@@ -85,26 +86,38 @@ exports.createPost = ( req, res, next ) => {
     throw error;
   }
 
-  // Grab user input for new post
   const title = req.body.title;
   const content = req.body.content;
   const imageUrl = req.file.path;
+  let creator;
 
   // Set and save post in database
   const post = new Post({
     title: title,
     content: content,
     imageUrl: imageUrl,
-    creator: {
-      name: 'Nicolas'
-    },
+    creator: req.userId,
   });
-  post.save()
+  post
+    .save()
+    // Select post creator user
     .then(result => {
-      console.log(result);
+      return User.findById(req.userId);
+    })
+    // Save post in creator's posts array
+    .then(user => {
+      creator = user;
+      user.posts.push(post);
+      return user.save();
+    })
+    .then(result => {
       res.status(201).json({
         message: 'Post successfully created',
-        post: result
+        post: post,
+        creator: {
+          _id: creator._id,
+          name: creator.name,
+        }
       });
     })
     .catch(err => {
@@ -112,7 +125,7 @@ exports.createPost = ( req, res, next ) => {
         err.statusCode = 500;
       }
       next(err);
-    })
+    });
 };
 
 
@@ -150,6 +163,12 @@ exports.updatePost = ( req, res, next ) => {
       if ( !post ) {
         const error = new Error('Post not found');
         error.statusCode = 404;
+        throw error;
+      }
+      // Check if user is the post creator
+      if (post.creator.toString() !== req.userId) {
+        const error = new Error('Not authorized');
+        error.statusCode = 403;
         throw error;
       }
       if ( imageUrl !== post.imageUrl ) {
@@ -190,15 +209,27 @@ exports.deletePost = ( req, res, next ) => {
         error.statusCode = 404;
         throw error;
       }
-      // TODO: `Check logged in user
+      // Check if user is the post creator
+      if (post.creator.toString() !== req.userId) {
+        const error = new Error('Not authorized');
+        error.statusCode = 403;
+        throw error;
+      }
       clearImage(post.imageUrl);
-      return Post.findByIdAndDelete(postId)
+      return Post.findByIdAndDelete(postId);
     })
     .then(result => {
-      console.log(result);
+      return User.findById(req.userId);
+    })
+    // Remove post link in user posts array
+    .then(user => {
+      user.posts.pull(postId);
+      return user.save();
+    })
+    .then(result => {
       res.status('200').json({
         message: 'Post Deleted'
-      })
+      });
     })
     .catch(err => {
       if ( !err.statusCode ) {
@@ -206,8 +237,8 @@ exports.deletePost = ( req, res, next ) => {
       }
       console.log(postId);
       next(err);
-    })
-}
+    });
+};
 
 
 //* FUNCTIONS
