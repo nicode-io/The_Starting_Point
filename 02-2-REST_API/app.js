@@ -14,6 +14,8 @@ const feedRoutes = require('./routes/feed');
 const secret = require("./secret");
 
 
+//* APP CREATION / CONFIGURATION
+
 // Create express application
 const app = express();
 
@@ -40,13 +42,13 @@ const fileFilter = ( req, file, cb ) => {
   }
 }
 
-//* MIDDLEWARES
+//* APP MIDDLEWARES
 
 // API parser, only JSON in/out
 app.use(bodyParser.json());
 
 // API binaries parser (Multer)
-app.use(multer({storage: fileStorage, fileFilter: fileFilter})
+app.use(multer({ storage: fileStorage, fileFilter: fileFilter })
   .single('image'))
 
 // Serve 'images' folder statically
@@ -69,7 +71,7 @@ app.use(( error, req, res, next ) => {
   const status = error.statusCode;
   const message = error.message;
   // Send http response status and error message
-  res.status(status).json({message: message});
+  res.status(status).json({ message: message });
 });
 
 

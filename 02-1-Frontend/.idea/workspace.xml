@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/02-1-Frontend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-10T15:21:03.604Z-Screenshot 2021-04-10 at 09.35.31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-10T15:21:59.592Z-Screenshot 2021-04-10 at 09.35.31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/becode-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/models/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/secret.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-11T12:58:04.576Z-profil2020-nb.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Feed/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/Feed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-2-REST_API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-2-REST_API/routes/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/routes/feed.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +50,9 @@
       <option name="presentableId" value="Default" />
       <updated>1618057608489</updated>
       <workItem from="1618057609654" duration="587000" />
-      <workItem from="1618058618285" duration="4437000" />
+      <workItem from="1618058618285" duration="4625000" />
+      <workItem from="1618139214271" duration="377000" />
+      <workItem from="1618143520810" duration="2284000" />
     </task>
     <servers />
   </component>
