@@ -8,6 +8,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const multer = require('multer');
+const cors = require('cors');
 
 // Import project files
 const feedRoutes = require('./routes/feed');
@@ -46,6 +47,9 @@ const fileFilter = ( req, file, cb ) => {
 // Configure Socket.IO
 
 //* APP MIDDLEWARES
+
+// CORS handler
+app.use(cors());
 
 // API parser, only JSON in/out
 app.use(bodyParser.json());

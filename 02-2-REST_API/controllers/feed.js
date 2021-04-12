@@ -203,40 +203,34 @@ exports.updatePost = async ( req, res, next ) => {
 //* DELETE
 
 // Delete a post
-exports.deletePost = async ( req, res, next ) => {
+exports.deletePost = async (req, res, next) => {
   const postId = req.params.postId;
-
   try {
-    const post = Post.findById(postId);
+    const post = await Post.findById(postId);
 
-    if ( !post ) {
-      const error = new Error('Post not found');
+    if (!post) {
+      const error = new Error('Could not find post.');
       error.statusCode = 404;
       throw error;
     }
-    // Check if user is the post creator
-    if ( post.creator.toString() !== req.userId ) {
-      const error = new Error('Not authorized');
+    if (post.creator.toString() !== req.userId) {
+      const error = new Error('Not authorized!');
       error.statusCode = 403;
       throw error;
     }
+    // Check logged in user
     clearImage(post.imageUrl);
-    await Post.findByIdAndDelete(postId);
+    await Post.findByIdAndRemove(postId);
 
     const user = await User.findById(req.userId);
-    // Remove post link in user posts array
     user.posts.pull(postId);
     await user.save();
-
-    res.status('200').json({
-      message: 'Post Deleted'
-    });
-  }
-  catch ( err ) {
-    if ( !err.statusCode ) {
+    io.getIO().emit('posts', { action: 'delete', post: postId });
+    res.status(200).json({ message: 'Deleted post.' });
+  } catch (err) {
+    if (!err.statusCode) {
       err.statusCode = 500;
     }
-    console.log(postId);
     next(err);
   }
 };
