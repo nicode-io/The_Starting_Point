@@ -10,69 +10,70 @@ const { validationResult } = require('express-validator');
 // Import project files
 const Post = require('../models/post');
 const User = require('../models/user');
+const io = require('../socket');
+
 
 //* GET
 
 // Fetch a list of posts
-exports.getPosts = ( req, res, next ) => {
+exports.getPosts = async ( req, res, next ) => {
   // Configure pagination
   // || 1 => If not set, default will be 1
   const currentPage = req.query.page || 1;
   const perPage = 2;
   let totalItems;
 
-  Post.find()
-    .countDocuments()
-    .then(count => {
-      totalItems = count;
-      return Post.find()
-        .skip(( currentPage - 1 ) * perPage)
-        .limit(perPage);
-    })
-    .then(posts => {
-      res.status(200).json({
-        message: 'Fetch posts successfully',
-        posts: posts,
-        totalItems: totalItems
-      });
-    })
-    .catch(err => {
-      if ( !err.statusCode ) {
-        err.statusCode = 500;
-      }
-      next(err);
+  try {
+    const count = await Post.find().countDocuments();
+    const posts = await Post.find()
+      .populate('creator')
+      .skip(( currentPage - 1 ) * perPage)
+      .limit(perPage);
+
+    res.status(200).json({
+      message: 'Fetch posts successfully',
+      posts: posts,
+      totalItems: totalItems
     });
+  }
+  catch ( err ) {
+    if ( !err.statusCode ) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
 };
 
 // Fetch a single post
-exports.getPost = ( req, res, next ) => {
+exports.getPost = async ( req, res, next ) => {
   const postId = req.params.postId;
 
-  Post.findById(postId)
-    .then(post => {
-      if ( !post ) {
-        const error = new Error('Post not found');
-        error.statusCode = 404;
-        throw error; // throw error to next catch block
-      }
-      res.status(200).json({
-        message: 'Post fetched',
-        post: post
-      });
-    })
-    .catch(err => {
-      if ( !err.statusCode ) {
-        err.statusCode = 500;
-      }
-      next(err);
+  try {
+    const postFindById = await Post.findById(postId);
+
+    if ( !postFindById ) {
+      const error = new Error('Post not found');
+      error.statusCode = 404;
+      throw error; // throw error to next catch block
+    }
+    res.status(200).json({
+      message: 'Post fetched',
+      post: postFindById
     });
+  }
+  catch ( err ) {
+    if ( !err.statusCode ) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
 };
 
 
 //* POST
 
 // Add a new post
-exports.createPost = ( req, res, next ) => {
+exports.createPost = async ( req, res, next ) => {
   // Server-side user input validation
   const errors = validationResult(req);
   if ( !errors.isEmpty() ) {
@@ -89,7 +90,6 @@ exports.createPost = ( req, res, next ) => {
   const title = req.body.title;
   const content = req.body.content;
   const imageUrl = req.file.path;
-  let creator;
 
   // Set and save post in database
   const post = new Post({
@@ -98,41 +98,47 @@ exports.createPost = ( req, res, next ) => {
     imageUrl: imageUrl,
     creator: req.userId,
   });
-  post
-    .save()
+
+  try {
+    await post.save();
     // Select post creator user
-    .then(result => {
-      return User.findById(req.userId);
-    })
+    const user = await User.findById(req.userId);
     // Save post in creator's posts array
-    .then(user => {
-      creator = user;
-      user.posts.push(post);
-      return user.save();
-    })
-    .then(result => {
-      res.status(201).json({
-        message: 'Post successfully created',
-        post: post,
+    user.posts.push(post);
+    await user.save();
+    // IO: Inform all users of a new post
+    io.getIO().emit('posts', {
+      action: 'create',
+      post: { ...post._doc,
         creator: {
-          _id: creator._id,
-          name: creator.name,
+          _id: req.userId,
+          name: user.name
         }
-      });
-    })
-    .catch(err => {
-      if ( !err.statusCode ) {
-        err.statusCode = 500;
       }
-      next(err);
     });
+
+    res.status(201).json({
+      message: 'Post successfully created',
+      post: post,
+      creator: {
+        _id: user._id,
+        name: user.name,
+      }
+    });
+  }
+  catch ( err ) {
+    if ( !err.statusCode ) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
 };
 
 
 //* PUT
 
 // Update a post
-exports.updatePost = ( req, res, next ) => {
+exports.updatePost = async ( req, res, next ) => {
   const postId = req.params.postId;
 
   // Server-side user input validation
@@ -158,86 +164,81 @@ exports.updatePost = ( req, res, next ) => {
   }
 
   // Update post in database
-  Post.findById(postId)
-    .then(post => {
-      if ( !post ) {
-        const error = new Error('Post not found');
-        error.statusCode = 404;
-        throw error;
-      }
-      // Check if user is the post creator
-      if (post.creator.toString() !== req.userId) {
-        const error = new Error('Not authorized');
-        error.statusCode = 403;
-        throw error;
-      }
-      if ( imageUrl !== post.imageUrl ) {
-        clearImage(post.imageUrl);
-      }
-      post.title = title;
-      post.content = content;
-      post.imageUrl = imageUrl;
-      return post.save();
-    })
-    .then(
-      result => {
-        res.status(200).json({
-          message: 'Post successfully updated',
-          post: result
-        });
-      }
-    )
-    .catch(err => {
-      if ( !err.statusCode ) {
-        err.statusCode = 500;
-      }
-      next(err);
+  try {
+    const post = Post.findById(postId);
+
+    if ( !post ) {
+      const error = new Error('Post not found');
+      error.statusCode = 404;
+      throw error;
+    }
+    // Check if user is the post creator
+    if ( post.creator.toString() !== req.userId ) {
+      const error = new Error('Not authorized');
+      error.statusCode = 403;
+      throw error;
+    }
+    if ( imageUrl !== post.imageUrl ) {
+      clearImage(post.imageUrl);
+    }
+    post.title = title;
+    post.content = content;
+    post.imageUrl = imageUrl;
+    const result = await post.save();
+
+    res.status(200).json({
+      message: 'Post successfully updated',
+      post: result
     });
+  }
+  catch ( err ) {
+    if ( !err.statusCode ) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
 };
 
 
 //* DELETE
 
 // Delete a post
-exports.deletePost = ( req, res, next ) => {
+exports.deletePost = async ( req, res, next ) => {
   const postId = req.params.postId;
 
-  Post.findById(postId)
-    .then(post => {
-      if ( !post ) {
-        const error = new Error('Post not found');
-        error.statusCode = 404;
-        throw error;
-      }
-      // Check if user is the post creator
-      if (post.creator.toString() !== req.userId) {
-        const error = new Error('Not authorized');
-        error.statusCode = 403;
-        throw error;
-      }
-      clearImage(post.imageUrl);
-      return Post.findByIdAndDelete(postId);
-    })
-    .then(result => {
-      return User.findById(req.userId);
-    })
+  try {
+    const post = Post.findById(postId);
+
+    if ( !post ) {
+      const error = new Error('Post not found');
+      error.statusCode = 404;
+      throw error;
+    }
+    // Check if user is the post creator
+    if ( post.creator.toString() !== req.userId ) {
+      const error = new Error('Not authorized');
+      error.statusCode = 403;
+      throw error;
+    }
+    clearImage(post.imageUrl);
+    await Post.findByIdAndDelete(postId);
+
+    const user = await User.findById(req.userId);
     // Remove post link in user posts array
-    .then(user => {
-      user.posts.pull(postId);
-      return user.save();
-    })
-    .then(result => {
-      res.status('200').json({
-        message: 'Post Deleted'
-      });
-    })
-    .catch(err => {
-      if ( !err.statusCode ) {
-        err.statusCode = 500;
-      }
-      console.log(postId);
-      next(err);
+    user.posts.pull(postId);
+    await user.save();
+
+    res.status('200').json({
+      message: 'Post Deleted'
     });
+  }
+  catch ( err ) {
+    if ( !err.statusCode ) {
+      err.statusCode = 500;
+    }
+    console.log(postId);
+    next(err);
+  }
 };
 
 
