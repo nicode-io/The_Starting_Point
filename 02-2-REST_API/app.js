@@ -8,11 +8,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const multer = require('multer');
+const cors = require('cors');
 
 // Import project files
 const feedRoutes = require('./routes/feed');
 const authRoutes = require('./routes/auth');
-const secret = require("./secret");
+const secret = require('./secret');
 
 
 //* APP CREATION / CONFIGURATION
@@ -41,16 +42,24 @@ const fileFilter = ( req, file, cb ) => {
   } else {
     cb(null, false);
   }
-}
+};
+
+// Configure Socket.IO
 
 //* APP MIDDLEWARES
+
+// CORS handler
+app.use(cors());
 
 // API parser, only JSON in/out
 app.use(bodyParser.json());
 
 // API binaries parser (Multer)
-app.use(multer({ storage: fileStorage, fileFilter: fileFilter })
-  .single('image'))
+app.use(multer({
+  storage: fileStorage,
+  fileFilter: fileFilter
+})
+  .single('image'));
 
 // Serve 'images' folder statically
 app.use('/images', express.static(path.join(__dirname, 'images')));
@@ -60,6 +69,7 @@ app.use(( req, res, next ) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
   next();
 });
 
@@ -75,24 +85,43 @@ app.use(( error, req, res, next ) => {
   const message = error.message;
   const data = error.data;
   // Send http response status and error message
-  res.status(status).json({ message: message, data: data });
+  res.status(status).json({
+    message: message,
+    data: data
+  });
 });
 
 
-//* DATABASE CONNECTION
+//* APPLICATION / DATABASE CONNECTION
 
-mongoose
-  .connect(
-    secret.getMongoDbApi(),
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
-  )
-  .then(result => {
-    app.listen(8080);
+const connect = async () => {
+  try {
+    await mongoose.connect(
+      secret.getMongoDbApi(),
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true
+      }
+    );
+    const server = app.listen(8080);
     console.log('REST Api Connected');
-  })
-  .catch(err => {
+    // Create Socket.IO connection
+    const io = require('./socket').init(
+      server,
+      options = {
+        cors: true,
+        origins: [ 'http://127.0.0.1:3000' ],
+      }
+    );
+    // Wait for client connection
+    io.on('connection', socket => {
+      console.log('IO - Client connected');
+    });
+  }
+  catch ( err ) {
     console.log(err);
-  });
+  }
+};
+connect();
