@@ -11,8 +11,6 @@ const multer = require('multer');
 const cors = require('cors');
 
 // Import project files
-const feedRoutes = require('./routes/feed');
-const authRoutes = require('./routes/auth');
 const secret = require('./secret');
 
 
@@ -73,9 +71,6 @@ app.use(( req, res, next ) => {
   next();
 });
 
-// Routers
-app.use('/feed', feedRoutes);
-app.use('/auth', authRoutes);
 
 // Error Handler (has priority)
 app.use(( error, req, res, next ) => {
@@ -105,20 +100,8 @@ const connect = async () => {
         useCreateIndex: true
       }
     );
-    const server = app.listen(8080);
+    app.listen(8080);
     console.log('REST Api Connected');
-    // Create Socket.IO connection
-    const io = require('./socket').init(
-      server,
-      options = {
-        cors: true,
-        origins: [ 'http://127.0.0.1:3000' ],
-      }
-    );
-    // Wait for client connection
-    io.on('connection', socket => {
-      console.log('IO - Client connected');
-    });
   }
   catch ( err ) {
     console.log(err);
