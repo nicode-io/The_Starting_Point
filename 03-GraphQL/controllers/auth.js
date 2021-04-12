@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 
-//* POST
+//* USER
 
 // User login
 exports.login = async ( req, res, next ) => {
@@ -54,9 +54,6 @@ exports.login = async ( req, res, next ) => {
     next(err);
   }
 };
-
-
-//* PUT
 
 // User signup
 exports.signup = async ( req, res, next ) => {

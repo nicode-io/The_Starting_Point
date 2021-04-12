@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="" />
+    <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../03-GraphQL/graphql/resolvers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-GraphQL/graphql/schema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-GraphQL/middleware/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-GraphQL/util/file.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Feed/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/Feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Feed/SinglePost/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03-GraphQL/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03-GraphQL/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-11T18:24:19.592Z-Avatar ØPP.png" beforeDir="false" afterPath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-12T20:05:43.310Z-Avatar ØPP.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-11T18:26:27.354Z-EggOfPhoenix_avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-11T20:56:53.466Z-Avatar ØPP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-11T20:59:00.437Z-EggOfPhoenix_avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-12T15:01:46.943Z-Avatar ØPP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/images/2021-04-12T15:18:55.865Z-eop-avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/middleware/is-auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../03-GraphQL/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-GraphQL/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../03-GraphQL/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +46,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -47,6 +70,7 @@
       <workItem from="1618209597415" duration="26000" />
       <workItem from="1618229373057" duration="267000" />
       <workItem from="1618238701136" duration="291000" />
+      <workItem from="1618241464936" duration="7482000" />
     </task>
     <servers />
   </component>
