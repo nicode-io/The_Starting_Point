@@ -40,6 +40,7 @@ The project is divided in two main projects:
   Backend and frontend are mixed inside Node with the help EJS views rendering HTML code. 
 - 02: REST API: A simple feed of posts also with authentication, error handling, security webtoken, ... 
   Node backend is totally splitted from frontend: backend is a REST API, frontend is build with REACT
+- 03: GraphQl: Another way to create your API, stop multiply requests and sending too much data with GraphQl but also has downsides
 
 
 ---
@@ -64,6 +65,8 @@ TODO
 -   Express-handlebars: manage handlebars and templating engine
 -   Express-session: create user session, generate cookies automatically
 -   Express-validator: sanitize and check format of user input and forms
+-   Express-graphql: GraphQL HTTP middleware.
+-   Graphql: query language for beautiful API 
 -   Jsonwebtoken: create security token to manage authentication and sessions with your REST Api
 -   Lodash: utility library delivering modularity, performance & extras
 -   Marked: markdown parser
@@ -78,6 +81,7 @@ TODO
 -   Pug: Another templating engine (used before EJS in the project)
 -   Sequelize: a great ORM manager to use with a SQL database
 -   Stripe: manage users payments in your website
+-   Validator: sanitize and validate data on server-side
 
 ---
 
@@ -118,7 +122,8 @@ TODO
   Add complete checkout process and payment with the help of Stripe (need webhook for prod/scale)
 - feature/1.0-REST_API :
   New project, simple posts feed but build with a REST Api and so a totally splitted backend/frontend
-
+- feature/1.1-Sokcet_IO (sorry for typo but branch have this name) :
+  Test using websocket with the help of Socket.IO
 ---
 
 ### Achievements
@@ -141,6 +146,8 @@ TODO
 - Use js script in EJS views to send async requests and manipulate DOM
 - Use Stripe to manage payments in an eshop, configure checkout process entirely (need webhook for prod)
 - Understand how REST API works: rules, request format, authentication with tokens, routing, and many more
+- Work with websockets to send data to user without them to request them, broadcast all over your project
+- Optimize your API with GraphQl, helps you get shaped and light request with only the data you want into them
 - ... 
 
 ---
