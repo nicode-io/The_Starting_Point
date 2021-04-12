@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-12T14:45:30.306Z-Avatar ØPP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-2-REST_API/images/2021-04-12T15:01:46.943Z-Avatar ØPP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/controllers/feed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-2-REST_API/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../02-2-REST_API/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="513571e4-17f3-4d8b-8e36-f6b6ae099ce7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
