@@ -9,20 +9,19 @@ const csrf = require('csurf');
 const flash = require('connect-flash');
 const multer = require('multer');
 
-const secret = require('./secret');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
+const MONGODB_URI =
+  `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@nicode.ydftq.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`;
+
 const app = express();
 const store = new MongoDBStore({
-  uri: secret.getDb(),
-  collection: 'sessions',
-}); // Create object which use database and connect-mongodb-session
-
-// Initialise CSRF token
+  uri: MONGODB_URI,
+  collection: 'sessions'
+});
 const csrfProtection = csrf();
 
-// Configure a storage for binaries (multer)
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'images');
@@ -32,7 +31,6 @@ const fileStorage = multer.diskStorage({
   }
 });
 
-// Configure file filter for binaries (multer)
 const fileFilter = (req, file, cb) => {
   if (
     file.mimetype === 'image/png' ||
@@ -52,36 +50,31 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
-app.use(bodyParser.urlencoded({extended: false}));
-// User Multer to parse request with mix of text and binary inside
-// params name need to match the field name in form
-app.use(multer({
-  storage: fileStorage,
-  fileFilter: fileFilter
-}).single('image'))
-
-// Serve static file folders with the help of express
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(
+  multer({ storage: fileStorage, fileFilter: fileFilter }).single('image')
+);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
-
 app.use(
   session({
     secret: 'my secret',
     resave: false,
     saveUninitialized: false,
-    store: store,
+    store: store
   })
-); // Express-Session middleware - Automatically set a cookie, use session 'store: store', secure with hash the user id
+);
 app.use(csrfProtection);
 app.use(flash());
 
-app.use(( req, res, next ) => {
+app.use((req, res, next) => {
   res.locals.isAuthenticated = req.session.isLoggedIn;
   res.locals.csrfToken = req.csrfToken();
   next();
 });
 
-app.use(( req, res, next ) => {
+app.use((req, res, next) => {
+  // throw new Error('Sync Dummy');
   if (!req.session.user) {
     return next();
   }
@@ -90,16 +83,13 @@ app.use(( req, res, next ) => {
       if (!user) {
         return next();
       }
-      // Store user in requests
       req.user = user;
       next();
     })
     .catch(err => {
-      // Reach error handling middleware in promise
       next(new Error(err));
     });
 });
-
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
@@ -109,28 +99,25 @@ app.get('/500', errorController.get500);
 
 app.use(errorController.get404);
 
-
-// Add special middleware to handling errors
-// Express will skip others middleware if an error is thrown
-// If you have multiple error handling middleware they'll execute
-// from top to bottom like "normal" middleware
-app.use(( error, req, res, next ) => {
+app.use((error, req, res, next) => {
+  // res.status(error.httpStatusCode).render(...);
+  // res.redirect('/500');
   res.status(500).render('500', {
-    pageTitle: 'Error',
+    pageTitle: 'Error!',
     path: '/500',
     isAuthenticated: req.session.isLoggedIn
   });
-  console.log(error);
-})
+});
 
 mongoose
-  .connect(
-    secret.getDb(),
-    {useNewUrlParser: true, useUnifiedTopology: true}
-  )
+  .connect(MONGODB_URI,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
   .then(result => {
-    app.listen(3000);
-    console.log('App Connected');
+    console.log('App Connected')
+    app.listen(process.env.PORT || 3000);
   })
   .catch(err => {
     console.log(err);
