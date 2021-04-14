@@ -28,7 +28,6 @@
 
 ### Description
 
-> Start 10-01-2021
 
 This project aims to study NODEjs and everything related to it: database, REST API, GRAPHQL,
 authentication, sessions, cookies, CRUD, MVC, Template engine and many others.
@@ -41,14 +40,7 @@ The project is divided in two main projects:
 - 02: REST API: A simple feed of posts also with authentication, error handling, security webtoken, ... 
   Node backend is totally splitted from frontend: backend is a REST API, frontend is build with REACT
 - 03: GraphQl: Another way to create your API, stop multiply requests and sending too much data with GraphQl but also has downsides
-
-
----
-
-### Installation
-> Step by step
-
-TODO
+- 04: Testing: Discover how Mocha, Chai and Sinon (there are off course others) packages can help to testing code
 
 ---
 
@@ -57,6 +49,7 @@ TODO
 
 -   Bcrypt: hash passwords to store them safely in database
 -   Body-parser: parse the http request
+-   Chai: BDD / TDD assertion library
 -   Connect-flash: special area of the session used for storing messages
 -   Connect-Mongodb-Session: link Express-Session with MongoDB database
 -   Csurf: add CSRF protection to your project
@@ -70,6 +63,7 @@ TODO
 -   Jsonwebtoken: create security token to manage authentication and sessions with your REST Api
 -   Lodash: utility library delivering modularity, performance & extras
 -   Marked: markdown parser
+-   Mocha: JS test framework 
 -   MongoDB: no-SQL MongoDB database manager
 -   Mongoose: a great ODM manager to use with MongoDB
 -   Multer: allow you to get binaries (images, files) through requests
@@ -80,6 +74,7 @@ TODO
 -   Pdfkit: create automated and customized pdf
 -   Pug: Another templating engine (used before EJS in the project)
 -   Sequelize: a great ORM manager to use with a SQL database
+-   Sinon: create stubs, spies
 -   Stripe: manage users payments in your website
 -   Validator: sanitize and validate data on server-side
 
@@ -124,6 +119,11 @@ TODO
   New project, simple posts feed but build with a REST Api and so a totally splitted backend/frontend
 - feature/1.1-Sokcet_IO (sorry for typo but branch have this name) :
   Test using websocket with the help of Socket.IO
+- feature/2.0-GraphQl :
+  Use GraphQl schema to discover another way to manage API compare to REST
+- feature/3.0-Deploy :
+  Configure app for production environment
+
 ---
 
 ### Achievements
@@ -148,6 +148,9 @@ TODO
 - Understand how REST API works: rules, request format, authentication with tokens, routing, and many more
 - Work with websockets to send data to user without them to request them, broadcast all over your project
 - Optimize your API with GraphQl, helps you get shaped and light request with only the data you want into them
+- Configure for production, host an app on Heroku or other hosting solution
+- Discover how to test code with dedicated packages
+- Get an overview of Deno and TypeScript 
 - ... 
 
 ---
