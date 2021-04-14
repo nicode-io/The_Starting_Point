@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2949f21-61cf-46ac-b48c-549173b9245a" name="Default Changelist" comment="Configure Multer storage / file filter">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="498a8d1d-3d74-4ab4-8acd-be209a9cee9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/error.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/shop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/invoices/invoice-5bb5dd38273cf9c22f1bece5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/invoices/invoice-5bb5dd38273cf9c22f1bece5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/invoices/invoice-6070800cd3966e1c5d5871c8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/invoices/invoice-607088a9ce09191f31354fb8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/invoices/invoice-607095a962752524d5d821ba.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/invoices/invoice-6070cb0be7e6df34478e84ca.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2021-04-12T21:18:50.461Z-eop-avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/invoices/invoice-5d7b9401df02f4316b78faf7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/invoices/invoice-60753b2dd0c2d608d585343c.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/is-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/is-auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/order.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodemon.js" beforeDir="false" afterPath="$PROJECT_DIR$/nodemon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/auth.css" afterDir="false" />
@@ -31,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/public/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/product.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/file.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/file.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/path.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/path.js" afterDir="false" />
@@ -42,22 +37,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="feature/3.0-Deploy" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="JsbtTreeLayoutManager">
-    <layout place="tools.popupnpm">
-      <scroll-view-position x="0" y="0" />
-    </layout>
-  </component>
-  <component name="ProjectId" id="1qo2CZ6ja6qlmggaI7pYDY4ERgi" />
+  <component name="ProjectId" id="1r9XcnTnFcmK7lWL2NrRpuHZB9N" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -66,79 +53,43 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.37" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/invoices" />
-      <recent name="$PROJECT_DIR$/views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="error-playgorund.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/error-playgorund.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.error-playgorund.js" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b2949f21-61cf-46ac-b48c-549173b9245a" name="Default Changelist" comment="" />
-      <created>1617731496980</created>
+      <changelist id="498a8d1d-3d74-4ab4-8acd-be209a9cee9d" name="Default Changelist" comment="" />
+      <created>1618389363409</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617731496980</updated>
-      <workItem from="1617731500412" duration="48000" />
-      <workItem from="1617731557319" duration="54000" />
-      <workItem from="1617731623859" duration="10487000" />
-      <workItem from="1617868348238" duration="29857000" />
-      <workItem from="1617949274372" duration="298000" />
-      <workItem from="1617980942097" duration="18514000" />
-      <workItem from="1618037774856" duration="1194000" />
-      <workItem from="1618051425197" duration="39000" />
-      <workItem from="1618261268526" duration="1187000" />
-      <workItem from="1618294696298" duration="905000" />
-      <workItem from="1618295795363" duration="54000" />
+      <updated>1618389363409</updated>
+      <workItem from="1618389365785" duration="18000" />
+      <workItem from="1618389385544" duration="743000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Configure Multer storage / file filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure Multer storage / file filter" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

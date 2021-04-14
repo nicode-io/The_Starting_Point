@@ -1,6 +1,8 @@
+const secret = require("../secret");
+
 const fs = require('fs');
 const path = require('path');
-const stripe = require('stripe')(process.env.STRIPE_KEY);
+const stripe = require('stripe')(secret.getStripeApiKey());
 
 const PDFDocument = require('pdfkit');
 
@@ -293,11 +295,11 @@ exports.getInvoice = (req, res, next) => {
           .fontSize(14)
           .text(
             prod.product.title +
-            ' - ' +
-            prod.quantity +
-            ' x ' +
-            '$' +
-            prod.product.price
+              ' - ' +
+              prod.quantity +
+              ' x ' +
+              '$' +
+              prod.product.price
           );
       });
       pdfDoc.text('---');
