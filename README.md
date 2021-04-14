@@ -33,7 +33,7 @@ This project aims to study NODEjs and everything related to it: database, REST A
 authentication, sessions, cookies, CRUD, MVC, Template engine and many others.
 This is done through an e-shop project.
 
-The project is divided in two main projects: 
+Modules : 
 
 - 01: ESHOP in MVC: A simple eshop but whith great features like authentication, error handling, ordre and cart management, online payments, ... 
   Backend and frontend are mixed inside Node with the help EJS views rendering HTML code. 
