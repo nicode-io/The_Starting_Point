@@ -79,6 +79,10 @@
         +   [Procedural Module 1 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-14_Procedural_Module_1_Solutions.sql)
         +   [Procedural Module 2 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-15_Procedural_Module_2_Statement.pdf)
         +   [Procedural Module 2 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-16_Procedural_Modue_2_Solutions.sql)
+        +   [Procedural Module 3 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-17_Procedural_Module3_Statement.pdf)
+        +   [Procedural Module 3 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-18_Procedural_Module_3_Solutions.sql)
+        +   [Procedural Module 4 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-19_Procedural_Module_4_Statement.pdf)
+        +   [Procedural Module 4 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-20_Procedural_Module_4_Solutions.sql)
     
 ---
 
