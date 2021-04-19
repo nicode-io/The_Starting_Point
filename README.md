@@ -1,5 +1,29 @@
-#  (◉ ͜ʖ◉))ﾉ彡 ASP.NET ⦾ BI ⦾ BOOTCAMP ✧٩(•́⌄•́๑)
-> Business Intelligence ASP.Net Bootcamp 
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="h./images/dotnet-logo.png">
+    <img src="./flutter.png" alt="Logo" width="250" height=250">
+  </a>
+
+<h3 align="center">.NET-SHREPOINT-BI BOOTCAMP</h3>
+
+  <p align="center">
+    A full-time 6monts bootcamp to learn .Net 5.0, Entity,
+    Sharepoint, Datawarehousing and Power BI
+    <br />
+    <br />
+    <a href="#bootcamp-program">Description</a>
+    ·
+    <a href="#database">Database</a>
+    ·
+    <a href="#c-sharp">C Sharp</a>
+    .
+    <a href="#asp-dotnet">ASP dotNET</a>
+    .
+    <a href="#business-intelligence">Business Intelligence</a>
+    .
+  </p>
 
 ---
 
@@ -88,14 +112,27 @@
 
 ##  C Sharp
 
-2.  [C#](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp)
-    *   [Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-01_Theory)
-        +   [Fundamentals](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-01_C%23_Fundamentals.pdf)
-    *   [Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code)
-        +   [Basic Syntax](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-01_Basic_Syntax_Algo/02-02-01_Basic_Syntax_Algo)
-        +   [Structures](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-02_Structures/02-02-02_Structures)
-	
-
+2.  [02. C#](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp)
+    *   [01. Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-01_Theory)
+        +   [01. Fundamentals](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-01_C%23_Fundamentals.pdf)
+        +   [02. C# Basics Cheat SHeet](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-02_CSharpCheatSheet_V2.2-1.pdf)
+        +   [03. Intro OOP - UML Overview](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-03_Intro_OOP-UML_overview.pdf)
+        +   [04. Into OOP - Notations](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-04_Intro_OOP-Notations.pdf)
+        +   [05. Intro OOP - OVerview Concepts](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-05_Intro_OOP-Overview_concepts.pdf)
+        +   [06. Intro OOP - Concepts](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-06_Intro_OOP-Concepts.pdf)
+        +   [07. Intro OOP - Encapsulation](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-07_Intro_OOP-Encapsulation.pdf)
+        +   [08. Intro OOP - Inheritance](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-08_Intro_OOP-Inheritance.pdf)
+        +   [09. Intro OOP - Abstraction](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-09_Intro_OOP-Abstraction.pdf)
+        +   [10. Intro OOP - Interface](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-10_Intro_OOP-Interface.pdf)
+        +   [11. Intro OOP - Design Pattern](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-11_Intro_OOP-Design_pattern.pdf)
+    *   [02. Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code)
+        +   [01. Basic Syntax](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-01_Basic_Syntax_Algo/02-02-01_Basic_Syntax_Algo)
+        +   [02. Structures](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-02_Structures/02-02-02_Structures)
+	*   [03. Visual & Graphics](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-03_Visuals_Graphics)
+        +   [01. Polymorphism / Inheritance](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-03_Visuals_Graphics/02-03-01_Polymorphism-Inheritance.png)
+        +   [02. 3-Tier Architecture](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-03_Visuals_Graphics/02-03-02_3-Tier_Architecture.png)
+        +   [03. Businness Intelligence: Big PIcture](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-03_Visuals_Graphics/02-03-03_BI_Big_Picture.png)
+        +   [04. Software development jobs](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-03_Visuals_Graphics/02-03-04_Software_Roles.png)
 
 ---
 
