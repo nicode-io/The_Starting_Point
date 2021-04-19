@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="h./images/dotnet-logo.png">
-    <img src="./flutter.png" alt="Logo" width="250" height=250">
+    <img src="./images/dotnet-logo.png" alt="Logo" width="250" height=250">
   </a>
 
 <h3 align="center">.NET-SHREPOINT-BI BOOTCAMP</h3>
