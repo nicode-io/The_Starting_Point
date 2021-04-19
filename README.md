@@ -8,12 +8,16 @@
 
 <h3 align="center">.NET-SHREPOINT-BI BOOTCAMP</h3>
 
-  <p align="center">
-    A full-time 6monts bootcamp to learn .Net 5.0, Entity,
-    Sharepoint, Datawarehousing and Power BI
+<p align="center">
+    A full-time 6monts bootcamp to learn .Net 5.0 / Entity frameworks.
+    </br>
+    Datawarehouse will be built with SSIS, SSRS and SSAS
+    See <a href="#bootcamp-program">summary</a> for more information
+</p>
+<p align="center">
     <br />
     <br />
-    <a href="#bootcamp-program">Description</a>
+    <a href="#bootcamp-program">Bootcamp summary</a>
     ·
     <a href="#database">Database</a>
     ·
@@ -23,22 +27,9 @@
     .
     <a href="#business-intelligence">Business Intelligence</a>
     .
-  </p>
-
----
-
-##  INDEX
-
--   [Bootcamp program](#bootcamp-program)
-    -   [Database Module](#database-module)  
-    -   [Development Module](#development-module)  
-    -   [Business Intelligence Module](#business-intelligence-module)  
--   [Database](#Database)
--   [C Sharp](#c-sharp)
--   [ASP dotNET](#asp-dotnet)
--   [Business Intelligence](#business-intelligence)
--   [Timeline](#timeline)
-
+    <a href="#timeline">Timeline</a>
+    .
+</p>
 
 ---
 
