@@ -32,8 +32,8 @@ class _NewTransactionState extends State<NewTransaction> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
       child: Container(
+        height: 200,
         padding: EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -51,7 +51,7 @@ class _NewTransactionState extends State<NewTransaction> {
             ),
             FlatButton(
               child: Text('Add Expense'),
-              textColor: Colors.purple,
+              textColor: Theme.of(context).accentColor,
               onPressed: submitData,
             )
           ],

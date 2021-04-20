@@ -15,7 +15,24 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Expenses Manager',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
+        accentColor: Colors.amber,
+        fontFamily: 'OpenSans',
+        textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+              fontFamily: 'Quicksand',
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+            )),
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                  color: Colors.amberAccent,
+                  fontFamily: 'OpenSans',
+                  fontSize: 18,
+                ),
+              ),
+        ),
       ),
       home: MyHomePage(),
     );
@@ -54,48 +71,6 @@ class _MyHomePageState extends State<MyHomePage> {
       amount: 919.99,
       date: DateTime.now(),
     ),
-    Transaction(
-      id: '01',
-      title: 'Old Jeans',
-      amount: 49.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: '02',
-      title: 'Cursus',
-      amount: 919.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: '01',
-      title: 'Old Jeans',
-      amount: 49.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: '02',
-      title: 'Cursus',
-      amount: 919.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: '01',
-      title: 'Old Jeans',
-      amount: 49.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: '02',
-      title: 'Cursus',
-      amount: 919.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: '01',
-      title: 'Old Jeans',
-      amount: 49.99,
-      date: DateTime.now(),
-    ),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
@@ -113,6 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
       context: ctx,
+      isScrollControlled: true,
       builder: (_) {
         return NewTransaction(_addNewTransaction);
       },
@@ -125,17 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
           title: Text(
             'Expenses Manager',
-            style: TextStyle(
-              color: Colors.white,
-            ),
           ),
           actions: [
             IconButton(
-              icon: Icon(Icons.add),
+              icon: Icon(Icons.add, color: Theme.of(context).accentColor),
               onPressed: () => _startAddNewTransaction(context),
             )
           ],
-          backgroundColor: Colors.deepPurple),
+          backgroundColor: Theme.of(context).primaryColorDark),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -143,12 +116,12 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 width: double.infinity,
                 child: Card(
-                  color: Colors.deepPurple,
+                  color: Theme.of(context).primaryColor,
                   child: Center(
                     child: Text(
-                      'CHART',
+                      'MY EXPENSES LIST',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Theme.of(context).accentColor,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
@@ -162,10 +135,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        backgroundColor: Colors.deepPurple,
+        child: Icon(Icons.add, color: Theme.of(context).primaryColorDark),
+        backgroundColor: Theme.of(context).accentColor,
         onPressed: () => _startAddNewTransaction(context),
       ),
     );
