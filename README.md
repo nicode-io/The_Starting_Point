@@ -54,7 +54,7 @@ He can follow other users and chat with them in real time.
 -   [v0.0.2](#v002)
 -   [v0.0.1](#v001)
     
-    ####    0.0.2
+    ####    v0.0.2
     >   Skeleton
     
     *   SociApi
@@ -69,7 +69,7 @@ He can follow other users and chat with them in real time.
         +   First migration (Entity > Sqlite)
         +   Add seed for activities
     
-    ####    0.0.1
+    ####    v0.0.1
     >   Init Project
     
     *   Create API **SociApi**
