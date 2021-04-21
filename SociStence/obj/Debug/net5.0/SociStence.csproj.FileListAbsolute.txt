@@ -1,0 +1,15 @@
+/Users/nicode/Development/Projects/Github/SociAct/Socistence/bin/Debug/net5.0/SociStence.deps.json
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/bin/Debug/net5.0/SociStence.dll
+/Users/nicode/Development/Projects/Github/SociAct/Socistence/bin/Debug/net5.0/ref/SociStence.dll
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/bin/Debug/net5.0/SociStence.pdb
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/bin/Debug/net5.0/SociOmain.dll
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/bin/Debug/net5.0/SociOmain.pdb
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.csprojAssemblyReference.cache
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.AssemblyInfoInputs.cache
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.AssemblyInfo.cs
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.csproj.CoreCompileInputs.cache
+/Users/nicode/Development/Projects/Github/SociAct/Socistence/obj/Debug/net5.0/SociStence.csproj.CopyComplete
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.dll
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/ref/SociStence.dll
+/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/Debug/net5.0/SociStence.pdb

@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SociApplication/1.0.0": {
+        "dependencies": {
+          "SociOmain": "1.0.0",
+          "SociStence": "1.0.0"
+        },
+        "runtime": {
+          "SociApplication.dll": {}
+        }
+      },
+      "SociOmain/1.0.0": {
+        "runtime": {
+          "SociOmain.dll": {}
+        }
+      },
+      "SociStence/1.0.0": {
+        "dependencies": {
+          "SociOmain": "1.0.0"
+        },
+        "runtime": {
+          "SociStence.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SociApplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SociOmain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SociStence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
