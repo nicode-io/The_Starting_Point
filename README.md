@@ -15,6 +15,8 @@
   ·
   <a href="#technos">Technos</a>
   ·
+  <a href="#packages">Packages</a>
+  ·
   <a href="#versions">Releases</a>
   ·
   <a href="#contacts">Contacts</a>
@@ -38,12 +40,35 @@ He can follow other users and chat with them in real time.
 *   ENTITY 6
 *   MOBX 6
 
+---
+
+### Packages
+
+*   Microsoft.EntityFrameworkCore.Design
+*   Microsoft.EntityFrameworkCore.Sqlite
+*   Swashbuckle.AspNetCore (Swagger)
 
 ---
 
 ### Releases
+-   [0.0.2](#0.0.2)
 -   [0.0.1](#0.0.1)
-
+    
+    ####    0.0.2
+    >   Skeleton
+    
+    *   SociApi
+        +   Create API controller template
+        +   Create Activities controller
+        +   Remove example controller
+    *   SociOmain
+        +   Create Activity class (model)
+    *   SociStence
+        +   Create DataContext
+        +   Add Activities (Activity DbSet)
+        +   First migration (Entity > Sqlite)
+        +   Add seed for activities
+    
     ####    0.0.1
     >   Init Project
     
