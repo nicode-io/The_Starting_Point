@@ -17,7 +17,7 @@
   ·
   <a href="#packages">Packages</a>
   ·
-  <a href="#versions">Releases</a>
+  <a href="#releases">Releases</a>
   ·
   <a href="#contacts">Contacts</a>
 </p>
@@ -51,8 +51,8 @@ He can follow other users and chat with them in real time.
 ---
 
 ### Releases
--   [0.0.2](#0.0.2)
--   [0.0.1](#0.0.1)
+-   [0_0_2](#0_0_2)
+-   [0_0_1](#0_0_1)
     
     ####    0.0.2
     >   Skeleton
