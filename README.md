@@ -5,21 +5,20 @@
   <a href="https://github.com/nicode-io/Flutter_Fundamentals">
     <img src="./Images/SociAct.png" alt="Logo" width="400" height=500">
   </a>
-
+</p>                                                           
 <h2 align="center">Soci'Act</h3>
-
-  <p align="center">
-    Social Network and Activities
-    <br />
-    <br />
-    <a href="#description">Description</a>
-    ·
-    <a href="#technos">Technos</a>
-    ·
-    <a href="#versions">Releases</a>
-    ·
-    <a href="#contacts">Contacts</a>
-  </p>
+<p align="center">
+  Social Network and Activities
+  <br />
+  <br />
+  <a href="#description">Description</a>
+  ·
+  <a href="#technos">Technos</a>
+  ·
+  <a href="#versions">Releases</a>
+  ·
+  <a href="#contacts">Contacts</a>
+</p>
 
 
 ---
