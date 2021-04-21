@@ -17,8 +17,8 @@
   "libraries": {
     "SociOmain/1.0.0": {
       "type": "project",
-      "path": "../Sociomain/SociOmain.csproj",
-      "msbuildProject": "../SociOmain/SociOmain.csproj"
+      "path": "../sociomain/SociOmain.csproj",
+      "msbuildProject": "../sociomain/SociOmain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/SociStence/SociStence.csproj",
+      "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj",
       "projectName": "SociStence",
-      "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociStence/SociStence.csproj",
+      "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj",
       "packagesPath": "/Users/nicode/.nuget/packages/",
-      "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/",
+      "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/socistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nicode/.nuget/NuGet/NuGet.Config"
@@ -51,8 +51,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj": {
-              "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj"
+            "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj": {
+              "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj"
             }
           }
         }

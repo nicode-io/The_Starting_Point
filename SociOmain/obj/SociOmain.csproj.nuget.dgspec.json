@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj": {}
+    "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj": {}
   },
   "projects": {
-    "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj": {
+    "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj",
+        "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj",
         "projectName": "SociOmain",
-        "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj",
+        "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj",
         "packagesPath": "/Users/nicode/.nuget/packages/",
-        "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/obj/",
+        "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicode/.nuget/NuGet/NuGet.Config"
