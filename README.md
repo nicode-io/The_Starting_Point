@@ -3,7 +3,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/nicode-io/Flutter_Fundamentals">
-    <img src="./Images/SociAct.png" alt="Logo" width="350" height=350">
+    <img src="./Images/SociAct.png" alt="Logo" width="350" height=300">
   </a>
 </p>                                                           
 <h2 align="center">Soci'Act</h3>
