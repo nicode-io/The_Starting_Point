@@ -51,8 +51,8 @@ He can follow other users and chat with them in real time.
 ---
 
 ### Releases
--   [0_0_2](#0_0_2)
--   [0_0_1](#0_0_1)
+-   [v0.0.2](#v002)
+-   [v0.0.1](#v001)
     
     ####    0.0.2
     >   Skeleton
