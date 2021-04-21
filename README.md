@@ -74,6 +74,7 @@ He can follow other users and chat with them in real time.
   <img align="center" src="https://github.com/devicons/devicon/blob/master/icons/twitter/twitter-original.svg" alt="twitter.com/nicode_io" width="40" height="40" />
 </a>  
 <br/>
+<br/>
 [:calendar: Discover the timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02)
 
 
