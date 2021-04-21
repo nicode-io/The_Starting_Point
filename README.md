@@ -75,7 +75,7 @@ He can follow other users and chat with them in real time.
 </a>  
 <br/>
 <br/>
-:calendar: [My Developer Path](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02)
+<a href="https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02">:calendar: Description</a>
 
 
 
