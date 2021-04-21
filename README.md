@@ -16,7 +16,7 @@
     ·
     <a href="#apps">Apps</a>
     ·
-    <a href="#achievements">Apps</a>
+    <a href="#achievements">Achievements</a>
   </p>
 
 
