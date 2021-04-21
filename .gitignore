@@ -4,8 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 ## Project config, will use 3rd-party API key etc
-appsettings.json
-appsettings.Development.json
+SociApi/appsettings.Development.json
+SociApi/appsettings.json
 
 # User-specific files
 *.rsuser
