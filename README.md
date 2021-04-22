@@ -44,9 +44,14 @@ He can follow other users and chat with them in real time.
 
 ### Packages
 
-*   Microsoft.EntityFrameworkCore.Design
-*   Microsoft.EntityFrameworkCore.Sqlite
-*   Swashbuckle.AspNetCore (Swagger)
+*   Backend
+    +   Microsoft.EntityFrameworkCore.Design
+    +   Microsoft.EntityFrameworkCore.Sqlite
+    +   Swashbuckle.AspNetCore (Swagger)
+*   Frontend
+    +   axios
+    +   semantic-ui
+    +   typeScript
 
 ---
 
@@ -56,18 +61,24 @@ He can follow other users and chat with them in real time.
     
     ####    v0.0.2
     >   Skeleton
-    
-    *   SociApi
-        +   Create API controller template
-        +   Create Activities controller
-        +   Remove example controller
-    *   SociOmain
-        +   Create Activity class (model)
-    *   SociStence
-        +   Create DataContext
-        +   Add Activities (Activity DbSet)
-        +   First migration (Entity > Sqlite)
-        +   Add seed for activities
+        
+    +   Frontend
+        *   Init React frontend
+        *   Add TypeScript
+        *   First activities fetch with Axios
+        *   Start basic design with Semantic-UI
+    +   Backend
+        *   SociApi
+            +   Create API controller template
+            +   Create Activities controller
+            +   Remove example controller
+        *   SociOmain
+            +   Create Activity class (model)
+        *   SociStence
+            +   Create DataContext
+            +   Add Activities (Activity DbSet)
+            +   First migration (Entity > Sqlite)
+            +   Add seed for activities
     
     ####    v0.0.1
     >   Init Project
