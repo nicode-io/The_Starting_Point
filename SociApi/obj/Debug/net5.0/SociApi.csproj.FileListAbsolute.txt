@@ -58,5 +58,3 @@
 /Users/nicode/Development/Projects/Github/SociAct/SociApi/bin/Debug/net5.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/nicode/Development/Projects/Github/SociAct/SociApi/bin/Debug/net5.0/Humanizer.dll
 /Users/nicode/Development/Projects/Github/SociAct/SociApi/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
-/Users/nicode/Development/Projects/Github/SociAct/SociApi/bin/Debug/net5.0/appsettings.Development.json
-/Users/nicode/Development/Projects/Github/SociAct/SociApi/bin/Debug/net5.0/appsettings.json
