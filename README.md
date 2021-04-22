@@ -6,7 +6,7 @@
     <img src="./Images/SociAct.png" alt="Logo" width="350" height=300">
   </a>
 </p>                                                           
-<h2 align="center">Soci'Act</h3>
+<h2 align="center">Soci'Act</h2>
 <p align="center">
   Social Network and Activities
   <br />
@@ -45,6 +45,8 @@ He can follow other users and chat with them in real time.
 ### Packages
 
 *   Backend
+    +   AutoMapper.Extensions.Microsoft.DependencyInjection
+    +   MediatR.Extensions.Microsoft.DependencyInjection
     +   Microsoft.EntityFrameworkCore.Design
     +   Microsoft.EntityFrameworkCore.Sqlite
     +   Swashbuckle.AspNetCore (Swagger)
@@ -56,29 +58,54 @@ He can follow other users and chat with them in real time.
 ---
 
 ### Releases
+
+-   [v0.0.3](#v003)
 -   [v0.0.2](#v002)
 -   [v0.0.1](#v001)
     
+    ####    v0.0.3
+    >   CQRS & Mediator pattern
+    
+    *   Backend
+        +   SociApi
+            *   Implement MediatR in BaseApiController
+            *   Migrate services into ApplicationServiceExtensions
+            *   Adds routes to ActivitiesController
+                +   CreateActivity
+                +   DeleteActivity
+                +   EditActivity
+        +   SociApplication
+            *   Add Create (activity)
+            *   Add Delete (activity)
+            *   Add Edit (activity)
+            *   Implement AutoMapper
+
     ####    v0.0.2
     >   Skeleton
         
-    +   Frontend
-        *   Init React frontend
-        *   Add TypeScript
-        *   First activities fetch with Axios
-        *   Start basic design with Semantic-UI
-    +   Backend
-        *   SociApi
-            +   Create API controller template
-            +   Create Activities controller
-            +   Remove example controller
-        *   SociOmain
-            +   Create Activity class (model)
-        *   SociStence
-            +   Create DataContext
-            +   Add Activities (Activity DbSet)
-            +   First migration (Entity > Sqlite)
-            +   Add seed for activities
+    *   Frontend
+        +   Init React frontend
+        +   Add TypeScript
+        +   First activities fetch with Axios
+        +   Start basic design with Semantic-UI
+    *   Backend
+        +   SociApi
+            *   Create API controller template
+            *   Create Activities controller
+            *   Add routes to ActivitiesController
+                +   GetActivity
+                +   GetActivities
+            *   Remove example controller
+        +   SociApplication
+            *   Add Detail (of activity)
+            *   Add List (of activities)
+        +   SociOmain
+            *   Create Activity class (model)
+        +   SociStence
+            *   Create DataContext
+            *   Add Activities (Activity DbSet)
+            *   First migration (Entity to Sqlite)
+            *   Add seed for activities
     
     ####    v0.0.1
     >   Init Project
