@@ -1,4 +1,3 @@
-[![wakatime](https://wakatime.com/badge/github/nicode-io/Flutter_Advanced.svg)](https://wakatime.com/badge/github/nicode-io/Flutter_Advanced)
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
