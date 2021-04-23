@@ -1,9 +1,8 @@
 import React from 'react';
-// @ts-ignore
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
-import './index.css';
-import App from './App';
+import './app/layout/style.css';
+import App from './app/layout/App';
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -11,4 +10,3 @@ ReactDOM.render(
   // </React.StrictMode>,
   document.getElementById('root')
 );
-

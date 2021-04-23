@@ -54,14 +54,29 @@ He can follow other users and chat with them in real time.
     +   axios
     +   semantic-ui
     +   typeScript
+    +   uuid
 
 ---
 
 ### Releases
 
+-   [v0.0.4](#v004)
 -   [v0.0.3](#v003)
 -   [v0.0.2](#v002)
 -   [v0.0.1](#v001)
+    
+    ####    v0.0.4
+    > Frontend connection
+    
+    *   Frontend
+        +   TypeScript
+            *   Implement interfaces
+            *   Destructure React props
+        +   CRUD (front only)
+            *   Add activity
+            *   Edit activity
+            *   Delete activity
+            *   View activity(ies)
     
     ####    v0.0.3
     >   CQRS & Mediator pattern
