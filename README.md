@@ -1,4 +1,4 @@
-
+[![wakatime](https://wakatime.com/badge/github/nicode-io/Fabulab.svg)](https://wakatime.com/badge/github/nicode-io/Fabulab)
 # (◉ ͜ʖ◉))ﾉ彡 FABLAB PROJECT ✧٩(•́⌄•́๑)
 >   Customer project realised during our BeCode's bootcamp
 
