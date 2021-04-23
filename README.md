@@ -1,4 +1,4 @@
-<img src="https://wakatime.com/badge/github/nicode-io/MERN-Eshop.svg" alt="wakatime>
+<a><img src="https://wakatime.com/badge/github/nicode-io/MERN-Eshop.svg" alt="wakatime></a>
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
