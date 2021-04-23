@@ -9,7 +9,16 @@ namespace GestBanque.Domain
         private double _solde;
         public string Numero { get; set; }
         public Personne Titulaire { get; set; }
-        public double Solde { get => _solde; }
+        public double Solde
+        {
+            get => _solde;
+            private set => _solde = value;
+        }
+
+        public Compte(string numero)
+        {
+            Numero = numero;
+        }
 
         public Compte(string numero, Personne titulaire, double solde = 0)
         {

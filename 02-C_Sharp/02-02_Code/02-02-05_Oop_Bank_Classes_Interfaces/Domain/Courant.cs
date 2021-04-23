@@ -10,11 +10,18 @@ namespace GestBanque.Domain
         public double LigneDeCredit 
         { 
             get => _ligneDeCredit;
-            set
+            private set
             {
                 if (value < 0) { _ligneDeCredit = 0; }
                 else { _ligneDeCredit = value; }
             }
+        }
+
+        public Courant(string numero, Personne titulaire, double ligneDeCredit) : base(numero, titulaire, ligneDeCredit)
+        {
+            Numero = numero;
+            Titulaire = titulaire;
+            LigneDeCredit = ligneDeCredit;
         }
 
         public Courant(string numero, Personne titulaire, double solde = 0, double ligneDeCredit=0)
