@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/github/nicode-io/ASP.NET_BI_Bootcamp.svg)](https://wakatime.com/badge/github/nicode-io/ASP.NET_BI_Bootcamp)
+[![wakatime](https://wakatime.com/badge/github/nicode-io/ASP.Net-5.0-Crash-Course.svg)](https://wakatime.com/badge/github/nicode-io/ASP.Net-5.0-Crash-Course)
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
