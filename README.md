@@ -1,4 +1,4 @@
-
+[![wakatime](https://wakatime.com/badge/github/nicode-io/SociAct.svg)](https://wakatime.com/badge/github/nicode-io/SociAct)
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
@@ -77,6 +77,9 @@ He can follow other users and chat with them in real time.
             *   Edit activity
             *   Delete activity
             *   View activity(ies)
+        +   React
+            *   Basic forms
+            *   Semantic-ui-react components
     
     ####    v0.0.3
     >   CQRS & Mediator pattern
