@@ -1,4 +1,4 @@
-
+[![wakatime](https://wakatime.com/badge/github/nicode-io/SociAct.svg)](https://wakatime.com/badge/github/nicode-io/SociAct)
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
@@ -31,6 +31,11 @@ This project aims to develop a social networking and activity management applica
 The user will be able to create a personalised profile, create or register for events.
 He can follow other users and chat with them in real time.
 
+Implemented : <br/>
+User can view a list of created activities that are stored in the database.
+User can view details, create, edit and delete each activity. 
+User can customize activity picture according to some general themes
+
 ---
 
 ### Technos
@@ -52,7 +57,11 @@ He can follow other users and chat with them in real time.
     +   Swashbuckle.AspNetCore (Swagger)
 *   Frontend
     +   axios
+    +   mobx
+    +   mobx-react-lite
     +   semantic-ui
+    +   semantic-ui-css
+    +   semantic-ui-react
     +   typeScript
     +   uuid
 
@@ -60,13 +69,39 @@ He can follow other users and chat with them in real time.
 
 ### Releases
 
+-   [v0.0.5](#v005)
 -   [v0.0.4](#v004)
 -   [v0.0.3](#v003)
 -   [v0.0.2](#v002)
 -   [v0.0.1](#v001)
+
+    ####    v0.0.5
+    >   Axios - MobX
     
+    *   Frontend
+        +   Axios
+            *   Configure Axios and create agent
+            *   Connect all requests to SociApi
+            *   Use generic type 
+            *   Create an Axios interceptor (fake delay)
+        +   MobX - State manager
+            *   Create store.ts
+            *   Create activityStore.ts
+            *   Add all actions to activityStore.ts
+                +   CRUD activities operations
+                +   Loading state
+                +   Edit mode state
+            *   Make components observables with observers
+        +   Refactoring
+            *   Move logic from components to stores
+            *   Add async / await syntax
+            *   Add map syntax
+            *   Optimize destructuring
+            *   Optimize imports
+            *   Clean all console warnings
+
     ####    v0.0.4
-    > Frontend connection
+    >   Frontend connection
     
     *   Frontend
         +   TypeScript
@@ -77,6 +112,9 @@ He can follow other users and chat with them in real time.
             *   Edit activity
             *   Delete activity
             *   View activity(ies)
+        +   React
+            *   Basic forms
+            *   Semantic-ui-react components
     
     ####    v0.0.3
     >   CQRS & Mediator pattern
@@ -140,8 +178,6 @@ He can follow other users and chat with them in real time.
 
 ### Contacts
 
-
-
 <a href="https://linkedin.com/in/nicolas-denoel">
   <img align="center" src="https://github.com/devicons/devicon/blob/master/icons/linkedin/linkedin-original.svg" alt="linkedin.com/in/nicolas-denoel" width="40" height="40" />
 </a>
@@ -154,6 +190,3 @@ He can follow other users and chat with them in real time.
 <br/>
 <br/>
 <a href="https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02">:calendar: My Developer Timeline</a>
-
-
-
