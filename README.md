@@ -26,6 +26,8 @@
     .
     <a href="#business-intelligence">Business Intelligence</a>
     .
+    <a href="#projects">Projects</a>
+    .
     <a href="#timeline">Timeline</a>
     .
 </p>
@@ -61,6 +63,11 @@
 -   Datawarehousing with SSIS, SSRS and SSAS
 -   Power BI
 -   Qlick Sense and Qlick View
+
+### Projects
+>   Concrete implementation project
+
+-   Sharoes Game : a small rpg using only console. This projects aims to fix OOP structures in C#. 
 
 ---
 
@@ -121,7 +128,6 @@
         +   [03. Enums](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-03_Enums)
         +   [04. OOP Part One](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-04_Oop_01)
         +   [05. OOP Bank exercise](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-05_Oop_Bank_Classes_Interfaces)
-        +   [06. Sharoes - Console Game Recap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-06-Sharoes_game)
 	*   [03. Visual & Graphics](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-03_Visuals_Graphics)
         +   [01. Polymorphism / Inheritance](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-03_Visuals_Graphics/02-03-01_Polymorphism-Inheritance.png)
         +   [02. 3-Tier Architecture](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-03_Visuals_Graphics/02-03-02_3-Tier_Architecture.png)
@@ -139,7 +145,12 @@
 ##  Business Intelligence
 
 
+---
 
+##  Projects
+
+5.  [05. Projects](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/05-Projects)
+    *   [01. Sharoes Game](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/05-Projects/05-01-Sharoes_game)
 
 ---
 
