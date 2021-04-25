@@ -20,7 +20,7 @@ export default class ActivitySore {
         makeAutoObservable(this)
     }
 
-    
+
     // Create MobX actions
 
     get activitiesByDate() {
