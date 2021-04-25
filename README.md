@@ -25,7 +25,7 @@
 
 ---
 
-### Description
+## Description
 
 This project aims to develop a social networking and activity management application.
 The user will be able to create a personalised profile, create or register for events.
@@ -38,7 +38,7 @@ User can customize activity picture according to some general themes
 
 ---
 
-### Technos
+## Technos
 
 *   .NET 5.0
 *   REACT 17
@@ -47,15 +47,15 @@ User can customize activity picture according to some general themes
 
 ---
 
-### Packages
+## Packages
 
-*   Backend
+*   ### Backend
     +   AutoMapper.Extensions.Microsoft.DependencyInjection
     +   MediatR.Extensions.Microsoft.DependencyInjection
     +   Microsoft.EntityFrameworkCore.Design
     +   Microsoft.EntityFrameworkCore.Sqlite
     +   Swashbuckle.AspNetCore (Swagger)
-*   Frontend
+*   ### Frontend
     +   axios
     +   mobx
     +   mobx-react-lite
@@ -67,15 +67,15 @@ User can customize activity picture according to some general themes
 
 ---
 
-### Releases
+## Releases
 
--   [v0.0.5](#v005)
--   [v0.0.4](#v004)
--   [v0.0.3](#v003)
--   [v0.0.2](#v002)
--   [v0.0.1](#v001)
+-   ### [v0.0.5](#v005)
+-   ### [v0.0.4](#v004)
+-   ### [v0.0.3](#v003)
+-   ### [v0.0.2](#v002)
+-   ### [v0.0.1](#v001)
 
-    ####    v0.0.5
+    ###    v0.0.5
     >   Axios - MobX
     
     *   Frontend
@@ -100,7 +100,7 @@ User can customize activity picture according to some general themes
             *   Optimize imports
             *   Clean all console warnings
 
-    ####    v0.0.4
+    ###    v0.0.4
     >   Frontend connection
     
     *   Frontend
@@ -116,7 +116,7 @@ User can customize activity picture according to some general themes
             *   Basic forms
             *   Semantic-ui-react components
     
-    ####    v0.0.3
+    ###    v0.0.3
     >   CQRS & Mediator pattern
     
     *   Backend
@@ -160,7 +160,7 @@ User can customize activity picture according to some general themes
             *   First migration (Entity to Sqlite)
             *   Add seed for activities
     
-    ####    v0.0.1
+    ###    v0.0.1
     >   Init Project
     
     *   Create API **SociApi**
