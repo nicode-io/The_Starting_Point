@@ -12,9 +12,9 @@ namespace Sharoes.Environment
 			while (hero.Hp > 0 && monster.Hp > 0)
 			{
 				hero.Hit(monster);
-				Thread.Sleep(250);
+				Thread.Sleep(1000);
 				monster.Hit(hero);
-				Thread.Sleep(250);
+				Thread.Sleep(1000);
 			}
 
 			if (hero.Hp <= 0)
