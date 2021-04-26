@@ -1,5 +1,5 @@
 #   (◉ ͜ʖ◉))ﾉ彡 BEGINNER'S GUIDE 
-#   TO (VIRTUAL) PRIVATE SERVER ✧٩(•́⌄•́๑) 
+#   TO VPS (✧٩(•́⌄•́๑) 
 >   Are your starting using a (virtual) private server ?  
 >   Let's start together to avoid the main pitfalls ! 
 
