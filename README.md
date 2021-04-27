@@ -44,5 +44,5 @@ docker container run (old: docker run) : run a container
 ### Timeline
 > Current steps and history of my reconversion
 
-![Timeline](images/Timeline-21-04-05.png "Reconversion Timeline")
+![Timeline](images/timeline.png "Reconversion Timeline")
 [:calendar: Discover the timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02)
