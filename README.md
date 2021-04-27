@@ -8,10 +8,8 @@
 <h3 align="center">DOCKER CURSUS</h3>
 
 <p align="center">
-    A full-time 6monts bootcamp to learn .Net 5.0 / Entity frameworks.
+    Discover the super powers of containers
     </br>
-    Datawarehouse will be built with SSIS, SSRS and SSAS
-    See <a href="#bootcamp-program">summary</a> for more information
 </p>
 <p align="center">
     <br />
