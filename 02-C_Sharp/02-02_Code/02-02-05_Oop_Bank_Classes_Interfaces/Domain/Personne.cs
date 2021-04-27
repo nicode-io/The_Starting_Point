@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,7 +8,29 @@ namespace GestBanque.Domain
     {
         public string Nom { get; private set; }
         public string Prenom { get; private set; }
-        public DateTime DateNaiss { get; private set; }
+        private DateTime DateNaiss()
+        {
+            Console.WriteLine("Quelle est sa date de naissance ? (au format jj/mm/aaaa)");
+            string temp = Console.ReadLine();
+            return ExtraireDate(temp);
+        }
+        private DateTime ExtraireDate(string texte)
+        {
+            string j, m, a;
+            int posJM, posMA;
+            int jj, mm, aaaa;
+            posJM = texte.IndexOf('/');
+            jj = 0 + posJM;
+            posMA = texte.LastIndexOf('/');
+            mm = posMA-1 - posJM;
+            j = texte.Substring(0, jj);
+            m = texte.Substring(posJM+1, mm);
+            a = texte.Substring(posMA+1);
+            int.TryParse(j, out jj);
+            int.TryParse(m, out mm);
+            int.TryParse(a, out aaaa);
+            return new DateTime(aaaa, mm, jj);
+        }
         public int Age
         {
             get
