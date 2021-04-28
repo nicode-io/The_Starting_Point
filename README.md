@@ -160,21 +160,21 @@ Being regularly confronted with questions related to the deployment of my variou
 ## Tips
 
 +   ### Global
-    *   #### Get into local docker VM (windows-MacOS)
+    *   ####    Get into local docker VM (windows-MacOS)
         +   As Docker runs into a mini VM on Windows and Mac you won't see container's processes running with
           command ```ps aux```
         +   To see running processes:
             *   Run ```docker run -it --rm --privileged --pid=host justincormack/nsenter1```
             *   Type ````ps aux```` to look for all processes
             *   Type ```ps aux | grep processName``` to look for a specific process name
-    *   #### What is Alpine
+    *   ####    What is Alpine
         +   Alpine is a minimalist Linux distribution, ideal for containers so.
         +   Image size of Alpine is only more than 5Mb (where Ubuntu for example is more than 70Mb)
         +   Alpine don't have bash installed, but you can use ```sh``` it's the terminal of this distribution
         +   **APK** is the package manager for Alpine
             *   Quit with ```exit```
 +   ### Image
-    *   #### What is (not) an image
+    *   ####    What is (not) an image
         +   App binaries and dependencies
         +   Metadata about the image and running information
         +   It's not, like a virtual machine, a complete OS.
@@ -183,12 +183,21 @@ Being regularly confronted with questions related to the deployment of my variou
         +   Docker never duplicate image if an exact match is existing on host
         +   Each layer of an image as its own SHA and is only stored once on host (space-saving)
         +   Image is read-only and can be accessed multiple times by multiple containers
-    *   #### Building, Dockerfile
+    *   ####    Building Dockerfile
         +   When Docker build an image, it attributes a SHA to each layer, later if this layer hasn't changed Docker will
           reuse it. That's what's make Docker so fast and powerful
-    
+        +   When you create a Dockerfile it's important to put the code that change the most in the bottom of your file, this way you reduce the amount of layers that need to be updated and so you reduce time and storage space needed for building your image
+    *   ####    Dockerfile KEYWORDS
+        +   FROM : Define source image, usually an official image as a base (Ubuntu, Nginx, etc...)
+        +   ENV : Define environment variables
+        +   WORKDIR : Go to a specific path (for example in an Ubuntu folder /usr/share/ )
+        +   RUN : All the tasks you need to run to launch your container (ex: apt update && apt upgrade)
+        +   COPY : Copy files from local directory to your image
+        +   EXPOSE : Open ports inside the virtual machine of Docker (not the host who runs the image)
+        +   CMD : The command that you'd use on your local machine to launch your project (ex: node app.js)
+        
 +   ### Container
-    *   #### Operations inside a container
+    *   ####    Operations inside a container
         +   Once you used ```docker run -it --name proxy nginx bash``` you have access to terminal, you can then make
           operations like in a classic terminal like ```ls -al``` or ```apt install``` on a Linux-based container.
         +   It's important to understand that operations in your container persist inside the container but will never
@@ -198,12 +207,12 @@ Being regularly confronted with questions related to the deployment of my variou
 
 
 *   ### Network
-    +   #### Default virtual networks
+    +   ####    Default virtual networks
         +   **bridge** or **docker0** is the default network that bridges NAT firewall to Host
         +   **host** network links container directly to host without using Docker VM, it passed out security of
           containerisation but can sometimes improve performance, be aware while using it
         +   **none** is not link virtual network
-    +   #### Networks good practise
+    +   ####    Networks good practise
         +   Each virtual network routes through NAT firewall on host IP
         +   All containers on a virtual network can talk to each other without -p
         +   Best practice is to create a new virtual network for each app
@@ -211,7 +220,7 @@ Being regularly confronted with questions related to the deployment of my variou
         +   Inter-communication never leaves host
         +   All externally exposed ports closed by default
         +   You must expose via -p, which is better default security
-    +   #### Docker DNS
+    +   ####    Docker DNS
         +   Use containerName for communication within the same network
         +   Don't rely on IP's because they could change at any moment
         +   Use custom network, default network like bridge don't have the containerName DNS logic
