@@ -21,6 +21,8 @@
     <a href="#docker-compose">Docker Compose</a>
     ·
     <a href="#timeline">Timeline</a>
+    ·
+    <a href="#sources">Sources</a>
 </p>
 
 ---
@@ -298,3 +300,9 @@ Docker Compose give you more power to join multiple containers, networks, ... sk
 </a>
 
 ---
+
+##  Sources
+
+-   [Bret Fisher aka DockMaster](https://www.bretfisher.com/)
+-   [Docker Documentation](https://docs.docker.com/docker-hub/)
+-   [DockerHub](https://hub.docker.com/)
