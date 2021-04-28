@@ -20,8 +20,6 @@
     ·
     <a href="#tips">Tips</a>
     ·
-    <a href="#vocabulary">Vocabulary</a>
-    ·
     <a href="#timeline">Timeline</a>
 </p>
 
