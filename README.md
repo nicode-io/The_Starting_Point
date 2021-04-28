@@ -220,6 +220,12 @@ Being regularly confronted with questions related to the deployment of my variou
 
 ---
 
+<a href="https://linkedin.com/in/nicolas-denoel">
+  <img align="center" src="https://github.com/devicons/devicon/blob/master/icons/linkedin/linkedin-original.svg" alt="linkedin.com/in/nicolas-denoel" width="40" height="40" />
+</a>  <a href="https://twitter.com/nicode_io">
+  <img align="center" src="https://github.com/devicons/devicon/blob/master/icons/twitter/twitter-original.svg" alt="twitter.com/inicode_io" width="40" height="40" />
+</a>  
+
 ## Timeline
 
 > Current steps and history of my reconversion
@@ -228,4 +234,4 @@ Being regularly confronted with questions related to the deployment of my variou
     <img src="./images/timeline.png" alt="Timeline">
 </a>
 
-[:calendar: Discover the timeline of my adventure to become a developer. Want to write your company's name on it ? Let's meet !](https://timelines.gitkraken.com/timeline/2e12cc334eb0406b84bf7a6339e666c4?range=2020-05-26_2021-08-02)
+---
