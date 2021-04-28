@@ -16,9 +16,11 @@
     <br />
     <a href="#description">Description</a>
     ·
-    <a href="#cheatsheet">Main Commands</a>
+    <a href="#dockert">Docker</a>
     ·
-    <a href="#tips">Tips</a>
+    <a href="#docker-tips">Docker Tips</a>
+    ·
+    <a href="#docker-compose">Docker Compose</a>
     ·
     <a href="#timeline">Timeline</a>
 </p>
@@ -40,43 +42,49 @@ Being regularly confronted with questions related to the deployment of my variou
 
 ---
 
-## Cheatsheet
+# DOCKER
+-   [Cheatsheet](#cheatsheet)
+    -   [Global](#global)
+    -   [Images](#images)
+        -   [Build Delete](#build-delete)
+        -   [List Logs Process](#list-logs-process)
+        -   [Tags Publish](#tags-publish)
 
-### Global
+    ##  Cheatsheet
 
-* ```docker version``` Check version and docker installation
-* ```docker info``` Display config values of engine
-* ```docker login``` Add login credentials to log on Docker Hub
-    + ```cat .docker/config.json``` To see your credentials
-* ```docker logout``` Remove login credentials to log off Docker Hub
-    + Log off every time if you don't trust the computer you're working on
-* ```docker help``` Get all commands you can use
-* ```docker system prune``` Purge Docker of all dangling images, containers, volumes and networks
-    + -a => Also removes unused files (not just dangling, so not associated with a container)
+    ### Global
+    * ```docker version``` Check version and docker installation
+    * ```docker info``` Display config values of engine
+    * ```docker login``` Add login credentials to log on Docker Hub
+        + ```cat .docker/config.json``` To see your credentials
+    * ```docker logout``` Remove login credentials to log off Docker Hub
+        + Log off every time if you don't trust the computer you're working on
+    * ```docker help``` Get all commands you can use
+    * ```docker system prune``` Purge Docker of all dangling images, containers, volumes and networks
+        + -a => Also removes unused files (not just dangling, so not associated with a container)
 
-### Images
+    ### Images
+    > Images are made up of file system changes and metadata
 
-> Images are made up of file system changes and metadata
-
-+   #### Build, Delete
-    * ```docker image build -t imageName .``` Build an image from Dockerfile in current folder
-        + -t => Define a name, and eventually a tage for built image
-        + . => In current folder, otherwise use a path to Dokcerfile
-    * ```docker rmi -f containerId``` Force deleting image according to its id
-        + Also works with first numbers of image id and multiple id
-+   #### List, Logs, Process
-    * ```docker image ls``` See all images on your system
-    * ```docker image inspect imageName``` Display image metadata
-    * ```docker image history imageName``` Show layers update in an image
-+   #### Tags, Publish
-    * ```docker image tag originalImageName accountName/newImageName``` Create a new image and tag from an existing
-      image
-        + Here tag is not specified and so will be **latest** by default
-    * ```docker image tag accoutnName/imageName accountName/imageName:customTag``` Add a custom tag to an existing image
-    * ```docker image push accountName/imageName``` Push an image to DockerHub repository
-    * ```docker image push accountName/imageName:customTag``` Push an image to DockerHub with custom tag
-        + As usual with Docker, if layers are similar it won't create a new image but associate the existing one with
-          the new tag
+    +   #### Build Delete
+        * ```docker image build -t imageName .``` Build an image from Dockerfile in current folder
+            + -t => Define a name, and eventually a tage for built image
+            + . => In current folder, otherwise use a path to Dokcerfile
+        * ```docker rmi -f containerId``` Force deleting image according to its id
+            + Also works with first numbers of image id and multiple id
+    +   #### List Logs Process
+        * ```docker image ls``` See all images on your system
+        * ```docker image inspect imageName``` Display image metadata
+        * ```docker image history imageName``` Show layers update in an image
+    +   #### Tags Publish
+        * ```docker image tag originalImageName accountName/newImageName``` Create a new image and tag from an existing
+          image
+            + Here tag is not specified and so will be **latest** by default
+        * ```docker image tag accoutnName/imageName accountName/imageName:customTag``` Add a custom tag to an existing image
+        * ```docker image push accountName/imageName``` Push an image to DockerHub repository
+        * ```docker image push accountName/imageName:customTag``` Push an image to DockerHub with custom tag
+            + As usual with Docker, if layers are similar it won't create a new image but associate the existing one with
+              the new tag
 
 ### Container
 
@@ -129,7 +137,7 @@ Being regularly confronted with questions related to the deployment of my variou
 
 ### Network
 
-*   #### Get network information
+*   ####    Get network information
     + ```docker container port containerName``` See ports used in container
     + ```docker network inspect networkName``` Display info about virtual network
         + --format '{{ .NetworkSettings.IPAddress }}' Allows you to get a clean result of your search while using **
@@ -152,6 +160,19 @@ Being regularly confronted with questions related to the deployment of my variou
       custom network and alias
         + --net => specify virtual network name
         + --net-alias => specify an alias in the network-scope for the container
+
+*   Persistent Data
+    +   ### Volume
+        *   ```docker volume ls``` List all volumes
+        *   ```docker volume inspect volumeId``` Display volume metadata and system path
+            +   You can only browse volume in Linux, not directly on Windows or Mac, see tips.
+        *   ```docker container run -d --name myCustomName -v volumeName:/dir/to/volume imageName``` Create a container with a named volume, you can then check volume more easily, for example with ```docker volume ls``` 
+        *   ```docker volume rm volumeName``` Remove volume, works only if volume is not linked to a container
+        *   ```docker volume prune``` Delete all volumes not used by at least one container
+    +   ### Bind mounting
+        *   Mac/Linux: ```docker container run -v /path/on/host:path/in/container``` Create bind mounting
+            +   To avoid typing your full host path you can use ```-v $(pwd):/container/path``` that point to your active terminal directory
+            +   For Windows: ```docker container run -v //driveLetter/path/on/host:path/in/container```
 
 <br/>
 
@@ -219,12 +240,27 @@ Being regularly confronted with questions related to the deployment of my variou
         +   Create your apps so frontend / backend sit on same Docker network
         +   Inter-communication never leaves host
         +   All externally exposed ports closed by default
-        +   You must expose via -p, which is better default security
+        +   You must expose ports via ```-p hostPort:containerPort```, which is better default security
     +   ####    Docker DNS
         +   Use containerName for communication within the same network
         +   Don't rely on IP's because they could change at any moment
         +   Use custom network, default network like bridge don't have the containerName DNS logic
 
++   ### Persistent Data
+    *   #### Volumes
+        +   Good Practise: Create named volume ```-v name:path/to/volume``` to make them persist for each container created from your image, to make directory name more friendly and to make it easier to identify through inspect or ls commands
+        +   Volumes are a solution to include persistent data without including them directly into your container, which is by definition immutable and not persistent
+        +   Volume is not deleted when the container that generate it is deleted or stopped
+        +   You can browse the volume through Linux file explorer 
+        +   You can't browse volumes into Windows or Mac file explorer cause Docker runs behind the scene in a mini virtual machine. You have to use mounted volume to go around this limitation
+    *   #### Bind Mounting
+        +   Bind mounting maps a host file/directory to a container file/directory
+        +   Mapping is virtual, files are just in one location
+        +   Files are not deleted if container is
+        +   You can't use mapping in Dockerfile, just with ```docker container run``` command
+        +   If files located in bind mounting is deleted into the container it's also deleted on host 
+    
+    
 <br/>
 
 ---
