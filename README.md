@@ -305,4 +305,5 @@ Docker Compose give you more power to join multiple containers, networks, ... sk
 
 -   [Bret Fisher aka DockMaster](https://www.bretfisher.com/)
 -   [Docker Documentation](https://docs.docker.com/docker-hub/)
+-   [Docker Compose Documentation](https://docs.docker.com/compose/)
 -   [DockerHub](https://hub.docker.com/)
