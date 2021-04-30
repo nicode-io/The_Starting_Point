@@ -279,9 +279,19 @@ Docker Compose give you more power to join multiple containers, networks, ... sk
 
 # DOCKER COMPOSE
 -   [Cheatsheet](#cheatsheet)
-    -   [](#)
-        -   [](#)
-
+    -   [Global](#global)
+-   [Tips](#tips)
+    -   [Global](#global)
+    
+    ##  CheatSheet
+    *   ### Global
+        +   ```docker-compose up``` Launch all parts: containers, volumes, networks
+        +   ```docker-compose down``` Stop and delete all parts: containers, volumes, networks
+    *   +   ```docker-compose build``` Build from docker-compose.yml or force build if images contained in your docker-compose file already exist locally 
+    ##  Tips
+    *   ### Global
+        +   Docker compose is a test/local development tool, not really fit for production
+        
 
 ---
 
