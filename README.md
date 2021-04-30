@@ -286,11 +286,15 @@ Docker Compose give you more power to join multiple containers, networks, ... sk
     ##  CheatSheet
     *   ### Global
         +   ```docker-compose up``` Launch all parts: containers, volumes, networks
+                -d => detached
         +   ```docker-compose down``` Stop and delete all parts: containers, volumes, networks
+            *   --rmi => Remove images included in your docker-compose.yml
+                +   you can add **all** or **local** to this option command
     *   +   ```docker-compose build``` Build from docker-compose.yml or force build if images contained in your docker-compose file already exist locally 
     ##  Tips
     *   ### Global
         +   Docker compose is a test/local development tool, not really fit for production
+        +   Docker compose add, by default, directory to file name to avoid conflicts
         
 
 ---
