@@ -82,7 +82,13 @@
         +   [Declarative SQL - Mindmap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-05_Declarative%20SQL%20-%20Mindmap.pdf)
         +   [Execution Order of SELECT](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-06_Execution%20order%20of%20a%20SELECT.pdf)
         +   [Data Manipulation Language (DML)](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-07_Data%20Manipulation%20Language%20(DML).pdf)
-        +   [Procedural SQL Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-08_T-SQL_Procedural.pdf)
+        +   [Procedural SQL MindMap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-08_Procedural_SQL_Mindmap.png)
+        +   [Procedural SQL Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-09_Procedural_T-SQL_Therory.pdf)
+        +   [Procedural SQL Mindmap Recap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-10_Procedural_SQL_Mindmap_Recap.png)
+        +   [Procedural SQL Mindmap Functions Procedures](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-11_Procedural_SQL_Mindmap_Functions_Procedures.png)
+        +   [Procedural SQL CheatSheet](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-12_Declarative_SQL_CheatSheet.pdf)
+        +   [Procedural SQL Full Mindmap](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-13_SQL_Full_Mindmap.png)
+        +   [Procedural SQL Full Mindmap Functions Procedures](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-01_Theory/01-01-14_Procedure_Function_Mindmap.png)
     *   [Exercises](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/01-Database/01-02_Exercices)
         +   [Exercice 1 - Library](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-01_Library.pdf)
         +   [Exercice 2 - Cooking Recipe](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-02_Cooking_recipe.pdf)
@@ -104,6 +110,8 @@
         +   [Procedural Module 3 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-18_Procedural_Module_3_Solutions.sql)
         +   [Procedural Module 4 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-19_Procedural_Module_4_Statement.pdf)
         +   [Procedural Module 4 - Exercises' Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-20_Procedural_Module_4_Solutions.sql)
+        +   [Procedural Module 5 - Exercises' Statement](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-21_Procedural_Module_5_Statement.pdf)
+        +   [Procedural Module 5 - Exercises' Solutions - Part 1](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/01-Database/01-02_Exercises/01-02-22_Procedural_Module_5_Solutions_part_one.sql)
     
 ---
 
