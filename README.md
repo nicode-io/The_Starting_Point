@@ -26,8 +26,6 @@
     .
     <a href="#business-intelligence">Business Intelligence</a>
     .
-    <a href="#projects">Projects</a>
-    .
     <a href="#timeline">Timeline</a>
     .
 </p>
@@ -63,11 +61,6 @@
 -   Datawarehousing with SSIS, SSRS and SSAS
 -   Power BI
 -   Qlick Sense and Qlick View
-
-### Projects
->   Concrete implementation project
-
--   Sharoes Game : a small rpg using only console. This projects aims to fix OOP structures in C#. 
 
 ---
 
@@ -130,6 +123,7 @@
         +   [09. Intro OOP - Abstraction](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-09_Intro_OOP-Abstraction.pdf)
         +   [10. Intro OOP - Interface](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-10_Intro_OOP-Interface.pdf)
         +   [11. Intro OOP - Design Pattern](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-11_Intro_OOP-Design_pattern.pdf)
+        +   [12. Polymporphism Schema](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/02-C_Sharp/02-01_Theory/02-01-12-Polymorphism_Schema.png)
     *   [02. Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code)
         +   [01. Basic Syntax](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-01_Basic_Syntax_Algo/02-02-01_Basic_Syntax_Algo)
         +   [02. Structures](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-02_Code/02-02-02_Structures/02-02-02_Structures)
@@ -152,13 +146,9 @@
 
 ##  Business Intelligence
 
-
----
-
-##  Projects
-
-5.  [05. Projects](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/05-Projects)
-    *   [01. Sharoes Game](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/05-Projects/05-01-Sharoes_game)
+4.  [04. BI](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/04-Business_Intelligence)
+    *   [01. Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/02-C_Sharp/02-03_Visuals_Graphics)
+        +   [01. BI Schema](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/04-Business_Intelligence/04-01-Theory/04-01-01-BI_Schema.png)
 
 ---
 
