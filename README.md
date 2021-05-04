@@ -8,7 +8,7 @@
 <h3 align="center">MATERIAL UI CURSUS</h3>
 
 <p align="center">
-    Beautiful UI in React 
+    Create beautiful UI in React 
     </br>
 </p>
 <p align="center">
@@ -16,9 +16,13 @@
     <br />
     <a href="#description">Description</a>
     ·
-    <a href="#basics">Basics</a>
+    <a href="#packages">Packages</a>
     ·
     <a href="#components">Components</a>
+    ·
+    <a href="#concepts">Concepts</a>
+    ·
+    <a href="#tips">Tips</a>
     ·
     <a href="#timeline">Timeline</a>
 </p>
@@ -40,13 +44,52 @@ Learn more about Material  UI library for React. It allows you to define beautif
 
 ---
 
-## Basics
+## Packages
 
+@fontsource/roboto
+@material-ui/core
+@material-ui/icons
+@material-ui/style
+react
+react-dom
+react-router
+react-router-dom
+react-scripts
 
 ---
 
 ##  Components
 
+-   AppBar
+-   ElevationScroll
+-   Toolbar
+
+---
+
+##  Concepts
+
+*   Material UI use JSS, a Javascript CSS which syntax looks almost like CSS :
+    +   use camelCase in replacement of dash separated - ex: border-radius(css) => borderRadius(jss)
+    +   string need to be put within single quotes
+*   Two place to style: a global one and a specific one:
+    +   Global style through custom theme
+    +   Specific style with inline-styling, which is functions using JSS
+*   Inline styling works with three elements:
+    +   ```const useStyles = makeStyles(theme => ({ paramName: value })``` is a function define before the component and so, outside the JSX rendering code, 
+        +   You can use the spread operator to import global params from theme.
+    +   ```const classes = useStyles();``` inside your component to link useStyle hook to a variable.
+    +   ```<div className={classes.paramName}/>``` insert params calling into JSX/JSS  
+
+---
+
+##  Tips
+
+    *   Beware that @material-ui/core/styles and @material-ui/styles are two differents packages
+    *   All theming customization props are located in the [Default Theme Object](https://material-ui.com/customization/default-theme/)
+        +   Colors in **Palette** section
+        +   Fonts in **Typography** section
+            *   Font size in Material UI use REM and is base on the **fontSize** attribute in this section
+    *   Theming manage light and dark mode with a complete default configuration
 
 ---
 
