@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L1nmUj22ffIuiI9iItIo9KD19oXXhjpm7Z2S1zaUgm1rP2rAksBltY6NhrEUxcPueDikmCNicu4axQ1o66CXsQ==",
+  "dgSpecHash": "gSGtimHXBsMlVzTvA1DgraMPDsZAsq3YQxdLR/+/kCZGI+EWtDOQ2lIWQHmIkge/Vc0CyGYvG4Rla0TJQJvUYw==",
   "success": true,
-  "projectFilePath": "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj",
+  "projectFilePath": "/Users/nicode/Development/Projects/Github/SociAct/Socistence/SociStence.csproj",
   "expectedPackageFiles": [
     "/Users/nicode/.nuget/packages/microsoft.data.sqlite.core/5.0.5/microsoft.data.sqlite.core.5.0.5.nupkg.sha512",
     "/Users/nicode/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
