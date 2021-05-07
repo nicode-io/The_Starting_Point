@@ -144,8 +144,13 @@
     *   [01. ADO LinQ](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ)
         +   [01. Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-01-Theory)
             *   [01. Ado.Net](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-01-Theory/01-01-01-%20Ado%20.Net.pdf)
+            *   [02. LinQ](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-01-Theory/01-01-02-Linq.pdf)
+            *   [03. LinQ to Objects](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-01-Theory/01-01-03-LinqToObjects.pdf)
+            *   [04. LinQ Operators](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-01-Theory/01-01-04-Linq_Operators.pdf)
         +   [02. Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code)
             *   [01. Introduction to ADO: SqlConnection, SqlAdapter, ExecuteReader, ExecuteScalar](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-01-Introduction)
+            *   [02. Basic Connection Toolbox](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-02-Toolbox)
+            *   [03. LinQ Exos](01-02-03-Exos)
 
 
 ---
