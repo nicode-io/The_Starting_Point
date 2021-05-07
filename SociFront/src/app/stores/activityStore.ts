@@ -1,11 +1,10 @@
 import {makeAutoObservable, runInAction} from "mobx";
-import {v4 as uuid} from "uuid";
 import agent from "../api/agent";
 import {Activity} from "../models/activity";
 
 
 // MobX store initialization
-export default class ActivitySore {
+export default class ActivityStore {
 
     // Define variables
     activityRegistry = new Map<String, Activity>();
@@ -30,17 +29,42 @@ export default class ActivitySore {
 
     }
 
+    loadActivity = async (id: string) => {
+        // Check if activity is in memory
+        let activity = this.getActivity(id);
+        // If yes display, else fetch database
+        if (activity) {
+            this.selectedActivity = activity;
+            return activity;
+        } else {
+            this.loadingInitial = true;
+            try {
+                // Store activity in memory
+                activity = await agent.Activities.details(id);
+                this.setActivity(activity);
+                this.selectedActivity = activity;
+                // Stop loading
+                this.setLoadingInitial(false);
+
+                return activity;
+            } catch (err) {
+                console.log(err);
+                this.setLoadingInitial(false);
+            }
+        }
+    }
+
     loadActivities = async () => {
+        this.loadingInitial = true;
         try {
             // Get activities from API
             const activities = await agent.Activities.list();
 
             // Mutating state in MobX
             activities.forEach(activity => {
-                activity.date = activity.date.split('T')[0];
-                this.activityRegistry.set(activity.id, activity);
+                // Use private helper
+                this.setActivity(activity);
             })
-
             this.setLoadingInitial(false);
         } catch (err) {
             console.log(err);
@@ -48,30 +72,21 @@ export default class ActivitySore {
         }
     }
 
+    // Private helpers for loadActivity()/loadActivities
+    private getActivity = (id: string) => {
+        // Returns activity if exist in memory
+        return this.activityRegistry.get(id);
+    }
+    private setActivity = (activity: Activity) => {
+        activity.date = activity.date.split('T')[0];
+        this.activityRegistry.set(activity.id, activity);
+    }
     setLoadingInitial = (state: boolean) => {
         this.loadingInitial = state;
     }
 
-    selectActivity = (id: string) => {
-        this.selectedActivity = this.activityRegistry.get(id);
-    }
-
-    cancelSelectedActivity = () => {
-        this.selectedActivity = undefined;
-    }
-
-    openForm = (id?: string) => {
-        id ? this.selectActivity(id) : this.cancelSelectedActivity();
-        this.editMode = true;
-    }
-
-    closeForm = () => {
-        this.editMode = false;
-    }
-
     createActivity = async (activity: Activity) => {
         this.loading = true;
-        activity.id = uuid();
         try {
             await agent.Activities.create(activity);
             runInAction(() => {
@@ -113,8 +128,6 @@ export default class ActivitySore {
             await agent.Activities.delete(id);
             runInAction(() => {
                 this.activityRegistry.delete(id);
-
-                if (this.selectedActivity?.id === id) this.cancelSelectedActivity();
                 this.loading = false;
             })
 
