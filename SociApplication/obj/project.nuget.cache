@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nOwczbW1gDc7lao85lpEKpHNucLGTsOBxOtZ4LY9dJqHB6dMT3UXxbqzwsN/GCK4iiDlDKXJL7+cSQGNuGlS2A==",
+  "dgSpecHash": "9kdFW/HjoHurpz0vo0mfIAZknz/LmrP5P9ds6YJRdTUoK9sOl39eOhx2u55x3OA6ic9brWo6yVtCmeUbGLu5jg==",
   "success": true,
-  "projectFilePath": "/Users/nicode/Development/Projects/Github/SociAct/sociapplication/SociApplication.csproj",
+  "projectFilePath": "/Users/nicode/Development/Projects/Github/SociAct/SociApplication/SociApplication.csproj",
   "expectedPackageFiles": [
     "/Users/nicode/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/nicode/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
