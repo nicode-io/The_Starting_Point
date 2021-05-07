@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj": {}
+    "/Users/nicode/Development/Projects/Github/SociAct/SociStence/SociStence.csproj": {}
   },
   "projects": {
-    "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj": {
+    "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj",
+        "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj",
         "projectName": "SociOmain",
-        "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj",
+        "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj",
         "packagesPath": "/Users/nicode/.nuget/packages/",
-        "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/obj/",
+        "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicode/.nuget/NuGet/NuGet.Config"
@@ -56,14 +56,14 @@
         }
       }
     },
-    "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj": {
+    "/Users/nicode/Development/Projects/Github/SociAct/SociStence/SociStence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj",
+        "projectUniqueName": "/Users/nicode/Development/Projects/Github/SociAct/SociStence/SociStence.csproj",
         "projectName": "SociStence",
-        "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/socistence/SociStence.csproj",
+        "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociStence/SociStence.csproj",
         "packagesPath": "/Users/nicode/.nuget/packages/",
-        "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/socistence/obj/",
+        "outputPath": "/Users/nicode/Development/Projects/Github/SociAct/SociStence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicode/.nuget/NuGet/NuGet.Config"
@@ -78,8 +78,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj": {
-                "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/sociomain/SociOmain.csproj"
+              "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj": {
+                "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociOmain/SociOmain.csproj"
               }
             }
           }

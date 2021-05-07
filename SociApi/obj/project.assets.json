@@ -1460,18 +1460,18 @@
     },
     "SociApplication/1.0.0": {
       "type": "project",
-      "path": "../sociapplication/SociApplication.csproj",
-      "msbuildProject": "../sociapplication/SociApplication.csproj"
+      "path": "../SociApplication/SociApplication.csproj",
+      "msbuildProject": "../SociApplication/SociApplication.csproj"
     },
     "SociOmain/1.0.0": {
       "type": "project",
-      "path": "../sociomain/SociOmain.csproj",
-      "msbuildProject": "../sociomain/SociOmain.csproj"
+      "path": "../Sociomain/SociOmain.csproj",
+      "msbuildProject": "../SociOmain/SociOmain.csproj"
     },
     "SociStence/1.0.0": {
       "type": "project",
-      "path": "../socistence/SociStence.csproj",
-      "msbuildProject": "../socistence/SociStence.csproj"
+      "path": "../Socistence/SociStence.csproj",
+      "msbuildProject": "../SociStence/SociStence.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1506,8 +1506,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/nicode/Development/Projects/Github/SociAct/sociapplication/SociApplication.csproj": {
-              "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/sociapplication/SociApplication.csproj"
+            "/Users/nicode/Development/Projects/Github/SociAct/SociApplication/SociApplication.csproj": {
+              "projectPath": "/Users/nicode/Development/Projects/Github/SociAct/SociApplication/SociApplication.csproj"
             }
           }
         }
