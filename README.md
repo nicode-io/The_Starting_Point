@@ -59,6 +59,8 @@ User can customize activity picture according to some general themes
     +   axios
     +   mobx
     +   mobx-react-lite
+    +   react
+    +   react-router-dom
     +   semantic-ui
     +   semantic-ui-css
     +   semantic-ui-react
@@ -69,13 +71,31 @@ User can customize activity picture according to some general themes
 
 ## Releases
 
+-   ### [v0.0.6](#v006)
 -   ### [v0.0.5](#v005)
 -   ### [v0.0.4](#v004)
 -   ### [v0.0.3](#v003)
 -   ### [v0.0.2](#v002)
 -   ### [v0.0.1](#v001)
 
-    ###    v0.0.5
+    ### v0.0.6
+    >   Routing
+
+    *   Frontend
+        +   React-router-dom
+            *   Add navbar links
+            *   Add button links
+        +   MobX
+            *   Adapt activityStore
+        +   Homepage
+            *   Isolate HomePage
+            *   Add link to activities
+        +   Refactoring
+            *   Switch buttons behaviours
+            *   Get rid of flickering 
+            *   Clean console warnings
+
+    ### v0.0.5
     >   Axios - MobX
     
     *   Frontend
