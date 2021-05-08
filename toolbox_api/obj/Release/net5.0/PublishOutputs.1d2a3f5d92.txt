@@ -1,0 +1,10 @@
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/appsettings.Development.json
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/appsettings.json
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/toolbox_api.dll
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/toolbox_api.deps.json
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/toolbox_api.runtimeconfig.json
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/toolbox_api.pdb
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/Microsoft.OpenApi.dll
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/Swashbuckle.AspNetCore.Swagger.dll
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/nicode/Development/Projects/Github/Toolbox/toolbox_api/obj/Release/net5.0/PubTmp/Out/Swashbuckle.AspNetCore.SwaggerUI.dll
