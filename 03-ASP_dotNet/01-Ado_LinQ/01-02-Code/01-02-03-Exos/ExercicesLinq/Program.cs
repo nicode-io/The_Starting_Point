@@ -21,11 +21,16 @@ namespace ExercicesLinq
             exo3_5(dc);
             exo3_6(dc);
             exo3_7(dc);
+            exo4_1(dc);
+            exo4_2(dc);
+            exo4_3(dc);
+            exo4_4(dc);
+            exo4_5(dc);
 
             Console.ReadLine();
         }
 
-         public static void exo2_1(DataContext dc)
+         static void exo2_1(DataContext dc)
          {
                 var result = dc.Students.Select(s => new {
                         s.Last_Name, 
@@ -40,7 +45,7 @@ namespace ExercicesLinq
                 }
          }
 
-        public static void exo2_2(DataContext dc)
+        static void exo2_2(DataContext dc)
          {
                 var result = dc.Students.Select(s => new {
                         lastName=s.Last_Name + " " + s.First_Name, 
@@ -55,7 +60,7 @@ namespace ExercicesLinq
                 }
          }
 
-        public static void exo2_3(DataContext dc)
+        static void exo2_3(DataContext dc)
         {
             IEnumerable<string> result = dc.Students
                 .Select(s => $"{s.Student_ID} {s.First_Name} {s.BirthDate} {s.Login} {s.Section_ID} {s.Course_ID}");
@@ -66,7 +71,7 @@ namespace ExercicesLinq
             }
         }
 
-         public static void exo3_1(DataContext dc)
+         static void exo3_1(DataContext dc)
         {
             var result = dc.Students
                 .Where(s => s.BirthDate.Year < 1955)
@@ -81,7 +86,7 @@ namespace ExercicesLinq
             }
         }
 
-        public static void exo3_2(DataContext dc)
+        static void exo3_2(DataContext dc)
         {
             var result = dc.Students
                 .Where(s => s.BirthDate.Year >= 1955 && s.BirthDate.Year <= 1965)
@@ -97,7 +102,7 @@ namespace ExercicesLinq
             }
         }
 
-        public static void exo3_3(DataContext dc)
+        static void exo3_3(DataContext dc)
         {
             var result = dc.Students
                 .Where(s => s.Last_Name.EndsWith("r"))
@@ -113,7 +118,7 @@ namespace ExercicesLinq
             }
         }
 
-        public static void exo3_4(DataContext dc)
+        static void exo3_4(DataContext dc)
         {
             var result = dc.Students
                 .OrderByDescending(s => s.Year_Result)
@@ -129,7 +134,7 @@ namespace ExercicesLinq
             }
         }
 
-        public static void exo3_5(DataContext dc)
+        static void exo3_5(DataContext dc)
         {
             var result = dc.Students
                 .OrderBy(s => s.Last_Name)
@@ -146,7 +151,7 @@ namespace ExercicesLinq
             }
         }
 
-        public static void exo3_6(DataContext dc)
+        static void exo3_6(DataContext dc)
         {
             var result = dc.Students
                 .Where(s => (s.Section_ID == 1020 || s.Section_ID == 1020) 
@@ -166,7 +171,7 @@ namespace ExercicesLinq
             }
         }
 
-        public static void exo3_7(DataContext dc)
+        static void exo3_7(DataContext dc)
         {
             var result = dc.Students
                 .Where(s => s.Section_ID.ToString().StartsWith("13")
@@ -181,6 +186,30 @@ namespace ExercicesLinq
             foreach(var line in result)
             {
                 Console.WriteLine("3.7" + line);
+            }
+        }
+
+        static void exo4_1(DataContext dc)
+        {
+            Console.WriteLine(dc.Students.Average(st => st.Year_Result));
+        }
+        static void exo4_2(DataContext dc)
+        {
+            Console.WriteLine(dc.Students.Max(st => st.Year_Result));
+        }
+        static void exo4_3(DataContext dc)
+        {
+            Console.WriteLine(dc.Students.Sum(st => st.Year_Result));
+        }
+        static void exo4_4(DataContext dc)
+        {
+            Console.WriteLine(dc.Students.Min(st => st.Year_Result));
+        }
+        static void exo4_5(DataContext dc)
+        {
+            foreach(Student c in dc.Students.Where(st => st.Year_Result % 2 == 1))
+            {
+                Console.WriteLine($"{c.First_Name} {c.Last_Name} {c.Year_Result}");
             }
         }
     }
