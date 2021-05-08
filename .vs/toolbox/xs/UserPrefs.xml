@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{A34F01D7-D820-46A7-9D65-054F59280778}|Default">
+  <MonoDevelop.Ide.ItemProperties.toolbox__api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="toolbox_api/Properties/launchSettings.json">
+    <Files>
+      <File FileName="toolbox_api/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="toolbox_api/Startup.cs" />
+      <File FileName="toolbox_api/Program.cs" />
+      <File FileName="toolbox_api/appsettings.json" />
+      <File FileName="toolbox_api/Properties/launchSettings.json" Line="8" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="toolbox" expanded="True">
+            <Node name="toolbox_api" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
