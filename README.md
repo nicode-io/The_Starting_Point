@@ -150,7 +150,8 @@
         +   [02. Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code)
             *   [01. Introduction to ADO: SqlConnection, SqlAdapter, ExecuteReader, ExecuteScalar](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-01-Introduction)
             *   [02. Basic Connection Toolbox](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-02-Toolbox)
-            *   [03. LinQ Exos](01-02-03-Exos)
+            *   [03. LinQ Exos Statements](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-03-Exos/Exos_Statement.pdf)
+            *   [03. LinQ Exos Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-03-Exos/ExercicesLinq/Program.cs)
 
 
 ---
