@@ -63,6 +63,14 @@ This project aims to study REACT and everything related to it: hooks, events, ro
 -   **Lifting the state up** is the tech'planation about move data up or down with props to allow another component to use them 
 -   use custom event on parent component to gather props from child, syntax: ```<ParentComponent onCustomEvent={customHandler} />``` then add props in child component and call the parent function.
 
+####    Conditional statement
+-   Use of **if** or **for** statement is forbidden in JSX, but you can use ternary expression
+-   It's possible to trick JSX to display conditional content with ```myCheck === 0 && <my>JSX<code>``` if first part is true second part will be executed and so displayed
+-   For total different render for a component, using if .. return JSX 1 else return JSX 2 works great (avoid using partial rendering for a clean code)
+
+####    Dynamic CSS styling
+-   Use the double curly braces to set CSS style so you call an object attribute for styling, syntax: ```style={{height: myVariable}}``` ! Replace **-** in properties like background-color with camelCase, so backgroundColor ```{{backgroundColor: myVariable}}``` (if you really want to use **-** you need to place properties into single quotes)
+
 ---
 
 ### Achievements
