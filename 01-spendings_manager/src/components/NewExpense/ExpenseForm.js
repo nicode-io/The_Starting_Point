@@ -44,7 +44,7 @@ const ExpenseForm = (props) => {
         // Store submitted values
         const submittedData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         }
         // Execute parent custom handler
@@ -54,46 +54,64 @@ const ExpenseForm = (props) => {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
+
+        // Close form
+        setOpenExpenseForm(false);
     };
 
-    return (
-        <form onSubmit={submitHandler}>
-            <div className="new-expense__controls">
-                <div className="new-expense__control">
-                    <label>Title</label>
-                    <input type="text"
-                           value={enteredTitle}
-                           onChange={titleChangeHandler}
-                    />
-                </div>
-            </div>
-            <div className="new-expense__controls">
-                <div className="new-expense__control">
-                    <label>Amount</label>
-                    <input type="number"
-                           value={enteredAmount}
-                           onChange={amountChangeHandler}
-                           min="0.01"
-                           step="0.01"
-                    />
-                </div>
-            </div>
-            <div className="new-expense__controls">
-                <div className="new-expense__control">
-                    <label>Date</label>
-                    <input
-                        type="date"
-                        value={enteredDate}
-                        onChange={dateChangeHandler}
-                        min="2019-01-01" max="2022-12-31"
-                    />
-                </div>
-            </div>
-            <div className="new-expense__actions">
-                <button type="submit">Add Expense</button>
-            </div>
-        </form>
-    )
+    const [openExpenseForm, setOpenExpenseForm] = useState(false);
+
+    const openFormHandler = (event) => {
+        setOpenExpenseForm(event);
+    }
+
+    if(openExpenseForm) {
+        return (
+            <form onSubmit={submitHandler}>
+                <section className="new-expense__controls">
+                    <article className="new-expense__control">
+                        <label>Title</label>
+                        <input type="text"
+                               value={enteredTitle}
+                               onChange={titleChangeHandler}
+                        />
+                    </article>
+                </section>
+                <section className="new-expense__controls">
+                    <article className="new-expense__control">
+                        <label>Amount</label>
+                        <input type="number"
+                               value={enteredAmount}
+                               onChange={amountChangeHandler}
+                               min="0.01"
+                               step="0.01"
+                        />
+                    </article>
+                </section>
+                <section className="new-expense__controls">
+                    <article className="new-expense__control">
+                        <label>Date</label>
+                        <input
+                            type="date"
+                            value={enteredDate}
+                            onChange={dateChangeHandler}
+                            min="2019-01-01" max="2022-12-31"
+                        />
+                    </article>
+                </section>
+                <section className="new-expense__actions">
+                    <button onClick={openFormHandler}>CancelExpense</button>
+                    <button type="submit">Add Expense</button>
+                </section>
+            </form>
+        )
+    } else {
+        return (
+            <section className="new-expense__actions">
+                <button onClick={openFormHandler}>Add Expense</button>
+            </section>
+        )
+    }
 };
 
 export default ExpenseForm
