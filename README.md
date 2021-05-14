@@ -152,6 +152,15 @@
             *   [02. Basic Connection Toolbox](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-02-Toolbox)
             *   [03. LinQ Exos Statements](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-03-Exos/Exos_Statement.pdf)
             *   [03. LinQ Exos Solutions](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/01-Ado_LinQ/01-02-Code/01-02-03-Exos/ExercicesLinq/Program.cs)
+    *   [02. ASP.Net](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/02-ASP.Net)
+        +   [01. Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/02-ASP.Net/02-01-Theory)
+            *   [01. 3-Tier Architecture](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/02-ASP.Net/02-01-Theory/02-01-01-3Tier_Architecture.png)
+            *   [02. IT Team Composition](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/02-ASP.Net/02-01-Theory/02-01-02-IT_Team_Composition.png)
+    *   [03. ASP.Net](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/02-ASP.Net)
+        +   [01. Theory](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/03-Entity_Framework/01-Theory)
+            *   [01. Entity Framewrok Slides](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/blob/main/03-ASP_dotNet/03-Entity_Framework/01-Theory/01-01-EFCore_Slides.pdf)
+        +   [02. Code](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/03-Entity_Framework/02-Code)
+            *   [01. Main exercise (TBU)](https://github.com/nicode-io/ASP.NET_BI_Bootcamp/tree/main/03-ASP_dotNet/03-Entity_Framework/02-Code/01-EntityFrameworkExos)
 
 
 ---
