@@ -13,6 +13,8 @@
 <p align="center">
     <br />
     <br />
+    <a href="#mindmaps">MindMaps</a>
+    ·   
     <a href="#mini-apps">Mini-Apps</a>
     ·
     <a href="#components">Components</a>
@@ -25,15 +27,32 @@
 
 ---
 
+### MindMaps
+
+(TO BE UPDATED)
+
+*   React Native Summary
+
+---
+
 ### Mini-Apps
+
+(TO BE UPDATED)
+
+*   Basics
+*   Number Guesser
 
 ---
 
 ### Components
 
 (TO BE UPDATED)
-*   Modal
 
+*   View
+*   ScrollView
+*   Text
+*   TextInput
+*   Modal
 *   TouchableOpacity
 *   TouchableWithoutFeedback
 *   TouchableHighlight
