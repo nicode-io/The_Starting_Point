@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="">
-    <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="Logo" width="250" height=250">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="Logo" width="150" height=150">
   </a>
 
 <h3 align="center">REACT NATIVE CURSUS</h3>
