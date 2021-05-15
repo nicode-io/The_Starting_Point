@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import * as Font from 'expo-font';
+// import * as Font from 'expo-font';
 
 
-import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen';
+import Header from './Components/Header';
+import StartGameScreen from './Screens/StartGameScreen';
 import Colors from "./constants/colors";
-import GameScreen from "./screens/GameScreen";
+import GameScreen from "./Screens/GameScreen";
 import GameOver from "./screens/GameOver";
 
-const fetchFonts = () => {
-    return Font.loadAsync({
-        'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
-        'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
-    })
-}
+// const fetchFonts = () => {
+//     return Font.loadAsync({
+//         'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+//         'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+//     })
+// }
 
 const App = () => {
     const [userNumber, setUserNumber] = useState(undefined);
