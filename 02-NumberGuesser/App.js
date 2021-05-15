@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 
 // import * as Font from 'expo-font';
 
 
-import Header from './Components/Header';
-import StartGameScreen from './Screens/StartGameScreen';
-import Colors from "./constants/colors";
-import GameScreen from "./Screens/GameScreen";
-import GameOver from "./screens/GameOver";
+import Header from './components/Header';
+import StartGameScreen from './screens/StartGameScreen';
+import Colors from './constants/colors';
+import GameScreen from './screens/GameScreen';
+import GameOver from './screens/GameOver';
 
 // const fetchFonts = () => {
 //     return Font.loadAsync({
@@ -17,7 +17,7 @@ import GameOver from "./screens/GameOver";
 //     })
 // }
 
-const App = () => {
+const App = props => {
     const [userNumber, setUserNumber] = useState(undefined);
     const [guessRounds, setGuessRounds] = useState(0);
 
@@ -47,12 +47,12 @@ const App = () => {
             onGameOver={gameOverHandler}
         />
     } else if (guessRounds > 0) {
-        content = <GameOver rounds={guessRounds} onStartNewGame={startNewGame} userNumber={userNumber}/>;
+        content = <GameOver rounds={guessRounds} onStartNewGame={startNewGame} userNumber={userNumber} />;
     }
 
     return (
         <View style={styles.screen}>
-            <Header title="Guess a Number"/>
+            <Header title="Guess a Number" />
             {content}
         </View>
     );
