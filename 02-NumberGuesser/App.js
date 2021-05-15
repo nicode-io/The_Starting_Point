@@ -1,21 +1,68 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View} from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import * as Font from 'expo-font';
+
+
+import Header from './components/Header';
+import StartGameScreen from './screens/StartGameScreen';
+import Colors from "./constants/colors";
+import GameScreen from "./screens/GameScreen";
+import GameOver from "./screens/GameOver";
+
+const fetchFonts = () => {
+    return Font.loadAsync({
+        'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+        'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+    })
 }
 
+const App = () => {
+    const [userNumber, setUserNumber] = useState(undefined);
+    const [guessRounds, setGuessRounds] = useState(0);
+
+
+    const startGameHandler = selectedNumber => {
+        setUserNumber(selectedNumber);
+        setGuessRounds(0);
+    }
+
+    const gameOverHandler = numOfRounds => {
+        setGuessRounds(numOfRounds);
+    }
+
+    const startNewGame = () => {
+        setGuessRounds(0);
+        setUserNumber('');
+    }
+
+    let content = <StartGameScreen
+        onStartGame={startGameHandler}
+    />
+
+
+    if (userNumber && guessRounds <= 0) {
+        content = <GameScreen
+            userChoice={userNumber}
+            onGameOver={gameOverHandler}
+        />
+    } else if (guessRounds > 0) {
+        content = <GameOver rounds={guessRounds} onStartNewGame={startNewGame} userNumber={userNumber}/>;
+    }
+
+    return (
+        <View style={styles.screen}>
+            <Header title="Guess a Number"/>
+            {content}
+        </View>
+    );
+};
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    screen: {
+        flex: 1,
+        backgroundColor: Colors.blurple,
+    }
 });
+
+export default App

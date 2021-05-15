@@ -19,6 +19,8 @@
     ·
     <a href="#components">Components</a>
     ·
+    <a href="#tips">Tips</a>
+    ·
     <a href="#packages">Packages</a>
     .
     <a href="#timeline">Timeline</a>
@@ -42,21 +44,44 @@
 *   Basics
 *   Number Guesser
 
+(TODO)
+*   Add CSS concept in REACT Native (how transform, etc)
+
 ---
 
 ### Components
 
 (TO BE UPDATED)
 
-*   View
+*   Alert
+*   Button
+*   Modal
 *   ScrollView
 *   Text
 *   TextInput
-*   Modal
 *   TouchableOpacity
 *   TouchableWithoutFeedback
 *   TouchableHighlight
 *   TouchableNativeFeedback (android only)
+*   View
+
+API
+*   Keyboard
+
+
+---
+
+### Tips
+
+(TO BE UPDATED)
+
+*   Shadow properties work on iOS, Elevation works on Android
+*   Flexbox is not working with **Text** component
+*   Not all CSS properties works in React Native (rtfm)
+*   Use spread operator to import style from basic component and add props style from custom component (see Card example in 02-NumberGuesser)
+*   You can forward props (like in React) with ```<Component {...props} />``` to a child component
+*   In a handler the order of multiple setState is not important as the next rendering won't occur before end of block execution
+*   Use props destructuring for specify exact dependencies in useEffect
 
 ---
 
