@@ -1,14 +1,13 @@
 import React, {useEffect, useRef, useState} from "react";
-import {Alert, ScrollView, StyleSheet, Text, View} from "react-native";
-import {Ionicons} from '@expo/vector-icons';
+import {Alert, Dimensions, ScrollView, StyleSheet, View} from "react-native";
 
-import Card from "../components/Card";
+
+import Card from "../Components/Card";
 import Colors from "../constants/colors";
-import Number from "../components/Number";
-import TitleText from "../components/texts/TitleText";
-import HintPlusButton from "../components/buttons/HintButton";
-import HintButton from "../components/buttons/HintButton";
-import BodyText from "../components/texts/BodyText";
+import Number from "../Components/Number";
+import TitleText from "../Components/texts/TitleText";
+import HintButton from "../Components/buttons/hintButton";
+import BodyText from "../Components/texts/BodyText";
 
 
 // Random number generation
@@ -114,6 +113,7 @@ const GameScreen = props => {
 
 const styles = StyleSheet.create({
     screen: {
+        flex: 1,
         alignItems: 'center',
         padding: 10,
     },
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         maxWidth: '90%',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginTop: 10,
+        marginTop: Dimensions.get('window').height > 600 ? 20 : 10,
         backgroundColor: Colors.yellow,
     },
     allGuesses: {
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.fuchsia
     },
     scrollStyle: {
-        flexDirection: 'column-reverse'
+        flexDirection: 'column-reverse',
     },
 });
 

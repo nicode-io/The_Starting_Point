@@ -1,12 +1,12 @@
 import React from "react";
-import {Image, ScrollView, StyleSheet, View} from "react-native";
+import {Dimensions, Image, ScrollView, StyleSheet, View} from "react-native";
 
-import Card from "../components/Card";
+import Card from "../Components/Card";
 import Colors from "../constants/colors";
-import Number from "../components/Number";
-import TitleText from "../components/texts/TitleText";
-import BodyText from "../components/texts/BodyText";
-import GameButton from "../components/buttons/gameButton";
+import Number from "../Components/Number";
+import TitleText from "../Components/texts/TitleText";
+import BodyText from "../Components/texts/BodyText";
+import GameButton from "../Components/buttons/gameButton";
 
 const GameOver = props => {
     return (
@@ -56,15 +56,15 @@ const styles = StyleSheet.create({
         width: 300,
         maxWidth: '80%',
         justifyContent: 'center',
-        marginVertical: 30,
+        marginVertical: Dimensions.get('window').height / 50,
         backgroundColor: Colors.fuchsia,
     },
     imageContainer: {
-        width: 150,
-        height: 150,
+        width: Dimensions.get('window').height * 0.7,
+        height: Dimensions.get('window').height * 0.7,
         alignSelf: 'center',
         marginBottom: 10,
-        borderRadius: 75,
+        borderRadius: Dimensions.get('window').height * 0.7 / 2,
         borderWidth: 3,
         borderColor: Colors.blurple,
         overflow: 'hidden'

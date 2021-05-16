@@ -4,10 +4,10 @@ import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
 import Colors from './constants/colors';
-import GameScreen from './screens/GameScreen';
-import GameOver from './screens/GameOver';
-import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen';
+import GameScreen from './Screens/GameScreen';
+import GameOver from './Screens/GameOver';
+import Header from './Components/Header';
+import StartGameScreen from './Screens/StartGameScreen';
 
 // Load fonts
 const fetchFonts = () => {

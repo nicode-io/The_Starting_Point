@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert, ScrollView, Image,} from 'react-native';
+import {View, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert, ScrollView, Image, Dimensions} from 'react-native';
 
 
-import Card from '../components/Card';
-import Input from '../components/texts/Input';
+import Card from '../Components/Card';
+import Input from '../Components/texts/Input';
 import Colors from '../constants/colors';
-import Number from "../components/Number";
-import TitleText from "../components/texts/TitleText";
-import BodyText from "../components/texts/BodyText";
-import GameButton from "../components/buttons/gameButton";
+import Number from "../Components/Number";
+import TitleText from "../Components/texts/TitleText";
+import BodyText from "../Components/texts/BodyText";
+import GameButton from "../Components/buttons/gameButton";
 
 const StartGameScreen = props => {
 
@@ -159,24 +159,28 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     button: {
-        width: '50%',
+        width: Dimensions.get('window').width / 4,
         marginHorizontal: 10
     },
     confirmed: {
-        width: 500,
-        maxWidth: '80%',
+        width: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
         marginVertical: 15,
         backgroundColor: Colors.blurple,
 
     },
     inputContainer: {
-        width: 500,
-        maxWidth: '80%',
+        width: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
         alignItems: 'center',
         backgroundColor: Colors.yellow
     },
     input: {
         width: 80,
+        minWidth: '20%',
+        maxWidth: '40%',
         textAlign: 'center',
 
     },
