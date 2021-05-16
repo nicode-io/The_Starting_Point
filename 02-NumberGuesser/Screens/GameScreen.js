@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import {Alert, StyleSheet, View} from "react-native";
+import {Alert, ScrollView, StyleSheet, Text, View} from "react-native";
 import {Ionicons} from '@expo/vector-icons';
 
 import Card from "../components/Card";
@@ -8,7 +8,7 @@ import Number from "../components/Number";
 import TitleText from "../components/texts/TitleText";
 import HintPlusButton from "../components/buttons/HintButton";
 import HintButton from "../components/buttons/HintButton";
-
+import BodyText from "../components/texts/BodyText";
 
 
 // Random number generation
@@ -32,9 +32,11 @@ const GameScreen = props => {
     const [currentGuess, setCurrentGuess] = useState(
         generateRandomNumber(1, 100, props.userChoice)
     );
+    const [allGuesses, setAllGuesses] = useState([]);
     const [rounds, setRounds] = useState(0);
     const currentMin = useRef(1);
     const currentMax = useRef(100);
+
 
     // Props destructuring
     const {userChoice, onGameOver} = props;
@@ -52,8 +54,8 @@ const GameScreen = props => {
             (direction === 'lower' && currentGuess < props.userChoice) ||
             (direction === 'greater' && currentGuess > props.userChoice)
         ) {
-            Alert.alert('Don\'t lie !', 'Computer know you\'re cheating ;)', [
-                {text: 'Sorry!', style: 'cancel'}
+            Alert.alert('Don\'t lie !', 'Computer knows when you\'re cheating ;)', [
+                {text: 'Oups !', style: 'cancel'}
             ]);
             return;
         }
@@ -68,6 +70,7 @@ const GameScreen = props => {
             currentMax.current,
             currentGuess
         );
+        setAllGuesses(prevGuesses => [...prevGuesses, currentGuess])
         setCurrentGuess(nextNumber);
         setRounds(prevRounds => prevRounds += 1);
     };
@@ -92,6 +95,19 @@ const GameScreen = props => {
                     GREATER&nbsp;
                 </HintButton>
             </Card>
+            <Card style={styles.allGuesses}>
+                <TitleText>Already guessed</TitleText>
+                <ScrollView contentContainerStyle={styles.scrollStyle}>
+                    {allGuesses.map((guess, index) =>
+                        <BodyText
+                            key={index}
+                        >
+                            Round #{index+1}&nbsp;&nbsp;
+                            Guess: {guess}
+                        </BodyText>)}
+                </ScrollView>
+            </Card>
+
         </View>
     )
 }
@@ -108,7 +124,17 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         marginTop: 10,
         backgroundColor: Colors.yellow,
-    }
+    },
+    allGuesses: {
+        width: 250,
+        maxWidth: '80%',
+        marginTop: 15,
+        paddingBottom: 30,
+        backgroundColor: Colors.fuchsia
+    },
+    scrollStyle: {
+        flexDirection: 'column-reverse'
+    },
 });
 
 export default GameScreen

@@ -21,7 +21,8 @@ const GameOver = props => {
                             resizeMode="stretch"
                         />
                     </View>
-                    <BodyText style={{...props.style}}>Your Number was: {props.userNumber}</BodyText>
+                    <BodyText style={{...props.style}}>Your Number was</BodyText>
+                    <Number>{props.userNumber}</Number>
                     <BodyText style={{...props.style}}>Computer rounds :</BodyText>
                     <Number>{props.rounds}</Number>
                     <BodyText style={{...props.style, paddingBottom: 10}}>to find your number</BodyText>

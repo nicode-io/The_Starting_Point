@@ -54,6 +54,7 @@
 
 *   Alert
 *   Button
+*   FlatList (best perf)
 *   Keyboard
 *   Modal
 *   ScrollView
@@ -92,7 +93,7 @@
     +   Custom ultra-basic components which is inherited by styled element
     +   Constant default-style stylesheet
 *   Always use with and height for network images
-
+*   flex: 1 takes all spaces possible while flexGrow: 1 have a different behaviour (see doc)
 ---
 
 ### Packages 

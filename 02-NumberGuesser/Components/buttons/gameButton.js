@@ -1,15 +1,23 @@
 import React from "react";
 import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import Colors from "../../constants/colors";
 
-const StartGameButton = props =>{
+const GameButton = props =>{
     return (
         <TouchableOpacity
             activeOpacity={0.4}
             onPress={props.onPress}
         >
-            <View style={{...styles.button, backgroundColor: props.bgColor}}>
-                <Text style={styles.buttonText}>{props.children}</Text>
+            <View style={{
+                ...styles.button,
+                backgroundColor: props.bgColor,
+                textColor: props.textColor,
+            }}>
+                <Text style={{
+                    ...styles.buttonText,
+                    color: props.textColor,
+                }}>
+                    {props.children}
+                </Text>
             </View>
         </TouchableOpacity>
     );
@@ -17,18 +25,17 @@ const StartGameButton = props =>{
 
 const styles = StyleSheet.create({
     button: {
-        width: '80%',
+        width: '90%',
         alignSelf: 'center',
         borderRadius: 10,
         marginVertical: 5,
         padding: 15,
     },
     buttonText: {
-        color: Colors.yellow,
         fontFamily: 'bangers-regular',
         fontSize: 20,
         textAlign: 'center',
     }
 });
 
-export default StartGameButton
+export default GameButton
