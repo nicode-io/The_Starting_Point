@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
 import Colors from './constants/colors';
-import GameScreen from './screens/GameScreen';
-import GameOver from './screens/GameOver';
-import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen';
+import GameScreen from './Screens/GameScreen';
+import GameOver from './Screens/GameOver';
+import Header from './Components/Header';
+import StartGameScreen from './Screens/StartGameScreen';
 
 // Load fonts
 const fetchFonts = () => {
@@ -67,7 +67,7 @@ const App = props => {
 
     return (
         <View style={styles.screen}>
-            <Header title="Number Guesser"/>
+            <Header title={Platform.OS === 'android' ? 'Number Guesser Android' : 'Number Guesser iOS'}/>
             {content}
         </View>
     );

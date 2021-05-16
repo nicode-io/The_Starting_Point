@@ -1,14 +1,24 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert, ScrollView, Image,} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+    View,
+    StyleSheet,
+    TouchableWithoutFeedback,
+    Keyboard,
+    Alert,
+    ScrollView,
+    Image,
+    Dimensions,
+    KeyboardAvoidingView, SafeAreaView
+} from 'react-native';
 
 
-import Card from '../components/Card';
-import Input from '../components/texts/Input';
+import Card from '../Components/Card';
+import Input from '../Components/texts/Input';
 import Colors from '../constants/colors';
-import Number from "../components/Number";
-import TitleText from "../components/texts/TitleText";
-import BodyText from "../components/texts/BodyText";
-import GameButton from "../components/buttons/gameButton";
+import Number from "../Components/Number";
+import TitleText from "../Components/texts/TitleText";
+import BodyText from "../Components/texts/BodyText";
+import GameButton from "../Components/buttons/gameButton";
 
 const StartGameScreen = props => {
 
@@ -17,6 +27,19 @@ const StartGameScreen = props => {
     const [confirmStartGame, setConfirmStartGame] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState(0);
     const [confirmed, setConfirmed] = useState(false);
+    const [buttonWidth, setButtonWidth] = useState(Dimensions.get('window').width / 4);
+
+    // Add effect and listener for Dimension changes (portrait <=> landscape)
+    useEffect(() => {
+        const updateLayout = () => {
+            setButtonWidth(Dimensions.get('window').width / 4);
+        };
+        Dimensions.addEventListener('change', updateLayout);
+        return () => {
+            Dimensions.removeEventListener('change', updateLayout)
+        }
+    }, [Dimensions]);
+
 
     // Filter user input
     const numberInputHandler = inputText => {
@@ -78,7 +101,11 @@ const StartGameScreen = props => {
                     value={enteredValue}
                 />
                 <View style={styles.buttonContainer}>
-                    <View style={styles.button}>
+                    <View style={{
+                        flex: 1,
+                        width: buttonWidth,
+                        marginHorizontal: 10,
+                    }}>
                         <GameButton
                             onPress={resetInputHandler}
                             bgColor={Colors.red}
@@ -87,7 +114,11 @@ const StartGameScreen = props => {
                             RESET
                         </GameButton>
                     </View>
-                    <View style={styles.button}>
+                    <View style={{
+                        flex: 1,
+                        width: buttonWidth,
+                        marginHorizontal: 10,
+                    }}>
                         <GameButton
                             onPress={() => {
                                 confirmInputHandler();
@@ -131,18 +162,22 @@ const StartGameScreen = props => {
     }
 
     return (
-        <ScrollView>
-            <TouchableWithoutFeedback
-                onPress={() => {
-                    Keyboard.dismiss();
-                }}
-            >
-                <View style={styles.screen}>
-                    <TitleText>Start a New Game !</TitleText>
-                    {content}
-                </View>
-            </TouchableWithoutFeedback>
-        </ScrollView>
+        <SafeAreaView>
+            <ScrollView>
+                <KeyboardAvoidingView behaviour="position" keyboardVerticalOffset={25}>
+                    <TouchableWithoutFeedback
+                        onPress={() => {
+                            Keyboard.dismiss();
+                        }}
+                    >
+                        <View style={styles.screen}>
+                            <TitleText>Start a New Game !</TitleText>
+                            {content}
+                        </View>
+                    </TouchableWithoutFeedback>
+                </KeyboardAvoidingView>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
 
@@ -158,25 +193,25 @@ const styles = StyleSheet.create({
         marginTop: 25,
         paddingHorizontal: 10,
     },
-    button: {
-        width: '50%',
-        marginHorizontal: 10
-    },
     confirmed: {
-        width: 500,
-        maxWidth: '80%',
+        width: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
         marginVertical: 15,
         backgroundColor: Colors.blurple,
 
     },
     inputContainer: {
-        width: 500,
-        maxWidth: '80%',
+        width: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
         alignItems: 'center',
         backgroundColor: Colors.yellow
     },
     input: {
         width: 80,
+        minWidth: '20%',
+        maxWidth: '40%',
         textAlign: 'center',
 
     },
