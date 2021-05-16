@@ -1,9 +1,14 @@
 import React, {useEffect, useRef, useState} from "react";
-import {Alert, Button, StyleSheet, Text, View} from "react-native";
+import {Alert, StyleSheet, View} from "react-native";
+import {Ionicons} from '@expo/vector-icons';
 
 import Card from "../components/Card";
 import Colors from "../constants/colors";
 import Number from "../components/Number";
+import TitleText from "../components/texts/TitleText";
+import HintPlusButton from "../components/buttons/HintButton";
+import HintButton from "../components/buttons/HintButton";
+
 
 
 // Random number generation
@@ -69,11 +74,23 @@ const GameScreen = props => {
 
     return (
         <View style={styles.screen}>
-            <Text style={styles.text}>Opponent's Guess</Text>
+            <TitleText style={{...props.style}}>
+                Opponent's Guess&nbsp;
+            </TitleText>
             <Number>{currentGuess}</Number>
             <Card style={styles.buttonContainer}>
-                <Button title="LOWER" onPress={nextGuessHandler.bind(this, 'lower')}/>
-                <Button title="GREATER" onPress={nextGuessHandler.bind(this, 'greater')}/>
+                <HintButton
+                    onPress={nextGuessHandler.bind(this, 'lower')}
+                    iconName={'ios-remove-circle-outline'}
+                >
+                    LOWER&nbsp;
+                </HintButton>
+                <HintButton
+                    onPress={nextGuessHandler.bind(this, 'greater')}
+                    iconName={'ios-add-circle-outline'}
+                >
+                    GREATER&nbsp;
+                </HintButton>
             </Card>
         </View>
     )
@@ -81,22 +98,15 @@ const GameScreen = props => {
 
 const styles = StyleSheet.create({
     screen: {
-        flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
         padding: 10,
     },
-    text: {
-        color: Colors.yellow,
-        fontSize: 24,
-        fontFamily: 'bangers-regular',
-        textAlign: 'center',
-    },
     buttonContainer: {
-        width: 300,
-        maxWidth: '80%',
+        width: 400,
+        maxWidth: '90%',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginTop: 20,
+        marginTop: 10,
         backgroundColor: Colors.yellow,
     }
 });

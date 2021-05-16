@@ -14,19 +14,17 @@ const styles = StyleSheet.create({
     container: {
         width: 100,
         maxWidth: '25%',
-        borderWidth: 3,
+        alignSelf: 'center',
+        marginVertical: 10,
+        borderWidth: 2,
         borderColor: Colors.yellow,
         borderRadius: 5,
-        padding: 10,
-        marginVertical: 10,
-        alignSelf: 'center',
-        justifyContent: 'center',
     },
     number: {
         color: Colors.yellow,
         fontSize: 28,
         fontFamily: 'bangers-regular',
-        fontWeight: '900',
+        fontWeight: '800',
         textAlign: 'center'
     }
 });

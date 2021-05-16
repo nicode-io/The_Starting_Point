@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert, ScrollView} from 'react-native';
+import {View, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert, ScrollView, Image,} from 'react-native';
+
 
 import Card from '../components/Card';
-import Input from '../components/Input';
+import Input from '../components/texts/Input';
 import Colors from '../constants/colors';
 import Number from "../components/Number";
+import TitleText from "../components/texts/TitleText";
+import BodyText from "../components/texts/BodyText";
+import GameButton from "../components/buttons/gameButton";
 
 const StartGameScreen = props => {
 
@@ -59,21 +63,70 @@ const StartGameScreen = props => {
     }
 
     // Start game
-    let confirmedOutput;
+    let content =
+        <View>
+            <Card style={styles.inputContainer}>
+                <BodyText style={{...props.style, ...styles.text}}>Select a Number (1-99)</BodyText>
+                <Input
+                    style={styles.input}
+                    blurOnSubmit
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    keyboardType="numeric"
+                    maxLength={2}
+                    onChangeText={numberInputHandler}
+                    value={enteredValue}
+                />
+                <View style={styles.buttonContainer}>
+                    <View style={styles.button}>
+                        <GameButton
+                            onPress={resetInputHandler}
+                            bgColor={Colors.red}
+                            textColor={Colors.white}
+                        >
+                            RESET
+                        </GameButton>
+                    </View>
+                    <View style={styles.button}>
+                        <GameButton
+                            onPress={() => {
+                                confirmInputHandler();
+                            }}
+                            bgColor={Colors.green}
+                            textColor={Colors.white}
+                        >
+                            CONFIRM
+                        </GameButton>
+                    </View>
+                </View>
+            </Card>
+            <View style={styles.imageContainer}>
+                <Image
+                    fadeDuration={3000}
+                    source={{uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.domintell.com%2Fwp-content%2Fuploads%2F2018%2F10%2FDomintell-New-Logo-Baseline.png&f=1&nofb=1'}}
+                    style={styles.image}
+                    resizeMode="center"
+                />
+            </View>
+        </View>
 
     if (confirmed && confirmStartGame) {
-        confirmedOutput =
+        content =
             <Card style={styles.confirmed}>
-                <Text style={styles.confirmText}>Let's start !</Text>
-                <Text style={styles.confirmText}>
+                <TitleText>Let's start !</TitleText>
+                <BodyText>
                     You choose :
-                </Text>
+                </BodyText>
                 <Number>{selectedNumber}</Number>
-                <Button
-                    title="START GAME"
-                    color={Colors.green}
-                    onPress={() => {props.onStartGame(selectedNumber)}}
-                />
+                <GameButton
+                    onPress={() => {
+                        props.onStartGame(selectedNumber)
+                    }}
+                    bgColor={Colors.fuchsia}
+                    textColor={Colors.yellow}
+                >
+                    START GAME
+                </GameButton>
             </Card>
     }
 
@@ -85,38 +138,8 @@ const StartGameScreen = props => {
                 }}
             >
                 <View style={styles.screen}>
-                    <Text style={styles.title}>Start a New Game !</Text>
-                    <Card style={styles.inputContainer}>
-                        <Text style={styles.text}>Select a Number (1-99)</Text>
-                        <Input
-                            style={styles.input}
-                            blurOnSubmit
-                            autoCapitalize="none"
-                            autoCorrect={false}
-                            keyboardType="numeric"
-                            maxLength={2}
-                            onChangeText={numberInputHandler}
-                            value={enteredValue}
-                        />
-                        <View style={styles.buttonContainer}>
-                            <View style={styles.button}>
-                                <Button
-                                    title="Reset"
-                                    onPress={resetInputHandler}
-                                    color={Colors.red}/>
-                            </View>
-                            <View style={styles.button}>
-                                <Button
-                                    title="Confirm"
-                                    onPress={() => {
-                                        confirmInputHandler();
-                                    }}
-                                    color={Colors.blurple}
-                                />
-                            </View>
-                        </View>
-                    </Card>
-                    {confirmedOutput}
+                    <TitleText>Start a New Game !</TitleText>
+                    {content}
                 </View>
             </TouchableWithoutFeedback>
         </ScrollView>
@@ -125,47 +148,19 @@ const StartGameScreen = props => {
 
 const styles = StyleSheet.create({
     screen: {
-        flex: 1,
         padding: 10,
         alignItems: 'center'
-    },
-    title: {
-        fontFamily: 'bangers-regular',
-        fontSize: 24,
-        color: Colors.yellow,
-        marginVertical: 10
-    },
-    text: {
-        fontFamily: 'bangers-regular',
-        fontSize: 20,
-        color: Colors.blurple,
-    },
-    inputContainer: {
-        width: 500,
-        maxWidth: '80%',
-        alignItems: 'center',
-        backgroundColor: Colors.yellow
     },
     buttonContainer: {
         flexDirection: 'row',
         width: '100%',
-        justifyContent: 'space-between',
-        paddingHorizontal: 15
+        justifyContent: 'center',
+        marginTop: 25,
+        paddingHorizontal: 10,
     },
     button: {
-        flex: 1,
+        width: '50%',
         marginHorizontal: 10
-    },
-    input: {
-        width: 50,
-        textAlign: 'center',
-
-    },
-    confirmText: {
-        color: Colors.yellow,
-        fontSize: 24,
-        fontFamily: 'bangers-regular',
-        textAlign: 'center',
     },
     confirmed: {
         width: 500,
@@ -173,6 +168,36 @@ const styles = StyleSheet.create({
         marginVertical: 15,
         backgroundColor: Colors.blurple,
 
+    },
+    inputContainer: {
+        width: 500,
+        maxWidth: '80%',
+        alignItems: 'center',
+        backgroundColor: Colors.yellow
+    },
+    input: {
+        width: 80,
+        textAlign: 'center',
+
+    },
+    text: {
+        color: Colors.blurple,
+    },
+    startButton: {
+        backgroundColor: Colors.fuchsia,
+    },
+    imageContainer: {
+        width: 200,
+        maxWidth: '100%',
+        height: 200,
+        marginTop: 30,
+        alignSelf: 'center',
+        marginBottom: 10,
+        overflow: 'hidden'
+    },
+    image: {
+        width: '100%',
+        height: '100%',
     },
 });
 

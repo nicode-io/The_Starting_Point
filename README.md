@@ -51,20 +51,19 @@
 ### Components
 
 ####    REACT Native
-+   Components
-    *   Alert
-    *   Button
-    *   Modal
-    *   ScrollView
-    *   Text
-    *   TextInput
-    *   TouchableOpacity
-    *   TouchableWithoutFeedback
-    *   TouchableHighlight
-    *   TouchableNativeFeedback (android only)
-    *   View
-+   API
-    *   Keyboard
+
+*   Alert
+*   Button
+*   Keyboard
+*   Modal
+*   ScrollView
+*   Text
+*   TextInput
+*   TouchableOpacity
+*   TouchableWithoutFeedback
+*   TouchableHighlight
+*   TouchableNativeFeedback (android only)
+*   View
 
 ####    EXPO
 +   Components
@@ -89,15 +88,17 @@
 *   In a handler the order of multiple setState is not important as the next rendering won't occur before end of block execution
 *   Use props destructuring for specify exact dependencies in useEffect
 *   Fonts are loaded at project root (App.js) and are available everywhere (While dev: reload project after copying font's files)
-
-(TODO)
-*   Add CSS concept in REACT Native (how transform, etc)
+*   Styling inheritance can be provided in two main ways:
+    +   Custom ultra-basic components which is inherited by styled element
+    +   Constant default-style stylesheet
+*   Always use with and height for network images
 
 ---
 
 ### Packages 
 
 *   expo
+    +   @expo/vector-icons
 *   expo-font
 *   expo-status-bar
 *   react
