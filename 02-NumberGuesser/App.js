@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-// import * as Font from 'expo-font';
+import * as Font from 'expo-font';
 
-
-import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen';
 import Colors from './constants/colors';
 import GameScreen from './screens/GameScreen';
 import GameOver from './screens/GameOver';
+import Header from './components/Header';
+import StartGameScreen from './screens/StartGameScreen';
 
-// const fetchFonts = () => {
-//     return Font.loadAsync({
-//         'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
-//         'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
-//     })
-// }
+// Load fonts
+const fetchFonts = () => {
+    return Font.loadAsync({
+        'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+        'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+    })
+}
 
 const App = props => {
+    // States
     const [userNumber, setUserNumber] = useState(undefined);
     const [guessRounds, setGuessRounds] = useState(0);
 
-
+    // Handlers
     const startGameHandler = selectedNumber => {
         setUserNumber(selectedNumber);
         setGuessRounds(0);
@@ -36,6 +37,7 @@ const App = props => {
         setUserNumber('');
     }
 
+    // Manage layout content
     let content = <StartGameScreen
         onStartGame={startGameHandler}
     />

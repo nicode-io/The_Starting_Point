@@ -39,10 +39,8 @@
 
 ### Mini-Apps
 
-(TO BE UPDATED)
-
 *   Basics
-*   Number Guesser
+*   Number Guesser: choose a random number and let computer guess it with your clues
 
 (TODO)
 *   Add CSS concept in REACT Native (how transform, etc)
@@ -87,7 +85,13 @@ API
 
 ### Packages 
 
-(TO BE UPDATED)
+*   expo
+*   expo-font
+*   expo-status-bar
+*   react
+*   react-dom
+*   react-native
+*   react-native-web
 
 ---
 

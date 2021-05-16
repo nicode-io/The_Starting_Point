@@ -1,3 +1,4 @@
+// Project colors
 const Colors = {
     black: '#23272a',
     blurple: '#5865f2',

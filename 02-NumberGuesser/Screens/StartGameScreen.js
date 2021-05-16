@@ -7,21 +7,27 @@ import Colors from '../constants/colors';
 import Number from "../components/Number";
 
 const StartGameScreen = props => {
+
+    // States
     const [enteredValue, setEnteredValue] = useState('');
     const [confirmStartGame, setConfirmStartGame] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState(0);
     const [confirmed, setConfirmed] = useState(false);
 
+    // Filter user input
     const numberInputHandler = inputText => {
         setEnteredValue(inputText.replace(/[^0-9]/g, ''));
     };
 
+    // Reset user input
     const resetInputHandler = () => {
         setEnteredValue('');
         setConfirmStartGame(false);
         setConfirmed(false);
     }
 
+
+    // User choice confirmation
     const confirmInputHandler = () => {
         const chosenNumber = parseInt(enteredValue);
         if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
@@ -52,6 +58,7 @@ const StartGameScreen = props => {
         }
     }
 
+    // Start game
     let confirmedOutput;
 
     if (confirmed && confirmStartGame) {

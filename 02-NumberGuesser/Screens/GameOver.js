@@ -1,8 +1,9 @@
 import React from "react";
 import {Button, StyleSheet, Text, View} from "react-native";
+
 import Card from "../components/Card";
-import Number from "../components/Number";
 import Colors from "../constants/colors";
+import Number from "../components/Number";
 
 const GameOver = props => {
     return (
