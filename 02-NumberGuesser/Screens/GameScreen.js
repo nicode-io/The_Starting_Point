@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import {Alert, Dimensions, ScrollView, StyleSheet, View} from "react-native";
+import {Alert, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, View} from "react-native";
 
 
 import Card from "../Components/Card";
@@ -75,39 +75,44 @@ const GameScreen = props => {
     };
 
     return (
-        <View style={styles.screen}>
-            <TitleText style={{...props.style}}>
-                Opponent's Guess&nbsp;
-            </TitleText>
-            <Number>{currentGuess}</Number>
-            <Card style={styles.buttonContainer}>
-                <HintButton
-                    onPress={nextGuessHandler.bind(this, 'lower')}
-                    iconName={'ios-remove-circle-outline'}
-                >
-                    LOWER&nbsp;
-                </HintButton>
-                <HintButton
-                    onPress={nextGuessHandler.bind(this, 'greater')}
-                    iconName={'ios-add-circle-outline'}
-                >
-                    GREATER&nbsp;
-                </HintButton>
-            </Card>
-            <Card style={styles.allGuesses}>
-                <TitleText>Already guessed</TitleText>
-                <ScrollView contentContainerStyle={styles.scrollStyle}>
-                    {allGuesses.map((guess, index) =>
-                        <BodyText
-                            key={index}
-                        >
-                            Round #{index+1}&nbsp;&nbsp;
-                            Guess: {guess}
-                        </BodyText>)}
-                </ScrollView>
-            </Card>
-
-        </View>
+        <SafeAreaView>
+            <ScrollView>
+                <KeyboardAvoidingView behaviour="position" keyboardVerticalOffset={25}>
+                    <View style={styles.screen}>
+                        <TitleText style={{...props.style}}>
+                            Opponent's Guess&nbsp;
+                        </TitleText>
+                        <Number>{currentGuess}</Number>
+                        <Card style={styles.buttonContainer}>
+                            <HintButton
+                                onPress={nextGuessHandler.bind(this, 'lower')}
+                                iconName={'ios-remove-circle-outline'}
+                            >
+                                LOWER&nbsp;
+                            </HintButton>
+                            <HintButton
+                                onPress={nextGuessHandler.bind(this, 'greater')}
+                                iconName={'ios-add-circle-outline'}
+                            >
+                                GREATER&nbsp;
+                            </HintButton>
+                        </Card>
+                        <Card style={styles.allGuesses}>
+                            <TitleText>Already guessed</TitleText>
+                            <ScrollView contentContainerStyle={styles.scrollStyle}>
+                                {allGuesses.map((guess, index) =>
+                                    <BodyText
+                                        key={index}
+                                    >
+                                        Round #{index + 1}&nbsp;&nbsp;
+                                        Guess: {guess}
+                                    </BodyText>)}
+                            </ScrollView>
+                        </Card>
+                    </View>
+                </KeyboardAvoidingView>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 

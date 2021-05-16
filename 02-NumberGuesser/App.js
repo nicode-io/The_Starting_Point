@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 
@@ -67,7 +67,7 @@ const App = props => {
 
     return (
         <View style={styles.screen}>
-            <Header title="Number Guesser"/>
+            <Header title={Platform.OS === 'android' ? 'Number Guesser Android' : 'Number Guesser iOS'}/>
             {content}
         </View>
     );
