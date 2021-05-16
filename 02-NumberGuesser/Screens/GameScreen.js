@@ -15,7 +15,7 @@ const generateRandomNumber = (min, max, exclude) => {
 
     // Check if random is the same as user choice
     if (rndNum === exclude) {
-        return generateRandomNumber();
+        return generateRandomNumber(min, max, exclude);
     } else {
         return rndNum;
     }
@@ -32,7 +32,7 @@ const GameScreen = props => {
     const currentMax = useRef(100);
 
     // Props destructuring
-    const { userChoice, onGameOver } = props;
+    const {userChoice, onGameOver} = props;
 
     // Effects
     useEffect(() => {
@@ -43,11 +43,13 @@ const GameScreen = props => {
 
     // Rounds management
     const nextGuessHandler = direction => {
-        if ((direction === 'lower' && currentGuess < props.userChoice)
-            || (direction === 'greater' && currentGuess > props.userChoice)) {
-            Alert.alert('Don\'t lie !', 'Computer know you\'re cheating ;)', [{
-                text: 'Sorry!', style: 'cancel'
-            }]);
+        if (
+            (direction === 'lower' && currentGuess < props.userChoice) ||
+            (direction === 'greater' && currentGuess > props.userChoice)
+        ) {
+            Alert.alert('Don\'t lie !', 'Computer know you\'re cheating ;)', [
+                {text: 'Sorry!', style: 'cancel'}
+            ]);
             return;
         }
         if (direction === 'lower') {
@@ -56,14 +58,18 @@ const GameScreen = props => {
             currentMin.current = currentGuess;
         }
 
-        const nextNumber = generateRandomNumber(currentMin.current, currentMax.current, currentGuess);
-        setRounds(prevRounds => prevRounds += 1);
+        const nextNumber = generateRandomNumber(
+            currentMin.current,
+            currentMax.current,
+            currentGuess
+        );
         setCurrentGuess(nextNumber);
+        setRounds(prevRounds => prevRounds += 1);
     };
 
     return (
         <View style={styles.screen}>
-            <Text>Opponent's Guess</Text>
+            <Text style={styles.text}>Opponent's Guess</Text>
             <Number>{currentGuess}</Number>
             <Card style={styles.buttonContainer}>
                 <Button title="LOWER" onPress={nextGuessHandler.bind(this, 'lower')}/>
@@ -76,15 +82,21 @@ const GameScreen = props => {
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
-        padding: 10,
         alignItems: 'center'
+        padding: 10,
+    },
+    text: {
+        color: Colors.yellow,
+        fontSize: 24,
+        fontFamily: 'bangers-regular',
+        textAlign: 'center',
     },
     buttonContainer: {
+        width: 300,
+        maxWidth: '80%',
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginTop: 20,
-        width: 300,
-        maxWidth: '80%',
         backgroundColor: Colors.yellow,
     }
 });

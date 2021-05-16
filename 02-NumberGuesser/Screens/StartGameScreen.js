@@ -64,9 +64,9 @@ const StartGameScreen = props => {
     if (confirmed && confirmStartGame) {
         confirmedOutput =
             <Card style={styles.confirmed}>
-                <Text style={{color: Colors.yellow, fontSize: 24, textAlign: 'center'}}>Let's start !</Text>
-                <Text style={{color: Colors.white, fontSize: 20, textAlign: 'center'}}>
-                    You choose:
+                <Text style={styles.confirmText}>Let's start !</Text>
+                <Text style={styles.confirmText}>
+                    You choose :
                 </Text>
                 <Number>{selectedNumber}</Number>
                 <Button
@@ -85,9 +85,9 @@ const StartGameScreen = props => {
                 }}
             >
                 <View style={styles.screen}>
-                    <Text style={styles.title}>Start a New Game!</Text>
+                    <Text style={styles.title}>Start a New Game !</Text>
                     <Card style={styles.inputContainer}>
-                        <Text style={{fontSize: 18}}>Select a Number (1-99)</Text>
+                        <Text style={styles.text}>Select a Number (1-99)</Text>
                         <Input
                             style={styles.input}
                             blurOnSubmit
@@ -112,7 +112,6 @@ const StartGameScreen = props => {
                                         confirmInputHandler();
                                     }}
                                     color={Colors.blurple}
-
                                 />
                             </View>
                         </View>
@@ -131,9 +130,15 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     title: {
-        fontSize: 20,
+        fontFamily: 'bangers-regular',
+        fontSize: 24,
         color: Colors.yellow,
         marginVertical: 10
+    },
+    text: {
+        fontFamily: 'bangers-regular',
+        fontSize: 20,
+        color: Colors.blurple,
     },
     inputContainer: {
         width: 500,
@@ -155,6 +160,12 @@ const styles = StyleSheet.create({
         width: 50,
         textAlign: 'center',
 
+    },
+    confirmText: {
+        color: Colors.yellow,
+        fontSize: 24,
+        fontFamily: 'bangers-regular',
+        textAlign: 'center',
     },
     confirmed: {
         width: 500,

@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     },
     headerTitle: {
         color: Colors.blurple,
-        fontSize: 18
+        fontSize: 30,
+        fontFamily: 'bangers-regular',
     }
 });
 

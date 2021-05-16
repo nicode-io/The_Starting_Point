@@ -31,41 +31,49 @@
 
 ### MindMaps
 
-(TO BE UPDATED)
-
 *   React Native Summary
+    +   Components
+    +   Concepts
+    +   Hooks
+    +   Props
+    +   States
+    
 
 ---
 
 ### Mini-Apps
 
 *   Basics
-*   Number Guesser: choose a random number and let computer guess it with your clues
-
-(TODO)
-*   Add CSS concept in REACT Native (how transform, etc)
+*   Number Guesser: choose a random number and let computer guess it according to your clues
 
 ---
 
 ### Components
 
-(TO BE UPDATED)
+####    REACT Native
++   Components
+    *   Alert
+    *   Button
+    *   Modal
+    *   ScrollView
+    *   Text
+    *   TextInput
+    *   TouchableOpacity
+    *   TouchableWithoutFeedback
+    *   TouchableHighlight
+    *   TouchableNativeFeedback (android only)
+    *   View
++   API
+    *   Keyboard
 
-*   Alert
-*   Button
-*   Modal
-*   ScrollView
-*   Text
-*   TextInput
-*   TouchableOpacity
-*   TouchableWithoutFeedback
-*   TouchableHighlight
-*   TouchableNativeFeedback (android only)
-*   View
-
-API
-*   Keyboard
-
+####    EXPO
++   Components
+    *   AppLoading
+        +   Prolong the default loading until specified tasks are done, for example async tasks
+        +   Takes a 'startAsync' parameter which must be a promise to be listened by the component
+        +   Takes a 'onFinish' function parameter where we specify what should be executed, a state update for example
+        +   Takes a 'onError' function parameter to manage promise failure
+        
 
 ---
 
@@ -80,6 +88,10 @@ API
 *   You can forward props (like in React) with ```<Component {...props} />``` to a child component
 *   In a handler the order of multiple setState is not important as the next rendering won't occur before end of block execution
 *   Use props destructuring for specify exact dependencies in useEffect
+*   Fonts are loaded at project root (App.js) and are available everywhere (While dev: reload project after copying font's files)
+
+(TODO)
+*   Add CSS concept in REACT Native (how transform, etc)
 
 ---
 

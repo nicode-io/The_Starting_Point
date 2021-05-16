@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
     },
     number: {
         color: Colors.yellow,
-        fontSize: 22,
+        fontSize: 28,
+        fontFamily: 'bangers-regular',
         fontWeight: '900',
         textAlign: 'center'
     }

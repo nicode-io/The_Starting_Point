@@ -29,8 +29,8 @@ const GameOver = props => {
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
+        alignItems: 'center',
         justifyContent: 'flex-start',
-        alignItems: 'center'
     },
     container: {
         width: 300,
@@ -39,16 +39,18 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.fuchsia,
     },
     title: {
-        textAlign: 'center',
         color: Colors.yellow,
-        fontSize: 20,
-        fontWeight: '700'
+        fontFamily: 'bangers-regular',
+        fontSize: 24,
+        fontWeight: '700',
+        textAlign: 'center',
     },
     text: {
         marginTop: 10,
+        color: Colors.yellow,
+        fontFamily: 'bangers-regular',
+        fontSize: 20,
         textAlign: 'center',
-        color: 'white',
-        fontSize: 18
     },
     replayContainer: {
         width: 300,
