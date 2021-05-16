@@ -1,9 +1,16 @@
 import React from "react";
-import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Platform, StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View} from "react-native";
 
 const GameButton = props =>{
+
+    let ButtonComponent = TouchableOpacity;
+
+    if (Platform.OS === 'android' && Platform.Version >= 21) {
+        ButtonComponent = TouchableNativeFeedback;
+    }
+
     return (
-        <TouchableOpacity
+        <ButtonComponent
             activeOpacity={0.4}
             onPress={props.onPress}
         >
@@ -19,7 +26,7 @@ const GameButton = props =>{
                     {props.children}
                 </Text>
             </View>
-        </TouchableOpacity>
+        </ButtonComponent>
     );
 };
 
