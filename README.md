@@ -157,6 +157,25 @@
 
 *   Top-level component in **createStackNavigator** receive a special **navigation** props with many functions (rtfm)
     +   The first go-to function is **navigate()**
+*   **Push** is useful to navigate inside the same components but with many links (like a file tree f.e), push always navigate to the link even if it pointed to current screen
+*   To navigate back to previous screen : ```navigation.pop()``` (stack only) or ```navigation.goBack()``` (global)
+    +   To navigate to top of the stack: ```navigation.popToTop()```
+*   Replace stack by a new one on link (f.e: after login you won't have a back to login screen but new stack): ```navigation.replace()```
+*   You can pass a **params** parameter to **navigate()** and passed any key/value pari you want to send props, or any other data
+    +   Grab then that values in your other component with ```const paramValue = props.navigation.getParam('paramName');``` (paramName is off course the key set before'
+    +   You can grab value in header using a function (ref in next point)
+*   Configure header 
+    +   Inside component: using (outside main component function) call to ```Component.navigationOptions = ... ``` where you can use **object** or a **function** to modify header (see 03-ProductsDemo) 
+    +   In navigator (good DRY practise) : add a **navigationOptions** to your navigation declaration, after **screen** must-have parameter, **navigationOptions** stay the same object you can configure
+        +   DRY navigator: use the second parameter of **createStackNavigator** object (first is routeConfigMap) to declare, inside this object, a global **defaultNavigationOptions** object which takes same parameters as **navigationOptions**
+        +   defaultNavigationOptions is overridden by component header styling BUT **navigationOptions inside navigator overrides all the rest**
+*   React-native-screens: for now just remember to call ```enableScreens()``` in root (app.js) after installing packages, it enhances performance, for more => RTFM
+
+
+ 
+
+
+
 
 ---
 
@@ -170,6 +189,7 @@
 *   react-dom
 *   react-native
 *   react-native-web
+*   react-native-screens
 *   @react-navigation/native
 ---
 
