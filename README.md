@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/github/nicode-io/ReactNative_Cursus.svg)](https://wakatime.com/badge/github/nicode-io/ReactNative_Cursus)
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -150,6 +152,11 @@
 *   You can use complete different files to avoid overwhelming sometimes your code with if statement 
     +   To do that simply name your two files: **MyComponent.ios.js** and **MyComponent.android.js** and React Native will automatically load the OS-related file when your code is calling **MyComponent** 
     +   Beware of file import naming cause IDE will sometimes add OS extension ;)
+    
+### Navigation
+
+*   Top-level component in **createStackNavigator** receive a special **navigation** props with many functions (rtfm)
+    +   The first go-to function is **navigate()**
 
 ---
 
@@ -163,7 +170,7 @@
 *   react-dom
 *   react-native
 *   react-native-web
-
+*   @react-navigation/native
 ---
 
 ### Timeline
