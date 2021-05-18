@@ -115,7 +115,6 @@
     
 ####    Styling 
 *   Shadow properties work on iOS, Elevation works on Android
-*   Flexbox is not working with **Text** component
 *   Not all CSS properties works in React Native (rtfm)
 *   Use spread operator to import style from basic component and add props style from custom component (see Card example in 02-NumberGuesser)
 *   Fonts are loaded at project root (App.js) and are available everywhere (While dev: reload project after copying font's files)
@@ -171,11 +170,8 @@
         +   defaultNavigationOptions is overridden by component header styling BUT **navigationOptions inside navigator overrides all the rest**
 *   React-native-screens: for now just remember to call ```enableScreens()``` in root (app.js) after installing packages, it enhances performance, for more => RTFM
 
-
- 
-
-
-
+### Filters
+*   ou can configure filters layout with **<Switch />** component
 
 ---
 

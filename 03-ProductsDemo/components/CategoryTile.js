@@ -22,8 +22,8 @@ const CategoryTile = props => {
 
 const styles = StyleSheet.create({
     gridItem: {
-        width: Dimensions.get('window').height / 6,
-        height: Dimensions.get('window').height / 6,
+        width:  Dimensions.get('window').height / 7,
+        height: Dimensions.get('window').height / 7,
         margin: 15,
         padding: 10,
         flex: 1,

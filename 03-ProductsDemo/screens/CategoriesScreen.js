@@ -10,6 +10,8 @@ import {
 
 import {CATEGORIES} from "../data/CategoryData";
 import CategoryTile from "../components/CategoryTile";
+import CustomHeaderButton from "../components/CustomHeaderButton";
+import {HeaderButtons, Item} from "react-navigation-header-buttons";
 
 const CategoriesScreen = props => {
 
@@ -55,6 +57,24 @@ const CategoriesScreen = props => {
         </SafeAreaView>
     )
 };
+
+// Header & Drawer configuration
+CategoriesScreen.navigationOptions = navigationData => {
+    return {
+        headerTitle: 'Products Categories',
+        headerLeft: () => (
+            <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+                <Item
+                    title="Menu"
+                    iconName="ios-menu"
+                    onPress={() => {
+                        navigationData.navigation.toggleDrawer()
+                    }}
+                />
+            </HeaderButtons>
+        )
+    }
+}
 
 const styles = StyleSheet.create({
     screen: {

@@ -4,6 +4,7 @@ import {FlatList, StyleSheet, Text, View} from "react-native";
 import {CATEGORIES} from "../data/CategoryData";
 import {PRODUCTS} from "../data/ProductsData";
 import ProductTile from "../components/ProductTile";
+import ProductsList from "../components/ProductsList";
 
 const CategoryProductsScreen = props => {
 
@@ -27,14 +28,14 @@ const CategoryProductsScreen = props => {
         )
     }
 
+    //TODO: Create a navigation var up or down the product to
+    // go back to products > category > subcategory
+
     return (
-        <View style={styles.screen}>
-            <FlatList
-                data={displayedProducts}
-                renderItem={renderProduct}
-                style={styles.list}
-            />
-        </View>
+        <ProductsList
+            products={displayedProducts}
+            renderProduct={renderProduct}
+        />
     )
 };
 
@@ -47,17 +48,5 @@ CategoryProductsScreen.navigationOptions = navigationData => {
         headerTitle: selectedCategory.title,
     };
 };
-
-const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginVertical: 20,
-    },
-    list: {
-        borderRadius: 5
-    }
-});
 
 export default CategoryProductsScreen
