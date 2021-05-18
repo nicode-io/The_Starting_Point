@@ -5,7 +5,7 @@
     <img src="./images/dotnet-logo.png" alt="Logo" width="250" height=250">
   </a>
 
-<h3 align="center">.NET-SHREPOINT-BI BOOTCAMP</h3>
+<h3 align="center">BI .NET BOOTCAMP</h3>
 
 <p align="center">
     A full-time 6monts bootcamp to learn .Net 5.0 / Entity frameworks.
