@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/github/nicode-io/ReactNative_Cursus.svg)](https://wakatime.com/badge/github/nicode-io/ReactNative_Cursus)
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -113,7 +115,6 @@
     
 ####    Styling 
 *   Shadow properties work on iOS, Elevation works on Android
-*   Flexbox is not working with **Text** component
 *   Not all CSS properties works in React Native (rtfm)
 *   Use spread operator to import style from basic component and add props style from custom component (see Card example in 02-NumberGuesser)
 *   Fonts are loaded at project root (App.js) and are available everywhere (While dev: reload project after copying font's files)
@@ -150,6 +151,27 @@
 *   You can use complete different files to avoid overwhelming sometimes your code with if statement 
     +   To do that simply name your two files: **MyComponent.ios.js** and **MyComponent.android.js** and React Native will automatically load the OS-related file when your code is calling **MyComponent** 
     +   Beware of file import naming cause IDE will sometimes add OS extension ;)
+    
+### Navigation
+
+*   Top-level component in **createStackNavigator** receive a special **navigation** props with many functions (rtfm)
+    +   The first go-to function is **navigate()**
+*   **Push** is useful to navigate inside the same components but with many links (like a file tree f.e), push always navigate to the link even if it pointed to current screen
+*   To navigate back to previous screen : ```navigation.pop()``` (stack only) or ```navigation.goBack()``` (global)
+    +   To navigate to top of the stack: ```navigation.popToTop()```
+*   Replace stack by a new one on link (f.e: after login you won't have a back to login screen but new stack): ```navigation.replace()```
+*   You can pass a **params** parameter to **navigate()** and passed any key/value pari you want to send props, or any other data
+    +   Grab then that values in your other component with ```const paramValue = props.navigation.getParam('paramName');``` (paramName is off course the key set before'
+    +   You can grab value in header using a function (ref in next point)
+*   Configure header 
+    +   Inside component: using (outside main component function) call to ```Component.navigationOptions = ... ``` where you can use **object** or a **function** to modify header (see 03-ProductsDemo) 
+    +   In navigator (good DRY practise) : add a **navigationOptions** to your navigation declaration, after **screen** must-have parameter, **navigationOptions** stay the same object you can configure
+        +   DRY navigator: use the second parameter of **createStackNavigator** object (first is routeConfigMap) to declare, inside this object, a global **defaultNavigationOptions** object which takes same parameters as **navigationOptions**
+        +   defaultNavigationOptions is overridden by component header styling BUT **navigationOptions inside navigator overrides all the rest**
+*   React-native-screens: for now just remember to call ```enableScreens()``` in root (app.js) after installing packages, it enhances performance, for more => RTFM
+
+### Filters
+*   ou can configure filters layout with **<Switch />** component
 
 ---
 
@@ -163,7 +185,8 @@
 *   react-dom
 *   react-native
 *   react-native-web
-
+*   react-native-screens
+*   @react-navigation/native
 ---
 
 ### Timeline
