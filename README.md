@@ -76,21 +76,24 @@ react-scripts
     +   Specific style with inline-styling, which is functions using JSS
 *   Inline styling works with three elements:
     +   ```const useStyles = makeStyles(theme => ({ paramName: value })``` is a function define before the component and so, outside the JSX rendering code, 
-        +   You can use the spread operator to import global params from theme.
+        *   You can use the spread operator to import global params from theme.
     +   ```const classes = useStyles();``` inside your component to link useStyle hook to a variable.
     +   ```<div className={classes.paramName}/>``` insert params calling into JSX/JSS  
+*   Responsive behaviours are managed by folllowings:
+    +   **Breakpoints** which are defined in our **Theme** properties
+    +   through **Drawers**
 
 ---
 
 ##  Tips
 
-    *   Beware that @material-ui/core/styles and @material-ui/styles are two differents packages
-    *   All theming customization props are located in the [Default Theme Object](https://material-ui.com/customization/default-theme/)
-        +   Colors in **Palette** section
-        +   Fonts in **Typography** section
-            *   Font size in Material UI use REM and is base on the **fontSize** attribute in this section
-    *   Theming manage light and dark mode with a complete default configuration
-
+*   Beware that @material-ui/core/styles and @material-ui/styles are two different packages
+*   All theming customization props are located in the [Default Theme Object](https://material-ui.com/customization/default-theme/)
+    +   Colors in **Palette** section
+    +   Fonts in **Typography** section
+        *   Font size in Material UI use REM and is base on the **fontSize** attribute in this section
+*   Theming manage light and dark mode with a complete default configuration
+*   Menus are build on top of MAterial UI so to style it you muse use ```classes={{paper: classes.claasName}}```
 ---
 
 <a href="https://linkedin.com/in/nicolas-denoel">

@@ -25,12 +25,12 @@ const App = () => {
                         component={() => <div>Custom Software</div>}
                     />
                     <Route
-                        exact path="/mobileapps"
-                        component={() => <div>Mobile Apps</div>}
+                        exact path="/mobileapp"
+                        component={() => <div>Mobile App</div>}
                     />
                     <Route
-                        exact path="/websites"
-                        component={() => <div>Websites</div>}
+                        exact path="/website"
+                        component={() => <div>Website</div>}
                     />
                     <Route
                         exact path="/revolution"
