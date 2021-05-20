@@ -88,6 +88,8 @@ This project aims to study REACT and everything related to it: hooks, events, ro
     -   Rename your css file with .module, syntax ```Component.module.css```
     -   You can then call in component dynamic class object, syntax ```className={style.Component}``` (if you choose to name your import styles)
 
+####    Debug
+
 
 ---
 
