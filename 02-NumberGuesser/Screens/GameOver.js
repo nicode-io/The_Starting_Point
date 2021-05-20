@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.fuchsia,
     },
     imageContainer: {
-        width: Dimensions.get('window').height * 0.7,
-        height: Dimensions.get('window').height * 0.7,
+        width: Dimensions.get('window').height / 4,
+        height: Dimensions.get('window').height / 4,
         alignSelf: 'center',
         marginBottom: 10,
         borderRadius: Dimensions.get('window').height * 0.7 / 2,
