@@ -38,71 +38,75 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 
 ---
 
-##  [1. Fundamentals](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals)
+##  [1. Fundamentals](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals)
 
-*   [CSharp]()
-*   [Flutter]()
-*   [PHP]()
-*   [SQL]()
-*   [OOP PHP]()
-*   [SASS]()
-*   [HTML]()
-
----
-
-##  [2. Learning Path]()
-
-*   [Javascript Frameworks]()
-*   [Javascript]()
-*   [Python]()
+*   [CSharp](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-01-CSharp)
+*   [Flutter](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-02-Flutter)
+*   [PHP](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-03-PHP)
+*   [SQL](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-04-SQL)
+*   [OOP PHP](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-05-OOP_PHP)
+*   [SASS](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-06-SASS)
+*   [HTML](https://github.com/nicode-io/The_Junior_Way/tree/main/01-Fundamentals/01-07-HTML)
 
 ---
 
-##  [3. Cursus]()
+##  [2. Learning Path](https://github.com/nicode-io/The_Junior_Way/tree/main/02-Learning_Path)
 
-*   [React]() 
-*   [MaterialUI]()
-*   [React Native]()
-*   [Node]()
-*   [Docker]()
-*   [Python CrashCourse]()
+*   [Javascript Frameworks](https://github.com/nicode-io/The_Junior_Way/tree/main/02-Learning_Path/02-01-JavaScript_Frameworks)
+*   [Javascript](https://github.com/nicode-io/The_Junior_Way/tree/main/02-Learning_Path/02-02-JavaScript)
+*   [Python](https://github.com/nicode-io/The_Junior_Way/tree/main/02-Learning_Path/02-03-Python)
 
 ---
 
-##  [4. Practise]()
+##  [3. Cursus](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus)
 
-*   [SociAct]()
-*   [Mern Eshop]()
-*   [Flutter]()
-*   [Toolbox]()
-*   [Portfolio Skeleton]()
-*   [Bookings App]()
-*   [ReactVPS]()
-*   [ReAngo 2Do List]()
-*   [Hackers Poulette]()
-*   [Django Unframed]()
+*   [React](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus/03-01-React) 
+*   [MaterialUI](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus/03-02-MaterailUI)
+*   [React Native](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus/03-03-ReactNative)
+*   [Node](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus/03-04-Node)
+*   [Docker](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus/03-05-Docker)
+*   [Python CrashCourse](https://github.com/nicode-io/The_Junior_Way/tree/main/03-Cursus/03-06-Python_CrashCourse)
 
 ---
 
-##  [5. Bootcamps]()
+##  [4. Practise](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise)
 
-*   [Becode]()
-*   [dotNet BI]()
+*   [SociAct](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-01-SociAct)
+*   [Mern Eshop](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-02-Mern_Eshop)
+*   [Flutter](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-03-Flutter)
+*   [Toolbox](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-04-Toolbox)
+*   [Portfolio Skeleton](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-05-Portfolio_skeleton)
+*   [Bookings App](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-06-Bookings_App)
+*   [ReactVPS](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-07-ReactVPS)
+*   [ReAngo 2Do List](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-08-ReAngo_2doList)
+*   [Hackers Poulette](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-09-Hackers_Poulette)
+*   [Django Unframed](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-10-Django_Unframed)
+*   [Django Unleashed](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-11-Django_Unleashed)
+*   [Python OneLiners](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-12-Python_OneLIners)
+*   [Alien Invasion](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-13-Alien_Invasion)
+*   [Turlututu](https://github.com/nicode-io/The_Junior_Way/tree/main/04-Practise/04-14-Turlututu)
 
 ---
 
-##  [6. Guides]()
+##  [5. Bootcamps](https://github.com/nicode-io/The_Junior_Way/tree/main/05-Bootcamps)
 
-*   [VPS Beginner guide]()
-*   [Badgr LinkedIn]()
+*   [Becode](https://github.com/nicode-io/The_Junior_Way/tree/main/05-Bootcamps/05-01-Becode)
+*   [dotNet BI](https://github.com/nicode-io/The_Junior_Way/tree/main/05-Bootcamps/05-02-dotNet_BI)
 
 ---
 
-##  [7. Collaborations]()
+##  [6. Guides](https://github.com/nicode-io/The_Junior_Way/tree/main/06-Guides)
 
-*   [Becode TeamWork]()
-*   [FabLab Charleroi]()
-*   [Python Workshop]()
+*   [VPS Beginner guide](https://github.com/nicode-io/The_Junior_Way/tree/main/06-Guides/06-01-VPS_Beginner_Guide)
+*   [Badgr LinkedIn](https://github.com/nicode-io/The_Junior_Way/tree/main/06-Guides/06-02-Badgr_LinkedIn)
+
+---
+
+##  [7. Collaborations](https://github.com/nicode-io/The_Junior_Way/tree/main/07-Collaborations)
+
+*   [Becode TeamWork](https://github.com/nicode-io/The_Junior_Way/tree/main/07-Collaborations/07-01-Becode_Teamwork)
+*   [FabLab Charleroi](https://github.com/nicode-io/The_Junior_Way/tree/main/07-Collaborations/07-02-FabLab_Charleroi)
+*   [Python Workshop](https://github.com/nicode-io/The_Junior_Way/tree/main/07-Collaborations/07-03-Python_Workshop)
 
 ---
 
