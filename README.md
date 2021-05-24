@@ -9,59 +9,87 @@
     After an intense year, the first step of this new career as a developer, it was time to sort out this Github profile.
 The first discoveries, certainly exciting, have less interest and are no longer representative of the quality of work
 that I wish to expose in the future.
+<br />
+<br />
 This repo therefore contains the imprint of a landmark year and will perhaps only be of interest to me, and those who
 have gone through this first year with me, but it is already so much.
+<br />
+<br />
 Thanks to all those who help me every day to achieve my goals in the passion of development.
 </p>
 <p align="center">
     <br />
     <br />
-    <a href="#bootcamps">Bootcamps</a>
+    <a href="#fundamentals">Fundamentals</a>
     ·
-    <a href="#fundamtentals">Fundamentals</a>
+    <a href="#learning-path">Learning Path</a>
     ·
     <a href="#cursus">Cursus</a>
+    <br />
+    <a href="#practise">Practise</a>
     ·
-    <a href="#docs">Docs</a>
+    <a href="#bootcamps">Bootcamps</a>
     ·
-    <a href="#timeline">Timeline</a>
+    <a href="#guides">Guide</a>
+    ·
+    <a href="#collaborations">Collaborations</a>
     ·
 </p>
 
 ---
 
-##  [Bootcamps](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps)
+##  [1. Fundamentals](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals)
 
-### [Becode Bootcamp](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps/01-Becode)
-
-*   Solo content (TO BE ADDED)
-*   [Becode - Teamwork](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps/01-Becode/Becode_TeamWork)
-
-### [ASP .Net](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps/02-ASPdotNet)
-
-*   [Database](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps/02-ASPdotNet/01-Database)
-*   [C Sharp](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps/02-ASPdotNet/02-C_Sharp)
-*   [ASP .Net](https://github.com/nicode-io/A_Junior_Way/tree/main/01-Bootcamps/02-ASPdotNet/03-ASP_dotNet)
-*   ... TO BE UPDATED
-
---- 
-
-##  [Fundamentals](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals)
-
-*   [JavaScript](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals/01-JAVASCRIPT_Fundamentals)
-*   [PHP](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals/02-PHP_Fundamentals)
-*   [CSharp](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals/03-CSharp_Fundamentals)
-*   [Flutter](https://github.com/nicode-io/A_Junior_Way/tree/main/02-Fundamentals/04-Flutter_Fundamentals)
+*   [CSharp]()
+*   [Flutter]()
 
 ---
 
-##  [Cursus](https://github.com/nicode-io/A_Junior_Way/tree/main/03-Cursus)
+##  [2. Learning Path]()
 
-*   [Node](https://github.com/nicode-io/A_Junior_Way/tree/main/03-Cursus/01-NodeCursus) 
-*   [React](https://github.com/nicode-io/A_Junior_Way/tree/main/03-Cursus/02-ReactCursus)
-*   [React Native](https://github.com/nicode-io/A_Junior_Way/tree/main/03-Cursus/03-ReactNative_Cursus)
-*   [Docker](https://github.com/nicode-io/A_Junior_Way/tree/main/03-Cursus/04-DockerCursus)
-*   [Material UI](https://github.com/nicode-io/A_Junior_Way/tree/main/03-Cursus/05-MaterialUICursus)
+*   [Javascript Frameworks]()
+*   [Javascript]()
+*   [Python]()
+
+---
+
+##  [3. Cursus]()
+
+*   [React]() 
+*   [MaterialUI]()
+*   [React Native]()
+*   [Node]()
+*   [Docker]()
+
+---
+
+##  [4. Practise]()
+
+*   [SociAct]()
+*   [Mern Eshop]()
+*   [Flutter]()
+
+---
+
+##  [5. Bootcamps]()
+
+*   [Becode]()
+*   [dotNet BI]()
+
+---
+
+##  [6. Guides]()
+
+*   [VPS Beginner guide]()
+*   [Badgr LinkedIn]()
+
+---
+
+##  [7. Collaborations]()
+
+*   [Becode TeamWork]()
+*   [FabLab Charleroi]()
+*   [Python Workshop]()
 
 ---
 
