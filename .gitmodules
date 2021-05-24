@@ -1,6 +1,3 @@
-[submodule "01-04-01-Kik-Irpa-asbl"]
-	path = 01-04-01-Kik-Irpa-asbl
-	url = https://github.com/nicode-be/01-04-01-Kik-Irpa-asbl
 [submodule "01-04-02-Page-404"]
 	path = 01-04-02-Page-404
 	url = https://github.com/nicode-be/01-04-02-Page-404
