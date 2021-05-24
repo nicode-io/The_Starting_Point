@@ -42,6 +42,10 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 
 *   [CSharp]()
 *   [Flutter]()
+*   [PHP]()
+*   [SQL]()
+*   [OOP PHP]()
+*   [SASS]()
 
 ---
 
@@ -73,6 +77,7 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 *   [Bookings App]()
 *   [ReactVPS]()
 *   [ReAngo 2Do List]()
+*   [Hackers Poulette]()
 
 ---
 
