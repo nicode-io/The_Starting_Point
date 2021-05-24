@@ -1,0 +1,185 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(193, 227, 228, 0.5);
+  font-family: 'Waiting for the Sunrise', cursive; }
+  body h1 img {
+    width: 10vw;
+    height: auto; }
+  body #hangmanGame #startGame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    body #hangmanGame #startGame .start {
+      background: #c1e3e4;
+      -webkit-box-shadow: 5px 0px 10px rgba(42, 97, 200, 0.8);
+              box-shadow: 5px 0px 10px rgba(42, 97, 200, 0.8);
+      border: none;
+      border-radius: 0.3vw;
+      margin: 2vh;
+      padding: 1vw;
+      font-family: 'Press Start 2P', cursive; }
+  body #hangmanGame #score {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: 'Press Start 2P', cursive; }
+    body #hangmanGame #score #points {
+      margin-left: 1vw;
+      font-family: inherit; }
+  body #hangmanGame #canvas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  body #hangmanGame #wordPrint {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90vw; }
+    body #hangmanGame #wordPrint span {
+      margin: 2vw;
+      font-size: 3rem;
+      font-weight: 900; }
+  body #hangmanGame #keyboard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1vh;
+    border-radius: 1vh;
+    background: rgba(60, 46, 38, 0.1); }
+    body #hangmanGame #keyboard button {
+      width: 4vw;
+      border: none;
+      border-radius: 0.4vw;
+      margin: 1.6vw;
+      padding: 1vw;
+      -webkit-box-shadow: 5px 0px 15px #c1e3ee;
+              box-shadow: 5px 0px 15px #c1e3ee;
+      font-family: 'Waiting for the Sunrise', cursive;
+      font-size: 1.5rem;
+      font-weight: 900; }
+  body #hangmanGame #endGame {
+    font-family: 'Press Start 2P', cursive; }
+    body #hangmanGame #endGame #win {
+      visibility: hidden;
+      width: 80vw;
+      height: 50vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      font-size: 5rem;
+      color: #f2993a; }
+    body #hangmanGame #endGame #loose {
+      visibility: hidden;
+      width: 80vw;
+      height: 50vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      font-size: 5rem;
+      color: red;
+      text-align: center; }
+/*# sourceMappingURL=style.css.map */
