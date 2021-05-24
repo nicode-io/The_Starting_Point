@@ -46,6 +46,7 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 *   [SQL]()
 *   [OOP PHP]()
 *   [SASS]()
+*   [HTML]()
 
 ---
 
