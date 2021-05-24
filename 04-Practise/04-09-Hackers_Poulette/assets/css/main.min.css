@@ -1,0 +1,80 @@
+@import "https://fonts.googleapis.com/css2?family=Bellota&display=swap";
+body {
+  background: #fff;
+  font-family: "Bellota", cursive;
+}
+body main section img {
+  width: auto;
+  height: 15vh;
+}
+body main section article .error {
+  color: #d45455;
+}
+body main section article label {
+  color: #303030;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+body main section article label #optional {
+  color: #0d8187;
+  font-size: 0.8rem;
+}
+body main #formSupport {
+  background: #0d818750;
+}
+body main #formSupport #winnie {
+  visibility: hidden;
+}
+body main #formSupport #submitSect #submit {
+  background-color: #0d8187;
+  border: 2px #0d818750 solid;
+  width: 50vw;
+  height: 6vh;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+body main #formSupport #descriptionSubmit {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    background: #fff;
+    font-family: "Bellota", cursive;
+  }
+  body main section img {
+    width: auto;
+    height: 20vh;
+  }
+  body main section article .error {
+    color: #d45455;
+  }
+  body main section article label {
+    color: #303030;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+  body main section article label #optional {
+    color: #0d8187;
+    font-size: 0.8rem;
+  }
+  body main #formSupport {
+    background: #0d818750;
+  }
+  body main #formSupport #winnie {
+    visibility: hidden;
+  }
+  body main #formSupport #submitSect #submit {
+    background-color: #0d8187;
+    border: 2px #0d818750 solid;
+    width: 20vw;
+    height: 6vh;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  body main #formSupport #descriptionSubmit {
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=main.min.css.map */
