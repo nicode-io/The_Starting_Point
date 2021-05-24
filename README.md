@@ -64,6 +64,7 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 *   [React Native]()
 *   [Node]()
 *   [Docker]()
+*   [Python CrashCourse]()
 
 ---
 
