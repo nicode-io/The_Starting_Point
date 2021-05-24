@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techno.ASP", "Techno.ASP\Techno.ASP.csproj", "{87CA2CBE-2ABD-4F74-B5EA-E353D6C3D6A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techno.DAL", "Techno.DAL\Techno.DAL.csproj", "{76784EC4-29BB-459A-B0CC-F6E04DC3D4A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87CA2CBE-2ABD-4F74-B5EA-E353D6C3D6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87CA2CBE-2ABD-4F74-B5EA-E353D6C3D6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87CA2CBE-2ABD-4F74-B5EA-E353D6C3D6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87CA2CBE-2ABD-4F74-B5EA-E353D6C3D6A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76784EC4-29BB-459A-B0CC-F6E04DC3D4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76784EC4-29BB-459A-B0CC-F6E04DC3D4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76784EC4-29BB-459A-B0CC-F6E04DC3D4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76784EC4-29BB-459A-B0CC-F6E04DC3D4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {307FD419-405A-4E1A-BE33-97BFA270A69D}
+	EndGlobalSection
+EndGlobal
