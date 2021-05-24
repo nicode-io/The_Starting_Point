@@ -1,6 +1,3 @@
-[submodule "01-04-02-Page-404"]
-	path = 01-04-02-Page-404
-	url = https://github.com/nicode-be/01-04-02-Page-404
 [submodule "01-04-03-Star-wars-crawl"]
 	path = 01-04-03-Star-wars-crawl
 	url = https://github.com/nicode-be/01-04-03-Star-wars-crawl
