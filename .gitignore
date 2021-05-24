@@ -216,3 +216,4 @@ typings/
 
 learning_log/ll_env/
 learning_log/learning_log/settings.py
+myclub_site_root/myclub_site/secrets.py
