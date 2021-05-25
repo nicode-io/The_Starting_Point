@@ -111,7 +111,6 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 ---
 
 ##  [Docs](https://github.com/nicode-io/A_Junior_Way/tree/main/04-Docs)
-
 *   [Badgr to Linkedin](https://github.com/nicode-io/A_Junior_Way/tree/main/04-Docs/01-Badgr-To-LinkedIn)
 *   [Guide to private VPS](https://github.com/nicode-io/A_Junior_Way/tree/main/04-Docs/02-Guide_to_private_server)
 
