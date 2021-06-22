@@ -16,17 +16,6 @@ Thanks to all those who help me every day to achieve my goals in the passion of 
 <p align="center">
     <br />
     <br />
-    <a href="#"></a>
-    ·
-    <a href="#"></a>
-    ·
-    <a href="#"></a>
-    <br />
-    <a href="#"></a>
-    ·
-    <a href="#'></a>
-    ·
-    <a href="#"></a>
     ·
     <a href="#timeline">Timeline</a>
     ·
