@@ -7,8 +7,8 @@
 
 <p align="center">
     A second year of coding and learning to get off to a great start. After a second bootcamp started in C# and BI, it's time to get down to business with a first experience in a Belgian electronics company. First project: the creation of an application for managing home automation installations from A to Z. 
-
-Learning remains my daily life. Doing my best and always better is my motto for this second year ! 
+   Learning remains my daily life. Doing my best and always better is my motto for this second year ! 
+                 </p>
 <br />
 <br />
 Thanks to all those who help me every day to live in the passion of coding.
