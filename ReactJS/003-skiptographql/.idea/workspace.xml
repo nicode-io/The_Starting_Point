@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63f91652-caff-4439-acd1-dbaf246fa3f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/003-skiptographql.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/crown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/shopping-bag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/cart-dropdown/cart-dropdown.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/cart-dropdown/cart-dropdown.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/cart-icon/cart-icon.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/cart-icon/cart-icon.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/cart-item/cart-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/checkout-item/checkout-item.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/checkout-item/checkout-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collection-item/collection-item.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collection-item/collection-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collection-preview/collection-preview.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collection-preview/collection-preview.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collections-overview/collections-overview.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collections-overview/collections-overview.container.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/collections-overview/collections-overview.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/custom-button/custom-button.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/custom-button/custom-button.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/directory/directory.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/directory/directory.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/error-boundary/error-boundary.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/error-boundary/error-boundary.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/form-input/form-input.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/form-input/form-input.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/header/header.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/header/header.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/menu-item/menu-item.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/menu-item/menu-item.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/sign-in/sign-in.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/sign-in/sign-in.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/sign-up/sign-up.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/sign-up/sign-up.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/spinner/spinner.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/spinner/spinner.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/stripe-button/stripe-button.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/with-spinner/with-spinner.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/firebase/firebase.utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/global.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/checkout/checkout.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/checkout/checkout.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/collection/collection.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/collection/collection.container.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/collection/collection.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/homepage/homepage.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/homepage/homepage.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/shop/shop.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/shop/shop.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/cart.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/cart.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/cart.sagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/cart.selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/cart.types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/cart.utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/directory/directory.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/directory/directory.selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/root-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/root-saga.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/shop/shop.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/shop/shop.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/shop/shop.sagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/shop/shop.selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/shop/shop.types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/user/user.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/user/user.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/user/user.sagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/user/user.selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/user/user.types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="213i3u1YiiuloMf50QQthV2TgWk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63f91652-caff-4439-acd1-dbaf246fa3f7" name="Changes" comment="" />
+      <created>1637175976104</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637175976104</updated>
+      <workItem from="1637175977960" duration="618000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
