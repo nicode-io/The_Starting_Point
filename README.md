@@ -24,10 +24,6 @@
 
 ---
 
-
-
----
-
 ### Timeline
 
 > My developer timeline
