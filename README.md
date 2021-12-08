@@ -6,12 +6,12 @@
 <h3 align="center">A Medior Way</h3>
 
 <p align="center">
-    A second year of coding and learning to get off to a great start. After a second bootcamp started in C# and BI, it's time to get down to business with a first experience in a Belgian electronics company. On the agenda was the creation of a React Native application to manage electronic modules.
+    A second year of coding and learning to get off to a great start. After a second bootcamp started in C# and BI, it's time to get down to business with a first experience in a Belgian electronics company. First project: the creation of an application for managing home automation installations from A to Z. 
 
-Learning remains my daily life, with currently three main side-learning: Python, Flutter and Algorithms. Doing my best and always better is my motto for this second year! 
+Learning remains my daily life. Doing my best and always better is my motto for this second year ! 
 <br />
 <br />
-Thanks to all those who help me every day to achieve my goals in the passion of development.
+Thanks to all those who help me every day to live in the passion of coding.
 </p>
 <p align="center">
     <br />
