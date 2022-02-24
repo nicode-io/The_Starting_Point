@@ -39,12 +39,6 @@ body {
   letter-spacing: .2rem;
   transition: all .2s;
 
-  // Make gradient on font
-  display: inline-block;
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
-  color: transparent;
-
   &:hover {
     transform: skewY(1deg) skewX(1deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);

@@ -86,10 +86,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
-  display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 .heading-secondary:hover {
   transform: skewY(1deg) skewX(1deg) scale(1.1);
@@ -123,6 +119,12 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+}
+
+.u-text-gradient-bg {
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .btn:link, .btn:visited {
@@ -224,6 +226,23 @@ body {
   top: 10rem;
 }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+.feature-box__icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -289,6 +308,18 @@ body {
   background-color: #f7f7f7;
   padding: 25vh 0;
   margin-top: -20vh;
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg);
+  margin-top: -12rem;
+}
+.section-features > * {
+  transform: skewY(7deg);
 }
 
 /*# sourceMappingURL=main.css.map */
