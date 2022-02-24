@@ -8,7 +8,7 @@
 
   &__photo {
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    box-shadow: $shadow-very-light;
     position: absolute;
     z-index: 1;
     transition: all .4s;
@@ -17,7 +17,7 @@
     &:hover {
       outline: .8rem solid $color-primary;
       transform: scale(1.05) translateY(-1rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+      box-shadow: $shadow-light;
       z-index: 2;
     }
 
