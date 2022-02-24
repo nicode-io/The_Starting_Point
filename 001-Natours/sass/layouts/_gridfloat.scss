@@ -1,16 +1,12 @@
 .row {
   max-width: $grid-width;
-  background-color: $color-grey;
   margin: 0 auto;
-  color: $color-white;
 
   @include clearfix;
 
   // Select all elements which classname begins with col- (use $ for ending by)
   [class^="col-"] {
-    background-color: $color-primary;
     float: left;
-    text-align: center;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
