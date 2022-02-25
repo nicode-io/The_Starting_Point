@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: .3rem;
+    border-radius: $border-radius-small;
     box-shadow: $shadow-medium;
     overflow: hidden;
 
@@ -53,8 +53,8 @@
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     position: relative;
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
+    border-top-left-radius: $border-radius-small;
+    border-top-right-radius: $border-radius-small;
 
     &--1 {
       background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
