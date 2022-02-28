@@ -42,7 +42,7 @@
   }
 
   &__list {
-    @include centerHorizontalVertical;
+    @include absoluteCentering;
     list-style: none;
     text-align: center;
     width: 100%;
