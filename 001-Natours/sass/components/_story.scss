@@ -1,12 +1,21 @@
 .story {
   width: 75%;
   margin: 0 auto;
-  padding: 6rem 6rem 6rem 8rem;
+  padding: 6rem 6rem 6rem 9rem;
   box-shadow: $shadow-big;
   background-color: rgba($color-white, .55);
   border-radius: $border-radius-small;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem 4rem 4rem 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(02deg);
+  }
 
   &__shape {
     width: 15rem;
@@ -21,6 +30,10 @@
     transform: translateX(-2rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0deg);
+    }
   }
 
   &__img {
@@ -32,6 +45,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0deg);
+    }
   }
 
   &__caption {

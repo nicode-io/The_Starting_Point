@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Must be specified for our responsive design to work -->
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-    <link href="css/icon-font.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/icon-font.css" rel="stylesheet"><!--Remove on prod (merged while building) -->
+    <link href="css/style.css" rel="stylesheet">
     <link href="img/favicon.png" rel="shortcut icon" type="image/png">
 
     <title>Natours | Exciting tours for adventurous people</title>
@@ -79,9 +80,27 @@
             </div>
             <div class="col-1-of-2">
                 <div class="composition">
-                    <img alt="Photo1" class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
-                    <img alt="Photo2" class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
-                    <img alt="Photo3" class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
+
+                    <!-- Responsive images: resolution switching -->
+                    <img alt="Photo 1"
+                         class="composition__photo composition__photo--p1"
+                         sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                         src="img/nat-1-large.jpg"
+                         srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                    >
+                    <img alt="Photo 2"
+                         class="composition__photo composition__photo--p2"
+                         sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                         src="img/nat-2-large.jpg"
+                         srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                    >
+                    <img alt="Photo 3"
+                         class="composition__photo composition__photo--p3"
+                         sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                         src="img/nat-3-large.jpg"
+                         srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                    >
+
                 </div>
             </div>
         </div>
@@ -390,7 +409,14 @@
 
 <footer class="footer">
     <div class="footer__logo-box">
-        <img alt="Full logo" class="footer__logo" src="img/logo-green-2x.png">
+
+        <!-- Responsive image switching -->
+        <picture class="footer__logo">
+            <source media="(max-width: 37.5em)" srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x">
+            <img alt="Full logo" class="footer__logo" src="img/logo-green-1x.png"
+                 srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x">
+        </picture>
+
     </div>
     <div class="row">
         <div class="col-1-of-2">
