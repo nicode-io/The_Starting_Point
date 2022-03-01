@@ -1,0 +1,96 @@
+// Yellow
+$color-primary: #f9ed69
+// Orange
+$color-secondary: #f08a5d
+// Pink
+$color-tertiary: #b83b5e
+// Dark Grey
+$color-text-dark: #333
+// Light white
+$color-text-light: #eee
+
+$width-button: 150px
+
+// Mixin without parameter
+@mixin clearfix
+  &::after
+    content: ""
+    clear: both
+    display: table
+
+// Mixin with parameter
+@mixin style-link-text($text-color)
+  text-decoration: none
+  text-transform: uppercase
+  color: $text-color
+
+// Functions
+@function divide($a, $b)
+  @return $a / $b
+
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+html
+  font-size: 62.5%
+
+body
+  box-sizing: border-box
+
+nav
+  margin: divide(6,2) * 1rem
+  // Example of use function
+  background-color: $color-primary
+
+  @include clearfix
+// Mixin use
+
+.navigation
+  list-style: none
+  float: left
+
+  li
+    display: inline-block
+    margin-left: 3rem
+
+    &:first-child
+      margin: 0
+
+
+    a:link
+      @include style-link-text($color-text-dark)
+// Mixin use
+
+.buttons
+  float: right
+
+// Extend declaration
+%btn-placeholder
+  padding: 1rem
+  display: inline-block
+  text-align: center
+  border-radius: 10rem
+  width: $width-button
+  @include style-link-text($color-text-light)
+// Mixin use
+
+.btn-main
+  &:link
+    @extend %btn-placeholder
+    // Extend use
+    background-color: $color-secondary
+
+  &:hover
+    background-color: darken($color-secondary, 5%)
+
+.btn-hot
+  &:link
+    @extend %btn-placeholder
+    background-color: $color-tertiary
+
+  &:hover
+    background-color: lighten($color-tertiary, 10%)
