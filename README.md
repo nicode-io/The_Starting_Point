@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/nicode-io/Flutter_Fundamentals">
-    <img src="./flutter.png" alt="Logo" width="250" height=250">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/512px-Sass_Logo_Color.svg.png" alt="Logo SASS" width="512" height="384">
   </a>
 
 <h3 align="center">(◉ ͜ʖ◉))ﾉ彡 ADVANCED CSS-SASS ✧٩(•́⌄•́๑)</h3>
