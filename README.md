@@ -1,11 +1,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/nicode-io/Flutter_Fundamentals">
-    <img src="./flutter.png" alt="Logo" width="250" height=250">
+  <a href="https://github.com/nicode-io/Advanced_CSS">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/512px-Sass_Logo_Color.svg.png" alt="Logo SASS" width="512" height="384">
   </a>
 
-<h3 align="center">(◉ ͜ʖ◉))ﾉ彡 ADVANCED CSS-SASS ✧٩(•́⌄•́๑)</h3>
+<h3 align="center">(◉ ͜ʖ◉))ﾉ彡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADVANCED
+CSS-SASS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✧٩(•́⌄•́๑)</h3>
 
   <p align="center">
     Learn CSS/SASS superpowers including fully responsive designs, 7/1 architecture, Flexbox, Grid and many more
