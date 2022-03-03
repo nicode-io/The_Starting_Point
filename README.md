@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/nicode-io/Flutter_Fundamentals">
+  <a href="https://github.com/nicode-io/Advanced-CSS">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/512px-Sass_Logo_Color.svg.png" alt="Logo SASS" width="512" height="384">
   </a>
 
