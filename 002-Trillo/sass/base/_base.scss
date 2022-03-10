@@ -22,7 +22,16 @@
   --color-black: #000;
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: .1rem solid var(--color-grey-light-2);
 }
+
+$bp-largest: 75em; // 1200px / 16
+$bp-large: 68.75em; // 1100px / 16
+$bp-medium: 56.25em; // 900px / 16
+$bp-small: 37.5em; // 600px /16
+$bp-smallest: 31.25em; // 500px / 16
 
 *,
 *::after,
@@ -36,22 +45,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
 
-  // Order of media queries matters last declared is higher priority
-  @include respond(big-desk) {
-    font-size: 75%; // 1rem = 12px => 12/16 = 75%
-  }
-
-  @include respond(tab-land) {
-    font-size: 56.25%; // 1rem = 9px => 9/16 = 56.25%
-  }
-
-  @include respond(tab-port) {
-    font-size: 50%; // 1rem = 8px => 8/16 = 50%
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
   }
 }
 
 body {
-  padding: 3rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: var(--color-grey-light-2);
@@ -60,10 +59,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-
-  @include respond(tab-port) {
-    padding: 0;
-  }
 }
 
 ::selection {
