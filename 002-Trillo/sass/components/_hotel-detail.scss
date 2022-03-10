@@ -1,0 +1,154 @@
+.hotel-detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  font-size: 1.4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
+  &__description {
+    flex: 0 0 60%;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-light);
+    margin-right: 4.5rem;
+    padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin-right: 3.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 0;
+    }
+  }
+
+  &__paragraph {
+
+  }
+
+  &__paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  &__recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+      margin-right: auto;
+    }
+
+    &__friends {
+      display: flex;
+    }
+
+    &__photo {
+      box-sizing: content-box;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: .3rem solid var(--color-white);
+
+      &:not(:last-child) {
+        margin-right: -2rem;
+      }
+    }
+  }
+}
+
+
+.user-reviews {
+  flex: 1;
+  font-size: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  .review {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+
+    @media only screen and (max-width: $bp-small) {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      z-index: 2;
+      padding: 0 3rem;
+      position: inherit;
+      text-align: center;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    &__photo {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+    }
+
+    &__user-box {
+      margin-right: auto;
+    }
+
+    &__username {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &__user-date {
+      margin-bottom: .4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--color-grey-dark-3)
+    }
+
+    &__rating {
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--color-primary);
+    }
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -2.5rem;
+      left: 0;
+      line-height: 1;
+      z-index: 1;
+      font-size: 20rem;
+      font-family: sans-serif;
+      color: var(--color-grey-light-2)
+    }
+  }
+}
