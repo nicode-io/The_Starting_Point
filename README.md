@@ -36,7 +36,16 @@ Repository contains three main projects:
 
 ## Features
 
-* *features/Natours_Project* First main project
+* *features/Nexter_Project* Vanilla CSS/SCSS + Grid + Flexbox
+    * Create a Grid layout
+    * Make layouts more flexible than before using the superpowers of Grid and also Flexbox
+* *features/Trillo_Project* Vanilla CSS/SCSS + Flexbox
+    * Use flexbox features on top of vanilla SCSS/CSS
+    * Make flexible layouts using media queries and flexbox
+    * Improve UI on each breakpoint, changing orientation or disposition of UI elements
+    * Use CSS variables (to show alternative to SASS variables here)
+    * Use SASS variables (for breakpoints definition here)
+* *features/Natours_Project* Vanilla CSS/SCSS
     * Discover all vanilla css power
     * SASS with 7/1 architecture
     * Responsive design:
@@ -46,7 +55,6 @@ Repository contains three main projects:
         * Concat
         * Prefix
         * Compress
-* *features/Trillo_Project*
 
 ---
 
