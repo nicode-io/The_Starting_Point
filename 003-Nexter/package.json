@@ -1,0 +1,29 @@
+{
+  "name": "Nexter",
+  "version": "1.0.0",
+  "description": "GRID learning project",
+  "main": "index.html",
+  "scripts": {
+    "start": "run-p dev:server watch:sass",
+    "watch:sass": "sass --watch ./sass/main.scss ./css/style.css",
+    "dev:server": "live-server --browser=firefox",
+    "compile:sass": "sass ./sass/main.scss ./css/style.comp.css",
+    "concat:css": "concat -o ./css/style.concat.css ./css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.concat.css -o ./css/style.prefix.css",
+    "compress:css": "sass ./sass/main.scss ./css/style.css --style compressed",
+    "build:css": "run-s compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "Nicode.IO",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "add": "^2.0.6",
+    "autoprefixer": "^10.4.2",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.8",
+    "yarn": "^1.22.17"
+  }
+}
