@@ -10,7 +10,7 @@ svg/240px-Unofficial_JavaScript_logo_2.svg.png" alt="Logo SASS" width="240" heig
 </h3>
 
   <p align="center">
-    Really understand JavaScript in 2022
+    Don't imitate, understand
     <br />
     <br />
     <a href="#description">Description</a>
@@ -25,13 +25,19 @@ svg/240px-Unofficial_JavaScript_logo_2.svg.png" alt="Logo SASS" width="240" heig
 ## Description
 
 Aims to learn advanced JS concepts and to truly understand how things works under the hood. No place to repeat or copy
-code but the will here is to go deep and really know this programming language
+code but the will here is to go deep and really know this programming language.
 
 ---
 
 ## Features
 
+* *features/004-Objects_&_Functions*
+    *
 * *features/003-Types_&_Operators*
+    * Operators precedence
+    * Operators associativity
+    * Default values
+    * Global object checking
 * *features/002-Execution_Contexts_&_Lexical_environments*
     * Global environment and Global object
     * Hoisting
