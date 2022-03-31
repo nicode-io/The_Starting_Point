@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://github.com/nicode-io/Advanced-CSS">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.
-svg/240px-Unofficial_JavaScript_logo_2.svg.png" alt="Logo SASS" width="240" height="240">
+svg/240px-Unofficial_JavaScript_logo_2.svg" alt="Logo JS" width="240" height="240">
   </a>
 
 <h3 align="center">(◉ ͜ʖ◉))ﾉ彡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JS 2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✧٩(•́⌄•́๑)
