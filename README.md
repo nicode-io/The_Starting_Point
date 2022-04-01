@@ -2,8 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/nicode-io/Advanced-CSS">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.
-svg/240px-Unofficial_JavaScript_logo_2.svg.png" alt="Logo SASS" width="240" height="240">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png" alt="Logo JS" width="240" height="240">
   </a>
 
 <h3 align="center">(◉ ͜ʖ◉))ﾉ彡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JS 2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✧٩(•́⌄•́๑)
@@ -32,7 +31,25 @@ code but the will here is to go deep and really know this programming language.
 ## Features
 
 * *features/004-Objects_&_Functions*
-    *
+    * Objects and dot
+    * Objects literals
+    * Faking namespaces
+    * JSON 
+    * First class functions
+    * Function statement and function expression
+    * By value and by reference
+    * Object functions and this keyword
+    * Arrays collections
+    * Arguments and spread operator
+    * Function overloading 
+    * Whitespace
+    * IIFE immediately invoked function expression
+    * Closures
+    * Framework closures functions factories
+    * Closures and callbacks
+    * Call, apply and bind function's methods
+    * Functional programming
+    * Underscore library
 * *features/003-Types_&_Operators*
     * Operators precedence
     * Operators associativity
