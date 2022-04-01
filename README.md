@@ -30,6 +30,20 @@ code but the will here is to go deep and really know this programming language.
 
 ## Features
 
+* *features/007-Odds_&_Ends*
+  * Initialization
+  * Figure out what something is
+  * Strict mode
+* *features/006-Building_Objects*
+  * Building objects functions constructor
+  * Building prototypes functions constructor
+  * Built-in functions
+  * DA: Arrays for...in
+  * Object.create() pure prototypal inheritance
+* *features/005-OOP_&_Prototypal_Inheritance*
+  * Proto objects
+  * Everything is object in JS
+  * Reflection and extend
 * *features/004-Objects_&_Functions*
     * Objects and dot
     * Objects literals
