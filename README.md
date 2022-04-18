@@ -22,25 +22,73 @@
 
 ## Description
 
-In this learning project, we'll discover how to set our mind to a test driven development, red to green way, to build more robust code. 
+In this learning project, we'll discover how to set our mind to a test driven development, red to green way, to build
+more robust code.
 
-After an introduction, we must practise to make the good test, focus must be made on testing user functionalities more than implementation itself. 
+After an introduction, we must practise to make the good test, focus must be made on testing user functionalities more
+than implementation itself.
 
-The tests won't insure a good code, we obviously need to follow good development rules such as SOLID and many more.
+The tests won't insure a good code, we obviously need to follow good development rules such as SOLID, INVEST and many
+more.
 
 ---
 
 ## Features
 
-* *features/f001-Introduction* 
-    * 
-
+* *features/f001-Introduction*
+  *
 
 ---
 
 ## Tips
 
 ### General
+
+### Jest
+
+#### Main Matchers
+
+* EQUALITY: **toEqual** and **toBe**
+* OPPOSITE: **.not** ex: .not.toBe
+* EXACT MATCH: **.toMatch()** ex: .toMatch(/\w+/)
+* NUMBERS COMPARE:
+  * **.toBeGreaterThan()**, **toBeGreaterThanOrEqual()**
+  * **.toBeLessThan()**, **toBeLessThanOrEqual()**
+* ARRAYS:
+  * **.toContain**, strict check using *===* ex: .toContain(users[0])
+  * **toContainEqual**, check value not memory address ex: .toContainEqual('Nicode')
+* EXISTENCE: **.toBeDefined()**, **.not.toBeDefined()**
+* Use **beforeEach()** and **afterEach()** inside a *describe* to avoid repeating ourselves in *it* tests
+  *Use **beforeAll()** and **afterAll** if you want to repeat an operation on all test cases
+
+### Expect
+
+* Expect helpers:
+  * **expect.stringContaining**
+  * **expect.arrayContaining**
+  * **expect.objectContaining**
+* Use **expect.extend({...})** to create custom extension in our tests (see expect-extend.test.js file in 01-jest-intro
+  directory)
+  * This allows us to create matcher more human-readable like **toHaveName**, **toBelongToDepartment**
+
+### jest.fn Mocking
+
+* Allow us to create a spy for a function
+* Allow us for mocking API call (see jest-fn-mocking.js/.test.js file in 01-jest-intro directory)
+
+### Babel
+
+* Install
+  * ```$ yarn add -D babel-jest babel-core regenerator-runtime @babel/present-env```
+  * Create a **.babelrc** file and add
+    ```js 
+    {
+      "presets": [
+        "@babel/preset-env"
+      ]
+    }
+    ``` 
+  * We can now use ES6 features like **import/export**
 
 ---
 
