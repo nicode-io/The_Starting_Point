@@ -36,13 +36,42 @@ more.
 ## Features
 
 * *features/f001-Introduction*
-  *
+  * Introduction to Jest basics
+    * Matchers
+    * Custom matchers
+    * Mocking using jest.fn
+* *features/f002-TDD_101*
+  * Main objectives: 
+    * Learn to split big task into relatively smaller ones and complete each one with a set of passing tests
+    * Learn some refactoring techniques
 
 ---
 
 ## Tips
 
 ### General
+* Writing test can usually be made with **3 steps**: 
+  * Memo: "Steps to put an elephant in the fridge": 
+    * Open the fridge 
+    * Put the elephant in
+    * Close the fridge
+  1. Do the preparation work:
+     * Set up the database
+     * Initialize object to be tested
+     * Loading some fixture data 
+     * ...
+  2. Invoke the method or function to be tested, usually assign the result to some variable
+  3. Do some assertions to see whether the result is as expected or not
+* Use **Given-When-Then** to arrange a test
+  * Also called as **3As** format: 
+    * **Arrange**/**Given**:
+      * describe all the preparation, including setting up dependencies
+    * **Act**/**When**:
+      * Trigger action or change the state of a subject to be tested, usually a function call with prepared parameters
+    * **Assert**/**Then**:
+      * Examine the result to see if it matches the expected result in some way
+* **Triangulation** is a way to implement TDD, we start from a failing test then a code with juste enough to make it pass, then write another test to drive changes from another angle. This way to do lead to a more and more generic code that accepts all tested scenarios. Even if it feels too much simple it's the foundation of TDD: split our code into small parts, then assemble all this little parts to get a robust and complete feature 
+* 
 
 ### Jest
 
