@@ -36,19 +36,27 @@ more.
 
 ## Features
 
+* *features/f003-Booklist_ATDD_1st_project*
+    *
+* *features/f002-TDD_101*
+    * Main objectives:
+        * Split big task into relatively smaller ones and complete each one with a set of passing tests
+        * Some refactoring techniques
 * *features/f001-Introduction*
     * Introduction to Jest basics
         * Matchers
         * Custom matchers
         * Mocking using jest.fn
-* *features/f002-TDD_101*
-    * Main objectives:
-        * Learn to split big task into relatively smaller ones and complete each one with a set of passing tests
-        * Learn some refactoring techniques
 
 ---
 
 ## Tips
+
+### Cypress
+
+* Open Cypress GUI: **npx cypress open**
+* Run headless mode (run all test one time in console): **npx cypress run**
+    * Add **"e2e": "cypress run"** to scripts to run from yarn run command
 
 ### General
 
@@ -65,6 +73,11 @@ more.
         * ...
     2. Invoke the method or function to be tested, usually assign the result to some variable
     3. Do some assertions to see whether the result is as expected or not
+* Writing user story with a pattern like this:
+    * As a user I want to see a list of books So that I can learn something new
+        * **As a <role>** who would benefit
+        * **I want to <do something>** explain user interaction
+        * **So that <value>** describe business value behind the feature
 * Use **Given-When-Then** to arrange a test
     * Also called as **3As** format:
         * **Arrange**/**Given**:
