@@ -6,10 +6,11 @@
 <h3 align="center">A Medior Way</h3>
 
 <p align="center">
-    A second year of coding and learning to get off to a great start. After a second bootcamp started in C# and BI, it's time to get down to business with a first experience in a Belgian electronics company. First project: the creation of an application for managing home automation installations from A to Z. 
-   Learning remains my daily life. Doing my best and always better is my motto for this second year ! 
-                 </p>
-                 Thanks to all those who help me every day to live in the passion of coding. 🚀 🖤💛💖
+A second year of coding and learning that's why this repository exists. 
+</p>
+<p align="center">Doing my best and always better is my motto for this second year ! 
+</p>
+               
 <br />
 <br />
 
@@ -18,14 +19,40 @@
     <br />
     <br />
     ·
+    <a href="#content">Content</a>    ·    
+    <a href="#links">Links</a>
+    ·
     <a href="#timeline">Timeline</a>
     ·
 </p>
 
+--- 
+## Content
+
+### Dalgo
+Learn algrotyhms and data structure in C/C++
+### FlutArt
+Practising one of the most trending multi-platform framework
+### Notifications
+Create and manage notifications
+### Pyhton API
+Simple example Python API
+### Python Games
+Multiple mini-games using Python
+### ReactJS
+Review knowledge about this library in functional approach
+### TypeScript
+A clean type-check layer for JS
+
+---
+## Links
+
 ---
 
-### Timeline
+## Timeline
 
 > My developer timeline
 
 ![Timeline](https://github.com/nicode-io/nicode-io/blob/master/images/Timeline.png)
+
+Thanks to all those who help me every day to live in the passion of coding. 🚀 🖤💛💖
