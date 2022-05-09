@@ -1,0 +1,101 @@
+//& Imports
+@import "https://fonts.googleapis.com/css2?family=Bellota&display=swap";
+@import "variables", "mixins";
+
+
+//& Mobile-First
+body {
+  background: $companyWhite;
+  font-family: 'Bellota', cursive;
+  main {
+    section {
+      img {
+        width: auto;
+        height: 15vh;
+      }
+      article {
+        .error {
+          color: $errorRed;
+        }
+        label {
+          color: $companyBlack;
+          font-size: 1.1rem;
+          font-weight: 900;
+          #optional {
+            color: $companyBlue;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    #formSupport {
+      background: $companyBlueTrans;
+      #winnie {
+        visibility: hidden;
+      }
+      #submitSect {
+        #submit {
+          background-color: $companyBlue;
+          border: 2px $companyBlueTrans solid;
+          width: 50vw;
+          height: 6vh;
+          font-size: 1.3rem;
+          font-weight: 700;
+        } 
+      }
+      #descriptionSubmit {
+        visibility: hidden;
+      }
+    }
+  }
+}  
+
+//& XL-Screens
+@media only screen and (min-width: 1200px) {
+  body {
+    background: $companyWhite;
+    font-family: 'Bellota', cursive;
+    main {
+      section {
+        img {
+          width: auto;
+          height: 20vh;
+        }
+        article {
+          .error {
+            color: $errorRed;
+          }
+          label {
+            color: $companyBlack;
+            font-size: 1.1rem;
+            font-weight: 900;
+            #optional {
+              color: $companyBlue;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      #formSupport {
+        background: $companyBlueTrans;
+        #winnie {
+          visibility: hidden;
+        }
+        #submitSect {
+          #submit {
+            background-color: $companyBlue;
+            border: 2px $companyBlueTrans solid;
+            width: 20vw;
+            height: 6vh;
+            font-size: 2rem;
+            font-weight: 900;
+          }
+        }
+        #descriptionSubmit {
+          visibility: hidden;
+        }
+      }
+    }
+  }  
+}
+

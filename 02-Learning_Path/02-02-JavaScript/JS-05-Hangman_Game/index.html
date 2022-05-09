@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='description' content='Hangman javascript game'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='assets/css/style.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Play the Hangman game - JS</title>
+    </head>
+    <body>
+        <h1><img src="assets/img/hangman.png" alt="The Hangman Game"></h1>
+        <section id='hangmanGame'>
+            <article id='startGame'>
+                <button id='easyGame' class='start'>
+                    START EASY GAME
+                </button>
+                <button id='mediumGame' class='start'>
+                    START MEDIUM GAME
+                </button>
+                <button id='hardGame' class='start'>
+                    START HARD GAME
+                </button>
+            </article>
+            <section id='score'>
+                <article>
+                    SCORE :
+                </article>
+                <article id='points'>
+                    
+                </article>
+            </section>
+            <article id='canvas'>
+                <canvas id='draw' width=1000 height=500></canvas>
+            </article>
+            <article id='wordPrint'>
+                
+            </article>
+            <article id='keyboard'>
+                
+            </article>
+            <article id='endGame'>
+                <p id='win'> 
+                    YOU WIN ! 
+                </p>
+                <p id='loose'> 
+                    YOU LOOSE :(
+                </p>
+                
+            </article>
+        </section>
+    <script src='assets/js/Hangman.js'></script>
+    <script src='assets/js/WordLibrary.js'></script>
+    <script src='assets/js/draw.js'></script>
+    <script src='assets/js/main.js'></script>
+    </body>
+</html>

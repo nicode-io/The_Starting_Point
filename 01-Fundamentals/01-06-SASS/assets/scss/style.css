@@ -1,0 +1,61 @@
+header {
+  background: blue;
+}
+
+nav {
+  background: red;
+}
+
+ul {
+  background: #f5912d;
+}
+
+li {
+  background: green;
+}
+
+a {
+  color: #f5912d;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: green;
+}
+
+html {
+  font-size: 0.75em;
+}
+
+.user-dialog-box, .alert-winning-user {
+  border: 10px solid gray;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.alert-winning-user {
+  border-color: green;
+}
+
+.user-notification {
+  border: 10px solid gray;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.alert-winning-user {
+  border-color: green;
+}
+
+.alert-winning-user {
+  border: 10px solid #5a0909;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=style.css.map */

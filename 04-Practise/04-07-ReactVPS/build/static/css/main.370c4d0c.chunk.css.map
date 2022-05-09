@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/app/layout/style.css"],"names":[],"mappings":"AAAA,KACE,wBACF,CAEA,4BACE,wEACF","file":"main.370c4d0c.chunk.css","sourcesContent":["body {\n  background-color: #EAEAEA;\n}\n\n.ui.inverted.top.fixed.menu {\n  background-image: linear-gradient(135deg, rgb(24,42,115) 0%, rgb(33,138,174) 69%, rgb(32,167,172) 89%);\n}\n"]}

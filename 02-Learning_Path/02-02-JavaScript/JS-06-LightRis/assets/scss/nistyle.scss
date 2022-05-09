@@ -1,0 +1,97 @@
+@import "_mixins.scss";
+ 
+body {
+  width:100vw;
+  height: 100vh;
+  background-image: url("http://www.nicode.be/lightris/assets/img/background.jpg");
+  font-family: 'Press Start 2P', cursive;
+  .banner {
+    @include flexRowCenter;
+    justify-content: space-around;
+    font-size: 2vw;
+    font-family: 'Press Start 2P', cursive;
+    p {
+      text-transform: uppercase;
+      color: rgba(242, 242, 242, 0.5);
+      font-size: 2rem;
+      text-shadow: -1px -1px black, 1px 1px white;
+    }
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  width: 400px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: inherit;
+}
+.grid div {
+  height: 40px;
+  width: 40px;
+}
+.mini-grid {
+  margin-left: 100px;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: inherit;
+}
+.mini-grid div {
+  height: 40px;
+  width: 40px;
+}
+.access {
+  @include flexRowCenter;
+  justify-content: space-around;
+  h3 {
+    color: rgba(4, 218, 242, 1);
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    text-shadow: -1px -1px black, 1px 1px white;
+  }
+  #start-button{
+    box-shadow: -5px -7px 85px 14px rgba(0,0,0,0.36);
+    text-align: center;
+    display: inline-block;
+    margin:5px;
+    font-weight: bold;
+    font-size: 2vw;
+    font-family: inherit;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+  }
+  #start-button:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+  }
+}
+.logo {
+  margin-top: 2vw;
+  @include flexColumnCenter;
+  a {
+    @include flexColumnCenter;
+    text-decoration: none;
+    background: rgba(121, 199, 216, 0.3);
+    box-shadow: -5px -7px 85px 14px rgba(0,0,0,0.36);
+    border-radius: 50%;
+    width: 13vw; 
+    height: 13vw;
+    padding:0.5vw;
+    img {
+      width: 11vw;
+      height: 11vw
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import 'mixins';
+
+body {
+    background: rgba(41,45,62,1);
+    @include flexColumn;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(81,84,186,1);
+}

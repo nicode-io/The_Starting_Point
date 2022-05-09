@@ -1,0 +1,63 @@
+.ro-body{
+    margin: auto auto;
+    background-color: $icy-white;
+}
+.ro-h1{
+    font-family: 'Lobster', cursive;
+    justify-content: center;
+    display:flex;
+}
+.ro-p{
+    color:black;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+    max-width: 350px;
+    word-wrap: break-word;
+}
+.BoxCarou{
+    margin-top: auto;
+    overflow: hidden;
+}
+.infoText{
+    display:flex;
+    
+}
+#carousel{
+    height:280px ;
+    width:750px;
+}
+#carousel ol{
+    position: relative;
+    display:inline-flex;
+    justify-content: center;
+    width :200px;
+    left:4.6875em;
+}
+#carousel ol li{
+    background-color: grey;
+}
+.black{
+    color:black;
+}
+.ro-a{
+    text-decoration: none;
+    color:black;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+
+}
+footer {
+    background: $light-grey;
+    .copyright {
+        font-family: 'Lobster', cursive;
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:380px){
+    #carousel{
+        img{
+            max-width:360px;
+            max-height:400px;
+        }
+    }
+}

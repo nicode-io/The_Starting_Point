@@ -1,0 +1,135 @@
+// MIXINS
+
+
+//! Flexbox
+    //& Row
+@mixin flexRowWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+@mixin flexRowNoWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+}
+@mixin flexRowReverseNoWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+}
+@mixin flexRowReverseNoWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+}
+
+    //& Column
+@mixin flexColumnWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+}
+@mixin flexColumnNoWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;    
+}
+@mixin flexColumnReverseNoWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;    
+}
+@mixin flexColumnReverseNoWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;    
+}
+
+    //& Center
+@mixin flexCenterCenter {
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexFlexstartCenter {
+    align-items: flex-start;
+    justify-content: center;
+}
+@mixin flexFlexendCenter {
+    align-items: flex-end;
+    justify-content: center;
+}
+@mixin flexBaselineCenter {
+    align-items: baseline;
+    justify-content: center;
+}
+@mixin flexStretchCenter {
+    align-items: stretch;
+    justify-content: center;
+}
+
+    //& Space Around
+@mixin flexCenterAround {
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flexFlexstartAround {
+    align-items: flex-start;
+    justify-content: space-around;
+}
+@mixin flexFlexendAround {
+    align-items: flex-end;
+    justify-content: space-around;
+}
+@mixin flexBaselineCenter {
+    align-items: baseline;
+    justify-content: space-around;
+}
+@mixin flexStretchCenter {
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+    //& Space Between
+@mixin flexCenterBetween {
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flexFlexstartBetween {
+    align-items: flex-start;
+    justify-content: space-around;
+}
+@mixin flexFlexendBetween {
+    align-items: flex-end;
+    justify-content: space-around;
+}
+@mixin flexBaselineCenter {
+    align-items: baseline;
+    justify-content: space-around;
+}
+@mixin flexStretchCenter {
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+    //& Space Evenly 
+@mixin flexCenterBetween {
+    align-items: center;
+    justify-content: space-evenly;
+}
+@mixin flexFlexstartBetween {
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+@mixin flexFlexendBetween {
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+@mixin flexBaselineCenter {
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+@mixin flexStretchCenter {
+    align-items: stretch;
+    justify-content: space-evenly;
+}

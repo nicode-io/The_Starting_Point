@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\sociapplication\SociApplication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+    <Content Include="bin\Debug\net5.0\AutoMapper.dll" />
+    <Content Include="bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll" />
+    <Content Include="bin\Debug\net5.0\Humanizer.dll" />
+    <Content Include="bin\Debug\net5.0\MediatR.dll" />
+    <Content Include="bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.Data.Sqlite.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll" />
+    <Content Include="bin\Debug\net5.0\Microsoft.OpenApi.dll" />
+    <Content Include="bin\Debug\net5.0\ref\SociApi.dll" />
+    <Content Include="bin\Debug\net5.0\runtimes\alpine-x64\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-arm64\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-armel\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-arm\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-mips64\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-musl-x64\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-x64\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\linux-x86\native\libe_sqlite3.so" />
+    <Content Include="bin\Debug\net5.0\runtimes\osx-x64\native\libe_sqlite3.dylib" />
+    <Content Include="bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll" />
+    <Content Include="bin\Debug\net5.0\runtimes\win-arm\native\e_sqlite3.dll" />
+    <Content Include="bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll" />
+    <Content Include="bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll" />
+    <Content Include="bin\Debug\net5.0\SociApi.deps.json" />
+    <Content Include="bin\Debug\net5.0\SociApi.dll" />
+    <Content Include="bin\Debug\net5.0\SociApi.pdb" />
+    <Content Include="bin\Debug\net5.0\SociApi.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\net5.0\SociApi.runtimeconfig.json" />
+    <Content Include="bin\Debug\net5.0\SociApplication.dll" />
+    <Content Include="bin\Debug\net5.0\SociApplication.pdb" />
+    <Content Include="bin\Debug\net5.0\SociOmain.dll" />
+    <Content Include="bin\Debug\net5.0\SociOmain.pdb" />
+    <Content Include="bin\Debug\net5.0\SociStence.dll" />
+    <Content Include="bin\Debug\net5.0\SociStence.pdb" />
+    <Content Include="bin\Debug\net5.0\SQLitePCLRaw.batteries_v2.dll" />
+    <Content Include="bin\Debug\net5.0\SQLitePCLRaw.core.dll" />
+    <Content Include="bin\Debug\net5.0\SQLitePCLRaw.nativelibrary.dll" />
+    <Content Include="bin\Debug\net5.0\SQLitePCLRaw.provider.dynamic_cdecl.dll" />
+    <Content Include="bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <Content Include="bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <Content Include="bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <Content Include="bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll" />
+  </ItemGroup>
+
+</Project>

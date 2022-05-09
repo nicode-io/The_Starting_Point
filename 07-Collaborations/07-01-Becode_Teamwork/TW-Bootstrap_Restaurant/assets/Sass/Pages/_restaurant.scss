@@ -1,0 +1,52 @@
+body {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .global {
+    width: 90vw;
+  }
+}
+
+.fontResto {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  color: $ni-red;
+}
+.fontRestoSmall {
+  font-family: 'Lobster', cursive;
+}
+
+.mapGoogle {
+  width : 90vw;
+}
+.hour {
+  text-align: center;
+}
+
+footer {
+  background: $light-grey;
+  .copyright {
+    font-family: 'Lobster', cursive;
+    font-size: 0.8rem;
+  }
+}
+
+
+// Media queries
+@media only screen and (min-width: 765px) {
+  body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .global {
+      width: 70vw;
+    }
+    .mapGoogle {
+      width : 100%;
+    }
+  }
+}
