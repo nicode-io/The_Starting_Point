@@ -57,6 +57,17 @@ more.
 * Open Cypress GUI: **npx cypress open**
 * Run headless mode (run all test one time in console): **npx cypress run**
     * Add **"e2e": "cypress run"** to scripts to run from yarn run command
+* Our tests will look at the rendered page to find elements we specify, it's not important what technology we use or how
+  the elements are created, only the end result is tested
+* Make use of a stub server during development, like **json-server** and combine it with **axios** to simulate HTTP
+  calls, we can then configure a middleware to link with our **Cypress fixtures**
+    * Steps:
+        * Install **json-server**
+        * Create **stub-server** directory, name of our choice
+        * Create **db.json** file inside it
+        * Add script for easy launch that target db file
+        * Create **server** file in stub-server folder
+            * See 002-Bookish directory for middleware detail
 
 ### General
 
